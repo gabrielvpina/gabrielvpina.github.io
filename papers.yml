@@ -1,0 +1,50 @@
+- title: "ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis"
+  date: 2026-02-10
+  path: "https://doi.org/10.1186/s12859-026-06391-6"
+  image: "papers_thumbs/viralquest.png"
+  description: "**Gabriel Victor Pina Rodrigues**; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar"
+  categories: [Virology, Bioinformatics, Pipeline]
+  target: _blank
+
+- title: "Tracing ancient viral footprints: a comprehensive study of endogenous viral elements in Bombus species"
+  date: 2026-02-05
+  path: "https://doi.org/10.1186/s13100-026-00393-0"
+  image: "papers_thumbs/EVE_bombus.webp"
+  description: "Lucas Barbosa de Amorim Conceição; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; **Gabriel Victor Pina Rodrigues**; Marco Antônio Costa; Eric Roberto Guimarães Rocha Aguiar "
+  categories: [Virology, Arthropod, EVEs]
+  target: _blank
+
+- title: "Insights into miRNAs of the Stingless Bee *Melipona quadrifasciata*"
+  date: 2025-06-19
+  path: "https://doi.org/10.3390/ncrna11030048"
+  image: "papers_thumbs/mirna_mquad.png"
+  description: "Dalliane Oliveira Soares; Lucas Yago Melo Ferreira; **Gabriel Victor Pina Rodrigues**; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição; Tatyana Chagas Moura; Isaque João da Silva de Faria; Roenick Proveti Olmo; Weyder Cristiano Santana *et al.*"
+  categories: [Arthropod, miRNAs, Genomics]
+  target: _blank
+
+
+- title: "*Theobroma cacao* Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance"
+  date: 2025-04-01
+  path: "https://www.mdpi.com/1999-4915/17/5/624"
+  image: "papers_thumbs/cocoa_virus.png"
+  description: "**Gabriel Victor Pina Rodrigues**; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães Rocha Aguiar"
+  categories: [Virology, Cocoa, Bioinformatics]
+  target: _blank
+
+
+- title: "Polymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae"
+  date: 2024-09-18
+  path: "https://doi.org/10.1099/jmm.0.001891"
+  image: "papers_thumbs/janna.png"
+  description: "Andressa Leite Ferraz de Melo, Luana Rossato, Jannaína Velasques, Virginia Lopes de Sousa, **Gabriel Victor Pina Rodrigues**, Cláudia Andrea Lima Cardoso, Julia Pimentel Arantes, Bruno Fernandes Lima, Simone Simionatto"
+  categories: [Antimicrobial Activity]
+  target: _blank
+
+
+- title: "The Virome of Cocoa Fermentation-Associated Microorganisms"
+  date: 2024-07-31
+  path: "https://doi.org/10.3390/v16081226"
+  image: "papers_thumbs/ferment.png"
+  description: "João Pedro Nunes Santos; **Gabriel Victor Pina Rodrigues**; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno Santos Florêncio; Aijalon Brito da Silva Junior; Paulo Eduardo Ambrósio; Carlos Priminho Pirovani et al."
+  categories: [Virology, Cocoa, Bioinformatics]
+  target: _blank

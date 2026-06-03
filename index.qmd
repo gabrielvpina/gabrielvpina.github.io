@@ -1,0 +1,44 @@
+---
+title: "Gabriel Pina"
+image: profile.jpg
+toc: false
+# listing:
+#   id: posts-listing
+#   categories: false
+#   type: grid
+#   fields: [image, date, title, description, categories, author]
+#   contents:
+#     - "posts/seq_sanger/*.qmd"
+#     - "posts/data_report/*.qmd"
+#     - "posts/decision_tree_basic/*.qmd"
+about:
+  id: hero-heading
+  template: jolla
+  image-shape: round
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/gabriel-rodrigues-008419210/
+      target: _blank
+
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com/gabrielvpina
+      target: _blank
+
+    - icon: github
+      text: Github
+      href: https://github.com/gabrielvpina
+      target: _blank
+
+    - text: "{{< fa brands orcid >}} ORCID"
+      href: https://orcid.org/0009-0005-2294-2845
+      target: _blank
+---
+
+RNA, code, and notes to my future self
+
+<!-- ## Posts
+
+::: {#posts-listing}
+::: -->

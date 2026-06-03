@@ -1,0 +1,275 @@
+[
+  {
+    "objectID": "papers.html",
+    "href": "papers.html",
+    "title": "Publications",
+    "section": "",
+    "text": "ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis\n\n\n\nVirology\n\nBioinformatics\n\nPipeline\n\n\n\nGabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar\n\n\n\nFeb 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nTracing ancient viral footprints: a comprehensive study of endogenous viral elements in Bombus species\n\n\n\nVirology\n\nArthropod\n\nEVEs\n\n\n\nLucas Barbosa de Amorim Conceição; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; Marco Antônio Costa; Eric Roberto Guimarães Rocha…\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights into miRNAs of the Stingless Bee Melipona quadrifasciata\n\n\n\nArthropod\n\nmiRNAs\n\nGenomics\n\n\n\nDalliane Oliveira Soares; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição;…\n\n\n\nJun 19, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheobroma cacao Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nGabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães…\n\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae\n\n\n\nAntimicrobial Activity\n\n\n\nAndressa Leite Ferraz de Melo, Luana Rossato, Jannaína Velasques, Virginia Lopes de Sousa, Gabriel Victor Pina Rodrigues, Cláudia Andrea Lima Cardoso, Julia Pimentel…\n\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Virome of Cocoa Fermentation-Associated Microorganisms\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nJoão Pedro Nunes Santos; Gabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno…\n\n\n\nJul 31, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Explorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nGabriel Pina\n\n\nOct 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nGabriel Pina\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nÁrvore de Decisão - Introdução\n\n\n\nMachine-learning\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nGabriel Pina\n\n\nNov 11, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html",
+    "href": "posts/seq_sanger/seq_sanger.html",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "",
+    "text": "Editar as sequências contidas nos eletroferogramas anexos, gerando um arquivo word com as sequências Forward e Reverse, e as sequências consenso. Verificar qual espécie no banco de dados do NCBI apresenta maior identidade com cada sequência consenso obtida."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
+    "href": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.1 Análise dos arquivos .ab1",
+    "text": "2.1 Análise dos arquivos .ab1\nArquivos .ab1 são dados brutos vindos de sequenciadores tipo Sanger. Esses arquivos possuem a sequência do DNA analisada, um eletroferograma (um gráfico mostrando os picos de fluorenscência para cada base) e uma pontuação de qualidade associada à cada base da sequência.\nNesse caso vamos utilizar o software CutePeaks para realizar o basecalling, a chamada das bases individuais da sequência analisada, para conferir seu pico de fluorescência e sua qualidade.\n\n\n\nExemplo de arquivo .ab1 lido pelo software CutePeaks"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
+    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.2 Conversão de .ab1 para .fastq",
+    "text": "2.2 Conversão de .ab1 para .fastq\nComo não será possível trabalhar diretamente com o software BioEdit, será necessário realizar a conversão dos arquivos arquivos .ab1 para o formato .fastq, formato padrão dos dados brutos de sequenciadores de nova gereação, como os da plataforma Illumina.\nPara realizar essa conversão, foi utilizada a biblioteca BioPython (suportada pela linguagem de programação Python) para criar o arquivo abi2fastq.py com o seguinte código:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"abi\")\ncount = SeqIO.write(records, saida, \"fastq\")\n\nO arquivo abi2fastq.py pode ser utilizado para inserir os dois argumentos para a conversão, o nome do aruivo de entrada e o nome do arquivo de saída (que será a conversão). Para rodar o código e realizar a conversão, executa-se no terminal linux:\n\npython abi2fastq.py COC_2F.ab1 COC_2F.fastq\n\nCom isso teremos nosso arquivo .ab1 convertido para formato .fastq, seguindo essa estrutura:\n@13F\nNNNNNNNNGNTGATATCANGAGTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAA\nTTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATT\nAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTT\nGATACACGAGCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTT\nTTAGATGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAAT\nTGGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATT\nGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAG\nCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAA\nTCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCT\nCAACATTTTTTAGGATTAATATCAGATCAAATGGAAATTACGGCACTTATGGATAATACATAGT\nGAAAATGACCAACTCCGTATTAAGACTCATTGTATCAT\n+\n\"$$$$%%%&%&')),)&+%,7)7M&lt;&gt;=@A[[;F&lt;KTU7DJ20PQ62U__L@&lt;JJGPY_G8YTIY\n___WW_Y99H8G=&lt;EL_\\_\\Y\\\\O\\____\\\\_\\\\\\_Y\\\\\\\\__\\\\\\_____\\___\\_\\\\\\\\___\n\\HYWYR__\\RG==LL\\\\_\\\\__W___\\\\___TYY\\RYQAY\\\\Y___W___T\\T_\\\\T\\=IOYEQ\nWOYY\\LTDLCELTSDQQ@YLEYY_____________________W________\\__________\n___\\___\\\\________________W_____________________W_________W______\n___\\__________________________\\\\_____________________RR_________\n_\\______________\\_______________________________________________\n______________________W_______YFF_W_O__O____________PW__________\n_______W__W_________________OO______WPOO_L_[[[[[[[[[U[[[[[[[[[[W\n[QUWUWW[[[LLUW[UIWKPUJG-&&,5H''*130/,3B:,8K/**'.(9(&gt;3@/',-*'+*?(\n4+*2/-J****'*(+(43-*3/*&lt;''/**1(B+2*+)(\nOnde o identificador da sequência é o @13F e a pontuação Phred de qualidade está localizada abaixo do símbolo de +. Em termos práticos esse arquivo informa a sequência e a qualidade das bases, mas diferente do formato anterior, os picos de fluorescência não são informados."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
+    "href": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.3 Checagem da qualidade dos arquivos fastq",
+    "text": "2.3 Checagem da qualidade dos arquivos fastq\nPara checar se a conversão foi realizada corretamente, os arquivos de qualidade das sequências .fastq foram comparadas com a qualidade exibida no eletroferograma e checada no CutePeaks. Essa checagem foi realizada com o software FastQC.\n\n\n\nQualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas\n\n\n\n\n\nChecagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
+    "href": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.4 Remoção das bases de baixa qualidade",
+    "text": "2.4 Remoção das bases de baixa qualidade\nPara a remoção das bases de baixa qualidade foi utilizado o software Seqtk, em sua função trimfq, que remove automaticamente as sequências de baixa qualidade (Phred &lt; 15) e bases não definidas.\nAs análises de quailidade também foram realizadas nas sequências após a remoção das bases de baixa qualidade."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
+    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.5 Conversão de FASTQ para FASTA",
+    "text": "2.5 Conversão de FASTQ para FASTA\nApós a trimagem das sequências e remoção de bases de não definidas, os arquivos FASTQ foram comvertidos para o formato FASTA através da biblioteca BioPython, seguindo a mesma lógica da conversão dos arquivos .ab1:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"fastq\")\ncount = SeqIO.write(records, saida, \"fasta\")\n\nO arquivo final fastq2fasta.py então é chamado no terminal linux:\n\npython fastq2fasta.py COC_2F.fastq COC_2F.fasta\n\nUm arquivo em formato FASTA se assemelha à um arquivo FASTQ, porém sem os índices de qualidade por base (Phred Score) anexados ao arquivo das sequências. Outra diferença são os símbolos adotados, o header de uma sequência (seu cabeçalho) agora é marcado pelo símbolo &gt; antes do nome da sequência."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
+    "href": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.6 Obtenção da Sequência Consenso",
+    "text": "2.6 Obtenção da Sequência Consenso\nA sequência conseso é o resultado da união via sobreposição das sequências foward e reverse do sequenciemanto. Para fazer a montegem dessas sequências em uma única final. Para isso pode-se utilizar o software CAP3, que alinha a sobreposição das sequências para estabelecer as contigs finais, uma técnica denominada de Overlap Layout Consensus.\nA entrada para o software CAP3 foi um arquivo FASTA com a junção das duas sequências (foward e reverse) de cada amostra, dessa maneira (Arquivo COC_merge.fasta):\n&gt;13F\nTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAATTATTATAAATGAAAGAG\nGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATTAGGAATTGGATTTT\nTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTTGATACACGAG\nCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGAT\nGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAATTG\nGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAA\nTTGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTA\nTAGGAGCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGAT\nTAATAATTAATCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATT\nTCACTTTTTTTCCTCAACATTTTTTAGGATTAATATC\n&gt;13R\nAAAAAAAAATTGAAATTTTAATCATTTTTGATTAATTATTAATCCTGATAATAAGGGAAA\nTCAATGAATAAATCTTGCAATAATGGAAAATACTGCTCCTATAGATAATACATAGTGAAA\nATGACCAACTACGTAATAAGAATCATGTAAAATAATATCAATTGATGAATTTGATAATAT\nAATTCCTGTTAATCCTCCAATAGTAAATATTAAAATAAATCCAATTGATCATATAAATGA\nAATATTAAAATTTAATTTTGATCCATGATAAGTTGCTAATCATCTAAAAACTTTAATTCC\nTGTAGGAATTGCAATAATTATTGTTGCAGATGTAAAATATGCTCGTGTATCAACATCTAA\nTCCTACAGTAAATATATGATGAGCTCATACAATAAATCCTAAAAATCCAATTCCTAATAT\nAGCATAAATTATTCTTAAATTTCCAAAAATTTCCTTTTTTCCTCTTTCATTTATAATAAT\nTTGTGAAATTAGTCCAAATCCTGGTAAAATTAAAATATAAACTTCTGGATGACCAAAAAA\nTCAAAATAAATGTTGATAA"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
+    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.7 Alinhamento das sequnências",
+    "text": "2.7 Alinhamento das sequnências\nAs sequências finais foram Alinhadas via BLASTn online contra o banco de dados core_nt, uma versão reduzida e clusterizada do banco total de nucleotídeos nt."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
+    "href": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.1 Qualidade das Sequências",
+    "text": "3.1 Qualidade das Sequências\nA qualidade sequências dos arquvos FASTQ foram realizadas com o software FastQC e depois agragadas com o software MultiQC. As qualidades foram medidas antes e depois da remoção de sequências de baixa qualidade.\n\n\n\nQualidade das sequências SEM a remoção das bases de baixa qualidade\n\n\n\n\n\nQualidade das sequências COM a remoção das bases de baixa qualidade"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
+    "href": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.2 Sequências montadas",
+    "text": "3.2 Sequências montadas\nAs sequências fasta (foward e reverse) foram unidas em arquivos únicos para cada código e amostra, COC_merged.fasta; MAC_merged.fasta e RBA_merged.fasta. Esses arquivos foram montados utilizando o software CAP3 e tiveram como resultado final os seguintes tamanhos em bases:\n\nTamanho das sequências em nucleotídeos\n\n\nAmostra\nTamanho (nt)\n\n\n\n\nCOC\n615\n\n\nMAC\n607\n\n\nRBA\n617\n\n\n\nComo resultado da montagem, temos o arquivo FASTA final para cada sequência:\n\n&gt;COC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTAATATC\n\n&gt;RBA\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTACGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTCTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGTGATTAATAATTAATCAAAAATGAT\nTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTAACTTTTTTTCCTCAACATT\nTTTTAGG\n\n&gt;MAC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTTAATATCA"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
+    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.3 Alinhamento no BLAST",
+    "text": "3.3 Alinhamento no BLAST\nFoi realizado o alinhamento global das sequências em um banco de dados de nucleotídeos (NCBI Core NT), os resultados foram os seguintes:\n\nMelhores resultados do alinhamento no BLAST para cada amostra\n\n\n\n\n\n\n\nAmostra\nMelhor Hit\nOrganismo\n\n\n\n\nCOC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nMAC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nRBA\nH5 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\n\nOs alinhamentos tiveram índices de identidade e cobertura maiores que 99% para os melhores alinhamentos.\nAs sequências aparentam ser derivadas da espécie Partamona rustica, especificamente vindas de subunidades H do gene citocromo c oxidase, sendo uma enzima na cadeia respiratória de transporte de elétrons das células."
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html",
+    "href": "posts/decision_tree_basic/dec_tree.html",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "",
+    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico.\n\n\n\nExistem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
+    "href": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "",
+    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico."
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
+    "href": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "",
+    "text": "Existem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
+    "href": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "2.1 Estrutura e funcionamento",
+    "text": "2.1 Estrutura e funcionamento\nO principal objetivo de uma Árvore de Decisão é criar um modelo que prevê o valor-alvo (o target) ao aprender regras de decisão simples inferidas das características dos dados (features).\n\nNó Raiz (Root Node): É o ponto inicial, representa todo o conjunto de dados.\nNós de Decisão Internos (Internal Decision Nodes): Representam testes em um atributo (característica) dos dados. A partir deles, o conjunto de dados é dividido em subconjuntos com base no resultado do teste. Por exemplo, “A idade é maior que 30?”\nRamos (Branches/Edges): São as possíveis respostas ou caminhos resultantes do teste em um nó de decisão.\nNós Folha (Leaf Nodes): Representam os resultados finais ou a decisão. Em um problema de classificação, a folha contém o rótulo da classe (ex: “aprovado” ou “negado”). Em um problema de regressão, contém um valor previsto (ex: a média dos valores daquele subconjunto).\n\n\n\n\nExemplo de Árvore de Decisão\n\n\nNesse exemplo, a árvore de decisão se baseia em informações pessoais dos itens (das pessoas), para a partir delas prever o tipo de carro mais provável para compra."
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.1 Bloco 1 - Instalando pacotes e importando dados",
+    "text": "3.1 Bloco 1 - Instalando pacotes e importando dados\n\n# 1. Instale os pacotes (rode apenas uma vez)\n# install.packages(\"rpart\")\n# install.packages(\"rpart.plot\")\n\n# 2. Carregue os pacotes\nlibrary(rpart)\nlibrary(rpart.plot)\n\n# 3. Carregue o dataset \"iris\" (que já vem com o R)\n# Vamos chamá-lo de \"dados\" para ficar mais claro\ndados &lt;- iris\n\n# Dê uma olhada rápida nos dados\n# Queremos prever \"Species\" usando as outras 4 colunas\nhead(dados)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.2 Bloco 2 - Implementando o Modelo",
+    "text": "3.2 Bloco 2 - Implementando o Modelo\n\n# Treina o modelo da árvore\n# method = \"class\" informa ao rpart que é um problema de CLASSIFICAÇÃO\nmodelo_arvore &lt;- rpart(\n  Species ~ ., \n  data = dados, \n  method = \"class\"\n)\n\n# Para ver um resumo simples das regras em texto\nprint(modelo_arvore)\n\nn= 150 \n\nnode), split, n, loss, yval, (yprob)\n      * denotes terminal node\n\n1) root 150 100 setosa (0.33333333 0.33333333 0.33333333)  \n  2) Petal.Length&lt; 2.45 50   0 setosa (1.00000000 0.00000000 0.00000000) *\n  3) Petal.Length&gt;=2.45 100  50 versicolor (0.00000000 0.50000000 0.50000000)  \n    6) Petal.Width&lt; 1.75 54   5 versicolor (0.00000000 0.90740741 0.09259259) *\n    7) Petal.Width&gt;=1.75 46   1 virginica (0.00000000 0.02173913 0.97826087) *"
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.3 Bloco 3 - Gerando Visualização",
+    "text": "3.3 Bloco 3 - Gerando Visualização\n\n# Criar a visualização da árvore\n# Esta é a \"saída\" do algoritmo!\nrpart.plot(modelo_arvore, main = \"Árvore de Decisão para Prever Espécie de Flor Iris\")"
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.4 Bloco 4 - Classificando Novo Item",
+    "text": "3.4 Bloco 4 - Classificando Novo Item\n\n# Vamos criar uma \"nova flor\" que medimos no jardim\n# Ela tem pétalas longas e largas.\nnova_flor &lt;- data.frame(\n  Sepal.Length = 5.1,\n  Sepal.Width = 3.2,\n  Petal.Length = 4.8,\n  Petal.Width = 1.9\n)\n\n# Usar o modelo para prever a qual classe (espécie) ela pertence\nprevisao &lt;- predict(modelo_arvore, nova_flor, type = \"class\")\n\n# Mostrar o resultado\nprint(paste(\"A previsão do modelo para a nova flor é:\", previsao))\n\n[1] \"A previsão do modelo para a nova flor é: virginica\"\n\n\nA partir da inserção do novo item, seguindo os mesmos parâmetros do dataset original, é possível classificar um novo item em uma das categorias estabelecidas."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html",
+    "href": "posts/data_report/data_report.html",
+    "title": "Explorando Dados com R",
+    "section": "",
+    "text": "Esse relatório é complementar à Atividade Prática 06, realizada dia 28 de Outubro em sala de aula. O relatório possui o intuito de representar como um relatório de dados formal deve ser estruturado, juntamento com as operações de processamento de dados e códigos no R.\n\n\nOs dados utilizados aqui serão vindos da tabela world-data-2023.csv, que representa um compilado abrangente de indicadores globais por país, referente ao ano de 2023.\nAs principais categorias de dados incluem:\n\nDemografia e Geografia: Informações sobre População, Densidade (P/Km2), Área Terrestre (Km2), População Urbana, Taxa de Natalidade, Taxa de Fertilidade e Expectativa de Vida.\nEconomia e Finanças: Dados vitais como Produto Interno Bruto (PIB), Índice de Preços ao Consumidor (IPC e sua variação), Código da Moeda, Salário Mínimo, Receita Tributária (%), Taxa de Imposto Total, e o Preço da Gasolina.\nSaúde e Educação: Indicadores sociais cruciais, incluindo Mortalidade Infantil e Materna, proporção de Médicos por Mil, Despesas de Saúde do bolso próprio, e as taxas de matrícula bruta nos ensinos primário e superior.\nMeio Ambiente e Recursos: Métricas ambientais como as Emissões de CO2​ e a porcentagem de Terra Agrícola e Área Florestal.\nForça de Trabalho e Segurança: Informações sobre a participação da Força de Trabalho, Taxa de Desemprego e o Tamanho das Forças Armadas.\n\nEm resumo, é um dataset de múltiplas facetas destinado a fornecer um perfil detalhado e estatístico de cada país."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#resumo-dos-dados",
+    "href": "posts/data_report/data_report.html#resumo-dos-dados",
+    "title": "Explorando Dados com R",
+    "section": "",
+    "text": "Os dados utilizados aqui serão vindos da tabela world-data-2023.csv, que representa um compilado abrangente de indicadores globais por país, referente ao ano de 2023.\nAs principais categorias de dados incluem:\n\nDemografia e Geografia: Informações sobre População, Densidade (P/Km2), Área Terrestre (Km2), População Urbana, Taxa de Natalidade, Taxa de Fertilidade e Expectativa de Vida.\nEconomia e Finanças: Dados vitais como Produto Interno Bruto (PIB), Índice de Preços ao Consumidor (IPC e sua variação), Código da Moeda, Salário Mínimo, Receita Tributária (%), Taxa de Imposto Total, e o Preço da Gasolina.\nSaúde e Educação: Indicadores sociais cruciais, incluindo Mortalidade Infantil e Materna, proporção de Médicos por Mil, Despesas de Saúde do bolso próprio, e as taxas de matrícula bruta nos ensinos primário e superior.\nMeio Ambiente e Recursos: Métricas ambientais como as Emissões de CO2​ e a porcentagem de Terra Agrícola e Área Florestal.\nForça de Trabalho e Segurança: Informações sobre a participação da Força de Trabalho, Taxa de Desemprego e o Tamanho das Forças Armadas.\n\nEm resumo, é um dataset de múltiplas facetas destinado a fornecer um perfil detalhado e estatístico de cada país."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#primeiras-impressões",
+    "href": "posts/data_report/data_report.html#primeiras-impressões",
+    "title": "Explorando Dados com R",
+    "section": "2.1 Primeiras impressões",
+    "text": "2.1 Primeiras impressões\nCom o resumo dos dados em mãos, pode-se observar que diversas colunas que deveriam ser numéricas estão sendo lidas como strings. As principais causas são:\n\nUso de vírgula para representar decimais, enquanto o R utiliza pontos\nCaracteres associados à porcentagens (ex: 23.12%)\nCaracteres associados à valores monetários (“$”)\n\nOutra coisa para se atentar são os nomes das colunas, que antes continham espaços e símbolos na tabela original e agora tiveram modificações automáticas devido à função de importação do R.\n\n# nomes vindos da importação\ncolnames(df)\n\n [1] \"Country\"                                  \n [2] \"Density..P.Km2.\"                          \n [3] \"Abbreviation\"                             \n [4] \"Agricultural.Land....\"                    \n [5] \"Land.Area.Km2.\"                           \n [6] \"Armed.Forces.size\"                        \n [7] \"Birth.Rate\"                               \n [8] \"Calling.Code\"                             \n [9] \"Capital.Major.City\"                       \n[10] \"Co2.Emissions\"                            \n[11] \"CPI\"                                      \n[12] \"CPI.Change....\"                           \n[13] \"Currency.Code\"                            \n[14] \"Fertility.Rate\"                           \n[15] \"Forested.Area....\"                        \n[16] \"Gasoline.Price\"                           \n[17] \"GDP\"                                      \n[18] \"Gross.primary.education.enrollment....\"   \n[19] \"Gross.tertiary.education.enrollment....\"  \n[20] \"Infant.mortality\"                         \n[21] \"Largest.city\"                             \n[22] \"Life.expectancy\"                          \n[23] \"Maternal.mortality.ratio\"                 \n[24] \"Minimum.wage\"                             \n[25] \"Official.language\"                        \n[26] \"Out.of.pocket.health.expenditure\"         \n[27] \"Physicians.per.thousand\"                  \n[28] \"Population\"                               \n[29] \"Population..Labor.force.participation....\"\n[30] \"Tax.revenue....\"                          \n[31] \"Total.tax.rate\"                           \n[32] \"Unemployment.rate\"                        \n[33] \"Urban_population\"                         \n[34] \"Latitude\"                                 \n[35] \"Longitude\"                                \n\n\nVamos checar agora o total de valores vazios NAs no dataset:\n\n# a função table() conta categorias do vetor gerado pela função is.na()\ntable(is.na(df))\n\n\nFALSE  TRUE \n 6774    51 \n\n\nSão 51 itens vazios em um total de 6774 itens totais da tabela, isso representa aproximadamente 0.75% dos valores totais no nosso dataset."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#corrigir-colunas-lidas-como-string",
+    "href": "posts/data_report/data_report.html#corrigir-colunas-lidas-como-string",
+    "title": "Explorando Dados com R",
+    "section": "3.1 Corrigir colunas lidas como string",
+    "text": "3.1 Corrigir colunas lidas como string\n\n3.1.1 Colunas com porcentagem (%)\nPara corrigir as colunas que possuem um caractere % em seus itens, utiliza-se uma substituição por um item vazio (““). Para isso emprega-se a função gsub() para substituir \"%\" -&gt; \"\". Normalmente a função gsub() funciona individualmente para cada coluna, por isso deve-se utilizar a função lapply() associada a ela, de forma que gsub() funcione em um loop para as colunas selecionadas.\n\n# colunas com caractere de porcentagem (%)\ncolunas_erradas &lt;- c(\"TaxaDesemprego\", \"TaxaImpostoTotal\", \"ReceitaFiscalPercentual\", \"PopulacaoForcaTrabalhoPercentual\", \"GastoSaudeProprioBolso\", \"MatriculaSuperiorBrutaPercentual\", \"MatriculaPrimariaBrutaPercentual\", \"AreaFlorestadaPercentual\", \"MudancaIPCPercentual\", \"TerraAgriculturaPercentual\")\n\n# aplicando gsub nas colunas escolhidas\ndf[colunas_erradas] &lt;- lapply(df[colunas_erradas], gsub, pattern = \"%\", replacement = \"\") # trocar porcentagem por vazio\n\n# transformando as colunas em numericas\ndf[colunas_erradas] &lt;- lapply(df[colunas_erradas], as.numeric)\n\n\n\n3.1.2 Colunas com cifrão ($)\nCom isso resolvemos as colunas com %, agora vamos aplicar a mesma lógica para colunas com cifrão $. Entretanto 0 cifrão é um metacaractere em expressões regulares que geralmente indica o fim da string. Para tratar o $ como um caractere literal que você deseja remover, ele precisa ser “escapado” com barras invertidas duplas \\\\$.\n\ncolunas_cifrao &lt;- c(\"SalarioMinimo\", \"PrecoGasolina\")\n\ndf[colunas_cifrao] &lt;- lapply(df[colunas_cifrao], gsub, pattern = \"\\\\$\", replacement = \"\")\n\ndf[colunas_cifrao] &lt;- lapply(df[colunas_cifrao], as.numeric)\n\n\n\n3.1.3 Colunas com vírgula\nA partir da substituição do cifrão nas colunas, é possível realizar a substituição das vírgulas nas colunas e convertê-las para colunas numéricas. Podemos checar com head(df) os nossos dados e selecionar as colunas erradas.\nÉ necessário fazer uma diferença, pois em colunas como PopulacaoUrbana, Populacao, PIB e EmissoesCO2 existe um padrão diferente de notação, onde as vírgulas estão somente para diferenciar visualmente os milhates das centenas e das dezenas, e não uma representação decimal.\n\ncolunas_cifrao &lt;- c(\"PIB\")\n\ndf[colunas_cifrao] &lt;- lapply(df[colunas_cifrao], gsub, pattern = \"\\\\$\", replacement = \"\")\n\ncolunas_virg &lt;- c(\"PopulacaoUrbana\", \"Populacao\", \"PIB\", \"EmissoesCO2\", \"AreaTerrestreKm2\", \"Densidade\", \"TamanhoForcasArmadas\")\n\ndf[colunas_virg] &lt;- lapply(df[colunas_virg], gsub, pattern = \",\", replacement = \"\")\n\ndf[colunas_virg] &lt;- lapply(df[colunas_virg], as.numeric)\n\nAgora todas as colunas estão formatadas para as análises estatísticas e gráficos."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#criação-dos-plots",
+    "href": "posts/data_report/data_report.html#criação-dos-plots",
+    "title": "Explorando Dados com R",
+    "section": "7.1 Criação dos Plots",
+    "text": "7.1 Criação dos Plots"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#variáveis-sócio-econômicas-1",
+    "href": "posts/data_report/data_report.html#variáveis-sócio-econômicas-1",
+    "title": "Explorando Dados com R",
+    "section": "7.2 Variáveis Sócio-Econômicas",
+    "text": "7.2 Variáveis Sócio-Econômicas\nColunas que envolvem as informações sobre saúde pública, economia e geografia da populção.\n\nsoc_eco &lt;- c(\n    \"TaxaNatalidade\",\n    \"TaxaFertilidade\",\n    \"ExpectativaVida\",\n    \"TaxaDesemprego\",\n    \"MortalidadeInfantil\",\n    \"TaxaImpostoTotal\",\n    \"SalarioMinimo\",\n    \"Densidade\"\n)\n\ndf_longo_indicadores %&gt;%\n    filter(Indicador %in% soc_eco) %&gt;%\n    ggplot(aes(x = Continent_Name, y = Valor, color = Indicador, fill=Indicador)) +\n    geom_boxplot(alpha=0.6) +\n    geom_jitter( alpha=0.6) +\n    facet_wrap(~ Indicador, scales = \"free\", ncol = 2) +\n    theme_minimal() +\n    theme(\n        axis.text.x = element_text(angle=45,hjust=1,vjust=1),\n        legend.position = \"top\"\n    )"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#variáveis-ambientais-1",
+    "href": "posts/data_report/data_report.html#variáveis-ambientais-1",
+    "title": "Explorando Dados com R",
+    "section": "7.3 Variáveis Ambientais",
+    "text": "7.3 Variáveis Ambientais\nParâmetros relacionados com as atividades agrícolas e florestais do ambiente.\n\namb &lt;- c(\n    \"TerraAgriculturaPercentual\",\n    \"AreaTerrestreKm2\",\n    \"EmissoesCO2\",\n    \"AreaFlorestadaPercentual\",\n    \"PopulacaoUrbana\"\n)\n\ndf_longo_indicadores %&gt;%\n    filter(Indicador %in% amb) %&gt;%\n    ggplot(aes(x = Continent_Name, y = Valor, color = Indicador, fill=Indicador)) +\n    geom_boxplot(alpha=0.6) +\n    geom_jitter( alpha=0.6) +\n    facet_wrap(~ Indicador, scales = \"free\", ncol = 2) +\n    theme_minimal() +\n    theme(\n        axis.text.x = element_text(angle=45,hjust=1,vjust=1),\n        legend.position = \"top\"\n    )"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#análise-de-variância-anova",
+    "href": "posts/data_report/data_report.html#análise-de-variância-anova",
+    "title": "Explorando Dados com R",
+    "section": "8.1 Análise de Variância (ANOVA)",
+    "text": "8.1 Análise de Variância (ANOVA)\nA partir dos resultados, seleciona-se as características que possuem uma distribuição seguindo a curva normal (PrecoGasolina e PopulacaoForcaTrabalhoPercentual).\n\n8.1.1 Preço da Gasolina\nModelo básico de ANOVA\nA função aov() do pacote básico do R é a responsável por fazer a análise de variância dos dados. Um modelo de ANOVA deve ser feito entre uma variável categórica, como Continent_Name (representando um grupo maior dos dados individuais) e uma variável numérica - nesse caso o preço da gasoline (PrecoGasolina).\nCriar subset somente com a coluna PrecoGasolina\n\ngas &lt;- df_longo_indicadores[df_longo_indicadores$Indicador == \"PrecoGasolina\", ]\n\nModelo ANOVA\n\n# Criar variável modelo para armazenar os dados da função aov()\nmodelo &lt;- aov(Valor ~ Continent_Name, data = gas)\n\n# Mostrar informações do modelo\nsummary(modelo)\n\n                Df Sum Sq Mean Sq F value  Pr(&gt;F)    \nContinent_Name   5  5.034  1.0069   9.361 6.7e-08 ***\nResiduals      171 18.394  0.1076                    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n16 observations deleted due to missingness\n\n\nA linha aov(Valor ~ Continent_Name, data = gas) pode ser traduzida como: Realizar uma análise de variância com os valores numéricos da coluna Valor em fator das categorias presentes em Continent_Name, sendo todas essas colunas pertencentes ao dataset gas.\nO resultado da coluna Pr(&gt;F) representa o P-Valor da ANOVA, onde sua interpretação é que:\n\nQuando Pr(&gt;F) &gt; 0.05: Não há diferença entre as médias das categorias no valor escolhido\nQuando Pr(&gt;F) &lt; 0.05: Há diferença significativa entre as médias dos grupos analisados\n\nNo caso o P-Valor da variável modelo é de 6.7e-08, que representa um valor muito abaixo que 0.05, o que pode evidenciar uma diferença clara nas médias entre os grupos.\nUma das desvantagens da ANOVA é a falta de especificidade na análise, não evidenciando quais grupos diferem e qual o grau de diferença."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#testes-post-hoc-pós-teste",
+    "href": "posts/data_report/data_report.html#testes-post-hoc-pós-teste",
+    "title": "Explorando Dados com R",
+    "section": "8.2 Testes Post-Hoc (pós-teste)",
+    "text": "8.2 Testes Post-Hoc (pós-teste)\nO Teste de Tukey (Tukey’s Honestly Significant Difference - HSD) é uma ferramenta essencial que entra em ação após a realização de uma ANOVA que resultou ser estatisticamente significativa (p&lt;0.05).\nAs colunas mais importantes são:\n\ndiff (Diferença): A diferença média entre os dois grupos comparados.\nlwr e upr (Limites do Intervalo de Confiança): Os limites inferior e superior do intervalo de confiança para a diferença.\np adj (p-valor ajustado): Este é o valor que você deve usar para decidir se a diferença é significativa.\n\n\nteste_tukey &lt;- TukeyHSD(modelo)\n\n# Mostrar os resultados\nprint(teste_tukey)\n\n  Tukey multiple comparisons of means\n    95% family-wise confidence level\n\nFit: aov(formula = Valor ~ Continent_Name, data = gas)\n\n$Continent_Name\n                                   diff          lwr          upr     p adj\nAsia-Africa                 -0.17674838 -0.372810112  0.019313350 0.1032280\nEurope-Africa                0.27393720  0.075732143  0.472142253 0.0013866\nNorth America-Africa         0.02682609 -0.226370156  0.280022330 0.9996396\nOceania-Africa               0.20996894 -0.173552102  0.593489991 0.6141519\nSouth America-Africa        -0.05134058 -0.357765203  0.255084043 0.9967065\nEurope-Asia                  0.45068558  0.253525978  0.647845180 0.0000000\nNorth America-Asia           0.20357447 -0.048804219  0.455953155 0.1898326\nOceania-Asia                 0.38671733  0.003735527  0.769699123 0.0463108\nSouth America-Asia           0.12540780 -0.180341629  0.431157232 0.8448253\nNorth America-Europe        -0.24711111 -0.501158436  0.006936214 0.0616820\nOceania-Europe              -0.06396825 -0.448051707  0.320115199 0.9967986\nSouth America-Europe        -0.32527778 -0.632406018 -0.018149538 0.0310231\nOceania-North America        0.18314286 -0.231999519  0.598285233 0.8000941\nSouth America-North America -0.07816667 -0.423349009  0.267015675 0.9866589\nSouth America-Oceania       -0.26130952 -0.710899231  0.188280184 0.5500147"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#plot-de-anova-com-ggstatsplot",
+    "href": "posts/data_report/data_report.html#plot-de-anova-com-ggstatsplot",
+    "title": "Explorando Dados com R",
+    "section": "8.3 Plot de ANOVA com ggstatsplot",
+    "text": "8.3 Plot de ANOVA com ggstatsplot\nO teste TukeyHSD() apresenta a diferença média entre todas as combinações de grupos na análise. Para se ter um plot gráfico com as informações tanto da ANOVA, quanto dos grrupos que tem uma diferença significativa em suas médias, usa-se o pacote ggstatsplot().\n\n# ANOVA com pacote ggstatsplot()\n# install.packages(\"ggstatsplot\")\n\nlibrary(ggstatsplot)\n\nggstatsplot::ggbetweenstats(gas, Continent_Name, Valor,  \ntitle = \"Distribuição do Preço da Gasolina por Continente (USD)\")\n\n\n\n\n\n\n\n\nÉ possível observar a diferença nas médias de cada continente, mas o ponto principal é o P-valor entre os grupos (os continentes). No caso da imagem, dois pares de continentes apresentaram um P-valor menor que 0.05, eles são as comparações dos testes entre cada grupo. Por isso os valores diferentes do que a ANOVA realizada em toda a coluna - como feita na variável modelo apresentada anteriormente.\nCriar subset e plot com a coluna PopulacaoForcaTrabalhoPercentual\n\n# Filtrar dataset\npopForc &lt;- df_longo_indicadores[df_longo_indicadores$Indicador == \"PopulacaoForcaTrabalhoPercentual\", ]\n\n# Criar plot com ggstatsplot()\nggstatsplot::ggbetweenstats(popForc, Continent_Name, Valor,  \ntitle = \"Distribuição da Força de Trabalho na População (%)\")\n\n\n\n\n\n\n\n\nNo caso da variável PopulacaoForcaTrabalhoPercentual, não houve diferença significativa nas médias dos continentes.\nAgora que as variáveis com distribuição normal nos dados foram analisadas com teste ANOVA, deve-se realizar os testes estatísticos não-paramétricos. Onde os dados selecionados não seguem a curva de Laplace-Gauss."
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#teste-de-kruskal-wallis-no-r",
+    "href": "posts/data_report/data_report.html#teste-de-kruskal-wallis-no-r",
+    "title": "Explorando Dados com R",
+    "section": "9.1 Teste de Kruskal-Wallis no R",
+    "text": "9.1 Teste de Kruskal-Wallis no R\nO Teste de Kruskal-Wallis verifica se as distribuições (ou, mais precisamente, as medianas ou as classificações médias) dos grupos são as mesmas.\nHipótese de Teste:\n\nH0​ - (Hipótese Nula): As medianas (ou classificações médias) de todos os grupos são iguais.\nH1​ - (Hipótese Alternativa): Pelo menos uma mediana de grupo é diferente das outras.\n\n\n9.1.1 Código no R\nPara realizar essa análise, a função kruskal.test() no R, com a mesma sintaxe de fórmula da ANOVA (variável_dependente ~ variável_agrupadora).\n\n# Criar novo subset\nexp_vida &lt;- df_longo_indicadores[df_longo_indicadores$Indicador == \"ExpectativaVida\", ]\n\n# 2. Executar o Teste de Kruskal-Wallis\nteste_kruskal &lt;- kruskal.test(Valor ~ Continent_Name, data = exp_vida)\n\n# 3. Imprimir o resultado\nprint(teste_kruskal)\n\n\n    Kruskal-Wallis rank sum test\n\ndata:  Valor by Continent_Name\nKruskal-Wallis chi-squared = 102.94, df = 5, p-value &lt; 2.2e-16\n\n\n\n\n9.1.2 Interpretação dos resultados\nSe o p-valor (p-value) resultante for menor que 0.05, se rejeita a hipótese H0​. Isso significa que há uma diferença estatisticamente significativa entre as distribuições do Preço da Gasolina em pelo menos um continente.\nSe o p-valor for maior ou igual a 0.05, a hipótese H0 não é rejeitada​. Não há evidência de diferença significativa nas medianas"
+  },
+  {
+    "objectID": "posts/data_report/data_report.html#plot-de-dados-não-paramétricos-com-ggstatsplot",
+    "href": "posts/data_report/data_report.html#plot-de-dados-não-paramétricos-com-ggstatsplot",
+    "title": "Explorando Dados com R",
+    "section": "9.2 Plot de dados não-paramétricos com ggstatsplot",
+    "text": "9.2 Plot de dados não-paramétricos com ggstatsplot\nÉ possível realizar a análise de dados não-paramétricos diretamente pela função ggbetweenstats() do pacote ggstatsplot. Para isso utiliza-se o argumento type com a opção “nonparametric” (type=nonparametric).\n\n# Criar plot com ggstatsplot()\nggstatsplot::ggbetweenstats(exp_vida, Continent_Name, Valor,  \ntitle = \"Expectativa de Vida da População em Anos\", \ntype = \"nonparametric\")"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Gabriel Pina",
+    "section": "",
+    "text": "RNA, code, and notes to my future self"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hard Skills:\n- Python, R and Bash\n- Linux, Bioconda and Docker\n- Quarto and Shiny\nKnow-How:\n- Biostatistics, NGS Data and Pipeline Devlopment\n- Genomics and Transcriptomics\n- Dashboards and Biological Databases"
+  },
+  {
+    "objectID": "about.html#experience",
+    "href": "about.html#experience",
+    "title": "About",
+    "section": "",
+    "text": "Hard Skills:\n- Python, R and Bash\n- Linux, Bioconda and Docker\n- Quarto and Shiny\nKnow-How:\n- Biostatistics, NGS Data and Pipeline Devlopment\n- Genomics and Transcriptomics\n- Dashboards and Biological Databases"
+  },
+  {
+    "objectID": "about.html#phd-2025---current-time",
+    "href": "about.html#phd-2025---current-time",
+    "title": "About",
+    "section": "PhD (2025 - Current time)",
+    "text": "PhD (2025 - Current time)\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\n\nWorking with ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. For more info check the GitHub repository."
+  },
+  {
+    "objectID": "about.html#masters-degree-2023---2025",
+    "href": "about.html#masters-degree-2023---2025",
+    "title": "About",
+    "section": "Master’s Degree (2023 - 2025)",
+    "text": "Master’s Degree (2023 - 2025)\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\n\nHas experience and published works with viral genomic survillance in Theobroma cacao public data to screening new viral putative sequences in RNA-Seq libraries in public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq public data to screen expressed genes in different tissues, genotypes and condition (inoculated with P. megakarya) and performs differential gene expression analysis between these groups."
+  },
+  {
+    "objectID": "about.html#bachelors-degree-2018---2022",
+    "href": "about.html#bachelors-degree-2018---2022",
+    "title": "About",
+    "section": "Bachelor’s Degree (2018 - 2022)",
+    "text": "Bachelor’s Degree (2018 - 2022)\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\n\nWorked with chemodiversity of the native populations of Atlantic forest plant Schinus terebinthifolia Raddi."
+  }
+]

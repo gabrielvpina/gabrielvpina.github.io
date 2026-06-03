@@ -1,0 +1,42 @@
+---
+title: "About"
+toc: false
+---
+
+## Experience
+
+**Hard Skills:**  
+- Python, R and Bash   
+- Linux, Bioconda and Docker   
+- Quarto and Shiny
+
+**Know-How:**  
+- Biostatistics, NGS Data and Pipeline Devlopment  
+- Genomics and Transcriptomics  
+- Dashboards and Biological Databases
+
+## PhD (2025 - Current time)
+
+**Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA**
+
+*PhD in Genetics and Molecular Biology*
+
+- Working with *ViralQuest* pipeline, a tool designed to characterize viral sequences in contigs samples. For more info [check the GitHub repository.](https://github.com/gabrielvpina/viralquest)
+
+## Master's Degree (2023 - 2025)
+
+**Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA**
+
+*MSc. in Genetics and Molecular Biology*
+
+- Has experience and published works with viral genomic survillance in *Theobroma cacao* public data to screening new viral putative sequences in RNA-Seq libraries in public databases.
+
+- Worked with identification of PRRs and NLRs genes in *Theobroma cacao* RNA-Seq public data to screen expressed genes in different tissues, genotypes and condition (inoculated with *P. megakarya*) and performs differential gene expression analysis between these groups. 
+
+## Bachelor's Degree (2018 - 2022)
+
+**Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA**
+
+*Bachelor in Interdisciplinary Sciences*
+
+- Worked with chemodiversity of the native populations of Atlantic forest plant *Schinus terebinthifolia* Raddi. 

@@ -1,0 +1,770 @@
+---
+title: Explorando Dados com R
+
+image: "thumb.png"
+categories: [Data-Science, Tutorial, R]
+
+date: 2025-10-30
+date-format: "long"
+
+author: 
+  - name: Gabriel Pina
+    degrees: 
+      - MSc
+    id: gr
+    orcid: 0009-0005-2294-2845
+    email: gvpina.rodrigues@gmail.com
+    affiliation: 
+      - name: Universidade Estadual de Santa Cruz
+        city: Ilhéus
+        state: Bahia
+        url: www.uesc.br
+
+abstract: > 
+  Relatório formal de análise de dados da Disciplina "Ciência de Dados", ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em Docência Gabriel Victor Pina Rodrigues. O presente relatório foi criado utilizando a plataforma Quarto® com linguagem R. Ele possui uma breve introdução dos dados juntamente com seu processamento e o delineamento de hipóteses. Testes estatísticos foram realizados para validar as hipóteses e o pacote ggplot2 foi utilizado para a construção de gráficos.
+keywords:
+  - Data Science
+  - Testes estatísticos
+  - Tidyplots
+
+lightbox: true
+format:
+    html:
+        number-sections: true
+        # theme: flatly
+        # code-fold: true
+        # code-summary: "Mostrar Código"
+        toc: true
+        toc_float: true
+        self-contained: true
+        other-links:
+        - text: Website
+          href: https://gabrielvpina.github.io/myBlog/
+
+lang: pt
+---
+
+# Introdução  
+
+Esse relatório é complementar à Atividade Prática 06, realizada dia 28 de Outubro em sala de aula. O relatório possui o intuito de representar como um relatório de dados formal deve ser estruturado, juntamento com as operações de processamento de dados e códigos no R. 
+
+## Resumo dos dados
+
+Os dados utilizados aqui serão vindos da tabela `world-data-2023.csv`, que representa um compilado abrangente de indicadores globais por país, referente ao ano de 2023.
+
+As principais categorias de dados incluem:
+
+- Demografia e Geografia: Informações sobre População, Densidade (P/Km2), Área Terrestre (Km2), População Urbana, Taxa de Natalidade, Taxa de Fertilidade e Expectativa de Vida.
+
+- Economia e Finanças: Dados vitais como Produto Interno Bruto (PIB), Índice de Preços ao Consumidor (IPC e sua variação), Código da Moeda, Salário Mínimo, Receita Tributária (%), Taxa de Imposto Total, e o Preço da Gasolina.
+
+- Saúde e Educação: Indicadores sociais cruciais, incluindo Mortalidade Infantil e Materna, proporção de Médicos por Mil, Despesas de Saúde do bolso próprio, e as taxas de matrícula bruta nos ensinos primário e superior.
+
+- Meio Ambiente e Recursos: Métricas ambientais como as Emissões de CO2​ e a porcentagem de Terra Agrícola e Área Florestal.
+
+- Força de Trabalho e Segurança: Informações sobre a participação da Força de Trabalho, Taxa de Desemprego e o Tamanho das Forças Armadas.
+
+Em resumo, é um dataset de múltiplas facetas destinado a fornecer um perfil detalhado e estatístico de cada país.
+
+# Importando os dados
+
+Para importar esse dataset, utilizaremos a função `read.csv()` para importar um conjunto de dados diretamente da web. **Atenção:** Esse tipo de importação só é possível se os dados estiverem de forma integral no link. 
+ 
+```{r}
+
+df <- read.csv("https://raw.githubusercontent.com/gabrielvpina/dataScience/refs/heads/main/data/world-data-2023.csv")
+
+```
+
+Utilizando a função `skim` do pacote *skimr* nos dados:
+
+```{r}
+#| fig-width: 12
+
+# importar pacote
+library(skimr)
+# chamar função de resumo
+skim(df)
+```
+
+## Primeiras impressões
+
+Com o resumo dos dados em mãos, pode-se observar que diversas colunas que deveriam ser numéricas estão sendo lidas como strings. As principais causas são:
+
+- Uso de vírgula para representar decimais, enquanto o R utiliza pontos
+- Caracteres associados à porcentagens (ex: 23.12%)
+- Caracteres associados à valores monetários ("$") 
+
+Outra coisa para se atentar são os nomes das colunas, que antes continham espaços e símbolos na tabela original e agora tiveram modificações automáticas devido à função de importação do R.
+
+```{r}
+# nomes vindos da importação
+colnames(df)
+```
+
+Vamos checar agora o total de valores vazios `NAs` no dataset:
+
+```{r}
+# a função table() conta categorias do vetor gerado pela função is.na()
+table(is.na(df))
+```
+
+São 51 itens vazios em um total de 6774 itens totais da tabela, isso representa aproximadamente **0.75%** dos valores totais no nosso dataset.
+
+# Processamento dos dados
+
+Inicialmente vamos corrigir os nomes das colunas e as colunas com porcentagens que estão sendo lidas como `string` devido ao caractere "%".
+
+### Nomes das Colunas 
+
+A função `colnames()` retorna o nome das colunas de um dataset, ela também pode ser utilizada para enviar um novo conjunto de nomes para as colunas de um dataset.
+
+```{r}
+# vamos usar a função colnames(df) para ver as colunas originais e ir inserindo os novos nomes no vertor "novos_nomes"
+novos_nomes <- c(
+    "Pais",
+    "Densidade", # 'Density (P/Km2)'
+    "Abreviacao",
+    "TerraAgriculturaPercentual", # 'Agricultural Land( %)'
+    "AreaTerrestreKm2", # 'Land Area(Km2)'
+    "TamanhoForcasArmadas", # 'Armed Forces size'
+    "TaxaNatalidade", # 'Birth Rate'
+    "CodigoDiscagem", # 'Calling Code'
+    "CapitalCidadePrincipal", # 'Capital/Major City'
+    "EmissoesCO2", # 'Co2-Emissions'
+    "IPC", # 'CPI'
+    "MudancaIPCPercentual", # 'CPI Change (%)'
+    "CodigoMoeda", # 'Currency-Code'
+    "TaxaFertilidade", # 'Fertility Rate'
+    "AreaFlorestadaPercentual", # 'Forested Area (%)'
+    "PrecoGasolina", # 'Gasoline Price'
+    "PIB", # 'GDP'
+    "MatriculaPrimariaBrutaPercentual", # 'Gross primary education enrollment (%)'
+    "MatriculaSuperiorBrutaPercentual", # 'Gross tertiary education enrollment (%)'
+    "MortalidadeInfantil", # 'Infant mortality'
+    "MaiorCidade", # 'Largest city'
+    "ExpectativaVida", # 'Life expectancy'
+    "TaxaMortalidadeMaterna", # 'Maternal mortality ratio'
+    "SalarioMinimo", # 'Minimum wage'
+    "LinguaOficial", # 'Official language'
+    "GastoSaudeProprioBolso", # 'Out of pocket health expenditure'
+    "MedicosPorMil", # 'Physicians per thousand'
+    "Populacao",
+    "PopulacaoForcaTrabalhoPercentual", # 'Population: Labor force participation (%)'
+    "ReceitaFiscalPercentual", # 'Tax revenue (%)'
+    "TaxaImpostoTotal", # 'Total tax rate'
+    "TaxaDesemprego", # 'Unemployment rate'
+    "PopulacaoUrbana", # 'Urban_population'
+    "Latitude",
+    "Longitude"
+)
+
+# Usando a função colnames() para inserir os novos nomes de coluna
+colnames(df) <- novos_nomes
+
+# Mostrar novos nomes
+colnames(df)
+```
+
+## Corrigir colunas lidas como string
+
+### Colunas com porcentagem (%)
+
+Para corrigir as colunas que possuem um caractere `%` em seus itens, utiliza-se uma substituição por um item vazio (""). Para isso emprega-se a função `gsub()` para substituir `"%" -> ""`. Normalmente a função `gsub()` funciona individualmente para cada coluna, por isso deve-se utilizar a função `lapply()` associada a ela, de forma que `gsub()` funcione em um loop para as colunas selecionadas.
+
+```{r}
+# colunas com caractere de porcentagem (%)
+colunas_erradas <- c("TaxaDesemprego", "TaxaImpostoTotal", "ReceitaFiscalPercentual", "PopulacaoForcaTrabalhoPercentual", "GastoSaudeProprioBolso", "MatriculaSuperiorBrutaPercentual", "MatriculaPrimariaBrutaPercentual", "AreaFlorestadaPercentual", "MudancaIPCPercentual", "TerraAgriculturaPercentual")
+
+# aplicando gsub nas colunas escolhidas
+df[colunas_erradas] <- lapply(df[colunas_erradas], gsub, pattern = "%", replacement = "") # trocar porcentagem por vazio
+
+# transformando as colunas em numericas
+df[colunas_erradas] <- lapply(df[colunas_erradas], as.numeric)
+```
+
+### Colunas com cifrão ($)
+
+Com isso resolvemos as colunas com `%`, agora vamos aplicar a mesma lógica para colunas com cifrão `$`. Entretanto 0 cifrão é um metacaractere em expressões regulares que geralmente indica o fim da string. Para tratar o `$` como um caractere literal que você deseja remover, ele precisa ser "escapado" com barras invertidas duplas `\\$`.
+
+```{r}
+#| warning: false
+
+colunas_cifrao <- c("SalarioMinimo", "PrecoGasolina")
+
+df[colunas_cifrao] <- lapply(df[colunas_cifrao], gsub, pattern = "\\$", replacement = "")
+
+df[colunas_cifrao] <- lapply(df[colunas_cifrao], as.numeric)
+```
+
+### Colunas com vírgula
+
+A partir da substituição do cifrão nas colunas, é possível realizar a substituição das vírgulas nas colunas e convertê-las para colunas numéricas. Podemos checar com `head(df)` os nossos dados e selecionar as colunas erradas.
+
+É necessário fazer uma diferença, pois em colunas como `PopulacaoUrbana`, `Populacao`, `PIB` e `EmissoesCO2` existe um padrão diferente de notação, onde as vírgulas estão somente para diferenciar visualmente os milhates das centenas e das dezenas, e não uma representação decimal. 
+
+```{r}
+colunas_cifrao <- c("PIB")
+
+df[colunas_cifrao] <- lapply(df[colunas_cifrao], gsub, pattern = "\\$", replacement = "")
+
+colunas_virg <- c("PopulacaoUrbana", "Populacao", "PIB", "EmissoesCO2", "AreaTerrestreKm2", "Densidade", "TamanhoForcasArmadas")
+
+df[colunas_virg] <- lapply(df[colunas_virg], gsub, pattern = ",", replacement = "")
+
+df[colunas_virg] <- lapply(df[colunas_virg], as.numeric)
+```
+
+Agora todas as colunas estão formatadas para as análises estatísticas e gráficos.
+
+# Análises Univariadas
+
+A partir dos dados já convertidos podemos realizar análises de distribuição dos dados.
+
+### Densidade dos dados
+
+```{r}
+#| warning: false
+#| message: false
+#| fig-height: 8
+#| fig-width: 9
+
+# importar pacotes
+library(tidyverse)
+library(ggplot2)
+library(tidyr)
+library(dplyr)
+
+colunas_para_plotar <- c(
+    "TaxaNatalidade",
+    "TaxaFertilidade",
+    "ExpectativaVida",
+    "TaxaDesemprego",
+    "TerraAgriculturaPercentual",
+    "AreaTerrestreKm2",
+    "EmissoesCO2",
+    "AreaFlorestadaPercentual",
+    "MortalidadeInfantil",
+    "TaxaImpostoTotal",
+    "PrecoGasolina",
+    "PopulacaoUrbana",
+    "SalarioMinimo",
+    "MedicosPorMil",
+    "Populacao",
+    "PopulacaoForcaTrabalhoPercentual",
+    "Densidade",
+    "TamanhoForcasArmadas"
+)
+
+
+df_longo <- df %>%
+    select(all_of(colunas_para_plotar)) %>%
+    pivot_longer(
+        cols = all_of(colunas_para_plotar),
+        names_to = "Variavel",            
+        values_to = "Valor"               
+    )
+
+grafico_densidade <- ggplot(df_longo, aes(x = Valor)) +
+    geom_density(fill = "#2a78b5", alpha = 0.7, color = "white") +
+    # geom_histogram(bins = 30, fill = "#2a78b5", alpha = 0.7, color = "white") +
+    facet_wrap(~ Variavel, scales = "free", ncol = 3) +
+    labs(
+        title = "Distribuição de Indicadores Globais por País (2023)",
+        x = "Valor",
+        y = "Densidade"
+    ) +
+    theme_minimal() +
+    theme(
+        plot.title = element_text(hjust = 0.5, face = "bold"),
+        strip.text = element_text(face = "bold") 
+    )
+
+print(grafico_densidade)
+```
+
+### Teste de Normalidade 
+
+O teste de normalidade é crucial para verificar se os dados numéricos seguem uma distribuição normal, o que é um pré-requisito para muitos testes estatísticos paramétricos (como o Teste t de Student ou ANOVA).
+
+**Teste de Shapiro-Wilk**
+
+O teste de Shapiro-Wilk fornece as seguintes informações sobre um conjunto de dados:
+
+- 1. Os dados **seguem** uma **distribuição normal**.
+- 2. Os dados **não seguem** uma **distribuição normal**.
+
+Entende-se conjunto de dados (no caso analisado), cada coluna com um índice sobre os dados de cada país.
+
+> **Distribuição normal:** É a mais importante distribuição de probabilidade, sendo aplicada em inúmeros fenômenos e utilizada para o desenvolvimento teórico de estatística. É também conhecida como distribuição de *Gauss*, *Laplace* ou *Laplace-Gauss*.
+
+
+**Teste Básico de Shapiro-Wilk no R**
+
+Para uma análise básica do teste de normalidade, deve-se inserir o *vetor* de interesse (uma coluna numérica) com os dados a serem analisados, usa-se a função `shapiro.test()`:
+
+```{r}
+#| warning: false
+test1 <- shapiro.test(df$MortalidadeInfantil)
+test1
+```
+
+A interpretação do p-valor:
+
+- p > 0.05: Os dados podem ser considerados normais. Você pode prosseguir com testes paramétricos (como ANOVA).
+- P < 0.05: Os dados não seguem uma distribuição normal. Você deve considerar transformações ou usar testes não-paramétricos (como Kruskal-Wallis).
+
+### Teste de Shapiro-Wilk para o conjunto de dados
+
+```{r}
+# selecionando o mesmo conjunto de dados dos meus plots
+colunas_para_testar <- c(
+    "TaxaNatalidade",
+    "TaxaFertilidade",
+    "ExpectativaVida",
+    "TaxaDesemprego",
+    "TerraAgriculturaPercentual",
+    "AreaTerrestreKm2",
+    "EmissoesCO2",
+    "AreaFlorestadaPercentual",
+    "MortalidadeInfantil",
+    "TaxaImpostoTotal",
+    "PrecoGasolina",
+    "PopulacaoUrbana",
+    "SalarioMinimo",
+    "MedicosPorMil",
+    "Populacao",
+    "PopulacaoForcaTrabalhoPercentual",
+    "Densidade",
+    "TamanhoForcasArmadas"
+)
+
+# criar dataframe para armazenar os resultados
+resultados_normalidade <- data.frame(
+    Variavel = character(),
+    ShapiroWilk_p_value = numeric(),
+    Interpretacao = character(),
+    stringsAsFactors = FALSE
+)
+
+# realizar o teste de normalidade para todas as colunas selecionadas
+for (col in colunas_para_testar) {
+    # filtra valores não-ausentes (NA) para o teste
+    dados_filtrados <- na.omit(df[[col]])
+
+    if (length(dados_filtrados) < 3) {
+        p_value <- NA
+        interpretacao <- "Amostra muito pequena (N < 3)"
+    } else {
+        teste <- shapiro.test(dados_filtrados)
+        p_value <- teste$p.value
+
+        if (p_value < 0.05) {
+            interpretacao <- "Rejeita H0: Não Normal"
+        } else {
+            interpretacao <- "Não Rejeita H0: Distribuição Normal"
+        }
+    }
+
+    # adicionar o resultado ao dataframe
+    resultados_normalidade[nrow(resultados_normalidade) + 1, ] <- c(col, p_value, interpretacao)
+}
+
+# plotar via pacote gt
+library(gt)
+gt(resultados_normalidade)
+```
+
+A maioria das nossas variáveis **não** segue a distribuição normal. Isso condiz com a natureza dos nossos dados, pois não se trata de dados gerados ao acaso, mas sim dados do mundo real influenciados por políticas internacionais e normas públicas, que podem adicionar todo tipo de viés aos dados absolutos. 
+
+**Exemplo de distribuição que não segue a normalidade:**
+
+```{r}
+#| warning: false
+ggplot(df, aes(x = MortalidadeInfantil))+
+    geom_density(fill = "#b5692a", alpha = 0.7, color = "white") +
+    theme_minimal()
+```
+
+As variáveis `PrecoGasolina` e `PopulacaoForcaTrabalhoPercentual` são as únicas que apresentaram uma distribuição normal no nosso dataset. 
+
+**Exemplo de distribuição normal:**
+
+```{r}
+#| warning: false
+ggplot(df, aes(x = PrecoGasolina))+
+    geom_density(fill = "#2fca49", alpha = 0.7, color = "white") +
+    theme_minimal()
+```
+
+# Correlação das Variáveis
+
+Observa-se que algumas variáveis pertencem à mesma categoria de medida. Pode-se selecionar variáveis com medidas sócio-econômicas e observar se há correlação entre elas no nosso dataset.
+
+### Variáveis Sócio-Econômicas
+
+Colunas que envolvem as informações sobre saúde pública, economia e geografia da populção.
+
+```{r}
+#| warning: false
+#| fig-height: 9
+#| fig-width: 10
+
+colunas_para_correlacionar <- c(
+    "TaxaNatalidade",
+    "TaxaFertilidade",
+    "ExpectativaVida",
+    "TaxaDesemprego",
+    "MortalidadeInfantil",
+    "TaxaImpostoTotal",
+    "SalarioMinimo",
+    "Densidade"
+)
+
+# importar pacote
+library(GGally)
+ 
+# correlatograma
+ggpairs(df, columns = colunas_para_correlacionar, ggplot2::aes(fill="#3d85bc", alpha=0.6)) 
+```
+
+### Variáveis Ambientais
+
+Parâmetros relacionados com as atividades agrícolas e florestais do ambiente.
+
+```{r}
+#| warning: false
+#| fig-height: 9
+#| fig-width: 10
+
+colunas_para_correlacionar_amb <- c(
+    "TerraAgriculturaPercentual",
+    "AreaTerrestreKm2",
+    "EmissoesCO2",
+    "AreaFlorestadaPercentual",
+    "PopulacaoUrbana"
+)
+
+# importar pacote
+library(GGally)
+ 
+# correlatograma
+ggpairs(df, columns = colunas_para_correlacionar_amb, ggplot2::aes(fill="#3d85bc", alpha=0.6)) 
+```
+
+# Testes Estatísticos
+
+Testes estatísticos funcionam baseados na observação de várias amostras pertencentes à um grupo maior. As diferenças nas médias nos diferentes grupos que mostram a significância estatística de um teste. No caso do dataset utilizado, somente temos as amostras, sem nenhum grupo maior para fazer um teste. 
+
+A fim de contornar esse problema, é necessário formar grupos com as amostras. Para isso é necessário importar os dados de países e continentes - a comparação de grandes grupos (continentes) vai permitir a aplicabilidade dos testes.
+
+```{r}
+# importar dataset
+continents <- read.csv("https://gist.githubusercontent.com/stevewithington/20a69c0b6d2ff846ea5d35e5fc47f26c/raw/13716ceb2f22b5643ce5e7039643c86a0e0c6da6/country-and-continent-codes-list-csv.csv")
+
+colnames(continents)
+```
+
+Vamos usar a variável `Two_Letter_Country_Code` para realizar um **JOIN** entre as duas tabelas.
+
+```{r}
+# importar pacote
+library(dplyr)
+
+# vamos unir os itens do continents (direita) para os itens do df (esquerda) - por isso um LEFT JOIN
+df2 <- left_join(df,continents, by=c("Abreviacao"="Two_Letter_Country_Code"))
+
+colnames(df2)
+```
+
+Agora temos ambos os conjuntos no mesmo dataset `df2`.
+
+# Plot com ggplot
+
+A partir desses dados vamos fazer uma análise comparativa entre os continentes.
+
+### Transposição do Dataset
+
+```{r}
+#| warning: false
+
+library(dplyr)
+library(ggplot2)
+library(tidyr)
+
+# Usando o pacote "dplyr" para filtrar os NAs da coluna Continent_Name
+df_limpo <- df2 %>%
+    filter(!is.na(Continent_Name)) %>% # o "!" significa uma negativa   
+    filter(Densidade <= 5000) # Para remover micro estados com pop. grandes
+
+
+#===============================================================================
+# Extender o dataset para que todas as variáveis possam ser acessadas
+
+# Colunas não numéricas
+colunas_id <- c(
+    "Pais",
+    "Abreviacao",
+    "CodigoDiscagem",
+    "CapitalCidadePrincipal",
+    "MaiorCidade",
+    "LinguaOficial",
+    "CodigoMoeda",               
+    "Continent_Name",
+    "Continent_Code",
+    "Country_Name",
+    "Three_Letter_Country_Code",
+    "Country_Number",
+    "Latitude",                 
+    "Longitude"                  
+)
+
+colunas_indicadores_numericos <- df_limpo %>%
+    # Seleciona todas as colunas que NÃO estão na lista de IDs
+    select(-all_of(colunas_id)) %>%
+    # E então seleciona daquelas, apenas as que são NUMÉRICAS (double/integer)
+    select(where(is.numeric)) %>%
+    colnames()
+
+df_limpo$IPC <- as.numeric(df_limpo$IPC)
+
+# função pivot_longer() -> extender o dataset na vertical 
+df_longo_indicadores <- df_limpo %>%
+    pivot_longer(
+        cols = all_of(colunas_indicadores_numericos),
+        names_to = "Indicador",
+        values_to = "Valor",        
+        values_drop_na = FALSE
+    )
+```
+
+Agora tempos o dataframe `df_longo_indicadores`, que é uma transposição do dataset orignial (manteve algumas colunas, mas outras foram transpostas em linhas). Segue a nova estrutura dele:
+
+```{r}
+gt(head(df_longo_indicadores))
+```
+
+Agora é possível selecionar um subset de características e analisar de forma junta em múltiplos boxplots, que vão apresentar as tendências dos continentes.
+
+## Criação dos Plots
+
+## Variáveis Sócio-Econômicas
+
+Colunas que envolvem as informações sobre saúde pública, economia e geografia da populção.
+
+```{r}
+#| warning: false
+#| fig-height: 12
+
+soc_eco <- c(
+    "TaxaNatalidade",
+    "TaxaFertilidade",
+    "ExpectativaVida",
+    "TaxaDesemprego",
+    "MortalidadeInfantil",
+    "TaxaImpostoTotal",
+    "SalarioMinimo",
+    "Densidade"
+)
+
+df_longo_indicadores %>%
+    filter(Indicador %in% soc_eco) %>%
+    ggplot(aes(x = Continent_Name, y = Valor, color = Indicador, fill=Indicador)) +
+    geom_boxplot(alpha=0.6) +
+    geom_jitter( alpha=0.6) +
+    facet_wrap(~ Indicador, scales = "free", ncol = 2) +
+    theme_minimal() +
+    theme(
+        axis.text.x = element_text(angle=45,hjust=1,vjust=1),
+        legend.position = "top"
+    )
+```
+
+## Variáveis Ambientais
+
+Parâmetros relacionados com as atividades agrícolas e florestais do ambiente.
+
+```{r}
+#| warning: false
+#| fig-height: 12
+
+amb <- c(
+    "TerraAgriculturaPercentual",
+    "AreaTerrestreKm2",
+    "EmissoesCO2",
+    "AreaFlorestadaPercentual",
+    "PopulacaoUrbana"
+)
+
+df_longo_indicadores %>%
+    filter(Indicador %in% amb) %>%
+    ggplot(aes(x = Continent_Name, y = Valor, color = Indicador, fill=Indicador)) +
+    geom_boxplot(alpha=0.6) +
+    geom_jitter( alpha=0.6) +
+    facet_wrap(~ Indicador, scales = "free", ncol = 2) +
+    theme_minimal() +
+    theme(
+        axis.text.x = element_text(angle=45,hjust=1,vjust=1),
+        legend.position = "top"
+    )
+```
+
+# Testes estatísticos - Parte II
+
+Anteriormente foi realizado o teste de Shapiro-Wilk, que informa se a distribuição de uma variável (ou dos resíduos de um modelo) desvia significativamente da distribuição normal. Ou seja, se na distribuição de um dos índices por país (População urbana, por exemplo) está seguindo uma distribuição normal em todos os países listados.
+
+O teste de Shapiro-Wilk é também classificado como um **teste de suposição (pré-teste/diagnóstico)**. Ele vai indicar a normalidade dos dados para realização de um **teste primário (teste de hipótese)**, como uma Análise de Variâncias (ANOVA).
+
+Como visto anteriormente, a princípio a ANOVA só pode ser realizada com dados paramétricos (dados com **distribuição normal**).
+
+## Análise de Variância (ANOVA)
+
+A partir dos resultados, seleciona-se as características que possuem uma distribuição seguindo a curva normal (`PrecoGasolina` e `PopulacaoForcaTrabalhoPercentual`).
+
+### Preço da Gasolina
+
+**Modelo básico de ANOVA**
+
+A função `aov()` do pacote básico do R é a responsável por fazer a análise de variância dos dados. Um modelo de ANOVA deve ser feito entre uma variável categórica, como `Continent_Name` (representando um grupo maior dos dados individuais) e uma variável numérica - nesse caso o preço da gasoline (`PrecoGasolina`).
+
+*Criar subset somente com a coluna `PrecoGasolina`*
+
+```{r}
+gas <- df_longo_indicadores[df_longo_indicadores$Indicador == "PrecoGasolina", ]
+```
+
+*Modelo ANOVA*
+
+```{r}
+# Criar variável modelo para armazenar os dados da função aov()
+modelo <- aov(Valor ~ Continent_Name, data = gas)
+
+# Mostrar informações do modelo
+summary(modelo)
+```
+
+A linha `aov(Valor ~ Continent_Name, data = gas)` pode ser traduzida como: Realizar uma análise de variância com os valores numéricos da coluna `Valor` em fator das categorias presentes em `Continent_Name`, sendo todas essas colunas pertencentes ao dataset `gas`.
+
+O resultado da coluna `Pr(>F)` representa o **P-Valor** da ANOVA, onde sua interpretação é que:
+
+1. Quando `Pr(>F)` > 0.05: Não há diferença entre as médias das categorias no valor escolhido
+2. Quando `Pr(>F)` < 0.05: Há diferença significativa entre as médias dos grupos analisados
+
+No caso o P-Valor da variável `modelo` é de **6.7e-08**, que representa um valor muito abaixo que 0.05, o que pode evidenciar uma diferença clara nas médias entre os grupos.
+
+Uma das desvantagens da ANOVA é a falta de especificidade na análise, não evidenciando quais grupos diferem e qual o grau de diferença.
+
+## Testes Post-Hoc (pós-teste)
+
+O Teste de Tukey (Tukey's Honestly Significant Difference - HSD) é uma ferramenta essencial que entra em ação após a realização de uma ANOVA que resultou ser estatisticamente significativa `(p<0.05)`.
+
+As colunas mais importantes são:
+
+1. `diff` (Diferença): A diferença média entre os dois grupos comparados.
+2. `lwr` e `upr` (Limites do Intervalo de Confiança): Os limites inferior e superior do intervalo de confiança para a diferença.
+3. `p adj` (p-valor ajustado): Este é o valor que você deve usar para decidir se a diferença é significativa.
+
+
+```{r}
+teste_tukey <- TukeyHSD(modelo)
+
+# Mostrar os resultados
+print(teste_tukey)
+```
+
+
+
+## Plot de ANOVA com `ggstatsplot`
+
+O teste `TukeyHSD()` apresenta a diferença média entre todas as combinações de grupos na análise. Para se ter um plot gráfico com as informações tanto da ANOVA, quanto dos grrupos que tem uma diferença significativa em suas médias, usa-se o pacote `ggstatsplot()`. 
+
+```{r}
+#| warning: false
+#| fig-height: 7
+
+# ANOVA com pacote ggstatsplot()
+# install.packages("ggstatsplot")
+
+library(ggstatsplot)
+
+ggstatsplot::ggbetweenstats(gas, Continent_Name, Valor,  
+title = "Distribuição do Preço da Gasolina por Continente (USD)")
+
+```
+
+É possível observar a diferença nas médias de cada continente, mas o ponto principal é o *P-valor* entre os grupos (os continentes). No caso da imagem, dois pares de continentes apresentaram um *P-valor* menor que `0.05`, eles são as comparações dos testes entre cada grupo. Por isso os valores diferentes do que a ANOVA realizada em toda a coluna - como feita na variável `modelo` apresentada anteriormente.
+
+*Criar subset  e plot com a coluna `PopulacaoForcaTrabalhoPercentual`*
+
+```{r}
+#| warning: false
+#| fig-height: 7
+ 
+# Filtrar dataset
+popForc <- df_longo_indicadores[df_longo_indicadores$Indicador == "PopulacaoForcaTrabalhoPercentual", ]
+
+# Criar plot com ggstatsplot()
+ggstatsplot::ggbetweenstats(popForc, Continent_Name, Valor,  
+title = "Distribuição da Força de Trabalho na População (%)")
+```
+
+No caso da variável `PopulacaoForcaTrabalhoPercentual`, não houve diferença significativa nas médias dos continentes. 
+
+Agora que as variáveis com distribuição normal nos dados foram analisadas com teste ANOVA, deve-se realizar os testes estatísticos **não-paramétricos**. Onde os dados selecionados não seguem a curva de Laplace-Gauss.
+
+
+# Testes estatísticos não-paramétricos
+
+## Teste de Kruskal-Wallis no R
+
+O Teste de Kruskal-Wallis verifica se as distribuições (ou, mais precisamente, as medianas ou as classificações médias) dos grupos são as mesmas.
+
+**Hipótese de Teste:**
+
+1. H0​ - (Hipótese Nula): As medianas (ou classificações médias) de todos os grupos são iguais.
+2. H1​ - (Hipótese Alternativa): Pelo menos uma mediana de grupo é diferente das outras.
+
+### Código no R
+
+Para realizar essa análise, a função `kruskal.test()` no R, com a mesma sintaxe de fórmula da ANOVA (`variável_dependente` ~ `variável_agrupadora`).
+
+```{r}
+#| warning: false
+
+# Criar novo subset
+exp_vida <- df_longo_indicadores[df_longo_indicadores$Indicador == "ExpectativaVida", ]
+
+# 2. Executar o Teste de Kruskal-Wallis
+teste_kruskal <- kruskal.test(Valor ~ Continent_Name, data = exp_vida)
+
+# 3. Imprimir o resultado
+print(teste_kruskal)
+```
+
+### Interpretação dos resultados
+
+Se o p-valor (`p-value`) resultante for **menor que 0.05, se rejeita a hipótese H0​**. Isso significa que há uma diferença estatisticamente significativa entre as distribuições do Preço da Gasolina em pelo menos um continente.
+
+Se o p-valor for **maior ou igual a 0.05, a hipótese H0 não é rejeitada​**. Não há evidência de diferença significativa nas medianas
+
+## Plot de dados não-paramétricos com ggstatsplot
+
+É possível realizar a análise de dados não-paramétricos diretamente pela função `ggbetweenstats()` do pacote **ggstatsplot**. Para isso utiliza-se o argumento `type` com a opção "nonparametric" (`type=nonparametric`).
+
+```{r}
+#| warning: false
+#| fig-height: 7
+
+# Criar plot com ggstatsplot()
+ggstatsplot::ggbetweenstats(exp_vida, Continent_Name, Valor,  
+title = "Expectativa de Vida da População em Anos", 
+type = "nonparametric")
+```
+
+# Conclusão
+
+Os itens executados nesse relatório enfocam na análise estatística dos dados, passando desde sua obtenção, pré-processamento, limpeza e correlação. Essas etapas anteriores que puderam dar suporte para as análises eestatísticas realizadas.
+
+As análises descritivas também são importantes, mas não foram abordadas nesse relatório, já que foram previamente revisadas.
+
+Em uma situação prática, teríamos uma hipótese geral ou uma pergunta guia para nortear a análise dos dados. Mas os testes executados aqui podem ser de serventia na análise de dados individuais dos discentes.

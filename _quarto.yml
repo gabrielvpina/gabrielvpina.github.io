@@ -1,0 +1,41 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "me.log"
+  navbar:
+    background: "#544054" 
+    right:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - papers.qmd
+      - posts.qmd
+    tools:
+      - icon: github
+        menu:
+          - text: Profile
+            href:  https://github.com/gabrielvpina
+          - text: Source Code
+            href:  https://github.com/gabrielvpina/myBlog
+  page-footer:
+    center: "© Gabriel Pina. 2026."
+    border: false
+
+
+format:
+  html:
+    theme:
+      - darkly
+      - brand
+    css: styles.css
+    toc: true
+    resources: 
+      - fonts/
+
+execute:
+  freeze: true 
+
+
+
