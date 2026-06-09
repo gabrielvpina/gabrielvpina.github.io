@@ -14,123 +14,67 @@
     "text": "Example Project\n\n\n\nPython\n\nBioinformatics\n\n\n\nTemplate project. Replace with your own project details.\n\n\n\nJun 9, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/hello-world/index.html",
-    "href": "posts/hello-world/index.html",
-    "title": "Hello, World — Template Post",
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "/posts",
     "section": "",
-    "text": "Copy this folder: posts/hello-world/ → posts/my-new-post/\nEdit index.qmd — update title, date, description, categories\nReplace thumb.png with your own thumbnail\nWrite your content below the front matter"
+    "text": "Árvore de Decisão - Introdução\n\n\n\nMachine-learning\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nOct 30, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/hello-world/index.html#how-to-create-a-new-post",
-    "href": "posts/hello-world/index.html#how-to-create-a-new-post",
-    "title": "Hello, World — Template Post",
+    "objectID": "posts/decision_tree_basic/dec_tree.html",
+    "href": "posts/decision_tree_basic/dec_tree.html",
+    "title": "Árvore de Decisão - Introdução",
     "section": "",
-    "text": "Copy this folder: posts/hello-world/ → posts/my-new-post/\nEdit index.qmd — update title, date, description, categories\nReplace thumb.png with your own thumbnail\nWrite your content below the front matter"
+    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico.\n\n\n\nExistem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
   },
   {
-    "objectID": "posts/hello-world/index.html#inserting-images",
-    "href": "posts/hello-world/index.html#inserting-images",
-    "title": "Hello, World — Template Post",
-    "section": "Inserting images",
-    "text": "Inserting images\n![Caption](image.png)\n![Caption with lightbox](image.png){.lightbox}"
-  },
-  {
-    "objectID": "posts/hello-world/index.html#inserting-links",
-    "href": "posts/hello-world/index.html#inserting-links",
-    "title": "Hello, World — Template Post",
-    "section": "Inserting links",
-    "text": "Inserting links\n[External link](https://example.com)\n[Another post](../other-post/)"
-  },
-  {
-    "objectID": "posts/hello-world/index.html#code-blocks",
-    "href": "posts/hello-world/index.html#code-blocks",
-    "title": "Hello, World — Template Post",
-    "section": "Code blocks",
-    "text": "Code blocks\nlibrary(ggplot2)\nggplot(mtcars, aes(mpg, hp)) + geom_point()\nimport pandas as pd\ndf = pd.read_csv(\"data.csv\")"
-  },
-  {
-    "objectID": "posts/hello-world/index.html#equations",
-    "href": "posts/hello-world/index.html#equations",
-    "title": "Hello, World — Template Post",
-    "section": "Equations",
-    "text": "Equations\nInline: \\(E = mc^2\\)\nBlock: \\[\n\\frac{\\partial f}{\\partial x} = 2x\n\\]"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html",
-    "href": "posts/seq_sanger/seq_sanger.html",
-    "title": "Processando dados de sequenciamento Sanger",
+    "objectID": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
+    "href": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
+    "title": "Árvore de Decisão - Introdução",
     "section": "",
-    "text": "Editar as sequências contidas nos eletroferogramas anexos, gerando um arquivo word com as sequências Forward e Reverse, e as sequências consenso. Verificar qual espécie no banco de dados do NCBI apresenta maior identidade com cada sequência consenso obtida."
+    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico."
   },
   {
-    "objectID": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
-    "href": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.1 Análise dos arquivos .ab1",
-    "text": "2.1 Análise dos arquivos .ab1\nArquivos .ab1 são dados brutos vindos de sequenciadores tipo Sanger. Esses arquivos possuem a sequência do DNA analisada, um eletroferograma (um gráfico mostrando os picos de fluorenscência para cada base) e uma pontuação de qualidade associada à cada base da sequência.\nNesse caso vamos utilizar o software CutePeaks para realizar o basecalling, a chamada das bases individuais da sequência analisada, para conferir seu pico de fluorescência e sua qualidade.\n\n\n\nExemplo de arquivo .ab1 lido pelo software CutePeaks"
+    "objectID": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
+    "href": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "",
+    "text": "Existem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
   },
   {
-    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
-    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.2 Conversão de .ab1 para .fastq",
-    "text": "2.2 Conversão de .ab1 para .fastq\nComo não será possível trabalhar diretamente com o software BioEdit, será necessário realizar a conversão dos arquivos arquivos .ab1 para o formato .fastq, formato padrão dos dados brutos de sequenciadores de nova gereação, como os da plataforma Illumina.\nPara realizar essa conversão, foi utilizada a biblioteca BioPython (suportada pela linguagem de programação Python) para criar o arquivo abi2fastq.py com o seguinte código:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"abi\")\ncount = SeqIO.write(records, saida, \"fastq\")\n\nO arquivo abi2fastq.py pode ser utilizado para inserir os dois argumentos para a conversão, o nome do aruivo de entrada e o nome do arquivo de saída (que será a conversão). Para rodar o código e realizar a conversão, executa-se no terminal linux:\n\npython abi2fastq.py COC_2F.ab1 COC_2F.fastq\n\nCom isso teremos nosso arquivo .ab1 convertido para formato .fastq, seguindo essa estrutura:\n@13F\nNNNNNNNNGNTGATATCANGAGTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAA\nTTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATT\nAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTT\nGATACACGAGCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTT\nTTAGATGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAAT\nTGGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATT\nGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAG\nCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAA\nTCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCT\nCAACATTTTTTAGGATTAATATCAGATCAAATGGAAATTACGGCACTTATGGATAATACATAGT\nGAAAATGACCAACTCCGTATTAAGACTCATTGTATCAT\n+\n\"$$$$%%%&%&')),)&+%,7)7M&lt;&gt;=@A[[;F&lt;KTU7DJ20PQ62U__L@&lt;JJGPY_G8YTIY\n___WW_Y99H8G=&lt;EL_\\_\\Y\\\\O\\____\\\\_\\\\\\_Y\\\\\\\\__\\\\\\_____\\___\\_\\\\\\\\___\n\\HYWYR__\\RG==LL\\\\_\\\\__W___\\\\___TYY\\RYQAY\\\\Y___W___T\\T_\\\\T\\=IOYEQ\nWOYY\\LTDLCELTSDQQ@YLEYY_____________________W________\\__________\n___\\___\\\\________________W_____________________W_________W______\n___\\__________________________\\\\_____________________RR_________\n_\\______________\\_______________________________________________\n______________________W_______YFF_W_O__O____________PW__________\n_______W__W_________________OO______WPOO_L_[[[[[[[[[U[[[[[[[[[[W\n[QUWUWW[[[LLUW[UIWKPUJG-&&,5H''*130/,3B:,8K/**'.(9(&gt;3@/',-*'+*?(\n4+*2/-J****'*(+(43-*3/*&lt;''/**1(B+2*+)(\nOnde o identificador da sequência é o @13F e a pontuação Phred de qualidade está localizada abaixo do símbolo de +. Em termos práticos esse arquivo informa a sequência e a qualidade das bases, mas diferente do formato anterior, os picos de fluorescência não são informados."
+    "objectID": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
+    "href": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "2.1 Estrutura e funcionamento",
+    "text": "2.1 Estrutura e funcionamento\nO principal objetivo de uma Árvore de Decisão é criar um modelo que prevê o valor-alvo (o target) ao aprender regras de decisão simples inferidas das características dos dados (features).\n\nNó Raiz (Root Node): É o ponto inicial, representa todo o conjunto de dados.\nNós de Decisão Internos (Internal Decision Nodes): Representam testes em um atributo (característica) dos dados. A partir deles, o conjunto de dados é dividido em subconjuntos com base no resultado do teste. Por exemplo, “A idade é maior que 30?”\nRamos (Branches/Edges): São as possíveis respostas ou caminhos resultantes do teste em um nó de decisão.\nNós Folha (Leaf Nodes): Representam os resultados finais ou a decisão. Em um problema de classificação, a folha contém o rótulo da classe (ex: “aprovado” ou “negado”). Em um problema de regressão, contém um valor previsto (ex: a média dos valores daquele subconjunto).\n\n\n\n\nExemplo de Árvore de Decisão\n\n\nNesse exemplo, a árvore de decisão se baseia em informações pessoais dos itens (das pessoas), para a partir delas prever o tipo de carro mais provável para compra."
   },
   {
-    "objectID": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
-    "href": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.3 Checagem da qualidade dos arquivos fastq",
-    "text": "2.3 Checagem da qualidade dos arquivos fastq\nPara checar se a conversão foi realizada corretamente, os arquivos de qualidade das sequências .fastq foram comparadas com a qualidade exibida no eletroferograma e checada no CutePeaks. Essa checagem foi realizada com o software FastQC.\n\n\n\nQualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas\n\n\n\n\n\nChecagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.1 Bloco 1 - Instalando pacotes e importando dados",
+    "text": "3.1 Bloco 1 - Instalando pacotes e importando dados\n\n# 1. Instale os pacotes (rode apenas uma vez)\n# install.packages(\"rpart\")\n# install.packages(\"rpart.plot\")\n\n# 2. Carregue os pacotes\nlibrary(rpart)\nlibrary(rpart.plot)\n\n# 3. Carregue o dataset \"iris\" (que já vem com o R)\n# Vamos chamá-lo de \"dados\" para ficar mais claro\ndados &lt;- iris\n\n# Dê uma olhada rápida nos dados\n# Queremos prever \"Species\" usando as outras 4 colunas\nhead(dados)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
   },
   {
-    "objectID": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
-    "href": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.4 Remoção das bases de baixa qualidade",
-    "text": "2.4 Remoção das bases de baixa qualidade\nPara a remoção das bases de baixa qualidade foi utilizado o software Seqtk, em sua função trimfq, que remove automaticamente as sequências de baixa qualidade (Phred &lt; 15) e bases não definidas.\nAs análises de quailidade também foram realizadas nas sequências após a remoção das bases de baixa qualidade."
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.2 Bloco 2 - Implementando o Modelo",
+    "text": "3.2 Bloco 2 - Implementando o Modelo\n\n# Treina o modelo da árvore\n# method = \"class\" informa ao rpart que é um problema de CLASSIFICAÇÃO\nmodelo_arvore &lt;- rpart(\n  Species ~ ., \n  data = dados, \n  method = \"class\"\n)\n\n# Para ver um resumo simples das regras em texto\nprint(modelo_arvore)\n\nn= 150 \n\nnode), split, n, loss, yval, (yprob)\n      * denotes terminal node\n\n1) root 150 100 setosa (0.33333333 0.33333333 0.33333333)  \n  2) Petal.Length&lt; 2.45 50   0 setosa (1.00000000 0.00000000 0.00000000) *\n  3) Petal.Length&gt;=2.45 100  50 versicolor (0.00000000 0.50000000 0.50000000)  \n    6) Petal.Width&lt; 1.75 54   5 versicolor (0.00000000 0.90740741 0.09259259) *\n    7) Petal.Width&gt;=1.75 46   1 virginica (0.00000000 0.02173913 0.97826087) *"
   },
   {
-    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
-    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.5 Conversão de FASTQ para FASTA",
-    "text": "2.5 Conversão de FASTQ para FASTA\nApós a trimagem das sequências e remoção de bases de não definidas, os arquivos FASTQ foram comvertidos para o formato FASTA através da biblioteca BioPython, seguindo a mesma lógica da conversão dos arquivos .ab1:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"fastq\")\ncount = SeqIO.write(records, saida, \"fasta\")\n\nO arquivo final fastq2fasta.py então é chamado no terminal linux:\n\npython fastq2fasta.py COC_2F.fastq COC_2F.fasta\n\nUm arquivo em formato FASTA se assemelha à um arquivo FASTQ, porém sem os índices de qualidade por base (Phred Score) anexados ao arquivo das sequências. Outra diferença são os símbolos adotados, o header de uma sequência (seu cabeçalho) agora é marcado pelo símbolo &gt; antes do nome da sequência."
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.3 Bloco 3 - Gerando Visualização",
+    "text": "3.3 Bloco 3 - Gerando Visualização\n\n# Criar a visualização da árvore\n# Esta é a \"saída\" do algoritmo!\nrpart.plot(modelo_arvore, main = \"Árvore de Decisão para Prever Espécie de Flor Iris\")"
   },
   {
-    "objectID": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
-    "href": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.6 Obtenção da Sequência Consenso",
-    "text": "2.6 Obtenção da Sequência Consenso\nA sequência conseso é o resultado da união via sobreposição das sequências foward e reverse do sequenciemanto. Para fazer a montegem dessas sequências em uma única final. Para isso pode-se utilizar o software CAP3, que alinha a sobreposição das sequências para estabelecer as contigs finais, uma técnica denominada de Overlap Layout Consensus.\nA entrada para o software CAP3 foi um arquivo FASTA com a junção das duas sequências (foward e reverse) de cada amostra, dessa maneira (Arquivo COC_merge.fasta):\n&gt;13F\nTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAATTATTATAAATGAAAGAG\nGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATTAGGAATTGGATTTT\nTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTTGATACACGAG\nCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGAT\nGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAATTG\nGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAA\nTTGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTA\nTAGGAGCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGAT\nTAATAATTAATCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATT\nTCACTTTTTTTCCTCAACATTTTTTAGGATTAATATC\n&gt;13R\nAAAAAAAAATTGAAATTTTAATCATTTTTGATTAATTATTAATCCTGATAATAAGGGAAA\nTCAATGAATAAATCTTGCAATAATGGAAAATACTGCTCCTATAGATAATACATAGTGAAA\nATGACCAACTACGTAATAAGAATCATGTAAAATAATATCAATTGATGAATTTGATAATAT\nAATTCCTGTTAATCCTCCAATAGTAAATATTAAAATAAATCCAATTGATCATATAAATGA\nAATATTAAAATTTAATTTTGATCCATGATAAGTTGCTAATCATCTAAAAACTTTAATTCC\nTGTAGGAATTGCAATAATTATTGTTGCAGATGTAAAATATGCTCGTGTATCAACATCTAA\nTCCTACAGTAAATATATGATGAGCTCATACAATAAATCCTAAAAATCCAATTCCTAATAT\nAGCATAAATTATTCTTAAATTTCCAAAAATTTCCTTTTTTCCTCTTTCATTTATAATAAT\nTTGTGAAATTAGTCCAAATCCTGGTAAAATTAAAATATAAACTTCTGGATGACCAAAAAA\nTCAAAATAAATGTTGATAA"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
-    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.7 Alinhamento das sequnências",
-    "text": "2.7 Alinhamento das sequnências\nAs sequências finais foram Alinhadas via BLASTn online contra o banco de dados core_nt, uma versão reduzida e clusterizada do banco total de nucleotídeos nt."
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
-    "href": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "3.1 Qualidade das Sequências",
-    "text": "3.1 Qualidade das Sequências\nA qualidade sequências dos arquvos FASTQ foram realizadas com o software FastQC e depois agragadas com o software MultiQC. As qualidades foram medidas antes e depois da remoção de sequências de baixa qualidade.\n\n\n\nQualidade das sequências SEM a remoção das bases de baixa qualidade\n\n\n\n\n\nQualidade das sequências COM a remoção das bases de baixa qualidade"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
-    "href": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "3.2 Sequências montadas",
-    "text": "3.2 Sequências montadas\nAs sequências fasta (foward e reverse) foram unidas em arquivos únicos para cada código e amostra, COC_merged.fasta; MAC_merged.fasta e RBA_merged.fasta. Esses arquivos foram montados utilizando o software CAP3 e tiveram como resultado final os seguintes tamanhos em bases:\n\nTamanho das sequências em nucleotídeos\n\n\nAmostra\nTamanho (nt)\n\n\n\n\nCOC\n615\n\n\nMAC\n607\n\n\nRBA\n617\n\n\n\nComo resultado da montagem, temos o arquivo FASTA final para cada sequência:\n\n&gt;COC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTAATATC\n\n&gt;RBA\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTACGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTCTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGTGATTAATAATTAATCAAAAATGAT\nTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTAACTTTTTTTCCTCAACATT\nTTTTAGG\n\n&gt;MAC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTTAATATCA"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
-    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "3.3 Alinhamento no BLAST",
-    "text": "3.3 Alinhamento no BLAST\nFoi realizado o alinhamento global das sequências em um banco de dados de nucleotídeos (NCBI Core NT), os resultados foram os seguintes:\n\nMelhores resultados do alinhamento no BLAST para cada amostra\n\n\n\n\n\n\n\nAmostra\nMelhor Hit\nOrganismo\n\n\n\n\nCOC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nMAC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nRBA\nH5 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\n\nOs alinhamentos tiveram índices de identidade e cobertura maiores que 99% para os melhores alinhamentos.\nAs sequências aparentam ser derivadas da espécie Partamona rustica, especificamente vindas de subunidades H do gene citocromo c oxidase, sendo uma enzima na cadeia respiratória de transporte de elétrons das células."
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.4 Bloco 4 - Classificando Novo Item",
+    "text": "3.4 Bloco 4 - Classificando Novo Item\n\n# Vamos criar uma \"nova flor\" que medimos no jardim\n# Ela tem pétalas longas e largas.\nnova_flor &lt;- data.frame(\n  Sepal.Length = 5.1,\n  Sepal.Width = 3.2,\n  Petal.Length = 4.8,\n  Petal.Width = 1.9\n)\n\n# Usar o modelo para prever a qual classe (espécie) ela pertence\nprevisao &lt;- predict(modelo_arvore, nova_flor, type = \"class\")\n\n# Mostrar o resultado\nprint(paste(\"A previsão do modelo para a nova flor é:\", previsao))\n\n[1] \"A previsão do modelo para a nova flor é: virginica\"\n\n\nA partir da inserção do novo item, seguindo os mesmos parâmetros do dataset original, é possível classificar um novo item em uma das categorias estabelecidas."
   },
   {
     "objectID": "posts/data_report/data_report.html",
@@ -217,67 +161,81 @@
     "text": "9.2 Plot de dados não-paramétricos com ggstatsplot\nÉ possível realizar a análise de dados não-paramétricos diretamente pela função ggbetweenstats() do pacote ggstatsplot. Para isso utiliza-se o argumento type com a opção “nonparametric” (type=nonparametric).\n\n# Criar plot com ggstatsplot()\nggstatsplot::ggbetweenstats(exp_vida, Continent_Name, Valor,  \ntitle = \"Expectativa de Vida da População em Anos\", \ntype = \"nonparametric\")"
   },
   {
-    "objectID": "posts/decision_tree_basic/dec_tree.html",
-    "href": "posts/decision_tree_basic/dec_tree.html",
-    "title": "Árvore de Decisão - Introdução",
+    "objectID": "posts/seq_sanger/seq_sanger.html",
+    "href": "posts/seq_sanger/seq_sanger.html",
+    "title": "Processando dados de sequenciamento Sanger",
     "section": "",
-    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico.\n\n\n\nExistem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
+    "text": "Editar as sequências contidas nos eletroferogramas anexos, gerando um arquivo word com as sequências Forward e Reverse, e as sequências consenso. Verificar qual espécie no banco de dados do NCBI apresenta maior identidade com cada sequência consenso obtida."
   },
   {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
-    "href": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "",
-    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico."
+    "objectID": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
+    "href": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.1 Análise dos arquivos .ab1",
+    "text": "2.1 Análise dos arquivos .ab1\nArquivos .ab1 são dados brutos vindos de sequenciadores tipo Sanger. Esses arquivos possuem a sequência do DNA analisada, um eletroferograma (um gráfico mostrando os picos de fluorenscência para cada base) e uma pontuação de qualidade associada à cada base da sequência.\nNesse caso vamos utilizar o software CutePeaks para realizar o basecalling, a chamada das bases individuais da sequência analisada, para conferir seu pico de fluorescência e sua qualidade.\n\n\n\nExemplo de arquivo .ab1 lido pelo software CutePeaks"
   },
   {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
-    "href": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "",
-    "text": "Existem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
+    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
+    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.2 Conversão de .ab1 para .fastq",
+    "text": "2.2 Conversão de .ab1 para .fastq\nComo não será possível trabalhar diretamente com o software BioEdit, será necessário realizar a conversão dos arquivos arquivos .ab1 para o formato .fastq, formato padrão dos dados brutos de sequenciadores de nova gereação, como os da plataforma Illumina.\nPara realizar essa conversão, foi utilizada a biblioteca BioPython (suportada pela linguagem de programação Python) para criar o arquivo abi2fastq.py com o seguinte código:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"abi\")\ncount = SeqIO.write(records, saida, \"fastq\")\n\nO arquivo abi2fastq.py pode ser utilizado para inserir os dois argumentos para a conversão, o nome do aruivo de entrada e o nome do arquivo de saída (que será a conversão). Para rodar o código e realizar a conversão, executa-se no terminal linux:\n\npython abi2fastq.py COC_2F.ab1 COC_2F.fastq\n\nCom isso teremos nosso arquivo .ab1 convertido para formato .fastq, seguindo essa estrutura:\n@13F\nNNNNNNNNGNTGATATCANGAGTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAA\nTTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATT\nAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTT\nGATACACGAGCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTT\nTTAGATGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAAT\nTGGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATT\nGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAG\nCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAA\nTCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCT\nCAACATTTTTTAGGATTAATATCAGATCAAATGGAAATTACGGCACTTATGGATAATACATAGT\nGAAAATGACCAACTCCGTATTAAGACTCATTGTATCAT\n+\n\"$$$$%%%&%&')),)&+%,7)7M&lt;&gt;=@A[[;F&lt;KTU7DJ20PQ62U__L@&lt;JJGPY_G8YTIY\n___WW_Y99H8G=&lt;EL_\\_\\Y\\\\O\\____\\\\_\\\\\\_Y\\\\\\\\__\\\\\\_____\\___\\_\\\\\\\\___\n\\HYWYR__\\RG==LL\\\\_\\\\__W___\\\\___TYY\\RYQAY\\\\Y___W___T\\T_\\\\T\\=IOYEQ\nWOYY\\LTDLCELTSDQQ@YLEYY_____________________W________\\__________\n___\\___\\\\________________W_____________________W_________W______\n___\\__________________________\\\\_____________________RR_________\n_\\______________\\_______________________________________________\n______________________W_______YFF_W_O__O____________PW__________\n_______W__W_________________OO______WPOO_L_[[[[[[[[[U[[[[[[[[[[W\n[QUWUWW[[[LLUW[UIWKPUJG-&&,5H''*130/,3B:,8K/**'.(9(&gt;3@/',-*'+*?(\n4+*2/-J****'*(+(43-*3/*&lt;''/**1(B+2*+)(\nOnde o identificador da sequência é o @13F e a pontuação Phred de qualidade está localizada abaixo do símbolo de +. Em termos práticos esse arquivo informa a sequência e a qualidade das bases, mas diferente do formato anterior, os picos de fluorescência não são informados."
   },
   {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
-    "href": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "2.1 Estrutura e funcionamento",
-    "text": "2.1 Estrutura e funcionamento\nO principal objetivo de uma Árvore de Decisão é criar um modelo que prevê o valor-alvo (o target) ao aprender regras de decisão simples inferidas das características dos dados (features).\n\nNó Raiz (Root Node): É o ponto inicial, representa todo o conjunto de dados.\nNós de Decisão Internos (Internal Decision Nodes): Representam testes em um atributo (característica) dos dados. A partir deles, o conjunto de dados é dividido em subconjuntos com base no resultado do teste. Por exemplo, “A idade é maior que 30?”\nRamos (Branches/Edges): São as possíveis respostas ou caminhos resultantes do teste em um nó de decisão.\nNós Folha (Leaf Nodes): Representam os resultados finais ou a decisão. Em um problema de classificação, a folha contém o rótulo da classe (ex: “aprovado” ou “negado”). Em um problema de regressão, contém um valor previsto (ex: a média dos valores daquele subconjunto).\n\n\n\n\nExemplo de Árvore de Decisão\n\n\nNesse exemplo, a árvore de decisão se baseia em informações pessoais dos itens (das pessoas), para a partir delas prever o tipo de carro mais provável para compra."
+    "objectID": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
+    "href": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.3 Checagem da qualidade dos arquivos fastq",
+    "text": "2.3 Checagem da qualidade dos arquivos fastq\nPara checar se a conversão foi realizada corretamente, os arquivos de qualidade das sequências .fastq foram comparadas com a qualidade exibida no eletroferograma e checada no CutePeaks. Essa checagem foi realizada com o software FastQC.\n\n\n\nQualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas\n\n\n\n\n\nChecagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"
   },
   {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
-    "href": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "3.1 Bloco 1 - Instalando pacotes e importando dados",
-    "text": "3.1 Bloco 1 - Instalando pacotes e importando dados\n\n# 1. Instale os pacotes (rode apenas uma vez)\n# install.packages(\"rpart\")\n# install.packages(\"rpart.plot\")\n\n# 2. Carregue os pacotes\nlibrary(rpart)\nlibrary(rpart.plot)\n\n# 3. Carregue o dataset \"iris\" (que já vem com o R)\n# Vamos chamá-lo de \"dados\" para ficar mais claro\ndados &lt;- iris\n\n# Dê uma olhada rápida nos dados\n# Queremos prever \"Species\" usando as outras 4 colunas\nhead(dados)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
+    "objectID": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
+    "href": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.4 Remoção das bases de baixa qualidade",
+    "text": "2.4 Remoção das bases de baixa qualidade\nPara a remoção das bases de baixa qualidade foi utilizado o software Seqtk, em sua função trimfq, que remove automaticamente as sequências de baixa qualidade (Phred &lt; 15) e bases não definidas.\nAs análises de quailidade também foram realizadas nas sequências após a remoção das bases de baixa qualidade."
   },
   {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
-    "href": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "3.2 Bloco 2 - Implementando o Modelo",
-    "text": "3.2 Bloco 2 - Implementando o Modelo\n\n# Treina o modelo da árvore\n# method = \"class\" informa ao rpart que é um problema de CLASSIFICAÇÃO\nmodelo_arvore &lt;- rpart(\n  Species ~ ., \n  data = dados, \n  method = \"class\"\n)\n\n# Para ver um resumo simples das regras em texto\nprint(modelo_arvore)\n\nn= 150 \n\nnode), split, n, loss, yval, (yprob)\n      * denotes terminal node\n\n1) root 150 100 setosa (0.33333333 0.33333333 0.33333333)  \n  2) Petal.Length&lt; 2.45 50   0 setosa (1.00000000 0.00000000 0.00000000) *\n  3) Petal.Length&gt;=2.45 100  50 versicolor (0.00000000 0.50000000 0.50000000)  \n    6) Petal.Width&lt; 1.75 54   5 versicolor (0.00000000 0.90740741 0.09259259) *\n    7) Petal.Width&gt;=1.75 46   1 virginica (0.00000000 0.02173913 0.97826087) *"
+    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
+    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.5 Conversão de FASTQ para FASTA",
+    "text": "2.5 Conversão de FASTQ para FASTA\nApós a trimagem das sequências e remoção de bases de não definidas, os arquivos FASTQ foram comvertidos para o formato FASTA através da biblioteca BioPython, seguindo a mesma lógica da conversão dos arquivos .ab1:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"fastq\")\ncount = SeqIO.write(records, saida, \"fasta\")\n\nO arquivo final fastq2fasta.py então é chamado no terminal linux:\n\npython fastq2fasta.py COC_2F.fastq COC_2F.fasta\n\nUm arquivo em formato FASTA se assemelha à um arquivo FASTQ, porém sem os índices de qualidade por base (Phred Score) anexados ao arquivo das sequências. Outra diferença são os símbolos adotados, o header de uma sequência (seu cabeçalho) agora é marcado pelo símbolo &gt; antes do nome da sequência."
   },
   {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
-    "href": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "3.3 Bloco 3 - Gerando Visualização",
-    "text": "3.3 Bloco 3 - Gerando Visualização\n\n# Criar a visualização da árvore\n# Esta é a \"saída\" do algoritmo!\nrpart.plot(modelo_arvore, main = \"Árvore de Decisão para Prever Espécie de Flor Iris\")"
+    "objectID": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
+    "href": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.6 Obtenção da Sequência Consenso",
+    "text": "2.6 Obtenção da Sequência Consenso\nA sequência conseso é o resultado da união via sobreposição das sequências foward e reverse do sequenciemanto. Para fazer a montegem dessas sequências em uma única final. Para isso pode-se utilizar o software CAP3, que alinha a sobreposição das sequências para estabelecer as contigs finais, uma técnica denominada de Overlap Layout Consensus.\nA entrada para o software CAP3 foi um arquivo FASTA com a junção das duas sequências (foward e reverse) de cada amostra, dessa maneira (Arquivo COC_merge.fasta):\n&gt;13F\nTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAATTATTATAAATGAAAGAG\nGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATTAGGAATTGGATTTT\nTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTTGATACACGAG\nCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGAT\nGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAATTG\nGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAA\nTTGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTA\nTAGGAGCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGAT\nTAATAATTAATCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATT\nTCACTTTTTTTCCTCAACATTTTTTAGGATTAATATC\n&gt;13R\nAAAAAAAAATTGAAATTTTAATCATTTTTGATTAATTATTAATCCTGATAATAAGGGAAA\nTCAATGAATAAATCTTGCAATAATGGAAAATACTGCTCCTATAGATAATACATAGTGAAA\nATGACCAACTACGTAATAAGAATCATGTAAAATAATATCAATTGATGAATTTGATAATAT\nAATTCCTGTTAATCCTCCAATAGTAAATATTAAAATAAATCCAATTGATCATATAAATGA\nAATATTAAAATTTAATTTTGATCCATGATAAGTTGCTAATCATCTAAAAACTTTAATTCC\nTGTAGGAATTGCAATAATTATTGTTGCAGATGTAAAATATGCTCGTGTATCAACATCTAA\nTCCTACAGTAAATATATGATGAGCTCATACAATAAATCCTAAAAATCCAATTCCTAATAT\nAGCATAAATTATTCTTAAATTTCCAAAAATTTCCTTTTTTCCTCTTTCATTTATAATAAT\nTTGTGAAATTAGTCCAAATCCTGGTAAAATTAAAATATAAACTTCTGGATGACCAAAAAA\nTCAAAATAAATGTTGATAA"
   },
   {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
-    "href": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "3.4 Bloco 4 - Classificando Novo Item",
-    "text": "3.4 Bloco 4 - Classificando Novo Item\n\n# Vamos criar uma \"nova flor\" que medimos no jardim\n# Ela tem pétalas longas e largas.\nnova_flor &lt;- data.frame(\n  Sepal.Length = 5.1,\n  Sepal.Width = 3.2,\n  Petal.Length = 4.8,\n  Petal.Width = 1.9\n)\n\n# Usar o modelo para prever a qual classe (espécie) ela pertence\nprevisao &lt;- predict(modelo_arvore, nova_flor, type = \"class\")\n\n# Mostrar o resultado\nprint(paste(\"A previsão do modelo para a nova flor é:\", previsao))\n\n[1] \"A previsão do modelo para a nova flor é: virginica\"\n\n\nA partir da inserção do novo item, seguindo os mesmos parâmetros do dataset original, é possível classificar um novo item em uma das categorias estabelecidas."
+    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
+    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.7 Alinhamento das sequnências",
+    "text": "2.7 Alinhamento das sequnências\nAs sequências finais foram Alinhadas via BLASTn online contra o banco de dados core_nt, uma versão reduzida e clusterizada do banco total de nucleotídeos nt."
   },
   {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "/posts",
-    "section": "",
-    "text": "Hello, World — Template Post\n\n\n\ntemplate\n\n\n\nTemplate for new posts. Copy this folder and edit.\n\n\n\nJun 9, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nÁrvore de Decisão - Introdução\n\n\n\nMachine-learning\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nOct 30, 2025\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
+    "href": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.1 Qualidade das Sequências",
+    "text": "3.1 Qualidade das Sequências\nA qualidade sequências dos arquvos FASTQ foram realizadas com o software FastQC e depois agragadas com o software MultiQC. As qualidades foram medidas antes e depois da remoção de sequências de baixa qualidade.\n\n\n\nQualidade das sequências SEM a remoção das bases de baixa qualidade\n\n\n\n\n\nQualidade das sequências COM a remoção das bases de baixa qualidade"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
+    "href": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.2 Sequências montadas",
+    "text": "3.2 Sequências montadas\nAs sequências fasta (foward e reverse) foram unidas em arquivos únicos para cada código e amostra, COC_merged.fasta; MAC_merged.fasta e RBA_merged.fasta. Esses arquivos foram montados utilizando o software CAP3 e tiveram como resultado final os seguintes tamanhos em bases:\n\nTamanho das sequências em nucleotídeos\n\n\nAmostra\nTamanho (nt)\n\n\n\n\nCOC\n615\n\n\nMAC\n607\n\n\nRBA\n617\n\n\n\nComo resultado da montagem, temos o arquivo FASTA final para cada sequência:\n\n&gt;COC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTAATATC\n\n&gt;RBA\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTACGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTCTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGTGATTAATAATTAATCAAAAATGAT\nTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTAACTTTTTTTCCTCAACATT\nTTTTAGG\n\n&gt;MAC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTTAATATCA"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
+    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.3 Alinhamento no BLAST",
+    "text": "3.3 Alinhamento no BLAST\nFoi realizado o alinhamento global das sequências em um banco de dados de nucleotídeos (NCBI Core NT), os resultados foram os seguintes:\n\nMelhores resultados do alinhamento no BLAST para cada amostra\n\n\n\n\n\n\n\nAmostra\nMelhor Hit\nOrganismo\n\n\n\n\nCOC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nMAC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nRBA\nH5 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\n\nOs alinhamentos tiveram índices de identidade e cobertura maiores que 99% para os melhores alinhamentos.\nAs sequências aparentam ser derivadas da espécie Partamona rustica, especificamente vindas de subunidades H do gene citocromo c oxidase, sendo uma enzima na cadeia respiratória de transporte de elétrons das células."
   },
   {
     "objectID": "projects/example-project/index.html",

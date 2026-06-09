@@ -136,7 +136,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
     radial-gradient(ellipse at 85% 75%, rgba(60,30,60,.12) 0%, transparent 55%),
     repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(255,255,255,.012) 32px),
     repeating-linear-gradient(90deg, transparent, transparent 31px, rgba(255,255,255,.012) 32px);
-  padding: 28px 20px 12px;
+  padding: 36px 28px 20px;
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -147,8 +147,8 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   align-items: start;
-  gap: 20px;
-  max-width: 1060px;
+  gap: 28px;
+  max-width: 1200px;
   margin: 0 auto;
   width: 100%;
 }
@@ -166,11 +166,11 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .window-titlebar {
   background: linear-gradient(90deg, var(--titlebar-1) 0%, var(--titlebar-2) 100%);
   color: #FFFFFF;
-  padding: 4px 6px;
+  padding: 7px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: .76rem;
+  font-size: .95rem;
   font-weight: 700;
   letter-spacing: .5px;
   user-select: none;
@@ -179,16 +179,16 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 .window-title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
-.window-controls { display: flex; gap: 3px; flex-shrink: 0; }
+.window-controls { display: flex; gap: 4px; flex-shrink: 0; }
 
 .window-controls span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 16px; height: 14px;
+  width: 20px; height: 18px;
   background: var(--window-chrome);
   color: var(--text-primary);
-  font-size: 8px; font-weight: 900;
+  font-size: 10px; font-weight: 900;
   border-top:    1px solid var(--bl);
   border-left:   1px solid var(--bl);
   border-right:  1px solid var(--bm);
@@ -210,8 +210,8 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .profile-body-wide {
   display: flex;
   align-items: center;
-  gap: 32px;
-  padding: 28px 36px;
+  gap: 48px;
+  padding: 40px 52px;
   text-align: left;
 }
 
@@ -222,49 +222,49 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   border-left:   2px solid var(--bm);
   border-right:  2px solid var(--bl);
   border-bottom: 2px solid var(--bl);
-  padding: 4px;
+  padding: 5px;
   background: var(--window-chrome);
 }
 
 .profile-photo {
-  width: 130px; height: 130px;
+  width: 190px; height: 190px;
   object-fit: cover; display: block;
 }
 
 .profile-content { flex: 1; min-width: 0; }
 
 .profile-name {
-  font-size: 1.2rem; font-weight: 800;
-  letter-spacing: 1px;
-  margin: 0 0 8px;
+  font-size: 2rem; font-weight: 800;
+  letter-spacing: 2px;
+  margin: 0 0 12px;
   color: var(--text-primary);
 }
 
 .profile-bio {
-  font-size: .78rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  margin: 0 0 20px;
-  line-height: 1.6;
+  margin: 0 0 28px;
+  line-height: 1.7;
 }
 
 .social-row {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 @media (max-width: 600px) {
-  .profile-body-wide { flex-direction: column; text-align: center; padding: 20px; }
+  .profile-body-wide { flex-direction: column; text-align: center; padding: 24px; gap: 24px; }
   .social-row { justify-content: center; }
 }
 
 /* ── Buttons ────────────────────────────────────────────────── */
 .retro-btn {
   display: inline-block;
-  padding: 4px 11px;
+  padding: 8px 20px;
   font-family: var(--font);
-  font-size: .72rem; font-weight: 700;
+  font-size: .9rem; font-weight: 700;
   color: var(--text-primary);
   text-decoration: none !important;
   background: var(--window-chrome);
@@ -299,14 +299,14 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 /* ── System Info Window ─────────────────────────────────────── */
 .sysinfo-window { grid-column: 1; grid-row: 2; }
-.sysinfo-window .window-body { padding: 20px 24px; }
+.sysinfo-window .window-body { padding: 28px 36px; }
 
 .sys-pre {
   font-family: var(--font);
-  font-size: .88rem;
+  font-size: 1.05rem;
   color: var(--text-primary);
   margin: 0; background: transparent;
-  border: none; padding: 0; line-height: 2;
+  border: none; padding: 0; line-height: 2.2;
 }
 
 .sys-key { color: var(--accent); font-weight: 700; }
@@ -314,7 +314,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 .cursor-blink {
   display: inline-block;
-  width: 8px; height: 14px;
+  width: 10px; height: 18px;
   background: var(--accent);
   vertical-align: text-bottom;
   animation: blink 1s step-end infinite;
@@ -330,57 +330,56 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .file-entry {
   display: flex;
   align-items: center;
-  padding: 14px 20px;
-  gap: 12px;
+  padding: 20px 28px;
+  gap: 16px;
   border-bottom: 1px solid var(--window-chrome);
-  font-size: .88rem;
 }
 
 .file-entry:last-child { border-bottom: none; }
-.file-icon { font-size: 16px; flex-shrink: 0; }
+.file-icon { font-size: 22px; flex-shrink: 0; }
 .file-info { flex: 1; min-width: 0; }
 
 .file-name {
   color: var(--text-primary) !important;
   text-decoration: none !important;
   font-weight: 600;
-  font-size: .88rem;
+  font-size: 1.05rem;
   display: block;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
 .file-name:hover { color: var(--accent) !important; }
-.file-meta { color: var(--text-muted) !important; font-size: .76rem; }
+.file-meta { color: var(--text-muted) !important; font-size: .85rem; }
 
 .posts-footer {
-  padding: 12px 20px;
+  padding: 16px 28px;
   border-top: 1px solid var(--window-chrome);
   text-align: right;
 }
 
 /* ── Taskbar ─────────────────────────────────────────────────── */
 .retro-taskbar {
-  max-width: 1060px;
-  margin: 16px auto 0;
+  max-width: 1200px;
+  margin: 24px auto 0;
   width: 100%;
   background: var(--window-chrome);
   border-top:    2px solid var(--bl);
   border-left:   2px solid var(--bl);
   border-right:  2px solid var(--bd);
   border-bottom: 2px solid var(--bd);
-  padding: 4px 8px;
+  padding: 6px 12px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
   font-family: var(--font);
-  font-size: .76rem;
+  font-size: .9rem;
 }
 
 .taskbar-start {
   background: var(--accent);
   color: #FFFFFF;
-  padding: 3px 14px;
-  font-weight: 800; font-size: .76rem;
+  padding: 5px 18px;
+  font-weight: 800; font-size: .9rem;
   border-top:    2px solid var(--accent-light);
   border-left:   2px solid var(--accent-light);
   border-right:  2px solid var(--accent-dark);
@@ -391,12 +390,12 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 .taskbar-tab {
   background: var(--surface-inset);
-  padding: 3px 14px;
+  padding: 5px 18px;
   border-top:    2px solid var(--bm);
   border-left:   2px solid var(--bm);
   border-right:  2px solid var(--bl);
   border-bottom: 2px solid var(--bl);
-  font-weight: 600; font-size: .73rem;
+  font-weight: 600; font-size: .88rem;
 }
 
 .taskbar-spacer { flex: 1; }
@@ -407,7 +406,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   border-left:   2px solid var(--bm);
   border-right:  2px solid var(--bl);
   border-bottom: 2px solid var(--bl);
-  padding: 2px 10px; font-size: .7rem; font-weight: 600;
+  padding: 4px 14px; font-size: .88rem; font-weight: 600;
 }
 
 /* ── Page title heading ─────────────────────────────────────── */
