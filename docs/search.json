@@ -1,17 +1,59 @@
 [
   {
-    "objectID": "papers.html",
-    "href": "papers.html",
-    "title": "Publications",
+    "objectID": "publications/index.html",
+    "href": "publications/index.html",
+    "title": "/publications",
     "section": "",
     "text": "ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis\n\n\n\nVirology\n\nBioinformatics\n\nPipeline\n\n\n\nGabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar\n\n\n\nFeb 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nTracing ancient viral footprints: a comprehensive study of endogenous viral elements in Bombus species\n\n\n\nVirology\n\nArthropod\n\nEVEs\n\n\n\nLucas Barbosa de Amorim Conceição; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; Marco Antônio Costa; Eric Roberto Guimarães Rocha…\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights into miRNAs of the Stingless Bee Melipona quadrifasciata\n\n\n\nArthropod\n\nmiRNAs\n\nGenomics\n\n\n\nDalliane Oliveira Soares; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição;…\n\n\n\nJun 19, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheobroma cacao Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nGabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães…\n\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae\n\n\n\nAntimicrobial Activity\n\n\n\nAndressa Leite Ferraz de Melo, Luana Rossato, Jannaína Velasques, Virginia Lopes de Sousa, Gabriel Victor Pina Rodrigues, Cláudia Andrea Lima Cardoso, Julia Pimentel…\n\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Virome of Cocoa Fermentation-Associated Microorganisms\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nJoão Pedro Nunes Santos; Gabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno…\n\n\n\nJul 31, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Posts",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "/projects",
     "section": "",
-    "text": "Explorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nGabriel Pina\n\n\nOct 30, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nGabriel Pina\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nÁrvore de Decisão - Introdução\n\n\n\nMachine-learning\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nGabriel Pina\n\n\nNov 11, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Example Project\n\n\n\nPython\n\nBioinformatics\n\n\n\nTemplate project. Replace with your own project details.\n\n\n\nJun 9, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hello-world/index.html",
+    "href": "posts/hello-world/index.html",
+    "title": "Hello, World — Template Post",
+    "section": "",
+    "text": "Copy this folder: posts/hello-world/ → posts/my-new-post/\nEdit index.qmd — update title, date, description, categories\nReplace thumb.png with your own thumbnail\nWrite your content below the front matter"
+  },
+  {
+    "objectID": "posts/hello-world/index.html#how-to-create-a-new-post",
+    "href": "posts/hello-world/index.html#how-to-create-a-new-post",
+    "title": "Hello, World — Template Post",
+    "section": "",
+    "text": "Copy this folder: posts/hello-world/ → posts/my-new-post/\nEdit index.qmd — update title, date, description, categories\nReplace thumb.png with your own thumbnail\nWrite your content below the front matter"
+  },
+  {
+    "objectID": "posts/hello-world/index.html#inserting-images",
+    "href": "posts/hello-world/index.html#inserting-images",
+    "title": "Hello, World — Template Post",
+    "section": "Inserting images",
+    "text": "Inserting images\n![Caption](image.png)\n![Caption with lightbox](image.png){.lightbox}"
+  },
+  {
+    "objectID": "posts/hello-world/index.html#inserting-links",
+    "href": "posts/hello-world/index.html#inserting-links",
+    "title": "Hello, World — Template Post",
+    "section": "Inserting links",
+    "text": "Inserting links\n[External link](https://example.com)\n[Another post](../other-post/)"
+  },
+  {
+    "objectID": "posts/hello-world/index.html#code-blocks",
+    "href": "posts/hello-world/index.html#code-blocks",
+    "title": "Hello, World — Template Post",
+    "section": "Code blocks",
+    "text": "Code blocks\nlibrary(ggplot2)\nggplot(mtcars, aes(mpg, hp)) + geom_point()\nimport pandas as pd\ndf = pd.read_csv(\"data.csv\")"
+  },
+  {
+    "objectID": "posts/hello-world/index.html#equations",
+    "href": "posts/hello-world/index.html#equations",
+    "title": "Hello, World — Template Post",
+    "section": "Equations",
+    "text": "Equations\nInline: \\(E = mc^2\\)\nBlock: \\[\n\\frac{\\partial f}{\\partial x} = 2x\n\\]"
   },
   {
     "objectID": "posts/seq_sanger/seq_sanger.html",
@@ -89,62 +131,6 @@
     "title": "Processando dados de sequenciamento Sanger",
     "section": "3.3 Alinhamento no BLAST",
     "text": "3.3 Alinhamento no BLAST\nFoi realizado o alinhamento global das sequências em um banco de dados de nucleotídeos (NCBI Core NT), os resultados foram os seguintes:\n\nMelhores resultados do alinhamento no BLAST para cada amostra\n\n\n\n\n\n\n\nAmostra\nMelhor Hit\nOrganismo\n\n\n\n\nCOC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nMAC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nRBA\nH5 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\n\nOs alinhamentos tiveram índices de identidade e cobertura maiores que 99% para os melhores alinhamentos.\nAs sequências aparentam ser derivadas da espécie Partamona rustica, especificamente vindas de subunidades H do gene citocromo c oxidase, sendo uma enzima na cadeia respiratória de transporte de elétrons das células."
-  },
-  {
-    "objectID": "posts/decision_tree_basic/dec_tree.html",
-    "href": "posts/decision_tree_basic/dec_tree.html",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "",
-    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico.\n\n\n\nExistem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
-  },
-  {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
-    "href": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "",
-    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico."
-  },
-  {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
-    "href": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "",
-    "text": "Existem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
-  },
-  {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
-    "href": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "2.1 Estrutura e funcionamento",
-    "text": "2.1 Estrutura e funcionamento\nO principal objetivo de uma Árvore de Decisão é criar um modelo que prevê o valor-alvo (o target) ao aprender regras de decisão simples inferidas das características dos dados (features).\n\nNó Raiz (Root Node): É o ponto inicial, representa todo o conjunto de dados.\nNós de Decisão Internos (Internal Decision Nodes): Representam testes em um atributo (característica) dos dados. A partir deles, o conjunto de dados é dividido em subconjuntos com base no resultado do teste. Por exemplo, “A idade é maior que 30?”\nRamos (Branches/Edges): São as possíveis respostas ou caminhos resultantes do teste em um nó de decisão.\nNós Folha (Leaf Nodes): Representam os resultados finais ou a decisão. Em um problema de classificação, a folha contém o rótulo da classe (ex: “aprovado” ou “negado”). Em um problema de regressão, contém um valor previsto (ex: a média dos valores daquele subconjunto).\n\n\n\n\nExemplo de Árvore de Decisão\n\n\nNesse exemplo, a árvore de decisão se baseia em informações pessoais dos itens (das pessoas), para a partir delas prever o tipo de carro mais provável para compra."
-  },
-  {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
-    "href": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "3.1 Bloco 1 - Instalando pacotes e importando dados",
-    "text": "3.1 Bloco 1 - Instalando pacotes e importando dados\n\n# 1. Instale os pacotes (rode apenas uma vez)\n# install.packages(\"rpart\")\n# install.packages(\"rpart.plot\")\n\n# 2. Carregue os pacotes\nlibrary(rpart)\nlibrary(rpart.plot)\n\n# 3. Carregue o dataset \"iris\" (que já vem com o R)\n# Vamos chamá-lo de \"dados\" para ficar mais claro\ndados &lt;- iris\n\n# Dê uma olhada rápida nos dados\n# Queremos prever \"Species\" usando as outras 4 colunas\nhead(dados)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
-  },
-  {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
-    "href": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "3.2 Bloco 2 - Implementando o Modelo",
-    "text": "3.2 Bloco 2 - Implementando o Modelo\n\n# Treina o modelo da árvore\n# method = \"class\" informa ao rpart que é um problema de CLASSIFICAÇÃO\nmodelo_arvore &lt;- rpart(\n  Species ~ ., \n  data = dados, \n  method = \"class\"\n)\n\n# Para ver um resumo simples das regras em texto\nprint(modelo_arvore)\n\nn= 150 \n\nnode), split, n, loss, yval, (yprob)\n      * denotes terminal node\n\n1) root 150 100 setosa (0.33333333 0.33333333 0.33333333)  \n  2) Petal.Length&lt; 2.45 50   0 setosa (1.00000000 0.00000000 0.00000000) *\n  3) Petal.Length&gt;=2.45 100  50 versicolor (0.00000000 0.50000000 0.50000000)  \n    6) Petal.Width&lt; 1.75 54   5 versicolor (0.00000000 0.90740741 0.09259259) *\n    7) Petal.Width&gt;=1.75 46   1 virginica (0.00000000 0.02173913 0.97826087) *"
-  },
-  {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
-    "href": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "3.3 Bloco 3 - Gerando Visualização",
-    "text": "3.3 Bloco 3 - Gerando Visualização\n\n# Criar a visualização da árvore\n# Esta é a \"saída\" do algoritmo!\nrpart.plot(modelo_arvore, main = \"Árvore de Decisão para Prever Espécie de Flor Iris\")"
-  },
-  {
-    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
-    "href": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
-    "title": "Árvore de Decisão - Introdução",
-    "section": "3.4 Bloco 4 - Classificando Novo Item",
-    "text": "3.4 Bloco 4 - Classificando Novo Item\n\n# Vamos criar uma \"nova flor\" que medimos no jardim\n# Ela tem pétalas longas e largas.\nnova_flor &lt;- data.frame(\n  Sepal.Length = 5.1,\n  Sepal.Width = 3.2,\n  Petal.Length = 4.8,\n  Petal.Width = 1.9\n)\n\n# Usar o modelo para prever a qual classe (espécie) ela pertence\nprevisao &lt;- predict(modelo_arvore, nova_flor, type = \"class\")\n\n# Mostrar o resultado\nprint(paste(\"A previsão do modelo para a nova flor é:\", previsao))\n\n[1] \"A previsão do modelo para a nova flor é: virginica\"\n\n\nA partir da inserção do novo item, seguindo os mesmos parâmetros do dataset original, é possível classificar um novo item em uma das categorias estabelecidas."
   },
   {
     "objectID": "posts/data_report/data_report.html",
@@ -231,45 +217,136 @@
     "text": "9.2 Plot de dados não-paramétricos com ggstatsplot\nÉ possível realizar a análise de dados não-paramétricos diretamente pela função ggbetweenstats() do pacote ggstatsplot. Para isso utiliza-se o argumento type com a opção “nonparametric” (type=nonparametric).\n\n# Criar plot com ggstatsplot()\nggstatsplot::ggbetweenstats(exp_vida, Continent_Name, Valor,  \ntitle = \"Expectativa de Vida da População em Anos\", \ntype = \"nonparametric\")"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Gabriel Pina",
+    "objectID": "posts/decision_tree_basic/dec_tree.html",
+    "href": "posts/decision_tree_basic/dec_tree.html",
+    "title": "Árvore de Decisão - Introdução",
     "section": "",
-    "text": "RNA, code, and notes to my future self"
+    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico.\n\n\n\nExistem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
+    "href": "posts/decision_tree_basic/dec_tree.html#o-que-é-aprendizado-de-máquina",
+    "title": "Árvore de Decisão - Introdução",
     "section": "",
-    "text": "Hard Skills:\n- Python, R and Bash\n- Linux, Bioconda and Docker\n- Quarto and Shiny\nKnow-How:\n- Biostatistics, NGS Data and Pipeline Devlopment\n- Genomics and Transcriptomics\n- Dashboards and Biological Databases"
+    "text": "Em termos gerais, Machine Learning (ML) ou Aprendizado de Máquina é um subconjunto da Inteligência Artificial (IA) que permite que sistemas de computador aprendam e melhorem automaticamente a partir da experiência (dados), sem serem explicitamente programados para cada tarefa específica.\nO emprego de métodos de Aprendizado de Máquina pode variar desde recomendações de filmes e músicas para usuários baseado em seu histórico de consumo, até na análise de imagens médicas para a detecção de doenças e diagnóstico."
   },
   {
-    "objectID": "about.html#experience",
-    "href": "about.html#experience",
-    "title": "About",
+    "objectID": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
+    "href": "posts/decision_tree_basic/dec_tree.html#tipos-de-aprendizado-de-máquina",
+    "title": "Árvore de Decisão - Introdução",
     "section": "",
-    "text": "Hard Skills:\n- Python, R and Bash\n- Linux, Bioconda and Docker\n- Quarto and Shiny\nKnow-How:\n- Biostatistics, NGS Data and Pipeline Devlopment\n- Genomics and Transcriptomics\n- Dashboards and Biological Databases"
+    "text": "Existem diversas abordagens para o aprendizado, mas as duas categorias principais são:\n\nAprendizado Supervisionado (Supervised Learning): O modelo é treinado usando dados rotulados. É como aprender com um professor que sempre fornece as respostas corretas. Exemplo: Treinar um modelo com imagens já marcadas como “SPAM” ou “NÃO SPAM” para que ele aprenda a filtrar novos e-mails.\nAprendizado Não Supervisionado (Unsupervised Learning): O modelo é treinado usando dados não rotulados e tem que encontrar a estrutura, agrupamentos (clustering) e padrões por conta própria. É como agrupar itens por cor sem que ninguém diga o nome das cores. Exemplo: Agrupar clientes de e-commerce com base em seus hábitos de compra para segmentação de marketing."
   },
   {
-    "objectID": "about.html#phd-2025---current-time",
-    "href": "about.html#phd-2025---current-time",
-    "title": "About",
-    "section": "PhD (2025 - Current time)",
-    "text": "PhD (2025 - Current time)\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\n\nWorking with ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. For more info check the GitHub repository."
+    "objectID": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
+    "href": "posts/decision_tree_basic/dec_tree.html#estrutura-e-funcionamento",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "2.1 Estrutura e funcionamento",
+    "text": "2.1 Estrutura e funcionamento\nO principal objetivo de uma Árvore de Decisão é criar um modelo que prevê o valor-alvo (o target) ao aprender regras de decisão simples inferidas das características dos dados (features).\n\nNó Raiz (Root Node): É o ponto inicial, representa todo o conjunto de dados.\nNós de Decisão Internos (Internal Decision Nodes): Representam testes em um atributo (característica) dos dados. A partir deles, o conjunto de dados é dividido em subconjuntos com base no resultado do teste. Por exemplo, “A idade é maior que 30?”\nRamos (Branches/Edges): São as possíveis respostas ou caminhos resultantes do teste em um nó de decisão.\nNós Folha (Leaf Nodes): Representam os resultados finais ou a decisão. Em um problema de classificação, a folha contém o rótulo da classe (ex: “aprovado” ou “negado”). Em um problema de regressão, contém um valor previsto (ex: a média dos valores daquele subconjunto).\n\n\n\n\nExemplo de Árvore de Decisão\n\n\nNesse exemplo, a árvore de decisão se baseia em informações pessoais dos itens (das pessoas), para a partir delas prever o tipo de carro mais provável para compra."
   },
   {
-    "objectID": "about.html#masters-degree-2023---2025",
-    "href": "about.html#masters-degree-2023---2025",
-    "title": "About",
-    "section": "Master’s Degree (2023 - 2025)",
-    "text": "Master’s Degree (2023 - 2025)\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\n\nHas experience and published works with viral genomic survillance in Theobroma cacao public data to screening new viral putative sequences in RNA-Seq libraries in public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq public data to screen expressed genes in different tissues, genotypes and condition (inoculated with P. megakarya) and performs differential gene expression analysis between these groups."
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-1---instalando-pacotes-e-importando-dados",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.1 Bloco 1 - Instalando pacotes e importando dados",
+    "text": "3.1 Bloco 1 - Instalando pacotes e importando dados\n\n# 1. Instale os pacotes (rode apenas uma vez)\n# install.packages(\"rpart\")\n# install.packages(\"rpart.plot\")\n\n# 2. Carregue os pacotes\nlibrary(rpart)\nlibrary(rpart.plot)\n\n# 3. Carregue o dataset \"iris\" (que já vem com o R)\n# Vamos chamá-lo de \"dados\" para ficar mais claro\ndados &lt;- iris\n\n# Dê uma olhada rápida nos dados\n# Queremos prever \"Species\" usando as outras 4 colunas\nhead(dados)\n\n  Sepal.Length Sepal.Width Petal.Length Petal.Width Species\n1          5.1         3.5          1.4         0.2  setosa\n2          4.9         3.0          1.4         0.2  setosa\n3          4.7         3.2          1.3         0.2  setosa\n4          4.6         3.1          1.5         0.2  setosa\n5          5.0         3.6          1.4         0.2  setosa\n6          5.4         3.9          1.7         0.4  setosa"
   },
   {
-    "objectID": "about.html#bachelors-degree-2018---2022",
-    "href": "about.html#bachelors-degree-2018---2022",
-    "title": "About",
-    "section": "Bachelor’s Degree (2018 - 2022)",
-    "text": "Bachelor’s Degree (2018 - 2022)\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\n\nWorked with chemodiversity of the native populations of Atlantic forest plant Schinus terebinthifolia Raddi."
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-2---implementando-o-modelo",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.2 Bloco 2 - Implementando o Modelo",
+    "text": "3.2 Bloco 2 - Implementando o Modelo\n\n# Treina o modelo da árvore\n# method = \"class\" informa ao rpart que é um problema de CLASSIFICAÇÃO\nmodelo_arvore &lt;- rpart(\n  Species ~ ., \n  data = dados, \n  method = \"class\"\n)\n\n# Para ver um resumo simples das regras em texto\nprint(modelo_arvore)\n\nn= 150 \n\nnode), split, n, loss, yval, (yprob)\n      * denotes terminal node\n\n1) root 150 100 setosa (0.33333333 0.33333333 0.33333333)  \n  2) Petal.Length&lt; 2.45 50   0 setosa (1.00000000 0.00000000 0.00000000) *\n  3) Petal.Length&gt;=2.45 100  50 versicolor (0.00000000 0.50000000 0.50000000)  \n    6) Petal.Width&lt; 1.75 54   5 versicolor (0.00000000 0.90740741 0.09259259) *\n    7) Petal.Width&gt;=1.75 46   1 virginica (0.00000000 0.02173913 0.97826087) *"
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-3---gerando-visualização",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.3 Bloco 3 - Gerando Visualização",
+    "text": "3.3 Bloco 3 - Gerando Visualização\n\n# Criar a visualização da árvore\n# Esta é a \"saída\" do algoritmo!\nrpart.plot(modelo_arvore, main = \"Árvore de Decisão para Prever Espécie de Flor Iris\")"
+  },
+  {
+    "objectID": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
+    "href": "posts/decision_tree_basic/dec_tree.html#bloco-4---classificando-novo-item",
+    "title": "Árvore de Decisão - Introdução",
+    "section": "3.4 Bloco 4 - Classificando Novo Item",
+    "text": "3.4 Bloco 4 - Classificando Novo Item\n\n# Vamos criar uma \"nova flor\" que medimos no jardim\n# Ela tem pétalas longas e largas.\nnova_flor &lt;- data.frame(\n  Sepal.Length = 5.1,\n  Sepal.Width = 3.2,\n  Petal.Length = 4.8,\n  Petal.Width = 1.9\n)\n\n# Usar o modelo para prever a qual classe (espécie) ela pertence\nprevisao &lt;- predict(modelo_arvore, nova_flor, type = \"class\")\n\n# Mostrar o resultado\nprint(paste(\"A previsão do modelo para a nova flor é:\", previsao))\n\n[1] \"A previsão do modelo para a nova flor é: virginica\"\n\n\nA partir da inserção do novo item, seguindo os mesmos parâmetros do dataset original, é possível classificar um novo item em uma das categorias estabelecidas."
+  },
+  {
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "/posts",
+    "section": "",
+    "text": "Hello, World — Template Post\n\n\n\ntemplate\n\n\n\nTemplate for new posts. Copy this folder and edit.\n\n\n\nJun 9, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nÁrvore de Decisão - Introdução\n\n\n\nMachine-learning\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nOct 30, 2025\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/example-project/index.html",
+    "href": "projects/example-project/index.html",
+    "title": "Example Project",
+    "section": "",
+    "text": "● Active\n  ⎈ GitHub"
+  },
+  {
+    "objectID": "projects/example-project/index.html#overview",
+    "href": "projects/example-project/index.html#overview",
+    "title": "Example Project",
+    "section": "Overview",
+    "text": "Overview\nBrief description of what this project does and why it exists.\nGoals:\n\nGoal one\nGoal two\nGoal three"
+  },
+  {
+    "objectID": "projects/example-project/index.html#methods-stack",
+    "href": "projects/example-project/index.html#methods-stack",
+    "title": "Example Project",
+    "section": "Methods / Stack",
+    "text": "Methods / Stack\n\n\n\nComponent\nTool\n\n\n\n\nLanguage\nPython 3.11\n\n\nAnalysis\npandas, numpy\n\n\nViz\nmatplotlib"
+  },
+  {
+    "objectID": "projects/example-project/index.html#results",
+    "href": "projects/example-project/index.html#results",
+    "title": "Example Project",
+    "section": "Results",
+    "text": "Results\nDescribe key outputs, findings, or screenshots here.\n\n\n\nResult figure"
+  },
+  {
+    "objectID": "projects/example-project/index.html#how-to-use",
+    "href": "projects/example-project/index.html#how-to-use",
+    "title": "Example Project",
+    "section": "How to Use",
+    "text": "How to Use\ngit clone https://github.com/gabrielvpina/example\ncd example\npip install -r requirements.txt\npython main.py\n\nTo create a new project: Copy projects/example-project/ → projects/my-project/ Edit index.qmd and replace content."
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "/about",
+    "section": "",
+    "text": "👤 gabriel_pina.txt\n      _□×\n    \n    \n      \n        \n      \n      Gabriel Pina\n      PhD Student · Bioinformatics\n      UESC — Ilhéus, BA, Brazil\n      \n        LinkedIn\n        GitHub\n        ORCID\n        Twitter\n      \n    \n  \n\n  \n  \n    \n      📄 curriculum.md\n      _□×\n    \n    \n\n\nHard Skills:\n\nPython, R and Bash\nLinux, Bioconda and Docker\nQuarto and Shiny\n\nKnow-How:\n\nBiostatistics, NGS Data and Pipeline Development\nGenomics and Transcriptomics\nDashboards and Biological Databases\n\n\n\n\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\nWorking with the ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. Check the GitHub repository.\n\n\n\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\nExperience and published works in viral genomic surveillance of Theobroma cacao public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with P. megakarya.\n\n\n\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
+  },
+  {
+    "objectID": "about/index.html#experience",
+    "href": "about/index.html#experience",
+    "title": "/about",
+    "section": "",
+    "text": "Hard Skills:\n\nPython, R and Bash\nLinux, Bioconda and Docker\nQuarto and Shiny\n\nKnow-How:\n\nBiostatistics, NGS Data and Pipeline Development\nGenomics and Transcriptomics\nDashboards and Biological Databases"
+  },
+  {
+    "objectID": "about/index.html#phd-2025-current",
+    "href": "about/index.html#phd-2025-current",
+    "title": "/about",
+    "section": "",
+    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\nWorking with the ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. Check the GitHub repository."
+  },
+  {
+    "objectID": "about/index.html#masters-degree-2023-2025",
+    "href": "about/index.html#masters-degree-2023-2025",
+    "title": "/about",
+    "section": "",
+    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\nExperience and published works in viral genomic surveillance of Theobroma cacao public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with P. megakarya."
+  },
+  {
+    "objectID": "about/index.html#bachelors-degree-2018-2022",
+    "href": "about/index.html#bachelors-degree-2018-2022",
+    "title": "/about",
+    "section": "",
+    "text": "Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
   }
 ]

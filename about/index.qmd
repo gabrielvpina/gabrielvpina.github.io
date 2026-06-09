@@ -1,0 +1,86 @@
+---
+title: "/about"
+toc: false
+---
+
+```{=html}
+<div class="about-window-grid">
+
+  <!-- Left: profile card -->
+  <div class="retro-window" style="align-self:start;">
+    <div class="window-titlebar">
+      <span class="window-title">👤 gabriel_pina.txt</span>
+      <div class="window-controls"><span>_</span><span>□</span><span>×</span></div>
+    </div>
+    <div class="window-body" style="text-align:center; padding:20px 16px;">
+      <div class="profile-photo-frame" style="display:inline-block;">
+        <img src="../assets/profile.jpg" class="profile-photo"
+             style="width:110px;height:110px;object-fit:cover;" alt="Gabriel Pina" />
+      </div>
+      <p style="font-weight:800;margin:12px 0 2px;letter-spacing:1px;font-size:.95rem;">Gabriel Pina</p>
+      <p style="font-size:.72rem;color:#4A3A4A;margin:0 0 4px;">PhD Student · Bioinformatics</p>
+      <p style="font-size:.7rem;color:#7A6878;margin:0 0 18px;">UESC — Ilhéus, BA, Brazil</p>
+      <div style="display:flex;flex-direction:column;gap:5px;">
+        <a class="retro-btn" href="https://linkedin.com/in/gabriel-rodrigues-008419210/" target="_blank" style="width:100%;text-align:center;">LinkedIn</a>
+        <a class="retro-btn" href="https://github.com/gabrielvpina" target="_blank" style="width:100%;text-align:center;">GitHub</a>
+        <a class="retro-btn" href="https://orcid.org/0009-0005-2294-2845" target="_blank" style="width:100%;text-align:center;">ORCID</a>
+        <a class="retro-btn" href="https://twitter.com/gabrielvpina" target="_blank" style="width:100%;text-align:center;">Twitter</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right: bio content -->
+  <div class="retro-window" style="align-self:start;">
+    <div class="window-titlebar">
+      <span class="window-title">📄 curriculum.md</span>
+      <div class="window-controls"><span>_</span><span>□</span><span>×</span></div>
+    </div>
+    <div class="window-body" style="padding:24px 28px;">
+```
+
+## Experience
+
+**Hard Skills:**
+
+- Python, R and Bash
+- Linux, Bioconda and Docker
+- Quarto and Shiny
+
+**Know-How:**
+
+- Biostatistics, NGS Data and Pipeline Development
+- Genomics and Transcriptomics
+- Dashboards and Biological Databases
+
+## PhD (2025 — current)
+
+**Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA**
+
+*PhD in Genetics and Molecular Biology*
+
+Working with the *ViralQuest* pipeline, a tool designed to characterize viral sequences in contigs samples. [Check the GitHub repository.](https://github.com/gabrielvpina/viralquest)
+
+## Master's Degree (2023 — 2025)
+
+**Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA**
+
+*MSc. in Genetics and Molecular Biology*
+
+Experience and published works in viral genomic surveillance of *Theobroma cacao* public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.
+
+Worked with identification of PRRs and NLRs genes in *Theobroma cacao* RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with *P. megakarya*.
+
+## Bachelor's Degree (2018 — 2022)
+
+**Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA**
+
+*Bachelor in Interdisciplinary Sciences*
+
+Worked with chemodiversity of native Atlantic forest plant populations of *Schinus terebinthifolia* Raddi.
+
+```{=html}
+    </div>
+  </div>
+
+</div>
+```

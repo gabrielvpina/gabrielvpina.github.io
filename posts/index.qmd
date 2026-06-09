@@ -1,0 +1,16 @@
+---
+title: "/posts"
+toc: false
+listing:
+  id: posts-listing
+  type: grid
+  contents: "*/*.qmd"
+  sort: "date desc"
+  categories: true
+  fields: [image, date, title, description, categories]
+  page-size: 9
+  grid-columns: 3
+---
+
+::: {#posts-listing}
+:::

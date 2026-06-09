@@ -1,44 +1,124 @@
 ---
-title: "Gabriel Pina"
-image: profile.jpg
+title: ""
+page-layout: custom
 toc: false
-# listing:
-#   id: posts-listing
-#   categories: false
-#   type: grid
-#   fields: [image, date, title, description, categories, author]
-#   contents:
-#     - "posts/seq_sanger/*.qmd"
-#     - "posts/data_report/*.qmd"
-#     - "posts/decision_tree_basic/*.qmd"
-about:
-  id: hero-heading
-  template: jolla
-  image-shape: round
-  links:
-    - icon: linkedin
-      text: LinkedIn
-      href: https://www.linkedin.com/in/gabriel-rodrigues-008419210/
-      target: _blank
-
-    - icon: twitter
-      text: twitter
-      href: https://twitter.com/gabrielvpina
-      target: _blank
-
-    - icon: github
-      text: Github
-      href: https://github.com/gabrielvpina
-      target: _blank
-
-    - text: "{{< fa brands orcid >}} ORCID"
-      href: https://orcid.org/0009-0005-2294-2845
-      target: _blank
+body-classes: retro-desktop-body
 ---
 
-RNA, code, and notes to my future self
+```{=html}
+<div class="retro-desktop">
+  <div class="desktop-grid">
 
-<!-- ## Posts
+    <!-- ── Profile Window (full width) ──────────────────── -->
+    <div class="retro-window profile-window">
+      <div class="window-titlebar">
+        <span class="window-title">📁 gabriel_pina.exe</span>
+        <div class="window-controls">
+          <span>_</span><span>□</span><span>×</span>
+        </div>
+      </div>
+      <div class="window-body profile-body-wide">
+        <div class="profile-photo-frame">
+          <img src="assets/profile.jpg" class="profile-photo"
+               alt="Gabriel Pina"
+               onerror="this.style.background='#C4BBC4';" />
+        </div>
+        <div class="profile-content">
+          <p class="profile-name">Gabriel Pina</p>
+          <p class="profile-bio">RNA, code, and notes to my future self.<br>
+            Bioinformatician · PhD Student · UESC, Bahia, Brazil</p>
+          <div class="social-row">
+            <a class="retro-btn" href="https://linkedin.com/in/gabriel-rodrigues-008419210/" target="_blank">LinkedIn</a>
+            <a class="retro-btn" href="https://twitter.com/gabrielvpina" target="_blank">Twitter</a>
+            <a class="retro-btn" href="https://github.com/gabrielvpina" target="_blank">GitHub</a>
+            <a class="retro-btn" href="https://orcid.org/0009-0005-2294-2845" target="_blank">ORCID</a>
+            <a class="retro-btn retro-btn-primary" href="about/">→ about me</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-::: {#posts-listing}
-::: -->
+    <!-- ── System Info Window ──────────────────────────── -->
+    <div class="retro-window sysinfo-window">
+      <div class="window-titlebar">
+        <span class="window-title">⚙ system.log</span>
+        <div class="window-controls">
+          <span>_</span><span>□</span><span>×</span>
+        </div>
+      </div>
+      <div class="window-body">
+        <pre class="sys-pre">
+<span class="sys-key">USER    </span><span class="sys-sep"> :: </span><span class="sys-val">gabrielvpina</span>
+<span class="sys-key">STATUS  </span><span class="sys-sep"> :: </span><span class="sys-val">online</span>
+<span class="sys-key">FIELD   </span><span class="sys-sep"> :: </span><span class="sys-val">Bioinformatics / Genetics</span>
+<span class="sys-key">AFFIL   </span><span class="sys-sep"> :: </span><span class="sys-val">UESC — Bahia, BR</span>
+<span class="sys-key">DEGREE  </span><span class="sys-sep"> :: </span><span class="sys-val">MSc. Genetics &amp; Mol. Bio.</span>
+<span class="sys-key">BOOT    </span><span class="sys-sep"> :: </span><span class="sys-val">2026</span>
+<span class="sys-key">KERNEL  </span><span class="sys-sep"> :: </span><span class="sys-val">me.log v1.0.0</span>
+        </pre>
+        <span class="cursor-blink"></span>
+      </div>
+    </div>
+
+    <!-- ── Recent Posts Window ─────────────────────────── -->
+    <div class="retro-window posts-window">
+      <div class="window-titlebar">
+        <span class="window-title">📄 recent.log</span>
+        <div class="window-controls">
+          <span>_</span><span>□</span><span>×</span>
+        </div>
+      </div>
+      <div class="window-body">
+        <ul class="file-list">
+          <li class="file-entry">
+            <span class="file-icon">📄</span>
+            <div class="file-info">
+              <a class="file-name" href="posts/decision_tree_basic/dec_tree.html">Árvore de Decisão — Introdução</a>
+              <span class="file-meta">2025-11-11 · machine-learning, R</span>
+            </div>
+          </li>
+          <li class="file-entry">
+            <span class="file-icon">📄</span>
+            <div class="file-info">
+              <a class="file-name" href="posts/seq_sanger/seq_sanger.html">Processando dados de Sequenciamento Sanger</a>
+              <span class="file-meta">2025-11-05 · bioinformatics</span>
+            </div>
+          </li>
+          <li class="file-entry">
+            <span class="file-icon">📄</span>
+            <div class="file-info">
+              <a class="file-name" href="posts/data_report/data_report.html">Explorando Dados com R</a>
+              <span class="file-meta">2025-10-30 · data-science, R</span>
+            </div>
+          </li>
+        </ul>
+        <div class="posts-footer">
+          <a class="retro-btn retro-btn-primary" href="posts/">→ all posts</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /desktop-grid -->
+
+  <!-- ── Taskbar ─────────────────────────────────────────── -->
+  <div class="retro-taskbar">
+    <button class="taskbar-start">▶ START</button>
+    <div class="taskbar-tab">📝 me.log</div>
+    <div class="taskbar-spacer"></div>
+    <div class="taskbar-clock" id="taskbar-clock">2026</div>
+  </div>
+
+</div><!-- /retro-desktop -->
+
+<script>
+  // Live clock
+  function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    document.getElementById('taskbar-clock').textContent = h + ':' + m;
+  }
+  updateClock();
+  setInterval(updateClock, 30000);
+</script>
+```

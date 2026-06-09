@@ -5,37 +5,34 @@ project:
 website:
   title: "me.log"
   navbar:
-    background: "#544054" 
+    background: "#3A2240"
+    foreground: "#F0ECF5"
     right:
-      - href: index.qmd
-        text: Home
-      - about.qmd
-      - papers.qmd
-      - posts.qmd
+      - href: posts/index.qmd
+        text: "/posts"
+      - href: publications/index.qmd
+        text: "/publications"
+      - href: projects/index.qmd
+        text: "/projects"
+      - href: about/index.qmd
+        text: "/about"
     tools:
       - icon: github
-        menu:
-          - text: Profile
-            href:  https://github.com/gabrielvpina
-          - text: Source Code
-            href:  https://github.com/gabrielvpina/myBlog
+        href: https://github.com/gabrielvpina
   page-footer:
-    center: "© Gabriel Pina. 2026."
+    center: "© gabriel_pina :: 2026"
     border: false
-
+    background: "#3A2240"
+    foreground: "#B08AB0"
 
 format:
   html:
-    theme:
-      - darkly
-      - brand
-    css: styles.css
-    toc: true
-    resources: 
-      - fonts/
+    theme: flatly
+    css: styles/retro.css
+    toc: false
+    fontsize: 0.9em
+    resources:
+      - assets/
 
 execute:
-  freeze: true 
-
-
-
+  freeze: true

@@ -28,19 +28,8 @@ keywords:
   - Tidyplots
 
 lightbox: true
-format:
-    html:
-        number-sections: true
-        # theme: flatly
-        # code-fold: true
-        # code-summary: "Mostrar Código"
-        toc: true
-        toc_float: true
-        self-contained: true
-        other-links:
-        - text: Website
-          href: https://gabrielvpina.github.io/myBlog/
-
+toc: true
+number-sections: true
 lang: pt
 ---
 

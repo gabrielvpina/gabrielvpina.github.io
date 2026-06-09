@@ -1,0 +1,16 @@
+---
+title: "/publications"
+toc: false
+listing:
+  id: papers-listing
+  categories: true
+  contents: papers.yml
+  type: grid
+  sort: "date desc"
+  image-height: 180px
+  grid-columns: 2
+  fields: [image, date, title, description, categories]
+---
+
+::: {#papers-listing}
+:::

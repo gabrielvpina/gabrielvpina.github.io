@@ -1,0 +1,16 @@
+---
+title: "/projects"
+toc: false
+listing:
+  id: projects-listing
+  type: grid
+  contents: "*/index.qmd"
+  sort: "date desc"
+  categories: true
+  fields: [image, date, title, description, categories]
+  page-size: 9
+  grid-columns: 3
+---
+
+::: {#projects-listing}
+:::

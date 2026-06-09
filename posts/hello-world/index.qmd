@@ -1,0 +1,52 @@
+---
+title: "Hello, World — Template Post"
+date: "2026-06-09"
+description: "Template for new posts. Copy this folder and edit."
+categories: [template]
+image: "thumb.png"
+toc: true
+---
+
+## How to create a new post
+
+1. Copy this folder: `posts/hello-world/` → `posts/my-new-post/`
+2. Edit `index.qmd` — update title, date, description, categories
+3. Replace `thumb.png` with your own thumbnail
+4. Write your content below the front matter
+
+---
+
+## Inserting images
+
+```markdown
+![Caption](image.png)
+![Caption with lightbox](image.png){.lightbox}
+```
+
+## Inserting links
+
+```markdown
+[External link](https://example.com)
+[Another post](../other-post/)
+```
+
+## Code blocks
+
+```r
+library(ggplot2)
+ggplot(mtcars, aes(mpg, hp)) + geom_point()
+```
+
+```python
+import pandas as pd
+df = pd.read_csv("data.csv")
+```
+
+## Equations
+
+Inline: $E = mc^2$
+
+Block:
+$$
+\frac{\partial f}{\partial x} = 2x
+$$
