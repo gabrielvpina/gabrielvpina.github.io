@@ -1,5 +1,47 @@
 [
   {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "/projects",
+    "section": "",
+    "text": "ViralQuest Pipeline Refactor\n\n\n\nPython\n\nBioinformatics\n\nGitHub\n\n\n\nThe refactor of a bioinformatics pipeline to viral discovery and analysis.\n\n\n\nJun 9, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about/index.html",
+    "href": "about/index.html",
+    "title": "/about",
+    "section": "",
+    "text": "👤 gabriel_pina.txt\n      _□×\n    \n    \n      \n        \n      \n      Gabriel Pina\n      PhD Student · Bioinformatics\n      UESC — Ilhéus, BA, Brazil\n      \n        LinkedIn\n        GitHub\n        ORCID\n        Twitter\n      \n    \n  \n\n  \n  \n    \n      📄 curriculum.md\n      _□×\n    \n    \n\n\nHard Skills:\n\nPython, R and Bash\nLinux, Bioconda and Docker\nQuarto and Shiny\n\nKnow-How:\n\nBiostatistics, NGS Data and Pipeline Development\nGenomics and Transcriptomics\nDashboards and Biological Databases\n\n\n\n\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\nWorking with the ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. Check the GitHub repository.\n\n\n\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\nExperience and published works in viral genomic surveillance of Theobroma cacao public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with P. megakarya.\n\n\n\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
+  },
+  {
+    "objectID": "about/index.html#experience",
+    "href": "about/index.html#experience",
+    "title": "/about",
+    "section": "",
+    "text": "Hard Skills:\n\nPython, R and Bash\nLinux, Bioconda and Docker\nQuarto and Shiny\n\nKnow-How:\n\nBiostatistics, NGS Data and Pipeline Development\nGenomics and Transcriptomics\nDashboards and Biological Databases"
+  },
+  {
+    "objectID": "about/index.html#phd-2025-current",
+    "href": "about/index.html#phd-2025-current",
+    "title": "/about",
+    "section": "",
+    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\nWorking with the ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. Check the GitHub repository."
+  },
+  {
+    "objectID": "about/index.html#masters-degree-2023-2025",
+    "href": "about/index.html#masters-degree-2023-2025",
+    "title": "/about",
+    "section": "",
+    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\nExperience and published works in viral genomic surveillance of Theobroma cacao public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with P. megakarya."
+  },
+  {
+    "objectID": "about/index.html#bachelors-degree-2018-2022",
+    "href": "about/index.html#bachelors-degree-2018-2022",
+    "title": "/about",
+    "section": "",
+    "text": "Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
+  },
+  {
     "objectID": "publications/index.html",
     "href": "publications/index.html",
     "title": "/publications",
@@ -7,18 +49,81 @@
     "text": "ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis\n\n\n\nVirology\n\nBioinformatics\n\nPipeline\n\n\n\nGabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar\n\n\n\nFeb 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nTracing ancient viral footprints: a comprehensive study of endogenous viral elements in Bombus species\n\n\n\nVirology\n\nArthropod\n\nEVEs\n\n\n\nLucas Barbosa de Amorim Conceição; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; Marco Antônio Costa; Eric Roberto Guimarães Rocha…\n\n\n\nFeb 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nInsights into miRNAs of the Stingless Bee Melipona quadrifasciata\n\n\n\nArthropod\n\nmiRNAs\n\nGenomics\n\n\n\nDalliane Oliveira Soares; Lucas Yago Melo Ferreira; Gabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição;…\n\n\n\nJun 19, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nTheobroma cacao Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nGabriel Victor Pina Rodrigues; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães…\n\n\n\nApr 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPolymyxin combined with Ocimum gratissimum essential oil: one alternative strategy for combating polymyxin-resistant Klebsiella pneumoniae\n\n\n\nAntimicrobial Activity\n\n\n\nAndressa Leite Ferraz de Melo, Luana Rossato, Jannaína Velasques, Virginia Lopes de Sousa, Gabriel Victor Pina Rodrigues, Cláudia Andrea Lima Cardoso, Julia Pimentel…\n\n\n\nSep 18, 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe Virome of Cocoa Fermentation-Associated Microorganisms\n\n\n\nVirology\n\nCocoa\n\nBioinformatics\n\n\n\nJoão Pedro Nunes Santos; Gabriel Victor Pina Rodrigues; Lucas Yago Melo Ferreira; Gabriel Pereira Monteiro; Paula Luize Camargo Fonseca; Ícaro Santos Lopes; Brenno…\n\n\n\nJul 31, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "/projects",
+    "objectID": "posts/seq_sanger/seq_sanger.html",
+    "href": "posts/seq_sanger/seq_sanger.html",
+    "title": "Processando dados de sequenciamento Sanger",
     "section": "",
-    "text": "Example Project\n\n\n\nPython\n\nBioinformatics\n\n\n\nTemplate project. Replace with your own project details.\n\n\n\nJun 9, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "Editar as sequências contidas nos eletroferogramas anexos, gerando um arquivo word com as sequências Forward e Reverse, e as sequências consenso. Verificar qual espécie no banco de dados do NCBI apresenta maior identidade com cada sequência consenso obtida."
   },
   {
-    "objectID": "posts/index.html",
-    "href": "posts/index.html",
-    "title": "/posts",
-    "section": "",
-    "text": "Árvore de Decisão - Introdução\n\n\n\nMachine-learning\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nOct 30, 2025\n\n\n\n\n\n\nNo matching items"
+    "objectID": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
+    "href": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.1 Análise dos arquivos .ab1",
+    "text": "2.1 Análise dos arquivos .ab1\nArquivos .ab1 são dados brutos vindos de sequenciadores tipo Sanger. Esses arquivos possuem a sequência do DNA analisada, um eletroferograma (um gráfico mostrando os picos de fluorenscência para cada base) e uma pontuação de qualidade associada à cada base da sequência.\nNesse caso vamos utilizar o software CutePeaks para realizar o basecalling, a chamada das bases individuais da sequência analisada, para conferir seu pico de fluorescência e sua qualidade.\n\n\n\nExemplo de arquivo .ab1 lido pelo software CutePeaks"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
+    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.2 Conversão de .ab1 para .fastq",
+    "text": "2.2 Conversão de .ab1 para .fastq\nComo não será possível trabalhar diretamente com o software BioEdit, será necessário realizar a conversão dos arquivos arquivos .ab1 para o formato .fastq, formato padrão dos dados brutos de sequenciadores de nova gereação, como os da plataforma Illumina.\nPara realizar essa conversão, foi utilizada a biblioteca BioPython (suportada pela linguagem de programação Python) para criar o arquivo abi2fastq.py com o seguinte código:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"abi\")\ncount = SeqIO.write(records, saida, \"fastq\")\n\nO arquivo abi2fastq.py pode ser utilizado para inserir os dois argumentos para a conversão, o nome do aruivo de entrada e o nome do arquivo de saída (que será a conversão). Para rodar o código e realizar a conversão, executa-se no terminal linux:\n\npython abi2fastq.py COC_2F.ab1 COC_2F.fastq\n\nCom isso teremos nosso arquivo .ab1 convertido para formato .fastq, seguindo essa estrutura:\n@13F\nNNNNNNNNGNTGATATCANGAGTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAA\nTTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATT\nAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTT\nGATACACGAGCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTT\nTTAGATGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAAT\nTGGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATT\nGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAG\nCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAA\nTCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCT\nCAACATTTTTTAGGATTAATATCAGATCAAATGGAAATTACGGCACTTATGGATAATACATAGT\nGAAAATGACCAACTCCGTATTAAGACTCATTGTATCAT\n+\n\"$$$$%%%&%&')),)&+%,7)7M&lt;&gt;=@A[[;F&lt;KTU7DJ20PQ62U__L@&lt;JJGPY_G8YTIY\n___WW_Y99H8G=&lt;EL_\\_\\Y\\\\O\\____\\\\_\\\\\\_Y\\\\\\\\__\\\\\\_____\\___\\_\\\\\\\\___\n\\HYWYR__\\RG==LL\\\\_\\\\__W___\\\\___TYY\\RYQAY\\\\Y___W___T\\T_\\\\T\\=IOYEQ\nWOYY\\LTDLCELTSDQQ@YLEYY_____________________W________\\__________\n___\\___\\\\________________W_____________________W_________W______\n___\\__________________________\\\\_____________________RR_________\n_\\______________\\_______________________________________________\n______________________W_______YFF_W_O__O____________PW__________\n_______W__W_________________OO______WPOO_L_[[[[[[[[[U[[[[[[[[[[W\n[QUWUWW[[[LLUW[UIWKPUJG-&&,5H''*130/,3B:,8K/**'.(9(&gt;3@/',-*'+*?(\n4+*2/-J****'*(+(43-*3/*&lt;''/**1(B+2*+)(\nOnde o identificador da sequência é o @13F e a pontuação Phred de qualidade está localizada abaixo do símbolo de +. Em termos práticos esse arquivo informa a sequência e a qualidade das bases, mas diferente do formato anterior, os picos de fluorescência não são informados."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
+    "href": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.3 Checagem da qualidade dos arquivos fastq",
+    "text": "2.3 Checagem da qualidade dos arquivos fastq\nPara checar se a conversão foi realizada corretamente, os arquivos de qualidade das sequências .fastq foram comparadas com a qualidade exibida no eletroferograma e checada no CutePeaks. Essa checagem foi realizada com o software FastQC.\n\n\n\nQualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas\n\n\n\n\n\nChecagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
+    "href": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.4 Remoção das bases de baixa qualidade",
+    "text": "2.4 Remoção das bases de baixa qualidade\nPara a remoção das bases de baixa qualidade foi utilizado o software Seqtk, em sua função trimfq, que remove automaticamente as sequências de baixa qualidade (Phred &lt; 15) e bases não definidas.\nAs análises de quailidade também foram realizadas nas sequências após a remoção das bases de baixa qualidade."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
+    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.5 Conversão de FASTQ para FASTA",
+    "text": "2.5 Conversão de FASTQ para FASTA\nApós a trimagem das sequências e remoção de bases de não definidas, os arquivos FASTQ foram comvertidos para o formato FASTA através da biblioteca BioPython, seguindo a mesma lógica da conversão dos arquivos .ab1:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"fastq\")\ncount = SeqIO.write(records, saida, \"fasta\")\n\nO arquivo final fastq2fasta.py então é chamado no terminal linux:\n\npython fastq2fasta.py COC_2F.fastq COC_2F.fasta\n\nUm arquivo em formato FASTA se assemelha à um arquivo FASTQ, porém sem os índices de qualidade por base (Phred Score) anexados ao arquivo das sequências. Outra diferença são os símbolos adotados, o header de uma sequência (seu cabeçalho) agora é marcado pelo símbolo &gt; antes do nome da sequência."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
+    "href": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.6 Obtenção da Sequência Consenso",
+    "text": "2.6 Obtenção da Sequência Consenso\nA sequência conseso é o resultado da união via sobreposição das sequências foward e reverse do sequenciemanto. Para fazer a montegem dessas sequências em uma única final. Para isso pode-se utilizar o software CAP3, que alinha a sobreposição das sequências para estabelecer as contigs finais, uma técnica denominada de Overlap Layout Consensus.\nA entrada para o software CAP3 foi um arquivo FASTA com a junção das duas sequências (foward e reverse) de cada amostra, dessa maneira (Arquivo COC_merge.fasta):\n&gt;13F\nTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAATTATTATAAATGAAAGAG\nGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATTAGGAATTGGATTTT\nTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTTGATACACGAG\nCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGAT\nGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAATTG\nGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAA\nTTGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTA\nTAGGAGCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGAT\nTAATAATTAATCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATT\nTCACTTTTTTTCCTCAACATTTTTTAGGATTAATATC\n&gt;13R\nAAAAAAAAATTGAAATTTTAATCATTTTTGATTAATTATTAATCCTGATAATAAGGGAAA\nTCAATGAATAAATCTTGCAATAATGGAAAATACTGCTCCTATAGATAATACATAGTGAAA\nATGACCAACTACGTAATAAGAATCATGTAAAATAATATCAATTGATGAATTTGATAATAT\nAATTCCTGTTAATCCTCCAATAGTAAATATTAAAATAAATCCAATTGATCATATAAATGA\nAATATTAAAATTTAATTTTGATCCATGATAAGTTGCTAATCATCTAAAAACTTTAATTCC\nTGTAGGAATTGCAATAATTATTGTTGCAGATGTAAAATATGCTCGTGTATCAACATCTAA\nTCCTACAGTAAATATATGATGAGCTCATACAATAAATCCTAAAAATCCAATTCCTAATAT\nAGCATAAATTATTCTTAAATTTCCAAAAATTTCCTTTTTTCCTCTTTCATTTATAATAAT\nTTGTGAAATTAGTCCAAATCCTGGTAAAATTAAAATATAAACTTCTGGATGACCAAAAAA\nTCAAAATAAATGTTGATAA"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
+    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "2.7 Alinhamento das sequnências",
+    "text": "2.7 Alinhamento das sequnências\nAs sequências finais foram Alinhadas via BLASTn online contra o banco de dados core_nt, uma versão reduzida e clusterizada do banco total de nucleotídeos nt."
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
+    "href": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.1 Qualidade das Sequências",
+    "text": "3.1 Qualidade das Sequências\nA qualidade sequências dos arquvos FASTQ foram realizadas com o software FastQC e depois agragadas com o software MultiQC. As qualidades foram medidas antes e depois da remoção de sequências de baixa qualidade.\n\n\n\nQualidade das sequências SEM a remoção das bases de baixa qualidade\n\n\n\n\n\nQualidade das sequências COM a remoção das bases de baixa qualidade"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
+    "href": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.2 Sequências montadas",
+    "text": "3.2 Sequências montadas\nAs sequências fasta (foward e reverse) foram unidas em arquivos únicos para cada código e amostra, COC_merged.fasta; MAC_merged.fasta e RBA_merged.fasta. Esses arquivos foram montados utilizando o software CAP3 e tiveram como resultado final os seguintes tamanhos em bases:\n\nTamanho das sequências em nucleotídeos\n\n\nAmostra\nTamanho (nt)\n\n\n\n\nCOC\n615\n\n\nMAC\n607\n\n\nRBA\n617\n\n\n\nComo resultado da montagem, temos o arquivo FASTA final para cada sequência:\n\n&gt;COC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTAATATC\n\n&gt;RBA\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTACGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTCTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGTGATTAATAATTAATCAAAAATGAT\nTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTAACTTTTTTTCCTCAACATT\nTTTTAGG\n\n&gt;MAC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTTAATATCA"
+  },
+  {
+    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
+    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
+    "title": "Processando dados de sequenciamento Sanger",
+    "section": "3.3 Alinhamento no BLAST",
+    "text": "3.3 Alinhamento no BLAST\nFoi realizado o alinhamento global das sequências em um banco de dados de nucleotídeos (NCBI Core NT), os resultados foram os seguintes:\n\nMelhores resultados do alinhamento no BLAST para cada amostra\n\n\n\n\n\n\n\nAmostra\nMelhor Hit\nOrganismo\n\n\n\n\nCOC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nMAC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nRBA\nH5 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\n\nOs alinhamentos tiveram índices de identidade e cobertura maiores que 99% para os melhores alinhamentos.\nAs sequências aparentam ser derivadas da espécie Partamona rustica, especificamente vindas de subunidades H do gene citocromo c oxidase, sendo uma enzima na cadeia respiratória de transporte de elétrons das células."
   },
   {
     "objectID": "posts/decision_tree_basic/dec_tree.html",
@@ -161,150 +266,38 @@
     "text": "9.2 Plot de dados não-paramétricos com ggstatsplot\nÉ possível realizar a análise de dados não-paramétricos diretamente pela função ggbetweenstats() do pacote ggstatsplot. Para isso utiliza-se o argumento type com a opção “nonparametric” (type=nonparametric).\n\n# Criar plot com ggstatsplot()\nggstatsplot::ggbetweenstats(exp_vida, Continent_Name, Valor,  \ntitle = \"Expectativa de Vida da População em Anos\", \ntype = \"nonparametric\")"
   },
   {
-    "objectID": "posts/seq_sanger/seq_sanger.html",
-    "href": "posts/seq_sanger/seq_sanger.html",
-    "title": "Processando dados de sequenciamento Sanger",
+    "objectID": "posts/index.html",
+    "href": "posts/index.html",
+    "title": "/posts",
     "section": "",
-    "text": "Editar as sequências contidas nos eletroferogramas anexos, gerando um arquivo word com as sequências Forward e Reverse, e as sequências consenso. Verificar qual espécie no banco de dados do NCBI apresenta maior identidade com cada sequência consenso obtida."
+    "text": "Árvore de Decisão - Introdução\n\n\n\nMachine-learning\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nOct 30, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
-    "href": "posts/seq_sanger/seq_sanger.html#análise-dos-arquivos-.ab1",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.1 Análise dos arquivos .ab1",
-    "text": "2.1 Análise dos arquivos .ab1\nArquivos .ab1 são dados brutos vindos de sequenciadores tipo Sanger. Esses arquivos possuem a sequência do DNA analisada, um eletroferograma (um gráfico mostrando os picos de fluorenscência para cada base) e uma pontuação de qualidade associada à cada base da sequência.\nNesse caso vamos utilizar o software CutePeaks para realizar o basecalling, a chamada das bases individuais da sequência analisada, para conferir seu pico de fluorescência e sua qualidade.\n\n\n\nExemplo de arquivo .ab1 lido pelo software CutePeaks"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
-    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-.ab1-para-.fastq",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.2 Conversão de .ab1 para .fastq",
-    "text": "2.2 Conversão de .ab1 para .fastq\nComo não será possível trabalhar diretamente com o software BioEdit, será necessário realizar a conversão dos arquivos arquivos .ab1 para o formato .fastq, formato padrão dos dados brutos de sequenciadores de nova gereação, como os da plataforma Illumina.\nPara realizar essa conversão, foi utilizada a biblioteca BioPython (suportada pela linguagem de programação Python) para criar o arquivo abi2fastq.py com o seguinte código:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"abi\")\ncount = SeqIO.write(records, saida, \"fastq\")\n\nO arquivo abi2fastq.py pode ser utilizado para inserir os dois argumentos para a conversão, o nome do aruivo de entrada e o nome do arquivo de saída (que será a conversão). Para rodar o código e realizar a conversão, executa-se no terminal linux:\n\npython abi2fastq.py COC_2F.ab1 COC_2F.fastq\n\nCom isso teremos nosso arquivo .ab1 convertido para formato .fastq, seguindo essa estrutura:\n@13F\nNNNNNNNNGNTGATATCANGAGTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAA\nTTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATT\nAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTT\nGATACACGAGCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTT\nTTAGATGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAAT\nTGGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATT\nGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAG\nCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAA\nTCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCT\nCAACATTTTTTAGGATTAATATCAGATCAAATGGAAATTACGGCACTTATGGATAATACATAGT\nGAAAATGACCAACTCCGTATTAAGACTCATTGTATCAT\n+\n\"$$$$%%%&%&')),)&+%,7)7M&lt;&gt;=@A[[;F&lt;KTU7DJ20PQ62U__L@&lt;JJGPY_G8YTIY\n___WW_Y99H8G=&lt;EL_\\_\\Y\\\\O\\____\\\\_\\\\\\_Y\\\\\\\\__\\\\\\_____\\___\\_\\\\\\\\___\n\\HYWYR__\\RG==LL\\\\_\\\\__W___\\\\___TYY\\RYQAY\\\\Y___W___T\\T_\\\\T\\=IOYEQ\nWOYY\\LTDLCELTSDQQ@YLEYY_____________________W________\\__________\n___\\___\\\\________________W_____________________W_________W______\n___\\__________________________\\\\_____________________RR_________\n_\\______________\\_______________________________________________\n______________________W_______YFF_W_O__O____________PW__________\n_______W__W_________________OO______WPOO_L_[[[[[[[[[U[[[[[[[[[[W\n[QUWUWW[[[LLUW[UIWKPUJG-&&,5H''*130/,3B:,8K/**'.(9(&gt;3@/',-*'+*?(\n4+*2/-J****'*(+(43-*3/*&lt;''/**1(B+2*+)(\nOnde o identificador da sequência é o @13F e a pontuação Phred de qualidade está localizada abaixo do símbolo de +. Em termos práticos esse arquivo informa a sequência e a qualidade das bases, mas diferente do formato anterior, os picos de fluorescência não são informados."
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
-    "href": "posts/seq_sanger/seq_sanger.html#checagem-da-qualidade-dos-arquivos-fastq",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.3 Checagem da qualidade dos arquivos fastq",
-    "text": "2.3 Checagem da qualidade dos arquivos fastq\nPara checar se a conversão foi realizada corretamente, os arquivos de qualidade das sequências .fastq foram comparadas com a qualidade exibida no eletroferograma e checada no CutePeaks. Essa checagem foi realizada com o software FastQC.\n\n\n\nQualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas\n\n\n\n\n\nChecagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
-    "href": "posts/seq_sanger/seq_sanger.html#remoção-das-bases-de-baixa-qualidade",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.4 Remoção das bases de baixa qualidade",
-    "text": "2.4 Remoção das bases de baixa qualidade\nPara a remoção das bases de baixa qualidade foi utilizado o software Seqtk, em sua função trimfq, que remove automaticamente as sequências de baixa qualidade (Phred &lt; 15) e bases não definidas.\nAs análises de quailidade também foram realizadas nas sequências após a remoção das bases de baixa qualidade."
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
-    "href": "posts/seq_sanger/seq_sanger.html#conversão-de-fastq-para-fasta",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.5 Conversão de FASTQ para FASTA",
-    "text": "2.5 Conversão de FASTQ para FASTA\nApós a trimagem das sequências e remoção de bases de não definidas, os arquivos FASTQ foram comvertidos para o formato FASTA através da biblioteca BioPython, seguindo a mesma lógica da conversão dos arquivos .ab1:\n\n# Importando a biblioteca BioPython\nfrom Bio import SeqIO\nimport sys\n\n# Definindo a entrada e a saída dos arquivos\nentrada = sys.argv[1]\nsaida = sys.argv[2]\n\n# Realizando a conversão dos dados\nrecords = SeqIO.parse(entrada, \"fastq\")\ncount = SeqIO.write(records, saida, \"fasta\")\n\nO arquivo final fastq2fasta.py então é chamado no terminal linux:\n\npython fastq2fasta.py COC_2F.fastq COC_2F.fasta\n\nUm arquivo em formato FASTA se assemelha à um arquivo FASTQ, porém sem os índices de qualidade por base (Phred Score) anexados ao arquivo das sequências. Outra diferença são os símbolos adotados, o header de uma sequência (seu cabeçalho) agora é marcado pelo símbolo &gt; antes do nome da sequência."
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
-    "href": "posts/seq_sanger/seq_sanger.html#obtenção-da-sequência-consenso",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.6 Obtenção da Sequência Consenso",
-    "text": "2.6 Obtenção da Sequência Consenso\nA sequência conseso é o resultado da união via sobreposição das sequências foward e reverse do sequenciemanto. Para fazer a montegem dessas sequências em uma única final. Para isso pode-se utilizar o software CAP3, que alinha a sobreposição das sequências para estabelecer as contigs finais, uma técnica denominada de Overlap Layout Consensus.\nA entrada para o software CAP3 foi um arquivo FASTA com a junção das duas sequências (foward e reverse) de cada amostra, dessa maneira (Arquivo COC_merge.fasta):\n&gt;13F\nTTTATATTTTAATTTTACCAGGATTTGGACTAATTTCACAAATTATTATAAATGAAAGAG\nGAAAAAAGGAAATTTTTGGAAATTTAAGAATAATTTATGCTATATTAGGAATTGGATTTT\nTAGGATTTATTGTATGAGCTCATCATATATTTACTGTAGGATTAGATGTTGATACACGAG\nCATATTTTACATCTGCAACAATAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGAT\nGATTAGCAACTTATCATGGATCAAAATTAAATTTTAATATTTCATTTATATGATCAATTG\nGATTTATTTTAATATTTACTATTGGAGGATTAACAGGAATTATATTATCAAATTCATCAA\nTTGATATTATTTTACATGATTCTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTA\nTAGGAGCAGTATTTTCCATTATTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGAT\nTAATAATTAATCAAAAATGATTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATT\nTCACTTTTTTTCCTCAACATTTTTTAGGATTAATATC\n&gt;13R\nAAAAAAAAATTGAAATTTTAATCATTTTTGATTAATTATTAATCCTGATAATAAGGGAAA\nTCAATGAATAAATCTTGCAATAATGGAAAATACTGCTCCTATAGATAATACATAGTGAAA\nATGACCAACTACGTAATAAGAATCATGTAAAATAATATCAATTGATGAATTTGATAATAT\nAATTCCTGTTAATCCTCCAATAGTAAATATTAAAATAAATCCAATTGATCATATAAATGA\nAATATTAAAATTTAATTTTGATCCATGATAAGTTGCTAATCATCTAAAAACTTTAATTCC\nTGTAGGAATTGCAATAATTATTGTTGCAGATGTAAAATATGCTCGTGTATCAACATCTAA\nTCCTACAGTAAATATATGATGAGCTCATACAATAAATCCTAAAAATCCAATTCCTAATAT\nAGCATAAATTATTCTTAAATTTCCAAAAATTTCCTTTTTTCCTCTTTCATTTATAATAAT\nTTGTGAAATTAGTCCAAATCCTGGTAAAATTAAAATATAAACTTCTGGATGACCAAAAAA\nTCAAAATAAATGTTGATAA"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
-    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-das-sequnências",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "2.7 Alinhamento das sequnências",
-    "text": "2.7 Alinhamento das sequnências\nAs sequências finais foram Alinhadas via BLASTn online contra o banco de dados core_nt, uma versão reduzida e clusterizada do banco total de nucleotídeos nt."
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
-    "href": "posts/seq_sanger/seq_sanger.html#qualidade-das-sequências",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "3.1 Qualidade das Sequências",
-    "text": "3.1 Qualidade das Sequências\nA qualidade sequências dos arquvos FASTQ foram realizadas com o software FastQC e depois agragadas com o software MultiQC. As qualidades foram medidas antes e depois da remoção de sequências de baixa qualidade.\n\n\n\nQualidade das sequências SEM a remoção das bases de baixa qualidade\n\n\n\n\n\nQualidade das sequências COM a remoção das bases de baixa qualidade"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
-    "href": "posts/seq_sanger/seq_sanger.html#sequências-montadas",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "3.2 Sequências montadas",
-    "text": "3.2 Sequências montadas\nAs sequências fasta (foward e reverse) foram unidas em arquivos únicos para cada código e amostra, COC_merged.fasta; MAC_merged.fasta e RBA_merged.fasta. Esses arquivos foram montados utilizando o software CAP3 e tiveram como resultado final os seguintes tamanhos em bases:\n\nTamanho das sequências em nucleotídeos\n\n\nAmostra\nTamanho (nt)\n\n\n\n\nCOC\n615\n\n\nMAC\n607\n\n\nRBA\n617\n\n\n\nComo resultado da montagem, temos o arquivo FASTA final para cada sequência:\n\n&gt;COC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTAATATC\n\n&gt;RBA\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTACGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTCTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGTGATTAATAATTAATCAAAAATGAT\nTAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTAACTTTTTTTCCTCAACATT\nTTTTAGG\n\n&gt;MAC\nTTATCAACATTTATTTTGATTTTTTGGTCATCCAGAAGTTTATATTTTAATTTTACCAGG\nATTTGGACTAATTTCACAAATTATTATAAATGAAAGAGGAAAAAAGGAAATTTTTGGAAA\nTTTAAGAATAATTTATGCTATATTAGGAATTGGATTTTTAGGATTTATTGTATGAGCTCA\nTCATATATTTACTGTAGGATTAGATGTTGATACACGAGCATATTTTACATCTGCAACAAT\nAATTATTGCAATTCCTACAGGAATTAAAGTTTTTAGATGATTAGCAACTTATCATGGATC\nAAAATTAAATTTTAATATTTCATTTATATGATCAATTGGATTTATTTTAATATTTACTAT\nTGGAGGATTAACAGGAATTATATTATCAAATTCATCAATTGATATTATTTTACATGATTC\nTTATTACGTAGTTGGTCATTTTCACTATGTATTATCTATAGGAGCAGTATTTTCCATTAT\nTGCAAGATTTATTCATTGATTTCCCTTATTATCAGGATTAATAATTAATCAAAAATGATT\nAAAATTTCAATTTTTTTTTATATTCATTGGAATTAATTTCACTTTTTTTCCTCAACATTT\nTTTAGGATTTAATATCA"
-  },
-  {
-    "objectID": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
-    "href": "posts/seq_sanger/seq_sanger.html#alinhamento-no-blast",
-    "title": "Processando dados de sequenciamento Sanger",
-    "section": "3.3 Alinhamento no BLAST",
-    "text": "3.3 Alinhamento no BLAST\nFoi realizado o alinhamento global das sequências em um banco de dados de nucleotídeos (NCBI Core NT), os resultados foram os seguintes:\n\nMelhores resultados do alinhamento no BLAST para cada amostra\n\n\n\n\n\n\n\nAmostra\nMelhor Hit\nOrganismo\n\n\n\n\nCOC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nMAC\nH2 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\nRBA\nH5 cytochrome c oxidase subunit I (COI) gene\nPartamona rustica\n\n\n\nOs alinhamentos tiveram índices de identidade e cobertura maiores que 99% para os melhores alinhamentos.\nAs sequências aparentam ser derivadas da espécie Partamona rustica, especificamente vindas de subunidades H do gene citocromo c oxidase, sendo uma enzima na cadeia respiratória de transporte de elétrons das células."
-  },
-  {
-    "objectID": "projects/example-project/index.html",
-    "href": "projects/example-project/index.html",
-    "title": "Example Project",
+    "objectID": "projects/viralquest/index.html",
+    "href": "projects/viralquest/index.html",
+    "title": "ViralQuest Pipeline Refactor",
     "section": "",
     "text": "● Active\n  ⎈ GitHub"
   },
   {
-    "objectID": "projects/example-project/index.html#overview",
-    "href": "projects/example-project/index.html#overview",
-    "title": "Example Project",
+    "objectID": "projects/viralquest/index.html#overview",
+    "href": "projects/viralquest/index.html#overview",
+    "title": "ViralQuest Pipeline Refactor",
     "section": "Overview",
-    "text": "Overview\nBrief description of what this project does and why it exists.\nGoals:\n\nGoal one\nGoal two\nGoal three"
+    "text": "Overview\nThe ViralQuest Pipeline already exists and current is in the 2.6.22 version. This project is about the refactoring from zero this pipeline.\nGoals:\n\nImprove the dependencies installation;\nCompatibility with Apple silicon architecture;\nBug fixes (a lot of them);\nRefactor all the visual interface for the final output."
   },
   {
-    "objectID": "projects/example-project/index.html#methods-stack",
-    "href": "projects/example-project/index.html#methods-stack",
-    "title": "Example Project",
+    "objectID": "projects/viralquest/index.html#methods-stack",
+    "href": "projects/viralquest/index.html#methods-stack",
+    "title": "ViralQuest Pipeline Refactor",
     "section": "Methods / Stack",
-    "text": "Methods / Stack\n\n\n\nComponent\nTool\n\n\n\n\nLanguage\nPython 3.11\n\n\nAnalysis\npandas, numpy\n\n\nViz\nmatplotlib"
+    "text": "Methods / Stack\n\n\n\nComponent\nTool\n\n\n\n\nLanguage\nPython&gt;=3.12\n\n\nEnvironment\npixi & pip\n\n\nDatabases\nZenodo & Google Drive"
   },
   {
-    "objectID": "projects/example-project/index.html#results",
-    "href": "projects/example-project/index.html#results",
-    "title": "Example Project",
+    "objectID": "projects/viralquest/index.html#results",
+    "href": "projects/viralquest/index.html#results",
+    "title": "ViralQuest Pipeline Refactor",
     "section": "Results",
-    "text": "Results\nDescribe key outputs, findings, or screenshots here.\n\n\n\nResult figure"
-  },
-  {
-    "objectID": "projects/example-project/index.html#how-to-use",
-    "href": "projects/example-project/index.html#how-to-use",
-    "title": "Example Project",
-    "section": "How to Use",
-    "text": "How to Use\ngit clone https://github.com/gabrielvpina/example\ncd example\npip install -r requirements.txt\npython main.py\n\nTo create a new project: Copy projects/example-project/ → projects/my-project/ Edit index.qmd and replace content."
-  },
-  {
-    "objectID": "about/index.html",
-    "href": "about/index.html",
-    "title": "/about",
-    "section": "",
-    "text": "👤 gabriel_pina.txt\n      _□×\n    \n    \n      \n        \n      \n      Gabriel Pina\n      PhD Student · Bioinformatics\n      UESC — Ilhéus, BA, Brazil\n      \n        LinkedIn\n        GitHub\n        ORCID\n        Twitter\n      \n    \n  \n\n  \n  \n    \n      📄 curriculum.md\n      _□×\n    \n    \n\n\nHard Skills:\n\nPython, R and Bash\nLinux, Bioconda and Docker\nQuarto and Shiny\n\nKnow-How:\n\nBiostatistics, NGS Data and Pipeline Development\nGenomics and Transcriptomics\nDashboards and Biological Databases\n\n\n\n\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\nWorking with the ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. Check the GitHub repository.\n\n\n\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\nExperience and published works in viral genomic surveillance of Theobroma cacao public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with P. megakarya.\n\n\n\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
-  },
-  {
-    "objectID": "about/index.html#experience",
-    "href": "about/index.html#experience",
-    "title": "/about",
-    "section": "",
-    "text": "Hard Skills:\n\nPython, R and Bash\nLinux, Bioconda and Docker\nQuarto and Shiny\n\nKnow-How:\n\nBiostatistics, NGS Data and Pipeline Development\nGenomics and Transcriptomics\nDashboards and Biological Databases"
-  },
-  {
-    "objectID": "about/index.html#phd-2025-current",
-    "href": "about/index.html#phd-2025-current",
-    "title": "/about",
-    "section": "",
-    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\nWorking with the ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. Check the GitHub repository."
-  },
-  {
-    "objectID": "about/index.html#masters-degree-2023-2025",
-    "href": "about/index.html#masters-degree-2023-2025",
-    "title": "/about",
-    "section": "",
-    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\nExperience and published works in viral genomic surveillance of Theobroma cacao public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with P. megakarya."
-  },
-  {
-    "objectID": "about/index.html#bachelors-degree-2018-2022",
-    "href": "about/index.html#bachelors-degree-2018-2022",
-    "title": "/about",
-    "section": "",
-    "text": "Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
+    "text": "Results\nThe ongoing project it is in the “total-refactor” branch in the github repo. The idea is to trasnfer the current version to a legacy branch and the refactor one to the main.\nI will write here later all the aspects of the refactor."
   }
 ]
