@@ -3,8 +3,8 @@ from PIL import Image
 import os
 
 # Define input and output paths
-input_path = 'tatianaDomitrovic.png' 
-output_path = 'noBackground/tatianaDomitrovic.png' 
+input_path = 'assets/profile.png' 
+output_path = 'assets/noBg_profile.png' 
 
 # Ensure the input file exists
 if not os.path.exists(input_path):

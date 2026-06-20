@@ -4,10 +4,11 @@ project:
 
 website:
   title: "me.log"
+  favicon: assets/favicon.png
   navbar:
     background: "#1A3025"
     foreground: "#E0F5E8"
-    right:
+    left:
       - href: posts/index.qmd
         text: "/posts"
       - href: publications/index.qmd

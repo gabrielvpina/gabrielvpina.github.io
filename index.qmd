@@ -12,9 +12,9 @@ body-classes: retro-desktop-body
     <!-- ── Profile Window (full width) ──────────────────── -->
     <div class="retro-window profile-window">
       <div class="window-titlebar">
-        <span class="window-title">📁 gabriel_pina.exe</span>
+        <span class="window-title">gabriel_pina.exe</span>
         <div class="window-controls">
-          <span>_</span><span>□</span><span>×</span>
+          <span></span><span></span><span></span>
         </div>
       </div>
       <div class="window-body profile-body-wide">
@@ -41,9 +41,9 @@ body-classes: retro-desktop-body
     <!-- ── System Info Window ──────────────────────────── -->
     <div class="retro-window sysinfo-window">
       <div class="window-titlebar">
-        <span class="window-title">⚙ system.log</span>
+        <span class="window-title">system.log</span>
         <div class="window-controls">
-          <span>_</span><span>□</span><span>×</span>
+          <span></span><span></span><span></span>
         </div>
       </div>
       <div class="window-body">
@@ -63,9 +63,9 @@ body-classes: retro-desktop-body
     <!-- ── Recent Posts Window ─────────────────────────── -->
     <div class="retro-window posts-window">
       <div class="window-titlebar">
-        <span class="window-title">📄 recent.log</span>
+        <span class="window-title">recent.log</span>
         <div class="window-controls">
-          <span>_</span><span>□</span><span>×</span>
+          <span></span><span></span><span></span>
         </div>
       </div>
       <div class="window-body">

@@ -68,13 +68,80 @@ h1,h2,h3,h4,h5,h6 { font-family: var(--font); font-weight: 700; }
 a { color: var(--accent); }
 a:hover { color: var(--accent-dark); }
 
-code, pre {
+/* ── Código e saídas (code chunks / outputs) ────────────────── */
+
+/* code inline (dentro de texto, ex: `função()`): um "chip" menta.
+   :not(.sourceCode) evita aplicar este estilo ao código DENTRO de
+   blocos coloridos, que têm syntax highlighting próprio do Quarto. */
+code:not(.sourceCode) {
   font-family: var(--font);
-  background: #EBF8F0;
-  border: 1.5px solid var(--border);
-  /* border-radius também se aplica a elementos inline */
+  background: #E0F5E8;
+  color: var(--accent-dark);
+  border: 1px solid var(--accent-light);
   border-radius: var(--radius-sm);
+  padding: 1px 6px;
+  font-size: .88em;
 }
+
+/* Bloco de CÓDIGO DE ENTRADA (input do chunk R/Python/Bash).
+   Estrutura do Quarto: div.sourceCode > pre > code.sourceCode      */
+div.sourceCode {
+  background: #F2FDF5;
+  border: 2px solid var(--border);
+  /* faixa verde à esquerda marca visualmente "isto é entrada"      */
+  border-left: 6px solid var(--titlebar-profile);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  /* max-width: 100% impede que o bloco ultrapasse o container; a
+     quebra de linha (regra abaixo) acomoda linhas longas dentro    */
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+/* O <pre> interno fica transparente: o visual vem do div.sourceCode */
+div.sourceCode pre {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 14px 16px;
+}
+
+/* Quebra de linha dentro do código: linhas longas se acomodam no
+   próprio bloco em vez de gerar scroll/transbordar a página.
+   - white-space: pre-wrap preserva indentação MAS permite quebrar
+   - overflow-wrap: anywhere quebra também tokens longos (URLs,
+     strings) que não têm espaços                                   */
+div.sourceCode pre code.sourceCode,
+.cell-output pre code,
+.cell-output pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Os tokens destacados do Quarto são <span> inline-block; isso
+   impede a quebra. Voltar para inline permite que a linha quebre. */
+div.sourceCode pre code.sourceCode > span {
+  display: inline;
+}
+
+/* Bloco de SAÍDA (resultado/output do chunk): coral à esquerda
+   para diferenciar claramente da entrada verde                     */
+.cell-output pre {
+  background: #FFF8F6;
+  border: 2px solid var(--border);
+  border-left: 6px solid var(--titlebar-posts);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-card);
+  max-width: 100%;
+  padding: 14px 16px;
+  margin: 0 0 1rem;
+  color: var(--text-secondary);
+}
+
+/* Botão "copiar" do Quarto herda o arredondamento                  */
+.code-copy-button { border-radius: var(--radius-sm) !important; }
 
 /* ── Navbar ─────────────────────────────────────────────────── */
 /* !important sobrescreve especificidade do Bootstrap/Quarto     */
@@ -101,7 +168,8 @@ code, pre {
 .navbar .navbar-nav .nav-link {
   color: #E0F5E8 !important;
   font-family: var(--font) !important;
-  font-size: .8rem !important;
+  font-size: .92rem !important;
+  font-weight: 800 !important;
   padding: 4px 12px !important;
   border: 1.5px solid transparent;
   border-radius: var(--radius-sm);
@@ -140,6 +208,46 @@ body:not(.retro-desktop-body) #quarto-content main {
   box-shadow: var(--shadow-card);
   margin: 20px auto;
   padding: 28px 36px !important;
+  /* main é um ITEM do CSS grid .page-columns do Quarto, colocado num
+     track de largura fixa (~806px). Descendentes rígidos (tabelas gt
+     do skim() com white-space:nowrap, imagens, URLs longas em código)
+     dão a main um max-content enorme e o item de grid ESTOURA o track,
+     arrastando a página inteira para ~2300px (scroll horizontal).
+     - max-width: 100% → resolve contra o grid area (o track de 806px),
+       prendendo main ao track. ESTA é a correção decisiva: min-width:0
+       e overflow sozinhos NÃO seguram o item de grid.
+     - overflow-x: auto → rede de segurança: dá scroll a qualquer filho
+       que ainda assim não caiba (ex: tabela gt muito larga).         */
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+}
+
+/* Tabelas largas (ex: saída do skim() com 17 colunas): scroll
+   horizontal próprio em vez de transbordar e quebrar o layout.
+   display: block é necessário para overflow funcionar em <table>.  */
+body:not(.retro-desktop-body) main table {
+  display: block;
+  overflow-x: auto;
+  max-width: 100%;
+  /* white-space: nowrap mantém as células sem quebra estranha,
+     deixando o scroll cuidar da largura                            */
+  white-space: nowrap;
+  border-collapse: collapse;
+}
+
+/* Cabeçalho de tabela com a cor de acento do tema                  */
+body:not(.retro-desktop-body) main table thead th,
+body:not(.retro-desktop-body) main table tr.header th {
+  background: #E0F5E8;
+  border-bottom: 2px solid var(--border) !important;
+  font-weight: 700;
+}
+
+/* Imagens dos posts também respeitam a largura do container        */
+body:not(.retro-desktop-body) main img {
+  max-width: 100%;
+  height: auto;
 }
 
 body:not(.retro-desktop-body) .page-columns {
@@ -186,12 +294,26 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   /* grid-template-columns: divide em 2 colunas de largura igual */
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
-  /* align-items: start evita que janelas menores se estiquem   */
-  align-items: start;
+  /* align-items: stretch faz os itens na mesma linha do grid
+     assumirem a altura do maior elemento da linha             */
+  align-items: stretch;
   gap: 24px;
   max-width: 1140px;
   margin: 0 auto;
   width: 100%;
+}
+
+/* Flexbox interno para que window-body ocupe a altura restante
+   após a titlebar, garantindo fundo branco até o fim da janela */
+.sysinfo-window,
+.posts-window {
+  display: flex;
+  flex-direction: column;
+}
+
+.sysinfo-window .window-body,
+.posts-window .window-body {
+  flex: 1;
 }
 
 /* ── Componente base: Retro Window ──────────────────────────── */
@@ -264,8 +386,10 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .profile-body-wide {
   display: flex;
   align-items: center;
-  gap: 48px;
-  padding: 40px 52px;
+  /* clamp() torna gap e padding fluidos: menores no celular,
+     maiores no desktop — sem media query                       */
+  gap: clamp(20px, 4vw, 48px);
+  padding: clamp(20px, 3.5vw, 36px) clamp(20px, 4vw, 48px);
   text-align: left;
 }
 
@@ -280,7 +404,9 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .profile-photo {
-  width: 190px; height: 190px;
+  /* clamp(): foto encolhe em telas pequenas, cresce no desktop  */
+  width: clamp(120px, 18vw, 170px);
+  height: clamp(120px, 18vw, 170px);
   object-fit: cover; display: block;
   /* calc(): subtrai 4px do raio para o filho não ultrapassar o frame */
   border-radius: calc(var(--radius) - 4px);
@@ -358,14 +484,24 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 /* ── System Info Window ─────────────────────────────────────── */
 .sysinfo-window { grid-column: 1; grid-row: 2; }
-.sysinfo-window .window-body { padding: 28px 36px; }
+
+/* window-body como flex coluna + justify-content: center distribui
+   o conteúdo verticalmente. Como a janela é esticada (stretch) para
+   igualar a altura da posts-window, isto centraliza o texto e evita
+   a lacuna branca embaixo — o espaço extra fica simétrico.        */
+.sysinfo-window .window-body {
+  padding: 20px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 
 .sys-pre {
   font-family: var(--font);
-  font-size: 1rem;
+  font-size: .95rem;
   color: var(--text-primary);
   margin: 0; background: transparent;
-  border: none; padding: 0; line-height: 2.2;
+  border: none; padding: 0; line-height: 1.9;
 }
 
 .sys-key { color: var(--accent); font-weight: 700; }
@@ -610,11 +746,29 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .quarto-title-meta-heading { color: var(--accent); font-weight: 700; }
 
 /* ── Layout da página /about ────────────────────────────────── */
+/* Coluna única: as duas janelas ficam uma ABAIXO da outra,
+   ocupando toda a largura disponível do conteúdo Quarto.         */
 .about-window-grid {
-  display: grid;
-  grid-template-columns: 240px 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 24px;
   margin-top: 8px;
+}
+
+/* Banner horizontal do perfil: foto à esquerda, infos à direita  */
+.about-profile-banner {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 24px 28px;
+}
+
+.about-profile-info { flex: 1; min-width: 0; }
+
+/* Em telas estreitas o banner vira coluna e centraliza           */
+@media (max-width: 600px) {
+  .about-profile-banner { flex-direction: column; text-align: center; }
+  .about-profile-info .social-row { justify-content: center; }
 }
 
 /* ── Badge de status de projeto ─────────────────────────────── */
@@ -640,7 +794,6 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   .profile-window,.sysinfo-window,.nav-window,.posts-window {
     grid-column: 1; grid-row: auto;
   }
-  .about-window-grid { grid-template-columns: 1fr; }
   body:not(.retro-desktop-body) #quarto-content main {
     padding: 20px 16px !important;
   }
