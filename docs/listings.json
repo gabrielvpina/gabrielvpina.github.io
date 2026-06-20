@@ -6,10 +6,6 @@
     ]
   },
   {
-    "listing": "/publications/index.html",
-    "items": []
-  },
-  {
     "listing": "/posts/index.html",
     "items": [
       "/posts/decision_tree_basic/dec_tree.html",
