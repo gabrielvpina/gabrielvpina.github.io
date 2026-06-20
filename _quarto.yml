@@ -5,8 +5,8 @@ project:
 website:
   title: "me.log"
   navbar:
-    background: "#3A2240"
-    foreground: "#F0ECF5"
+    background: "#1A3025"
+    foreground: "#E0F5E8"
     right:
       - href: posts/index.qmd
         text: "/posts"
@@ -22,8 +22,8 @@ website:
   page-footer:
     center: "© gabriel_pina :: 2026"
     border: false
-    background: "#3A2240"
-    foreground: "#B08AB0"
+    background: "#1A3025"
+    foreground: "#A8E6C0"
 
 format:
   html:

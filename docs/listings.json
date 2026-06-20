@@ -1,7 +1,11 @@
 [
   {
-    "listing": "/publications/index.html",
-    "items": []
+    "listing": "/posts/index.html",
+    "items": [
+      "/posts/decision_tree_basic/dec_tree.html",
+      "/posts/seq_sanger/seq_sanger.html",
+      "/posts/data_report/data_report.html"
+    ]
   },
   {
     "listing": "/projects/index.html",
@@ -10,11 +14,7 @@
     ]
   },
   {
-    "listing": "/posts/index.html",
-    "items": [
-      "/posts/decision_tree_basic/dec_tree.html",
-      "/posts/seq_sanger/seq_sanger.html",
-      "/posts/data_report/data_report.html"
-    ]
+    "listing": "/publications/index.html",
+    "items": []
   }
 ]

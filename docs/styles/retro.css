@@ -1,44 +1,64 @@
 /* ============================================================
-   me.log — Retro OS / Neo-Skeuo Design System
-   Palette: warm off-white · purple accent · dark desktop
+   me.log — Neo-Brutalist Colorful Design System
+   Paleta: fundo menta · janelas brancas · bordas pretas flat
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
-/* ── Variables ─────────────────────────────────────────────── */
+/* ── Variáveis CSS (Custom Properties) ─────────────────────────
+   :root define variáveis no elemento raiz (html). Elas ficam
+   disponíveis em todo o documento via var(--nome).
+   Isso centraliza a paleta: mudar uma cor aqui reflete em tudo. */
 :root {
-  --desktop-bg:        #170E17;
-  --window-bg:         #F5F0F5;
-  --window-chrome:     #C4BBC4;
-  --surface-raised:    #D0C8D0;
-  --surface-inset:     #9A909A;
+  /* Fundo da área de desktop (landing page) */
+  --desktop-bg:        #C9EDD6;
 
-  --titlebar-1:        #3A2240;
-  --titlebar-2:        #7A5A7A;
-  --titlebar-inactive: #6A6068;
+  /* Superfícies de janela */
+  --window-bg:         #FFFFFF;
+  --window-chrome:     #F2FDF5;
 
-  --accent:            #8B5A8B;
-  --accent-dark:       #544054;
-  --accent-light:      #B08AB0;
+  /* Titlebars coloridas — cada janela tem a sua */
+  --titlebar-profile:  #3DC87A;   /* verde vibrante */
+  --titlebar-sysinfo:  #F5C842;   /* amarelo dourado */
+  --titlebar-posts:    #F07060;   /* coral/salmão */
+  --titlebar-about:    #3DC87A;   /* verde (reutilizado em /about) */
 
-  --text-primary:      #1A1220;
-  --text-secondary:    #4A3A4A;
-  --text-muted:        #7A6878;
+  /* Acento interativo principal */
+  --accent:            #259E57;
+  --accent-dark:       #186638;
+  --accent-light:      #A8E6C0;
 
-  --bl: #FFFFFF;
-  --bm: #807880;
-  --bd: #000000;
+  /* Texto */
+  --text-primary:      #111111;
+  --text-secondary:    #3A3A3A;
+  --text-muted:        #777777;
+
+  /* Borda flat (neo-brutalista): uma cor sólida escura, sem gradiente 3D */
+  --border:            #111111;
+
+  /* box-shadow: deslocX deslocY blur cor
+     Com blur = 0, a sombra é sólida e geométrica — efeito neo-brutalist.
+     O deslocamento cria a ilusão de "elevação" sem gradiente. */
+  --shadow-window:     5px 5px 0 var(--border);
+  --shadow-card:       3px 3px 0 var(--border);
+  --shadow-btn:        3px 3px 0 var(--border);
+
+  /* border-radius: arredonda os cantos dos elementos
+     --radius é para janelas/cards; --radius-sm para botões e badges */
+  --radius:            10px;
+  --radius-sm:          6px;
 
   --font: 'JetBrains Mono', 'Courier New', Courier, monospace;
-  --shadow-window: 3px 3px 0 rgba(0,0,0,.45);
 }
 
 /* ── Reset / Base ───────────────────────────────────────────── */
+/* box-sizing: border-box faz padding e border serem incluídos
+   na largura/altura declarada — comportamento mais previsível    */
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
   font-family: var(--font);
-  background: var(--desktop-bg);
+  background: #EDF7F1;
   color: var(--text-primary);
   margin: 0; padding: 0;
 }
@@ -50,73 +70,88 @@ a:hover { color: var(--accent-dark); }
 
 code, pre {
   font-family: var(--font);
-  background: #EDE6EE;
-  border: 1px solid var(--bm);
-  border-radius: 0;
+  background: #EBF8F0;
+  border: 1.5px solid var(--border);
+  /* border-radius também se aplica a elementos inline */
+  border-radius: var(--radius-sm);
 }
 
 /* ── Navbar ─────────────────────────────────────────────────── */
+/* !important sobrescreve especificidade do Bootstrap/Quarto     */
 .navbar {
-  background: #3A2240 !important;
-  border-bottom: 2px solid var(--accent) !important;
+  background: #1A3025 !important;
+  border-bottom: 3px solid #3DC87A !important;
   font-family: var(--font) !important;
-  min-height: 38px !important;
-  padding: 3px 16px !important;
+  min-height: 40px !important;
+  padding: 4px 20px !important;
 }
 
 .navbar-brand {
-  color: var(--accent-light) !important;
+  color: #3DC87A !important;
   font-weight: 800 !important;
   font-size: .95rem !important;
   letter-spacing: 2px;
 }
 
-.navbar-brand::before { content: "▶ "; color: var(--accent-light); }
+/* ::before é um pseudo-element: insere conteúdo decorativo
+   antes do elemento sem precisar de HTML extra               */
+.navbar-brand::before { content: "▶ "; color: #3DC87A; }
 
 .navbar .nav-link,
 .navbar .navbar-nav .nav-link {
-  color: #F0ECF5 !important;
+  color: #E0F5E8 !important;
   font-family: var(--font) !important;
   font-size: .8rem !important;
-  padding: 4px 11px !important;
-  border: 1px solid transparent;
-  transition: none !important;
+  padding: 4px 12px !important;
+  border: 1.5px solid transparent;
+  border-radius: var(--radius-sm);
+  /* transition: anima suavemente as propriedades listadas
+     ao mudar de estado (normal → hover)                      */
+  transition: background 0.15s, border-color 0.15s;
 }
 
 .navbar .nav-link:hover {
-  color: var(--accent-light) !important;
-  border-color: var(--accent) !important;
-  background: rgba(139,90,139,.15) !important;
+  color: #3DC87A !important;
+  border-color: #3DC87A !important;
+  /* rgba(r,g,b,a): cor com transparência; 0.12 = 12% opaco   */
+  background: rgba(61,200,122,.12) !important;
 }
 
 /* ── Footer ─────────────────────────────────────────────────── */
 .nav-footer {
-  background: #3A2240 !important;
+  background: #1A3025 !important;
   color: var(--accent-light) !important;
   font-family: var(--font) !important;
   font-size: .75rem !important;
-  border-top: 2px solid var(--accent) !important;
+  border-top: 3px solid #3DC87A !important;
 }
 
-/* ── Inner pages: content container ────────────────────────── */
+/* ── Páginas internas (não é a landing page) ────────────────── */
+/* :not(.retro-desktop-body) seleciona body que NÃO tem essa classe,
+   ou seja, todas as páginas exceto a landing page              */
 body:not(.retro-desktop-body) {
-  background: #F5F0F5;
+  background: #EDF7F1;
 }
 
 body:not(.retro-desktop-body) #quarto-content main {
   background: var(--window-bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
+  margin: 20px auto;
   padding: 28px 36px !important;
 }
 
 body:not(.retro-desktop-body) .page-columns {
-  background: var(--window-bg);
+  background: #EDF7F1;
 }
 
-/* ── Desktop index page ─────────────────────────────────────── */
+/* ── Landing page (desktop) ─────────────────────────────────── */
 body.retro-desktop-body {
   overflow-x: hidden;
 }
 
+/* Remove os containers padrão do Quarto na landing page        */
 body.retro-desktop-body #quarto-content,
 body.retro-desktop-body main.content {
   padding: 0 !important;
@@ -127,86 +162,105 @@ body.retro-desktop-body main.content {
 body.retro-desktop-body #quarto-margin-sidebar,
 body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
-/* ── Desktop container ──────────────────────────────────────── */
+/* ── Área de desktop ────────────────────────────────────────── */
 .retro-desktop {
   min-height: calc(100vh - 90px);
   background: var(--desktop-bg);
+  /* repeating-linear-gradient: grade sutil de fundo
+     Dois gradientes sobrepostos criam a aparência de grid      */
   background-image:
-    radial-gradient(ellipse at 15% 25%, rgba(139,90,139,.07) 0%, transparent 55%),
-    radial-gradient(ellipse at 85% 75%, rgba(60,30,60,.12) 0%, transparent 55%),
-    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(255,255,255,.012) 32px),
-    repeating-linear-gradient(90deg, transparent, transparent 31px, rgba(255,255,255,.012) 32px);
-  padding: 36px 28px 20px;
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(255,255,255,.25) 32px),
+    repeating-linear-gradient(90deg, transparent, transparent 31px, rgba(255,255,255,.25) 32px);
+  /* clamp(mínimo, preferido, máximo): padding lateral responsivo.
+     Em telas estreitas fica 16px, escala até 40px em telas largas */
+  padding: 32px clamp(16px, 5%, 40px) 24px;
   display: flex;
   flex-direction: column;
   gap: 0;
 }
 
+/* Grid das janelas — max-width alinhado ao container Bootstrap xl
+   (1140px), garantindo mesma proporção que as outras páginas Quarto */
 .desktop-grid {
   display: grid;
+  /* grid-template-columns: divide em 2 colunas de largura igual */
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
+  /* align-items: start evita que janelas menores se estiquem   */
   align-items: start;
-  gap: 28px;
-  max-width: 1200px;
+  gap: 24px;
+  max-width: 1140px;
   margin: 0 auto;
   width: 100%;
 }
 
-/* ── Retro Window Component ─────────────────────────────────── */
+/* ── Componente base: Retro Window ──────────────────────────── */
 .retro-window {
   background: var(--window-chrome);
-  border-top:    2px solid var(--bl);
-  border-left:   2px solid var(--bl);
-  border-right:  2px solid var(--bd);
-  border-bottom: 2px solid var(--bd);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  /* overflow: hidden é necessário: faz os filhos respeitarem
+     o border-radius do pai (titlebar não vaza nas bordas)      */
+  overflow: hidden;
   box-shadow: var(--shadow-window);
 }
 
+/* Barra de título */
 .window-titlebar {
-  background: linear-gradient(90deg, var(--titlebar-1) 0%, var(--titlebar-2) 100%);
-  color: #FFFFFF;
-  padding: 7px 10px;
+  background: var(--titlebar-profile);
+  color: var(--text-primary);
+  padding: 8px 12px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: .95rem;
+  font-size: .9rem;
   font-weight: 700;
   letter-spacing: .5px;
+  /* user-select: none impede selecionar o texto da titlebar ao clicar */
   user-select: none;
   gap: 8px;
+  border-bottom: 2px solid var(--border);
 }
 
-.window-title { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* Cores individuais por janela — seletor descendente:
+   .sysinfo-window .window-titlebar = titlebar DENTRO de sysinfo-window */
+.profile-window .window-titlebar { background: var(--titlebar-profile); }
+.sysinfo-window .window-titlebar { background: var(--titlebar-sysinfo); }
+.posts-window   .window-titlebar { background: var(--titlebar-posts); color: #FFFFFF; }
 
-.window-controls { display: flex; gap: 4px; flex-shrink: 0; }
+.window-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  /* text-overflow: ellipsis adiciona "..." quando texto não cabe */
+  text-overflow: ellipsis;
+}
+
+.window-controls { display: flex; gap: 5px; flex-shrink: 0; }
 
 .window-controls span {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px; height: 18px;
-  background: var(--window-chrome);
+  width: 20px; height: 20px;
+  background: var(--window-bg);
   color: var(--text-primary);
   font-size: 10px; font-weight: 900;
-  border-top:    1px solid var(--bl);
-  border-left:   1px solid var(--bl);
-  border-right:  1px solid var(--bm);
-  border-bottom: 1px solid var(--bm);
+  border: 1.5px solid var(--border);
+  /* border-radius: 50% cria um círculo perfeito               */
+  border-radius: 50%;
   cursor: default; line-height: 1;
 }
 
 .window-body {
   background: var(--window-bg);
   color: var(--text-primary);
-  border-top:  2px solid var(--bm);
-  border-left: 2px solid var(--bm);
 }
 
 /* ── Profile Window ─────────────────────────────────────────── */
+/* grid-column: 1 / -1 = da coluna 1 até a última → ocupa toda a largura */
 .profile-window { grid-column: 1 / -1; grid-row: 1; }
 
-/* Wide horizontal layout */
 .profile-body-wide {
   display: flex;
   align-items: center;
@@ -218,19 +272,21 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .profile-photo-frame {
   display: inline-block;
   flex-shrink: 0;
-  border-top:    2px solid var(--bm);
-  border-left:   2px solid var(--bm);
-  border-right:  2px solid var(--bl);
-  border-bottom: 2px solid var(--bl);
+  border: 3px solid var(--border);
+  border-radius: var(--radius);
   padding: 5px;
-  background: var(--window-chrome);
+  background: var(--titlebar-profile);
+  box-shadow: var(--shadow-card);
 }
 
 .profile-photo {
   width: 190px; height: 190px;
   object-fit: cover; display: block;
+  /* calc(): subtrai 4px do raio para o filho não ultrapassar o frame */
+  border-radius: calc(var(--radius) - 4px);
 }
 
+/* flex: 1 faz o conteúdo ocupar o espaço restante ao lado da foto */
 .profile-content { flex: 1; min-width: 0; }
 
 .profile-name {
@@ -254,48 +310,51 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   gap: 8px;
 }
 
+/* @media: aplica estilos apenas quando a largura da tela ≤ 600px */
 @media (max-width: 600px) {
   .profile-body-wide { flex-direction: column; text-align: center; padding: 24px; gap: 24px; }
   .social-row { justify-content: center; }
 }
 
-/* ── Buttons ────────────────────────────────────────────────── */
+/* ── Botões ─────────────────────────────────────────────────── */
 .retro-btn {
   display: inline-block;
   padding: 8px 20px;
   font-family: var(--font);
-  font-size: .9rem; font-weight: 700;
+  font-size: .88rem; font-weight: 700;
   color: var(--text-primary);
   text-decoration: none !important;
-  background: var(--window-chrome);
-  border-top:    2px solid var(--bl);
-  border-left:   2px solid var(--bl);
-  border-right:  2px solid var(--bd);
-  border-bottom: 2px solid var(--bd);
+  background: #F2FDF5;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
   cursor: pointer; letter-spacing: .5px; white-space: nowrap;
+  box-shadow: var(--shadow-btn);
+  /* transition anima transform e box-shadow ao mudar de estado */
+  transition: transform 0.08s, box-shadow 0.08s;
 }
 
-.retro-btn:hover { background: var(--surface-raised); color: var(--text-primary); text-decoration: none !important; }
+.retro-btn:hover {
+  background: var(--accent-light);
+  color: var(--text-primary);
+  text-decoration: none !important;
+  /* translate(-1px, -1px): move 1px para cima e esquerda (efeito "levitar") */
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0 var(--border);
+}
 
 .retro-btn:active {
-  border-top:    2px solid var(--bd);
-  border-left:   2px solid var(--bd);
-  border-right:  2px solid var(--bl);
-  border-bottom: 2px solid var(--bl);
+  /* ao clicar: move na direção da sombra e remove-a → efeito de pressão */
+  transform: translate(3px, 3px);
+  box-shadow: none;
 }
 
 .retro-btn-primary {
   background: var(--accent);
   color: #FFFFFF;
-  border-top-color:    var(--accent-light);
-  border-left-color:   var(--accent-light);
-  border-right-color:  var(--accent-dark);
-  border-bottom-color: var(--accent-dark);
+  border-color: var(--border);
 }
 
-.retro-btn-primary:hover { background: var(--accent-light); color: var(--text-primary); }
-
-/* (nav-window removed from index) */
+.retro-btn-primary:hover { background: var(--accent-dark); color: #FFFFFF; }
 
 /* ── System Info Window ─────────────────────────────────────── */
 .sysinfo-window { grid-column: 1; grid-row: 2; }
@@ -303,7 +362,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 .sys-pre {
   font-family: var(--font);
-  font-size: 1.05rem;
+  font-size: 1rem;
   color: var(--text-primary);
   margin: 0; background: transparent;
   border: none; padding: 0; line-height: 2.2;
@@ -317,8 +376,14 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   width: 10px; height: 18px;
   background: var(--accent);
   vertical-align: text-bottom;
+  border-radius: 2px;
+  /* animation: nome duração timing-function iterações
+     step-end: muda de estado abruptamente (sem interpolação)   */
   animation: blink 1s step-end infinite;
 }
+
+/* @keyframes define os quadros da animação:
+   0% e 100% → opaco; 50% → invisível → pisca                  */
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
 
 /* ── Posts Preview Window ───────────────────────────────────── */
@@ -330,9 +395,9 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .file-entry {
   display: flex;
   align-items: center;
-  padding: 20px 28px;
-  gap: 16px;
-  border-bottom: 1px solid var(--window-chrome);
+  padding: 18px 24px;
+  gap: 14px;
+  border-bottom: 1.5px solid #D0EDD8;
 }
 
 .file-entry:last-child { border-bottom: none; }
@@ -343,30 +408,30 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   color: var(--text-primary) !important;
   text-decoration: none !important;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 1rem;
   display: block;
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
 .file-name:hover { color: var(--accent) !important; }
-.file-meta { color: var(--text-muted) !important; font-size: .85rem; }
+.file-meta { color: var(--text-muted) !important; font-size: .82rem; }
 
 .posts-footer {
-  padding: 16px 28px;
-  border-top: 1px solid var(--window-chrome);
+  padding: 14px 24px;
+  border-top: 1.5px solid #D0EDD8;
   text-align: right;
 }
 
 /* ── Taskbar ─────────────────────────────────────────────────── */
 .retro-taskbar {
-  max-width: 1200px;
-  margin: 24px auto 0;
+  /* max-width igual ao desktop-grid → alinhamento perfeito     */
+  max-width: 1140px;
+  margin: 20px auto 0;
   width: 100%;
-  background: var(--window-chrome);
-  border-top:    2px solid var(--bl);
-  border-left:   2px solid var(--bl);
-  border-right:  2px solid var(--bd);
-  border-bottom: 2px solid var(--bd);
+  background: var(--window-bg);
+  border: 2px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-card);
   padding: 6px 12px;
   display: flex;
   align-items: center;
@@ -379,44 +444,49 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   background: var(--accent);
   color: #FFFFFF;
   padding: 5px 18px;
-  font-weight: 800; font-size: .9rem;
-  border-top:    2px solid var(--accent-light);
-  border-left:   2px solid var(--accent-light);
-  border-right:  2px solid var(--accent-dark);
-  border-bottom: 2px solid var(--accent-dark);
+  font-weight: 800; font-size: .88rem;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-btn);
   font-family: var(--font);
   letter-spacing: 1px;
+  transition: transform 0.08s, box-shadow 0.08s;
+  cursor: pointer;
+}
+
+.taskbar-start:hover {
+  transform: translate(-1px,-1px);
+  box-shadow: 4px 4px 0 var(--border);
 }
 
 .taskbar-tab {
-  background: var(--surface-inset);
-  padding: 5px 18px;
-  border-top:    2px solid var(--bm);
-  border-left:   2px solid var(--bm);
-  border-right:  2px solid var(--bl);
-  border-bottom: 2px solid var(--bl);
-  font-weight: 600; font-size: .88rem;
+  background: #E0F5E8;
+  padding: 5px 16px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-weight: 600; font-size: .85rem;
 }
 
+/* flex: 1 em um filho flex faz ele ocupar todo o espaço restante
+   — separa o START/tab da esquerda do relógio da direita       */
 .taskbar-spacer { flex: 1; }
 
 .taskbar-clock {
-  background: var(--surface-inset);
-  border-top:    2px solid var(--bm);
-  border-left:   2px solid var(--bm);
-  border-right:  2px solid var(--bl);
-  border-bottom: 2px solid var(--bl);
-  padding: 4px 14px; font-size: .88rem; font-weight: 600;
+  background: var(--titlebar-sysinfo);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 4px 14px; font-size: .85rem; font-weight: 700;
+  color: var(--text-primary);
 }
 
-/* ── Page title heading ─────────────────────────────────────── */
+/* ── Título das páginas internas ────────────────────────────── */
 .quarto-title-block .quarto-title h1 {
   font-family: var(--font);
   font-size: 1.4rem; font-weight: 800;
   color: var(--text-primary);
   letter-spacing: 1px;
   padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent);
+  border-bottom: 3px solid var(--accent);
 }
 
 .quarto-title-block .quarto-title h1::before {
@@ -424,12 +494,12 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   color: var(--accent);
 }
 
-/* ── Cards (listing pages) ──────────────────────────────────── */
+/* ── Cards (páginas de listagem: /posts, /projects) ─────────── */
 .quarto-listing-container-grid {
   padding: 8px 4px;
 }
 
-/* Bootstrap grid gutter for listing */
+/* Variáveis Bootstrap customizadas para o gutter do grid       */
 .list.grid {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 1.5rem;
@@ -437,21 +507,18 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .card {
-  background: var(--window-chrome) !important;
-  border-top:    2px solid var(--bl) !important;
-  border-left:   2px solid var(--bl) !important;
-  border-right:  2px solid var(--bd) !important;
-  border-bottom: 2px solid var(--bd) !important;
-  border-radius: 0 !important;
-  box-shadow: 3px 3px 0 rgba(0,0,0,.35) !important;
-  transition: none !important;
+  background: var(--window-bg) !important;
+  border: 2px solid var(--border) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow-card) !important;
+  transition: transform 0.08s, box-shadow 0.08s !important;
   overflow: hidden;
   margin-bottom: 4px;
 }
 
 .card:hover {
   transform: translate(-2px,-2px) !important;
-  box-shadow: 5px 5px 0 rgba(0,0,0,.35) !important;
+  box-shadow: 5px 5px 0 var(--border) !important;
 }
 
 .card-body {
@@ -472,24 +539,24 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .card-img-top, .thumbnail-image {
-  border-bottom: 2px solid var(--bm);
+  border-bottom: 2px solid var(--border);
 }
 
-/* Category chips */
+/* Chips de categoria nos cards */
 .quarto-category, .badge {
-  background: var(--window-chrome) !important;
-  border: 1px solid var(--accent) !important;
-  color: var(--text-primary) !important;
-  border-radius: 0 !important;
+  background: #E0F5E8 !important;
+  border: 1.5px solid var(--accent) !important;
+  color: var(--accent-dark) !important;
+  border-radius: var(--radius-sm) !important;
   font-family: var(--font) !important;
-  font-size: .68rem !important; font-weight: 600 !important;
+  font-size: .68rem !important; font-weight: 700 !important;
   letter-spacing: .3px;
   padding: 2px 8px !important;
 }
 
 .listing-date { color: var(--accent) !important; font-size: .72rem !important; }
 
-/* ── Category filter panel (sidebar) ────────────────────────── */
+/* ── Painel lateral de categorias ───────────────────────────── */
 #quarto-margin-sidebar .quarto-listing-category {
   font-family: var(--font);
 }
@@ -501,7 +568,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   letter-spacing: 1px;
   color: var(--accent) !important;
   text-transform: uppercase;
-  border-bottom: 1px solid var(--bm);
+  border-bottom: 2px solid var(--border);
   padding-bottom: 4px;
   margin-bottom: 8px;
 }
@@ -523,26 +590,26 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   font-weight: 700 !important;
 }
 
-/* Category count badge */
 .quarto-listing-category a .quarto-category-count {
-  background: var(--window-chrome);
-  border: 1px solid var(--bm);
+  background: #E0F5E8;
+  border: 1.5px solid var(--accent);
+  border-radius: var(--radius-sm);
   font-size: .65rem;
   padding: 0 5px;
   color: var(--text-muted) !important;
 }
 
-/* ── Publication / paper cards ──────────────────────────────── */
+/* ── Publicações / cards de artigos ─────────────────────────── */
 .quarto-listing-item .card-body a {
   color: var(--accent-dark);
   font-weight: 700;
 }
 
-/* ── Post / project page content ───────────────────────────── */
+/* ── Meta de post/projeto (data, author) ────────────────────── */
 .quarto-title-meta { font-family: var(--font); font-size: .76rem; }
 .quarto-title-meta-heading { color: var(--accent); font-weight: 700; }
 
-/* ── About page layout ──────────────────────────────────────── */
+/* ── Layout da página /about ────────────────────────────────── */
 .about-window-grid {
   display: grid;
   grid-template-columns: 240px 1fr;
@@ -550,13 +617,14 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   margin-top: 8px;
 }
 
-/* ── Project status badge ───────────────────────────────────── */
+/* ── Badge de status de projeto ─────────────────────────────── */
 .project-status {
   display: inline-block;
   font-family: var(--font);
   font-size: .7rem; font-weight: 700;
   padding: 2px 10px;
-  border: 1px solid var(--accent);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm);
   background: var(--window-chrome);
   color: var(--text-primary);
   letter-spacing: 1px;
@@ -565,10 +633,15 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .project-status.active  { border-color: #2E7D32; background: #E8F5E9; color: #1B5E20; }
 .project-status.wip     { border-color: #F57F17; background: #FFFDE7; color: #E65100; }
 
-/* ── Responsive ─────────────────────────────────────────────── */
+/* ── Responsivo ─────────────────────────────────────────────── */
+/* Abaixo de 760px: empilha as janelas em coluna única           */
 @media (max-width: 760px) {
   .desktop-grid { grid-template-columns: 1fr; }
-  .profile-window,.sysinfo-window,.nav-window,.posts-window { grid-column:1; grid-row:auto; }
+  .profile-window,.sysinfo-window,.nav-window,.posts-window {
+    grid-column: 1; grid-row: auto;
+  }
   .about-window-grid { grid-template-columns: 1fr; }
-  body:not(.retro-desktop-body) #quarto-content main { padding: 20px 16px !important; }
+  body:not(.retro-desktop-body) #quarto-content main {
+    padding: 20px 16px !important;
+  }
 }
