@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2026-06-09">
-<meta name="description" content="Template project. Replace with your own project details.">
+<meta name="description" content="The refactor of a bioinformatics pipeline to viral discovery and analysis.">
 
-<title>Example Project – me.log</title>
+<title>ViralQuest Pipeline Refactor – me.log</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -78,9 +43,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-4451e1bdd912363600e9bea0d6565b78.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
-<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -166,7 +128,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
   <li><a href="#methods-stack" id="toc-methods-stack" class="nav-link" data-scroll-target="#methods-stack">Methods / Stack</a></li>
   <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
-  <li><a href="#how-to-use" id="toc-how-to-use" class="nav-link" data-scroll-target="#how-to-use">How to Use</a></li>
   </ul>
 </nav>
     </div>
@@ -175,16 +136,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Example Project</h1>
+<h1 class="title">ViralQuest Pipeline Refactor</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Python</div>
     <div class="quarto-category">Bioinformatics</div>
+    <div class="quarto-category">GitHub</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    Template project. Replace with your own project details.
+    The refactor of a bioinformatics pipeline to viral discovery and analysis.
   </div>
 </div>
 
@@ -210,16 +172,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- Project status badge + links -->
 <div style="display:flex; gap:10px; align-items:center; margin-bottom:24px; flex-wrap:wrap;">
   <span class="project-status active">● Active</span>
-  <a class="retro-btn" href="https://github.com/gabrielvpina/example" target="_blank">⎈ GitHub</a>
+  <a class="retro-btn" href="https://github.com/gabrielvpina/viralquest" target="_blank">⎈ GitHub</a>
 </div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Brief description of what this project does and why it exists.</p>
+<p>The ViralQuest Pipeline already exists and current is in the 2.6.22 version. This project is about the refactoring from zero this pipeline.</p>
 <p><strong>Goals:</strong></p>
 <ul>
-<li>Goal one</li>
-<li>Goal two</li>
-<li>Goal three</li>
+<li>Improve the dependencies installation;</li>
+<li>Compatibility with Apple silicon architecture;</li>
+<li>Bug fixes (a lot of them);</li>
+<li>Refactor all the visual interface for the final output.</li>
 </ul>
 </section>
 <section id="methods-stack" class="level2">
@@ -234,37 +197,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td>Language</td>
-<td>Python 3.11</td>
+<td>Python&gt;=3.12</td>
 </tr>
 <tr class="even">
-<td>Analysis</td>
-<td>pandas, numpy</td>
+<td>Environment</td>
+<td>pixi &amp; pip</td>
 </tr>
 <tr class="odd">
-<td>Viz</td>
-<td>matplotlib</td>
+<td>Databases</td>
+<td>Zenodo &amp; Google Drive</td>
 </tr>
 </tbody>
 </table>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<p>Describe key outputs, findings, or screenshots here.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><a href="thumb.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Result figure"><img src="thumb.png" class="img-fluid figure-img" alt="Result figure"></a></p>
-<figcaption>Result figure</figcaption>
-</figure>
-</div>
-</section>
-<section id="how-to-use" class="level2">
-<h2 class="anchored" data-anchor-id="how-to-use">How to Use</h2>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/gabrielvpina/example</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> example</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> main.py</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<hr>
-<p><em>To create a new project:</em> <em>Copy <code>projects/example-project/</code> → <code>projects/my-project/</code></em> <em>Edit <code>index.qmd</code> and replace content.</em></p>
+<p>The ongoing project it is in the “total-refactor” branch in the github repo. The idea is to trasnfer the current version to a legacy branch and the refactor one to the main.</p>
+<p>I will write here later all the aspects of the refactor.</p>
 
 
 </section>
@@ -684,38 +633,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     </div>
   </div>
 </footer>
-<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
-(function() {
-  let previousOnload = window.onload;
-  window.onload = () => {
-    if (previousOnload) {
-      previousOnload();
-    }
-    lightboxQuarto.on('slide_before_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      const href = trigger.getAttribute('href');
-      if (href !== null) {
-        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
-        if (imgEl !== null) {
-          const srcAttr = imgEl.getAttribute("src");
-          if (srcAttr && srcAttr.startsWith("data:")) {
-            slideConfig.href = srcAttr;
-          }
-        }
-      } 
-    });
-  
-    lightboxQuarto.on('slide_after_load', (data) => {
-      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(slideNode);
-      }
-    });
-  
-  };
-  
-})();
-          </script>
 
 
 

@@ -1,0 +1,46 @@
+---
+title: "ViralQuest Pipeline Refactor"
+date: "2026-06-09"
+description: "The refactor of a bioinformatics pipeline to viral discovery and analysis."
+categories: [Python, Bioinformatics, GitHub]
+image: "thumb.png"
+
+# Project-specific fields (edit freely)
+status: "Active"           # Active | WIP | Completed
+github: "https://github.com/gabrielvpina/viralquest"
+
+toc: true
+---
+
+```{=html}
+<!-- Project status badge + links -->
+<div style="display:flex; gap:10px; align-items:center; margin-bottom:24px; flex-wrap:wrap;">
+  <span class="project-status active">● Active</span>
+  <a class="retro-btn" href="https://github.com/gabrielvpina/viralquest" target="_blank">⎈ GitHub</a>
+</div>
+```
+
+## Overview
+
+The ViralQuest Pipeline already exists and current is in the 2.6.22 version. This project is about the refactoring from zero this pipeline.
+
+**Goals:**
+
+- Improve the dependencies installation;
+- Compatibility with Apple silicon architecture;
+- Bug fixes (a lot of them);
+- Refactor all the visual interface for the final output.
+
+## Methods / Stack
+
+| Component | Tool |
+|-----------|------|
+| Language | Python>=3.12 |
+| Environment | pixi & pip |
+| Databases | Zenodo & Google Drive |
+
+## Results
+
+The ongoing project it is in the "total-refactor" branch in the github repo. The idea is to trasnfer the current version to a legacy branch and the refactor one to the main.
+
+I will write here later all the aspects of the refactor.

@@ -35,39 +35,11 @@
     "text": "Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
   },
   {
-    "objectID": "projects/example-project/index.html",
-    "href": "projects/example-project/index.html",
-    "title": "Example Project",
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "/projects",
     "section": "",
-    "text": "● Active\n  ⎈ GitHub"
-  },
-  {
-    "objectID": "projects/example-project/index.html#overview",
-    "href": "projects/example-project/index.html#overview",
-    "title": "Example Project",
-    "section": "Overview",
-    "text": "Overview\nBrief description of what this project does and why it exists.\nGoals:\n\nGoal one\nGoal two\nGoal three"
-  },
-  {
-    "objectID": "projects/example-project/index.html#methods-stack",
-    "href": "projects/example-project/index.html#methods-stack",
-    "title": "Example Project",
-    "section": "Methods / Stack",
-    "text": "Methods / Stack\n\n\n\nComponent\nTool\n\n\n\n\nLanguage\nPython 3.11\n\n\nAnalysis\npandas, numpy\n\n\nViz\nmatplotlib"
-  },
-  {
-    "objectID": "projects/example-project/index.html#results",
-    "href": "projects/example-project/index.html#results",
-    "title": "Example Project",
-    "section": "Results",
-    "text": "Results\nDescribe key outputs, findings, or screenshots here.\n\n\n\nResult figure"
-  },
-  {
-    "objectID": "projects/example-project/index.html#how-to-use",
-    "href": "projects/example-project/index.html#how-to-use",
-    "title": "Example Project",
-    "section": "How to Use",
-    "text": "How to Use\ngit clone https://github.com/gabrielvpina/example\ncd example\npip install -r requirements.txt\npython main.py\n\nTo create a new project: Copy projects/example-project/ → projects/my-project/ Edit index.qmd and replace content."
+    "text": "ViralQuest Pipeline Refactor\n\n\n\nPython\n\nBioinformatics\n\nGitHub\n\n\n\nThe refactor of a bioinformatics pipeline to viral discovery and analysis.\n\n\n\nJun 9, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "posts/seq_sanger/seq_sanger.html",
@@ -294,11 +266,32 @@
     "text": "Árvore de Decisão - Introdução\n\n\n\nMachine-learning\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nNov 11, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nProcessando dados de sequenciamento Sanger\n\n\n\nBioinformatics\n\nTutorial\n\nSanger\n\n\n\nAtividade Prática realizada no dia 05/11/2025, na disciplina de “Filogenia Molecular”, ministrada pelo Prof. Marco A. Costa, na Universidade Estadual de Santa Cruz (UESC)…\n\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nExplorando Dados com R\n\n\n\nData-Science\n\nTutorial\n\nR\n\n\n\nRelatório formal de análise de dados da Disciplina “Ciência de Dados”, ministrada pelo Professor Eric Roberto Guimarãers Rocha Aguiar e tendo como aluno de Estágio em…\n\n\n\nOct 30, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "projects/index.html",
-    "href": "projects/index.html",
-    "title": "/projects",
+    "objectID": "projects/viralquest/index.html",
+    "href": "projects/viralquest/index.html",
+    "title": "ViralQuest Pipeline Refactor",
     "section": "",
-    "text": "Example Project\n\n\n\nPython\n\nBioinformatics\n\n\n\nTemplate project. Replace with your own project details.\n\n\n\nJun 9, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "● Active\n  ⎈ GitHub"
+  },
+  {
+    "objectID": "projects/viralquest/index.html#overview",
+    "href": "projects/viralquest/index.html#overview",
+    "title": "ViralQuest Pipeline Refactor",
+    "section": "Overview",
+    "text": "Overview\nThe ViralQuest Pipeline already exists and current is in the 2.6.22 version. This project is about the refactoring from zero this pipeline.\nGoals:\n\nImprove the dependencies installation;\nCompatibility with Apple silicon architecture;\nBug fixes (a lot of them);\nRefactor all the visual interface for the final output."
+  },
+  {
+    "objectID": "projects/viralquest/index.html#methods-stack",
+    "href": "projects/viralquest/index.html#methods-stack",
+    "title": "ViralQuest Pipeline Refactor",
+    "section": "Methods / Stack",
+    "text": "Methods / Stack\n\n\n\nComponent\nTool\n\n\n\n\nLanguage\nPython&gt;=3.12\n\n\nEnvironment\npixi & pip\n\n\nDatabases\nZenodo & Google Drive"
+  },
+  {
+    "objectID": "projects/viralquest/index.html#results",
+    "href": "projects/viralquest/index.html#results",
+    "title": "ViralQuest Pipeline Refactor",
+    "section": "Results",
+    "text": "Results\nThe ongoing project it is in the “total-refactor” branch in the github repo. The idea is to trasnfer the current version to a legacy branch and the refactor one to the main.\nI will write here later all the aspects of the refactor."
   },
   {
     "objectID": "publications/index.html",
