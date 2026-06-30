@@ -1,6 +1,6 @@
 /* ============================================================
    me.log — Neo-Brutalist Colorful Design System
-   Paleta: fundo menta · janelas brancas · bordas pretas flat
+   Paleta: fundo lavanda · janelas brancas · bordas pretas flat
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
@@ -11,22 +11,22 @@
    Isso centraliza a paleta: mudar uma cor aqui reflete em tudo. */
 :root {
   /* Fundo da área de desktop (landing page) */
-  --desktop-bg:        #C9EDD6;
+  --desktop-bg:        #E2D5F5;
 
   /* Superfícies de janela */
   --window-bg:         #FFFFFF;
-  --window-chrome:     #F2FDF5;
+  --window-chrome:     #FAF6FE;
 
   /* Titlebars coloridas — cada janela tem a sua */
-  --titlebar-profile:  #3DC87A;   /* verde vibrante */
+  --titlebar-profile:  #9B5DE5;   /* roxo vibrante */
   --titlebar-sysinfo:  #F5C842;   /* amarelo dourado */
   --titlebar-posts:    #F07060;   /* coral/salmão */
-  --titlebar-about:    #3DC87A;   /* verde (reutilizado em /about) */
+  --titlebar-about:    #9B5DE5;   /* roxo (reutilizado em /about) */
 
   /* Acento interativo principal */
-  --accent:            #259E57;
-  --accent-dark:       #186638;
-  --accent-light:      #A8E6C0;
+  --accent:            #7C3AED;
+  --accent-dark:       #5B21B6;
+  --accent-light:      #D6BCF5;
 
   /* Texto */
   --text-primary:      #111111;
@@ -58,7 +58,7 @@
 
 body {
   font-family: var(--font);
-  background: #EDF7F1;
+  background: #F5F0FB;
   color: var(--text-primary);
   margin: 0; padding: 0;
 }
@@ -70,12 +70,12 @@ a:hover { color: var(--accent-dark); }
 
 /* ── Código e saídas (code chunks / outputs) ────────────────── */
 
-/* code inline (dentro de texto, ex: `função()`): um "chip" menta.
+/* code inline (dentro de texto, ex: `função()`): um "chip" lilás.
    :not(.sourceCode) evita aplicar este estilo ao código DENTRO de
    blocos coloridos, que têm syntax highlighting próprio do Quarto. */
 code:not(.sourceCode) {
   font-family: var(--font);
-  background: #E0F5E8;
+  background: #ECE3FA;
   color: var(--accent-dark);
   border: 1px solid var(--accent-light);
   border-radius: var(--radius-sm);
@@ -86,9 +86,9 @@ code:not(.sourceCode) {
 /* Bloco de CÓDIGO DE ENTRADA (input do chunk R/Python/Bash).
    Estrutura do Quarto: div.sourceCode > pre > code.sourceCode      */
 div.sourceCode {
-  background: #F2FDF5;
+  background: #FAF6FE;
   border: 2px solid var(--border);
-  /* faixa verde à esquerda marca visualmente "isto é entrada"      */
+  /* faixa roxa à esquerda marca visualmente "isto é entrada"       */
   border-left: 6px solid var(--titlebar-profile);
   border-radius: var(--radius-sm);
   box-shadow: var(--shadow-card);
@@ -127,7 +127,7 @@ div.sourceCode pre code.sourceCode > span {
 }
 
 /* Bloco de SAÍDA (resultado/output do chunk): coral à esquerda
-   para diferenciar claramente da entrada verde                     */
+   para diferenciar claramente da entrada roxa                      */
 .cell-output pre {
   background: #FFF8F6;
   border: 2px solid var(--border);
@@ -146,15 +146,15 @@ div.sourceCode pre code.sourceCode > span {
 /* ── Navbar ─────────────────────────────────────────────────── */
 /* !important sobrescreve especificidade do Bootstrap/Quarto     */
 .navbar {
-  background: #1A3025 !important;
-  border-bottom: 3px solid #3DC87A !important;
+  background: #251A30 !important;
+  border-bottom: 3px solid #9B5DE5 !important;
   font-family: var(--font) !important;
   min-height: 40px !important;
   padding: 4px 20px !important;
 }
 
 .navbar-brand {
-  color: #3DC87A !important;
+  color: #9B5DE5 !important;
   font-weight: 800 !important;
   font-size: .95rem !important;
   letter-spacing: 2px;
@@ -162,11 +162,11 @@ div.sourceCode pre code.sourceCode > span {
 
 /* ::before é um pseudo-element: insere conteúdo decorativo
    antes do elemento sem precisar de HTML extra               */
-.navbar-brand::before { content: "▶ "; color: #3DC87A; }
+.navbar-brand::before { content: "▶ "; color: #9B5DE5; }
 
 .navbar .nav-link,
 .navbar .navbar-nav .nav-link {
-  color: #E0F5E8 !important;
+  color: #ECE3FA !important;
   font-family: var(--font) !important;
   font-size: .92rem !important;
   font-weight: 800 !important;
@@ -179,26 +179,26 @@ div.sourceCode pre code.sourceCode > span {
 }
 
 .navbar .nav-link:hover {
-  color: #3DC87A !important;
-  border-color: #3DC87A !important;
+  color: #9B5DE5 !important;
+  border-color: #9B5DE5 !important;
   /* rgba(r,g,b,a): cor com transparência; 0.12 = 12% opaco   */
-  background: rgba(61,200,122,.12) !important;
+  background: rgba(155,93,229,.14) !important;
 }
 
 /* ── Footer ─────────────────────────────────────────────────── */
 .nav-footer {
-  background: #1A3025 !important;
+  background: #251A30 !important;
   color: var(--accent-light) !important;
   font-family: var(--font) !important;
   font-size: .75rem !important;
-  border-top: 3px solid #3DC87A !important;
+  border-top: 3px solid #9B5DE5 !important;
 }
 
 /* ── Páginas internas (não é a landing page) ────────────────── */
 /* :not(.retro-desktop-body) seleciona body que NÃO tem essa classe,
    ou seja, todas as páginas exceto a landing page              */
 body:not(.retro-desktop-body) {
-  background: #EDF7F1;
+  background: #F5F0FB;
 }
 
 body:not(.retro-desktop-body) #quarto-content main {
@@ -239,7 +239,7 @@ body:not(.retro-desktop-body) main table {
 /* Cabeçalho de tabela com a cor de acento do tema                  */
 body:not(.retro-desktop-body) main table thead th,
 body:not(.retro-desktop-body) main table tr.header th {
-  background: #E0F5E8;
+  background: #ECE3FA;
   border-bottom: 2px solid var(--border) !important;
   font-weight: 700;
 }
@@ -251,7 +251,7 @@ body:not(.retro-desktop-body) main img {
 }
 
 body:not(.retro-desktop-body) .page-columns {
-  background: #EDF7F1;
+  background: #F5F0FB;
 }
 
 /* ── Landing page (desktop) ─────────────────────────────────── */
@@ -450,7 +450,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   font-size: .88rem; font-weight: 700;
   color: var(--text-primary);
   text-decoration: none !important;
-  background: #F2FDF5;
+  background: #FAF6FE;
   border: 2px solid var(--border);
   border-radius: var(--radius-sm);
   cursor: pointer; letter-spacing: .5px; white-space: nowrap;
@@ -533,7 +533,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   align-items: center;
   padding: 18px 24px;
   gap: 14px;
-  border-bottom: 1.5px solid #D0EDD8;
+  border-bottom: 1.5px solid #E0D3F2;
 }
 
 .file-entry:last-child { border-bottom: none; }
@@ -554,7 +554,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 .posts-footer {
   padding: 14px 24px;
-  border-top: 1.5px solid #D0EDD8;
+  border-top: 1.5px solid #E0D3F2;
   text-align: right;
 }
 
@@ -596,7 +596,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .taskbar-tab {
-  background: #E0F5E8;
+  background: #ECE3FA;
   padding: 5px 16px;
   border: 1.5px solid var(--border);
   border-radius: var(--radius-sm);
@@ -680,7 +680,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 /* Chips de categoria nos cards */
 .quarto-category, .badge {
-  background: #E0F5E8 !important;
+  background: #ECE3FA !important;
   border: 1.5px solid var(--accent) !important;
   color: var(--accent-dark) !important;
   border-radius: var(--radius-sm) !important;
@@ -727,7 +727,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .quarto-listing-category a .quarto-category-count {
-  background: #E0F5E8;
+  background: #ECE3FA;
   border: 1.5px solid var(--accent);
   border-radius: var(--radius-sm);
   font-size: .65rem;
