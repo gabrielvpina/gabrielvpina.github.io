@@ -34,6 +34,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./assets/favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -71,7 +73,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-posts-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-categories','listing-path',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-title","listing-image","listing-categories","listing-date","listing-date-format","listing-author","listing-abstract","listing-keywords","listing-lightbox","listing-toc","listing-number-sections","listing-lang","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-bibliography","listing-csl"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-posts-listing'] = new List('listing-posts-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles/retro.css">
 </head>
@@ -166,12 +226,15 @@ ul.task-list li input[type="checkbox"] {
       </div>
       <div class="window-body">
         <pre class="sys-pre"><span class="sys-key">USER    </span><span class="sys-sep"> :: </span><span class="sys-val">gabrielvpina</span>
-<span class="sys-key">STATUS  </span><span class="sys-sep"> :: </span><span class="sys-val">online</span>
+<span class="sys-key">OS      </span><span class="sys-sep"> :: </span><span class="sys-val">Linux/macOS</span>
+<span class="sys-key">SKILL   </span><span class="sys-sep"> :: </span><span class="sys-val">R/Python</span>
+<span class="sys-key">SHELL   </span><span class="sys-sep"> :: </span><span class="sys-val">Zsh</span>
+<span class="sys-key">TERMINAL</span><span class="sys-sep"> :: </span><span class="sys-val">Kitty</span>
 <span class="sys-key">FIELD   </span><span class="sys-sep"> :: </span><span class="sys-val">Bioinformatics / Genetics</span>
-<span class="sys-key">AFFIL   </span><span class="sys-sep"> :: </span><span class="sys-val">UESC — Bahia, BR</span>
+<span class="sys-key">AFFIL   </span><span class="sys-sep"> :: </span><span class="sys-val">UESC — Brazil</span>
 <span class="sys-key">DEGREE  </span><span class="sys-sep"> :: </span><span class="sys-val">MSc. Genetics &amp; Mol. Bio.</span>
 <span class="sys-key">BOOT    </span><span class="sys-sep"> :: </span><span class="sys-val">2026</span>
-<span class="sys-key">KERNEL  </span><span class="sys-sep"> :: </span><span class="sys-val">me.log v1.0.0</span>
+<span class="sys-key">KERNEL  </span><span class="sys-sep"> :: </span><span class="sys-val">me.log v1.0.2</span>
         </pre>
         <span class="cursor-blink"></span>
       </div>
@@ -186,29 +249,26 @@ ul.task-list li input[type="checkbox"] {
         </div>
       </div>
       <div class="window-body">
-        <ul class="file-list">
-          <li class="file-entry">
-            <span class="file-icon">📄</span>
-            <div class="file-info">
-              <a class="file-name" href="posts/decision_tree_basic/dec_tree.html">Árvore de Decisão — Introdução</a>
-              <span class="file-meta">2025-11-11 · machine-learning, R</span>
-            </div>
-          </li>
-          <li class="file-entry">
-            <span class="file-icon">📄</span>
-            <div class="file-info">
-              <a class="file-name" href="posts/seq_sanger/seq_sanger.html">Processando dados de Sequenciamento Sanger</a>
-              <span class="file-meta">2025-11-05 · bioinformatics</span>
-            </div>
-          </li>
-          <li class="file-entry">
-            <span class="file-icon">📄</span>
-            <div class="file-info">
-              <a class="file-name" href="posts/data_report/data_report.html">Explorando Dados com R</a>
-              <span class="file-meta">2025-10-30 · data-science, R</span>
-            </div>
-          </li>
-        </ul>
+        <div id="listing-posts-listing" class="quarto-listing quarto-listing-container-custom">
+<ul class="file-list">
+<li class="file-entry">
+<div class="file-info">
+<p><a class="file-name" href="./posts/why_use_linux/post.html">Seja amigo de um pinguim</a> <span class="file-meta">2026-07-03 · Opinion, Linux, Research</span></p>
+</div>
+</li>
+<li class="file-entry">
+<div class="file-info">
+<p><a class="file-name" href="./posts/decision_tree_basic/dec_tree.html">Árvore de Decisão - Introdução</a> <span class="file-meta">2025-11-11 · Machine-learning, Tutorial, R</span></p>
+</div>
+</li>
+<li class="file-entry">
+<div class="file-info">
+<p><a class="file-name" href="./posts/seq_sanger/seq_sanger.html">Processando dados de sequenciamento Sanger</a> <span class="file-meta">2025-11-05 · Bioinformatics, Tutorial, Sanger</span></p>
+</div>
+</li>
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
         <div class="posts-footer">
           <a class="retro-btn retro-btn-primary" href="posts/index.html">→ all posts</a>
         </div>
@@ -238,6 +298,7 @@ ul.task-list li input[type="checkbox"] {
   updateClock();
   setInterval(updateClock, 30000);
 </script>
+
 
 
 

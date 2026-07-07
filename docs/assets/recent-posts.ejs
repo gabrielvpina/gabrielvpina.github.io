@@ -1,0 +1,10 @@
+<ul class="file-list">
+<% for (const item of items) { %>
+<li class="file-entry">
+<div class="file-info">
+<a class="file-name" href="<%= item.path %>"><%= item.title %></a>
+<span class="file-meta"><%= item.date %><% if (item.categories && item.categories.length) { %> · <%= item.categories.join(', ') %><% } %></span>
+</div>
+</li>
+<% } %>
+</ul>

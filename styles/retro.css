@@ -537,8 +537,11 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .file-entry:last-child { border-bottom: none; }
-.file-icon { font-size: 22px; flex-shrink: 0; }
 .file-info { flex: 1; min-width: 0; }
+/* O listing (template EJS) é processado como markdown, e o pandoc
+   envolve o conteúdo da .file-info num <p>. Zera a margem para não
+   criar espaçamento extra dentro de cada item.                    */
+.file-info p { margin: 0; }
 
 .file-name {
   color: var(--text-primary) !important;

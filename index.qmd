@@ -3,6 +3,14 @@ title: ""
 page-layout: custom
 toc: false
 body-classes: retro-desktop-body
+listing:
+  - id: posts-listing
+    contents: "posts/*/*.qmd"
+    sort: "date desc"
+    max-items: 3
+    date-format: "YYYY-MM-DD"
+    template: assets/recent-posts.ejs
+    fields: [title, date, categories, path]
 ---
 
 ```{=html}
@@ -49,12 +57,15 @@ body-classes: retro-desktop-body
       <div class="window-body">
         <pre class="sys-pre">
 <span class="sys-key">USER    </span><span class="sys-sep"> :: </span><span class="sys-val">gabrielvpina</span>
-<span class="sys-key">STATUS  </span><span class="sys-sep"> :: </span><span class="sys-val">online</span>
+<span class="sys-key">OS      </span><span class="sys-sep"> :: </span><span class="sys-val">Linux/macOS</span>
+<span class="sys-key">SKILL   </span><span class="sys-sep"> :: </span><span class="sys-val">R/Python</span>
+<span class="sys-key">SHELL   </span><span class="sys-sep"> :: </span><span class="sys-val">Zsh</span>
+<span class="sys-key">TERMINAL</span><span class="sys-sep"> :: </span><span class="sys-val">Kitty</span>
 <span class="sys-key">FIELD   </span><span class="sys-sep"> :: </span><span class="sys-val">Bioinformatics / Genetics</span>
-<span class="sys-key">AFFIL   </span><span class="sys-sep"> :: </span><span class="sys-val">UESC — Bahia, BR</span>
+<span class="sys-key">AFFIL   </span><span class="sys-sep"> :: </span><span class="sys-val">UESC — Brazil</span>
 <span class="sys-key">DEGREE  </span><span class="sys-sep"> :: </span><span class="sys-val">MSc. Genetics &amp; Mol. Bio.</span>
 <span class="sys-key">BOOT    </span><span class="sys-sep"> :: </span><span class="sys-val">2026</span>
-<span class="sys-key">KERNEL  </span><span class="sys-sep"> :: </span><span class="sys-val">me.log v1.0.0</span>
+<span class="sys-key">KERNEL  </span><span class="sys-sep"> :: </span><span class="sys-val">me.log v1.0.2</span>
         </pre>
         <span class="cursor-blink"></span>
       </div>
@@ -69,29 +80,7 @@ body-classes: retro-desktop-body
         </div>
       </div>
       <div class="window-body">
-        <ul class="file-list">
-          <li class="file-entry">
-            <span class="file-icon">📄</span>
-            <div class="file-info">
-              <a class="file-name" href="posts/decision_tree_basic/dec_tree.html">Árvore de Decisão — Introdução</a>
-              <span class="file-meta">2025-11-11 · machine-learning, R</span>
-            </div>
-          </li>
-          <li class="file-entry">
-            <span class="file-icon">📄</span>
-            <div class="file-info">
-              <a class="file-name" href="posts/seq_sanger/seq_sanger.html">Processando dados de Sequenciamento Sanger</a>
-              <span class="file-meta">2025-11-05 · bioinformatics</span>
-            </div>
-          </li>
-          <li class="file-entry">
-            <span class="file-icon">📄</span>
-            <div class="file-info">
-              <a class="file-name" href="posts/data_report/data_report.html">Explorando Dados com R</a>
-              <span class="file-meta">2025-10-30 · data-science, R</span>
-            </div>
-          </li>
-        </ul>
+        <div id="posts-listing"></div>
         <div class="posts-footer">
           <a class="retro-btn retro-btn-primary" href="posts/index.html">→ all posts</a>
         </div>
