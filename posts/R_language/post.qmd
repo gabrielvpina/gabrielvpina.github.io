@@ -1,0 +1,299 @@
+---
+title: Ploglamando em L - Boas pláticas
+description: "Dicas pessoais e boas práticas em R: instalação, ambiente de desenvolvimento e organização do fluxo de trabalho."
+
+image: "little-onion.jpg"
+categories: [Data Science, R, Programing]
+
+date: 2026-07-09
+date-format: "long"
+
+author: 
+  - name: Gabriel Pina
+    degrees: 
+      - MSc
+    id: gr
+    orcid: 0009-0005-2294-2845
+    email: gvpina.rodrigues@gmail.com
+    affiliation: 
+      - name: Universidade Estadual de Santa Cruz
+        city: Ilhéus
+        state: Bahia
+        url: www.uesc.br
+
+bibliography: refs.bib
+csl: abnt.csl
+
+
+lightbox: true
+toc: true
+number-sections: true
+lang: pt
+---
+
+# O que é a linguagem R?
+
+**R** é uma linguagem de programação e um ambiente voltado para computação estatística e gráfica. Ela tem seu código aberto e foi desenvolvida por *Ross Ihaka* e por *Robert Gentleman* no departamento de Estatística da *Universidade de Auckland*, na Nova Zelândia em 1993. Ela faz parte do **projeto GNU** (mencionado no post anterior) e é similar a linguagem **S** — da *Bell Laboratories*, antiga *AT&T* @rproject_about.
+
+![Criadores da linguagem R, na esquerda temos *Robert Gentleman* e ao seu lado *Ross Ihaka*.](pics/robert-ross.webp)
+
+É utilizada principalmente por estatísticos, analistas de dados e pesquisadores para desenvolver softwares de estatística e ajudar na interpretação de dados. Além da linguagem em si, a comunidade de usuários e desenvolvedores trabalham na criação de **pacotes**, complementos que permitem novas funcionalidades e integrações no fluxo de trabalho @wikipedia_r_2024.
+
+:::{.callout-note}
+Esse post será sobre instalação, desenvolvimento e boas práticas no R. Não se trata de um tutorial sobre como programar em R.
+:::
+
+## Entendendo por partes
+
+Temos a seguinte definição do *R-Project* @rproject_about:
+
+> "R é uma linguagem de programação e um ambiente voltado para computação estatística e gráfica."
+
+**O que essa afirmação significa?** Uma *linguagem de programação*, em temos simples, é um conjuntos de regras e semânticas para que um usuário humano possa enviar e escrever uma rotina ou tarefa para que um computador. A linguagem é escrita em uma sintaxe que possa ser lida por seres humanos para depois ser convertida em instruções binárias (a linguagem que um computador de fato "entende").
+
+Sobre o *ambiente de programação*, é o diferencial do R ante as outras linguagens de programação. Ele é desde sua origem desenhado para suportar tudo o que é necessário para a análise de dados: **Armazenamento de dados** (data frames, vetores e listas); **Cálculo de arrays e matrizes nativo** (funções que operam diretamente em conjuntos de dados); **Ferramentas gráficas integradas** para a visualização de dados.
+
+Além disso o R possui suporte à pacotes do CRAN ([The Comprehensive R Archive Network](https://cran.r-project.org/)), que confere novas capacidades para a linguagem — são milhares de bibliotecas que podem ser utilizadas para uma vasta gama de aplicações.
+
+Então a **linguagem R** diz respeito à sintaxe (escrita do código) e regras de como inserir instruções. Já o **ambiente R** se refere à todos os recursos embarcados na instalação. 
+
+# Instalando o R
+
+Vamos instalar o `r-base`, a parte mais básica do R que possui somente os pacotes mais simples. Para usar essa versão é necessário ter uma IDE ou usá-la direto pelo terminal.
+
+## Instalando em diferentes sistemas operacionais
+
+### Windows
+
+No site do [CRAN](https://cran.r-project.org/), acesse a aba **Download R for Windows** e clique em [base](https://cran.r-project.org/bin/windows/base/) e baixe a versão disponível (arquivo .exe).
+
+### MacOS via terminal
+
+No CRAN, clique em [Download R for macOS](https://cran.r-project.org/) e baixe o .pkg correspondente com a arquitetura de processamento do seu dispositivo: 
+
+- **Apple Silicon** (M1/M2/M3/M4) → arquivo `arm64`
+
+- **Intel** → arquivo `x86_64`
+
+### Linux
+
+Para sistemas baseados em **Debian (Ubuntu/Mint)**, vá no terminal e digite:
+
+```bash
+sudo apt update
+sudo apt install --no-install-recommends r-base
+```
+
+Para versões mais recentes do R (o repositório padrão do Ubuntu costuma ser antigo), adicione o repositório da CRAN:
+
+```bash
+sudo apt install --no-install-recommends software-properties-common dirmngr
+wget -qO- https://cloud.r-project.org/bin/linux/ubuntu/marutter_pubkey.asc | sudo tee -a /etc/apt/trusted.gpg.d/cran_ubuntu_key.asc
+sudo add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu $(lsb_release -cs)-cran40/"
+sudo apt update
+sudo apt install r-base
+```
+
+Para **Fedora/RHEL/CentOS**:
+
+```bash
+sudo dnf install R
+```
+
+Para sistemas baseados em **Arch Linux**:
+
+```bash
+sudo pacman -S r-base
+```
+
+# O pulo do gato
+
+Depois de instalar o R via CRAN, basta ir no terminal e digitar o comando `R --version` e ver qual versão do R está presente no seu computador. 
+
+Entretanto, já vi diversas vezes pessoas que dependiam de pacotes específicos para realizar uma análise, e esses pacotes dependerem de uma versão antiga do R para serem executados. Essa interligação de dependências pode impedir a execução de algumas análises. 
+
+Existem diversos pacotes que não tem manutenção no CRAN e podem ser executados somente em uma versão antiga do R. Por mais que se consiga instalar uma versão mais antiga, ela pode não suportar itens de pacotes atuais que estão acompanhando a última versão do R. Em projetos que necessitam da integração de múltiplos pacotes, 
+
+## rig, R installation manager
+
+O `rig` é uma ferramenta de linha de comando, criada pela **Posit** (equipe do r-lib), que permite instalar, gerenciar e alternar entre múltiplas versões do R em macOS, Windows e Linux.
+
+Com ele é possível alternar as versões do R de forma fácil, permitindo que se manipule pacotes e ambientes em versões anteriores ou ainda em desenvolvimento. Entretanto para a sua instalação, ele **deve ser instalado no lugar do R**, ou seja, caso você tenha o R instalado em sua máquina, terá que removê-lo para dar lugar ao rig.
+
+## Instalando rig
+
+### macOS
+
+Via Homebrew:
+
+```bash
+brew tap r-lib/rig
+brew trust r-lib/rig
+brew install --cask rig
+```
+
+### Windows
+
+Baixe o instalador em [https://github.com/r-lib/rig/releases](https://github.com/r-lib/rig/releases). O rig se adiciona automaticamente ao PATH, mas pode ser necessário reiniciar o terminal depois da instalação.
+
+### Linux
+
+Sistemas baseados em Debian:
+
+```bash
+# Add repository key
+sudo curl -L https://rig.r-pkg.org/deb/rig.gpg -o /etc/apt/trusted.gpg.d/rig.gpg
+ 
+# Add repository
+sudo sh -c 'echo "deb http://rig.r-pkg.org/deb rig main" > /etc/apt/sources.list.d/rig.list'
+ 
+# Install package
+sudo apt update
+sudo apt install r-rig
+```
+
+Instalação universal (qualquer distro):
+
+```bash
+curl -Ls https://github.com/r-lib/rig/releases/download/latest/rig-linux-$(arch)-latest.tar.gz | 
+  sudo tar xz -C /usr/local
+```
+
+## Uso básico
+
+Depois de instalado, é possível verificar a instalação com o comando `rig list` no terminal. Depois disso podemos realizar alguns comandos básicos para instalar e gerenciar as versões do R:
+
+```bash
+rig add release       # instala a versão mais recente do R
+rig list              # lista versões instaladas
+rig default 4.5.1     # define a versão padrão do R
+```
+# IDEs para R
+
+**IDE** (Integrated Development Environment / Ambiente de Desenvolvimento Integrado) é um software que reúne, num único programa, as principais ferramentas necessárias para programar. No caso do R, a IDE mais consolidada e utilizada é o [RStudio](https://docs.posit.co/ide/user/#rstudio-ide-oss-downloads). 
+
+Esse tema em específico se trata de algo mais pessoal, afinal se pode escrever códigos de R até no bloco de notas ou diretamente no terminal. Nesse caso somente apresentarei algumas opções de IDEs e cabe a você, leitor, testar e escolher a sua (ou nenhuma delas):
+
+- `RStudio`: Como disse anteriormente, a IDE mais adotada até então. Feita especificamente para linguagem R, ela possui todos os recursos necessários para executar análises e criar projetos. Super sólida e recomendada para qualquer iniciante.
+
+- `Positron`: IDE mais recente da Posit (mesma empresa do RStudio), baseada no VS Code, com suporte nativo a R e Python (a que eu estou usando nesse momento).
+
+- `VS Code`: Editor genérico com extensão R (por *REditorSupport*), oferece console, debug e integração com languageserver (uso mais genérico, com suporte para diversas linguagens de programação).
+
+- `Neovim`: Especificamente com a extensão [quarto-nvim](https://github.com/quarto-dev/quarto-nvim), onde é possível escrever códigos quarto com R nativo e marcação de texto.
+
+Enfim, esse é um tema de escopo pessoal e pode variar de acordo com sua preferência. Caso seja seu primeiro contato com R, eu recomendo fortemente o `RStudio` para iniciar.
+
+Atualmente uso o `Positron` como IDE pois essa possui uma maior integração com extensões, além de ter uma interface mais parecida com a do VSCode — que já tenho familiaridade.
+
+# Versionamento de pacotes e ambientes locais
+
+Com o uso constante de R em diferentes projetos, administrar todos no mesmo ambiente R pode ser complicado.
+
+O `renv` é um pacote R para gerenciamento de dependências por projeto, criado pela *Posit* (mesma empresa do RStudio). Ele funciona de forma parecida com o `venv` do *Python*: cria uma biblioteca de pacotes isolada para cada projeto, garantindo que as versões dos pacotes usados fiquem fixas e não sejam afetadas por atualizações feitas em outros projetos ou na instalação global do R.
+
+Isso resolve um problema comum: sem isolamento, se você atualiza um pacote pensando em um projeto, pode acabar quebrando outro projeto que dependia de uma versão anterior. Com o renv, cada projeto tem seu próprio conjunto de pacotes, e é possível reproduzir exatamente o mesmo ambiente em outra máquina, o que é essencial para trabalho colaborativo e reprodutibilidade científica.
+
+## Instalando o renv
+
+O renv é instalado como qualquer pacote do CRAN, direto no console do R ou pela IDE:
+
+```R
+install.packages("renv")
+```
+
+Isso instala o pacote uma única vez na biblioteca padrão do R. A partir daí, ele pode ser usado em qualquer projeto.
+
+## Como o renv cria um ambiente local?
+
+Ao instalar um pacote de forma global (sem o renv), o R armazena os pacotes no diretório onde o R foi instalado (ex: `/usr/lib/R` no Linux, `C:/Program Files/R/R-4.4.1` no Windows). Nele estão contidos os arquivos:
+
+```
+R_HOME/
+├── bin/        # executáveis (R, Rscript)
+├── library/    # pacotes "base" e "recommended" (base, stats, utils, methods...)
+├── etc/        # configurações globais (Rprofile.site, Renviron.site)
+└── doc/
+```
+
+Isso significa que, sem o `renv`, todos os projetos do computador compartilham a mesma biblioteca de pacotes — instalar ou atualizar um pacote em um projeto afeta automaticamente todos os outros.
+
+O `renv` resolve isso criando uma estrutura **paralela e isolada dentro da própria pasta do projeto**, em vez de depender da biblioteca global do R. Ao rodar `renv::init()`, a seguinte estrutura é criada:
+
+```
+meu_projeto/
+├── renv.lock
+├── .Rprofile
+├── renv/
+│   ├── activate.R
+│   ├── library/
+│   ├── settings.json
+│   └── staging/
+```
+
+Na prática, isso quer dizer que:
+
+- Pacotes instalados dentro do projeto vão parar em `renv/library/`, não na biblioteca global.
+
+- Cada projeto enxerga sua própria versão de cada pacote, mesmo que a biblioteca global tenha outra versão instalada.
+
+- Sair da pasta do projeto (ou abrir outro projeto sem `renv`) faz o R voltar a usar a biblioteca global normalmente — o isolamento vale apenas enquanto a sessão está ativa dentro daquele diretório.
+
+Todo esse estado é registrado no `renv.lock`, um arquivo JSON que lista a versão do R e de cada pacote usado no projeto. É esse arquivo — e não a pasta `renv/library/` em si — que deve ser versionado no Git, pois permite recriar o ambiente isolado em qualquer outra máquina com `renv::restore()`.
+
+Importante ressaltar que o renv só possui controle de versionamento nos pacotes instalados, **o renv não tem controle sobre a versão do R instalada**. Para isso podemos utilizar o rig para controle de versão do R. 
+
+# Docker como alternativa (ou complemento) ao renv
+
+Enquanto o `renv` isola pacotes R dentro de um projeto, o **Docker** vai um passo além: isola o **ambiente inteiro** — sistema operacional, versão do R, bibliotecas de sistema, e os pacotes R em si. Isso resolve um problema que o `renv` sozinho não cobre: dependências de sistema fora do R.
+
+## Como funciona na prática
+
+Um projeto R com Docker normalmente tem um arquivo `Dockerfile`, que descreve passo a passo como construir o ambiente:
+
+```dockerfile
+FROM rocker/r-ver:4.4.1
+
+RUN apt-get update && apt-get install -y \
+    libcurl4-openssl-dev \
+    libxml2-dev
+
+COPY renv.lock renv.lock
+RUN R -e "install.packages('renv'); renv::restore()"
+
+COPY . /app
+WORKDIR /app
+
+CMD ["Rscript", "analise.R"]
+```
+
+Aqui, `rocker/r-ver` é uma imagem base mantida pelo projeto **Rocker**, que fornece versões do R prontas para uso em containers — é o ponto de partida mais comum para quem trabalha com R em Docker.
+
+## renv + Docker juntos
+
+Na prática, muitos projetos usam as duas ferramentas de forma complementar:
+
+- O `Dockerfile` garante o sistema operacional, a versão do R e as bibliotecas de sistema.
+
+- O `renv.lock`, copiado para dentro da imagem, garante as versões exatas dos pacotes R.
+
+Isso dá uma reprodutibilidade em duas camadas: mesmo que o `renv.lock` sozinho não resolva uma dependência de sistema, o Dockerfile já cuida disso antes mesmo do R rodar.
+
+## Quando vale a pena usar Docker
+
+- **Deploy em produção** — rodar uma API ou um relatório automatizado em servidor, com garantia de que o ambiente é idêntico ao de desenvolvimento.
+
+- **Colaboração entre sistemas operacionais diferentes** — evita o clássico "funciona na minha máquina", já que todos rodam o mesmo container, independente de usarem Windows, macOS ou Linux.
+
+- **CI/CD** — pipelines de teste automatizado (GitHub Actions, GitLab CI) rodando sempre no mesmo ambiente controlado.
+
+Para uso local e individual, apenas o `renv` costuma ser suficiente. O Docker se torna mais valioso quando entram em jogo múltiplas máquinas, dependências de sistema, ou necessidade de deploy — situações em que isolar só os pacotes R não é o bastante.
+
+# Reprodutibilidade é a chave
+
+Todas essas medidas e ações tomadas tem como objetivo tornar um projeto/análise em R o mais reprodutível possível. Por ter que lidar com um grande volume de projetos entre diferentes pessoas, sei bem o quão impeditivo pode ser a quebra de um código por dependências desalinhadas. Até checar os logs e erros, chegar na solução, baixar as dependências faltantes, há um longo caminho de estresse e momentos onde se diz "fiz tudo isso para no final a solução ser somente a instalação da dependência xyz!".
+
+Além de gerar menos estresse, estratégias de reprodutibilidade são vitais nos meios acadêmicos e corporativos. Saber esses métodos é o mínimo que se pode fazer quando se deseja que seu trabalho seja testado e utilizado por outras pessoas.
+
+
+

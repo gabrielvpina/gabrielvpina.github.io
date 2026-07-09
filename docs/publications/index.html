@@ -134,6 +134,16 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../styles/retro.css">
+<meta property="og:title" content="/publications – me.log">
+<meta property="og:image" content="https://gabrielvpina.github.io/papers_thumbs/viralquest.png">
+<meta property="og:site_name" content="me.log">
+<meta property="og:image:height" content="2198">
+<meta property="og:image:width" content="3326">
+<meta name="twitter:title" content="/publications – me.log">
+<meta name="twitter:image" content="https://gabrielvpina.github.io/papers_thumbs/viralquest.png">
+<meta name="twitter:image-height" content="2198">
+<meta name="twitter:image-width" content="3326">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -464,7 +474,7 @@ Jul 31, 2024
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gabrielvpina\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

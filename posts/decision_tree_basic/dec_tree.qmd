@@ -1,5 +1,6 @@
 ---
 title: Árvore de Decisão - Introdução
+description: "Uma introdução prática a árvores de decisão em R, aplicada a um relatório de Ciência de Dados."
 
 image: "decision_tree.png"
 categories: [Machine-learning, Tutorial, R]

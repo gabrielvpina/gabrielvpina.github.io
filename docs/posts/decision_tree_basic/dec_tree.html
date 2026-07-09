@@ -8,6 +8,7 @@
 
 <meta name="author" content="Gabriel Rodrigues">
 <meta name="keywords" content="Data-Science, Machine-Learning, Decision-Tree">
+<meta name="description" content="Uma introdução prática a árvores de decisão em R, aplicada a um relatório de Ciência de Dados.">
 
 <title>Árvore de Decisão - Introdução – me.log</title>
 <style>
@@ -114,6 +115,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles/retro.css">
+<meta property="og:title" content="Árvore de Decisão - Introdução – me.log">
+<meta property="og:description" content="Uma introdução prática a árvores de decisão em R, aplicada a um relatório de Ciência de Dados.">
+<meta property="og:image" content="https://gabrielvpina.github.io/posts/decision_tree_basic/decision_tree.png">
+<meta property="og:site_name" content="me.log">
+<meta property="og:image:height" content="922">
+<meta property="og:image:width" content="1400">
+<meta name="twitter:title" content="Árvore de Decisão - Introdução – me.log">
+<meta name="twitter:description" content="Uma introdução prática a árvores de decisão em R, aplicada a um relatório de Ciência de Dados.">
+<meta name="twitter:image" content="https://gabrielvpina.github.io/posts/decision_tree_basic/decision_tree.png">
+<meta name="twitter:image-height" content="922">
+<meta name="twitter:image-width" content="1400">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -198,6 +211,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Uma introdução prática a árvores de decisão em R, aplicada a um relatório de Ciência de Dados.
+  </div>
+</div>
 
 <div class="quarto-title-meta-author">
   <div class="quarto-title-meta-heading">Autor</div>
@@ -457,7 +475,7 @@ node), split, n, loss, yval, (yprob)
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gabrielvpina\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

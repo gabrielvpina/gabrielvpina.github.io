@@ -4,7 +4,10 @@ project:
 
 website:
   title: "me.log"
+  site-url: https://gabrielvpina.github.io
   favicon: assets/favicon.png
+  open-graph: true
+  twitter-card: true
   navbar:
     background: "#251A30"
     foreground: "#ECE3FA"

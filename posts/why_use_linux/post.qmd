@@ -1,5 +1,6 @@
 ---
 title: Seja amigo de um pinguim
+description: "Um ensaio sobre jardins fechados, dependência de sistemas operacionais e por que vale a pena migrar para o Linux."
 
 image: "logo.jpg"
 categories: [Opinion, Linux, Research]

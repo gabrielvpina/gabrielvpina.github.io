@@ -8,6 +8,7 @@
 
 <meta name="author" content="Gabriel Pina">
 <meta name="keywords" content="Data Science, Testes estatísticos, Tidyplots">
+<meta name="description" content="Relatório de análise de dados em R: do processamento à validação de hipóteses com testes estatísticos e gráficos em ggplot2.">
 
 <title>Explorando Dados com R – me.log</title>
 <style>
@@ -114,6 +115,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles/retro.css">
+<meta property="og:title" content="Explorando Dados com R – me.log">
+<meta property="og:description" content="Relatório de análise de dados em R: do processamento à validação de hipóteses com testes estatísticos e gráficos em ggplot2.">
+<meta property="og:image" content="https://gabrielvpina.github.io/posts/data_report/thumb.png">
+<meta property="og:site_name" content="me.log">
+<meta property="og:image:height" content="721">
+<meta property="og:image:width" content="862">
+<meta name="twitter:title" content="Explorando Dados com R – me.log">
+<meta name="twitter:description" content="Relatório de análise de dados em R: do processamento à validação de hipóteses com testes estatísticos e gráficos em ggplot2.">
+<meta name="twitter:image" content="https://gabrielvpina.github.io/posts/data_report/thumb.png">
+<meta name="twitter:image-height" content="721">
+<meta name="twitter:image-width" content="862">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -238,6 +251,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Relatório de análise de dados em R: do processamento à validação de hipóteses com testes estatísticos e gráficos em ggplot2.
+  </div>
+</div>
 
 <div class="quarto-title-meta-author">
   <div class="quarto-title-meta-heading">Autor</div>
@@ -2818,7 +2836,7 @@ Kruskal-Wallis chi-squared = 102.94, df = 5, p-value &lt; 2.2e-16</code></pre>
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gabrielvpina\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

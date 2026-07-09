@@ -85,7 +85,7 @@ ul.task-list li input[type="checkbox"] {
     const options = {
       valueNames: ['listing-title','listing-date','listing-categories','listing-path',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
       
-      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-title","listing-image","listing-categories","listing-date","listing-date-format","listing-author","listing-abstract","listing-keywords","listing-lightbox","listing-toc","listing-number-sections","listing-lang","listing-path","listing-outputHref","listing-date-modified","listing-description","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-bibliography","listing-csl"],
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-title","listing-description","listing-image","listing-categories","listing-date","listing-date-format","listing-author","listing-bibliography","listing-csl","listing-lightbox","listing-toc","listing-number-sections","listing-lang","listing-path","listing-outputHref","listing-date-modified","listing-filename","listing-file-modified","listing-reading-time","listing-word-count","listing-abstract","listing-keywords"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -134,6 +134,10 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="styles/retro.css">
+<meta property="og:title" content="– me.log">
+<meta property="og:site_name" content="me.log">
+<meta name="twitter:title" content="– me.log">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed retro-desktop-body fullcontent quarto-light">
@@ -253,17 +257,17 @@ window.Quarto = {
 <ul class="file-list">
 <li class="file-entry">
 <div class="file-info">
+<p><a class="file-name" href="./posts/R_language/post.html">Ploglamando em L - Boas pláticas</a> <span class="file-meta">2026-07-09 · Data Science, R, Programing</span></p>
+</div>
+</li>
+<li class="file-entry">
+<div class="file-info">
 <p><a class="file-name" href="./posts/why_use_linux/post.html">Seja amigo de um pinguim</a> <span class="file-meta">2026-07-03 · Opinion, Linux, Research</span></p>
 </div>
 </li>
 <li class="file-entry">
 <div class="file-info">
 <p><a class="file-name" href="./posts/decision_tree_basic/dec_tree.html">Árvore de Decisão - Introdução</a> <span class="file-meta">2025-11-11 · Machine-learning, Tutorial, R</span></p>
-</div>
-</li>
-<li class="file-entry">
-<div class="file-info">
-<p><a class="file-name" href="./posts/seq_sanger/seq_sanger.html">Processando dados de sequenciamento Sanger</a> <span class="file-meta">2025-11-05 · Bioinformatics, Tutorial, Sanger</span></p>
 </div>
 </li>
 </ul>
@@ -376,7 +380,7 @@ window.Quarto = {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gabrielvpina\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }

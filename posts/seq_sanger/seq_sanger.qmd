@@ -1,5 +1,6 @@
 ---
 title: Processando dados de sequenciamento Sanger
+description: "Tutorial prático de processamento de dados de sequenciamento Sanger para a construção de árvores filogenéticas."
 
 image: "thumb.png"
 categories: [Bioinformatics, Tutorial, Sanger]

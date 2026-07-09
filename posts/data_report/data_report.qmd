@@ -1,5 +1,6 @@
 ---
 title: Explorando Dados com R
+description: "Relatório de análise de dados em R: do processamento à validação de hipóteses com testes estatísticos e gráficos em ggplot2."
 
 image: "thumb.png"
 categories: [Data-Science, Tutorial, R]

@@ -2,6 +2,7 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/R_language/post.html",
       "/posts/why_use_linux/post.html",
       "/posts/decision_tree_basic/dec_tree.html",
       "/posts/seq_sanger/seq_sanger.html",
@@ -21,6 +22,7 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/R_language/post.html",
       "/posts/why_use_linux/post.html",
       "/posts/decision_tree_basic/dec_tree.html",
       "/posts/seq_sanger/seq_sanger.html",

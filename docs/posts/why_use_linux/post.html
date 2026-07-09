@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gabriel Pina">
+<meta name="description" content="Um ensaio sobre jardins fechados, dependência de sistemas operacionais e por que vale a pena migrar para o Linux.">
 
 <title>Seja amigo de um pinguim – me.log</title>
 <style>
@@ -98,6 +99,14 @@ div.csl-indent {
 
 
 <link rel="stylesheet" href="../../styles/retro.css">
+<meta property="og:title" content="Seja amigo de um pinguim – me.log">
+<meta property="og:description" content="Um ensaio sobre jardins fechados, dependência de sistemas operacionais e por que vale a pena migrar para o Linux.">
+<meta property="og:image" content="https://gabrielvpina.github.io/posts/why_use_linux/logo.jpg">
+<meta property="og:site_name" content="me.log">
+<meta name="twitter:title" content="Seja amigo de um pinguim – me.log">
+<meta name="twitter:description" content="Um ensaio sobre jardins fechados, dependência de sistemas operacionais e por que vale a pena migrar para o Linux.">
+<meta name="twitter:image" content="https://gabrielvpina.github.io/posts/why_use_linux/logo.jpg">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-fixed quarto-light">
@@ -190,6 +199,11 @@ div.csl-indent {
   </div>
   </div>
 
+<div>
+  <div class="description">
+    Um ensaio sobre jardins fechados, dependência de sistemas operacionais e por que vale a pena migrar para o Linux.
+  </div>
+</div>
 
 <div class="quarto-title-meta-author">
   <div class="quarto-title-meta-heading">Autor</div>
@@ -655,7 +669,7 @@ div.csl-indent {
     }
       var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
       var mailtoRegex = new RegExp(/^mailto:/);
-        var filterRegex = new RegExp('/' + window.location.host + '/');
+        var filterRegex = new RegExp("https:\/\/gabrielvpina\.github\.io");
       var isInternal = (href) => {
           return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
