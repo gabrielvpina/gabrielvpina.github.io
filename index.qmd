@@ -41,7 +41,7 @@ listing:
             <a class="retro-btn" href="https://github.com/gabrielvpina" target="_blank">GitHub</a>
             <a class="retro-btn" href="https://orcid.org/0009-0005-2294-2845" target="_blank">ORCID</a>
             <a class="retro-btn retro-btn-primary" href="about/">→ about me</a>
-          </div>
+          </div> 
         </div>
       </div>
     </div>
@@ -92,7 +92,7 @@ listing:
   <!-- ── Taskbar ─────────────────────────────────────────── -->
   <div class="retro-taskbar">
     <button class="taskbar-start">▶ START</button>
-    <div class="taskbar-tab">📝 me.log</div>
+    <div class="taskbar-tab">me.log</div>
     <div class="taskbar-spacer"></div>
     <div class="taskbar-clock" id="taskbar-clock">2026</div>
   </div>
