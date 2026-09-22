@@ -3,3 +3,6 @@
 
 # macOS
 .DS_Store
+
+# Imagens-fonte (nao publicadas e nao versionadas)
+/_source/
