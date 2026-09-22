@@ -410,34 +410,48 @@
     "href": "about/index.html",
     "title": "/about",
     "section": "",
-    "text": "gabriel_pina.txt\n      \n    \n    \n      \n        \n      \n      \n        Gabriel Pina\n        PhD Student · Bioinformatics\n        UESC — Ilhéus, BA, Brazil\n        \n          LinkedIn\n          GitHub\n          ORCID\n          Lattes\n        \n      \n    \n  \n\n  \n  \n    \n      curriculum.md\n      \n    \n    \n\n\nHard Skills:\n\nPython, R and Bash\nLinux, Bioconda and Docker\nQuarto and Shiny\n\nKnow-How:\n\nBiostatistics, NGS Data and Pipeline Development\nGenomics and Transcriptomics\nDashboards and Biological Databases\n\n\n\n\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\nWorking with the ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. Check the GitHub repository.\n\n\n\nUniversidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\nExperience and published works in viral genomic surveillance of Theobroma cacao public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with P. megakarya.\n\n\n\nUniversidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
+    "text": "curriculum.md\n      \n    \n    \n      \n        gabrielvpina@me.log:~$ cat curriculum.md\n\n\nBioinformatician working where virology meets genomics. PhD student in Genetics and Molecular Biology at the Universidade Estadual de Santa Cruz (UESC), in Ilhéus, Bahia — the same program where I finished my master’s.\nMost of my work comes down to one idea: the viruses are already in the data, and somebody has to go look. I build the tools that make that search routine.\n\n\n\nViral discovery and surveillance from public data. Mining RNA-Seq libraries deposited for entirely different purposes, and recovering the viral sequences hiding in them.\nMetagenomics and metatranscriptomics. Characterizing viral diversity across hosts — plants, arthropods and fermentation-associated microbial communities.\nEndogenous viral elements and small RNAs. Tracing ancient viral integrations in bee genomes, and the small RNA pathways that respond to infection.\nPlant immunity. Identification of resistance genes in Theobroma cacao, and the study of their expression under various conditions.\n\n\n\n\n\nUniversidade Estadual de Santa Cruz · Ilhéus, BA · 2025 — present\nBuilding the next generation of ViralQuest, and extending viral discovery to new hosts and datasets.\n\n\n\nUniversidade Estadual de Santa Cruz · Ilhéus, BA · 2023 — 2025\nEmphasis on bioinformatics. Viral genomic surveillance of Theobroma cacao using public data, screening putative novel viral sequences across RNA-Seq libraries.\n\n\n\nUniversidade Federal do Sul da Bahia · Itabuna, BA · 2018 — 2022\n\n\n\n\nSequencing data — NGS analysis; genome and transcriptome assembly and curation; differential expression; gene set enrichment (GSEA); small RNA analysis.\nEngineering — bioinformatics pipeline development; reproducible environments with Docker and pixi; data mining from public sequence repositories; Linux server administration for research.\nLanguages — R, Python and Bash, with Git and GitHub for everything.\n\n\n\n\n\nAn interactive, accessible pipeline for viral sequence analysis and curation. Designed so that finding viruses in a contig set does not require being a bioinformatician first. Published in BMC Bioinformatics.\n\n\n\nQuery and download viral taxonomy, metadata and sequences — the tedious part of every virome project, automated.\n\n\n\nA terminal interface for the SLURM workload manager, for people who live on a cluster.\n\n\n\nFigures and visualizations from published papers, kept in the open so the plots are reproducible.\n\n\n\n\nWork on cocoa viromes, bee endogenous viral elements, stingless bee miRNAs and the ViralQuest pipeline itself — the full list lives on the publications page.\n        gabrielvpina@me.log:~$"
   },
   {
-    "objectID": "about/index.html#experience",
-    "href": "about/index.html#experience",
+    "objectID": "about/index.html#whoami",
+    "href": "about/index.html#whoami",
     "title": "/about",
     "section": "",
-    "text": "Hard Skills:\n\nPython, R and Bash\nLinux, Bioconda and Docker\nQuarto and Shiny\n\nKnow-How:\n\nBiostatistics, NGS Data and Pipeline Development\nGenomics and Transcriptomics\nDashboards and Biological Databases"
+    "text": "Bioinformatician working where virology meets genomics. PhD student in Genetics and Molecular Biology at the Universidade Estadual de Santa Cruz (UESC), in Ilhéus, Bahia — the same program where I finished my master’s.\nMost of my work comes down to one idea: the viruses are already in the data, and somebody has to go look. I build the tools that make that search routine."
   },
   {
-    "objectID": "about/index.html#phd-2025-current",
-    "href": "about/index.html#phd-2025-current",
+    "objectID": "about/index.html#research",
+    "href": "about/index.html#research",
     "title": "/about",
     "section": "",
-    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nPhD in Genetics and Molecular Biology\nWorking with the ViralQuest pipeline, a tool designed to characterize viral sequences in contigs samples. Check the GitHub repository."
+    "text": "Viral discovery and surveillance from public data. Mining RNA-Seq libraries deposited for entirely different purposes, and recovering the viral sequences hiding in them.\nMetagenomics and metatranscriptomics. Characterizing viral diversity across hosts — plants, arthropods and fermentation-associated microbial communities.\nEndogenous viral elements and small RNAs. Tracing ancient viral integrations in bee genomes, and the small RNA pathways that respond to infection.\nPlant immunity. Identification of resistance genes in Theobroma cacao, and the study of their expression under various conditions."
   },
   {
-    "objectID": "about/index.html#masters-degree-2023-2025",
-    "href": "about/index.html#masters-degree-2023-2025",
+    "objectID": "about/index.html#education",
+    "href": "about/index.html#education",
     "title": "/about",
     "section": "",
-    "text": "Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA\nMSc. in Genetics and Molecular Biology\nExperience and published works in viral genomic surveillance of Theobroma cacao public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.\nWorked with identification of PRRs and NLRs genes in Theobroma cacao RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with P. megakarya."
+    "text": "Universidade Estadual de Santa Cruz · Ilhéus, BA · 2025 — present\nBuilding the next generation of ViralQuest, and extending viral discovery to new hosts and datasets.\n\n\n\nUniversidade Estadual de Santa Cruz · Ilhéus, BA · 2023 — 2025\nEmphasis on bioinformatics. Viral genomic surveillance of Theobroma cacao using public data, screening putative novel viral sequences across RNA-Seq libraries.\n\n\n\nUniversidade Federal do Sul da Bahia · Itabuna, BA · 2018 — 2022"
   },
   {
-    "objectID": "about/index.html#bachelors-degree-2018-2022",
-    "href": "about/index.html#bachelors-degree-2018-2022",
+    "objectID": "about/index.html#skills",
+    "href": "about/index.html#skills",
     "title": "/about",
     "section": "",
-    "text": "Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA\nBachelor in Interdisciplinary Sciences\nWorked with chemodiversity of native Atlantic forest plant populations of Schinus terebinthifolia Raddi."
+    "text": "Sequencing data — NGS analysis; genome and transcriptome assembly and curation; differential expression; gene set enrichment (GSEA); small RNA analysis.\nEngineering — bioinformatics pipeline development; reproducible environments with Docker and pixi; data mining from public sequence repositories; Linux server administration for research.\nLanguages — R, Python and Bash, with Git and GitHub for everything."
+  },
+  {
+    "objectID": "about/index.html#software",
+    "href": "about/index.html#software",
+    "title": "/about",
+    "section": "",
+    "text": "An interactive, accessible pipeline for viral sequence analysis and curation. Designed so that finding viruses in a contig set does not require being a bioinformatician first. Published in BMC Bioinformatics.\n\n\n\nQuery and download viral taxonomy, metadata and sequences — the tedious part of every virome project, automated.\n\n\n\nA terminal interface for the SLURM workload manager, for people who live on a cluster.\n\n\n\nFigures and visualizations from published papers, kept in the open so the plots are reproducible."
+  },
+  {
+    "objectID": "about/index.html#publications",
+    "href": "about/index.html#publications",
+    "title": "/about",
+    "section": "",
+    "text": "Work on cocoa viromes, bee endogenous viral elements, stingless bee miRNAs and the ViralQuest pipeline itself — the full list lives on the publications page.\n        gabrielvpina@me.log:~$"
   }
 ]

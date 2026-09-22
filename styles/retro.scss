@@ -1130,45 +1130,91 @@ div.quarto-post .listing-categories .listing-category {
   margin-top: 8px;
 }
 
-.about-profile-banner {
-  display: flex;
-  align-items: center;
-  gap: 28px;
+/* O currículo é uma janela-terminal: o corpo não tem respiro próprio,
+   quem dá o padding é a tela escura lá dentro.                      */
+.curriculum-window { --cor: #{$verde}; }
+.curriculum-window .window-body { padding: 0; }
+
+/* ── Currículo em forma de terminal ─────────────────────────── */
+/* Herda o fundo escuro, as scanlines e o prompt de .terminal; aqui
+   ficam só as marcações do conteúdo em markdown.                 */
+.terminal-prose {
+  padding: 24px 26px 28px;
 }
 
-.about-profile-info { flex: 1; min-width: 0; }
-
-/* As duas classes são exigidas no seletor: só ".about-photo"
-   perderia para "body:not(.retro-desktop-body) main img", que tem
-   mais elementos no seletor.                                      */
-.profile-photo.about-photo {
-  width: 130px;
-  height: 130px;
-  object-fit: cover;
-  border: $borda-fina solid $tinta;
-  border-radius: $raio;
-  box-shadow: $sombra-p;
+/* Cada seção vira uma linha de comando */
+.terminal-prose h2 {
+  margin: 28px 0 14px;
+  padding-bottom: 8px;
+  font-family: $fonte-texto;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: $term-label;
+  text-transform: lowercase;
+  border-bottom: 1px dashed rgba(236, 230, 216, .18);
 }
 
-.about-name {
-  margin: 0 0 2px;
-  font-family: $fonte-titulo;
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -.5px;
+.terminal-prose h2:first-of-type { margin-top: 22px; }
+
+.terminal-prose h2::before {
+  content: "$ ";
+  color: $verde;
+  font-weight: 400;
 }
 
-.about-role {
-  margin: 0 0 2px;
-  font-size: .88rem;
-  color: $tinta-suave;
+/* Subtítulo (cada formação, cada projeto): sem cifrão, para não
+   competir com o nível de cima.                                  */
+.terminal-prose h3 {
+  margin: 22px 0 4px;
+  font-family: $fonte-texto;
+  font-size: .94rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: $term-texto;
 }
 
-.about-place {
-  margin: 0 0 14px;
-  font-size: .82rem;
-  color: $tinta-suave;
+.terminal-prose p { margin: 0 0 12px; }
+
+/* Linha de metadados logo abaixo de um subtítulo (instituição, ano) */
+.terminal-prose h3 + p { color: $term-prompt; font-size: .86rem; }
+
+/* Negrito destacado como saída em realce */
+.terminal-prose strong { color: $mostarda; font-weight: 600; }
+
+/* Itálico (nomes de espécies, títulos de grau) em tom frio */
+.terminal-prose em { color: #9ad9c4; font-style: italic; }
+
+.terminal-prose a {
+  color: $verde;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
+
+.terminal-prose a:hover { color: $mostarda; }
+
+/* Listas com marcador de terminal em vez de bolinha */
+.terminal-prose ul {
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.terminal-prose ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 3px;
+}
+
+.terminal-prose ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 2px;
+  color: $verde;
+}
+
+/* O prompt de fechamento encosta no conteúdo, sem margem extra */
+.terminal-prose > .terminal-prompt:last-child { margin: 20px 0 0; }
 
 /* ── Cabeçalho e selo de projeto ────────────────────────────── */
 .project-header {
@@ -1219,8 +1265,7 @@ div.quarto-post .listing-categories .listing-category {
   .file-date { grid-column: 1 / -1; }
   .file-tags { grid-column: 1 / -1; }
   .pub { grid-template-columns: 48px 1fr; padding: 14px 16px; }
-  .about-profile-banner { flex-direction: column; text-align: center; }
-  .about-profile-info .social-row { justify-content: center; }
+  .terminal-prose { padding: 18px 16px 22px; font-size: .85rem; }
   body:not(.retro-desktop-body) #quarto-content main {
     padding: 20px 16px !important;
   }

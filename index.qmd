@@ -41,11 +41,11 @@ listing:
       <div class="window-body">
         <div class="hero">
           <div class="hero-photo">
-            <img src="assets/profile.jpg" alt="Gabriel Pina" />
-            <span class="hero-photo-label">perfil.jpg</span>
+            <img src="assets/profile-pixel.jpg" alt="Gabriel Pina" />
+            <span class="hero-photo-label">profile.jpg</span>
           </div>
           <div class="hero-text">
-            <p class="hero-greeting">olá, eu sou</p>
+            <p class="hero-greeting">hi, I'm</p>
             <h1 class="hero-name">Gabriel Pina</h1>
             <p class="hero-tagline">RNA, code, and <span class="mark">notes to my future self</span>.</p>
             <ul class="hero-meta">

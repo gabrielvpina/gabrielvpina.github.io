@@ -6,80 +6,83 @@ toc: false
 ```{=html}
 <div class="about-window-grid">
 
-  <!-- Top: profile card (banner horizontal) -->
-  <div class="retro-window">
-    <div class="window-titlebar">
-      <span class="window-title">gabriel_pina.txt</span>
-      <div class="window-controls"><span></span><span></span><span></span></div>
-    </div>
-    <div class="window-body about-profile-banner">
-      <div class="profile-photo-frame">
-        <img src="../assets/profile.jpg" class="profile-photo about-photo" alt="Gabriel Pina" />
-      </div>
-      <div class="about-profile-info">
-        <p class="about-name">Gabriel Pina</p>
-        <p class="about-role">PhD Student · Bioinformatics</p>
-        <p class="about-place">UESC — Ilhéus, BA, Brazil</p>
-        <div class="social-row">
-          <a class="retro-btn" href="https://linkedin.com/in/gabriel-rodrigues-008419210/" target="_blank">LinkedIn</a>
-          <a class="retro-btn" href="https://github.com/gabrielvpina" target="_blank">GitHub</a>
-          <a class="retro-btn" href="https://orcid.org/0009-0005-2294-2845" target="_blank">ORCID</a>
-          <a class="retro-btn" href="https://lattes.cnpq.br/6691808758719803" target="_blank">Lattes</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bottom: bio content -->
-  <div class="retro-window">
+  <div class="retro-window curriculum-window">
     <div class="window-titlebar">
       <span class="window-title">curriculum.md</span>
       <div class="window-controls"><span></span><span></span><span></span></div>
     </div>
     <div class="window-body">
+      <div class="terminal terminal-prose">
+        <p class="terminal-prompt"><b>gabrielvpina@me.log</b>:~$ cat curriculum.md</p>
 ```
 
-## Experience
+## Whoami
 
-**Hard Skills:**
+Bioinformatician working where virology meets genomics. PhD student in Genetics and Molecular Biology at the **Universidade Estadual de Santa Cruz** (UESC), in Ilhéus, Bahia — the same program where I finished my master's.
 
-- Python, R and Bash
-- Linux, Bioconda and Docker
-- Quarto and Shiny
+Most of my work comes down to one idea: the viruses are already in the data, and somebody has to go look. I build the tools that make that search routine.
 
-**Know-How:**
+## Research
 
-- Biostatistics, NGS Data and Pipeline Development
-- Genomics and Transcriptomics
-- Dashboards and Biological Databases
+**Viral discovery and surveillance from public data.** Mining RNA-Seq libraries deposited for entirely different purposes, and recovering the viral sequences hiding in them.
 
-## PhD (2025 — current)
+**Metagenomics and metatranscriptomics.** Characterizing viral diversity across hosts — plants, arthropods and fermentation-associated microbial communities.
 
-**Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA**
+**Endogenous viral elements and small RNAs.** Tracing ancient viral integrations in bee genomes, and the small RNA pathways that respond to infection.
 
-*PhD in Genetics and Molecular Biology*
+**Plant immunity.** Identification of resistance genes in *Theobroma cacao*, and the study of their expression under various conditions.
 
-Working with the *ViralQuest* pipeline, a tool designed to characterize viral sequences in contigs samples. [Check the GitHub repository.](https://github.com/gabrielvpina/viralquest)
+## Education
 
-## Master's Degree (2023 — 2025)
+### PhD in Genetics and Molecular Biology
 
-**Universidade Estadual de Santa Cruz, Brazil | Ilhéus, BA**
+Universidade Estadual de Santa Cruz · Ilhéus, BA · 2025 — present
 
-*MSc. in Genetics and Molecular Biology*
+Building the next generation of *ViralQuest*, and extending viral discovery to new hosts and datasets.
 
-Experience and published works in viral genomic surveillance of *Theobroma cacao* public data — screening novel viral putative sequences in RNA-Seq libraries from public databases.
+### MSc in Genetics and Molecular Biology
 
-Worked with identification of PRRs and NLRs genes in *Theobroma cacao* RNA-Seq data: differential gene expression between tissues, genotypes and conditions inoculated with *P. megakarya*.
+Universidade Estadual de Santa Cruz · Ilhéus, BA · 2023 — 2025
 
-## Bachelor's Degree (2018 — 2022)
+Emphasis on bioinformatics. Viral genomic surveillance of *Theobroma cacao* using public data, screening putative novel viral sequences across RNA-Seq libraries.
 
-**Universidade Federal do Sul da Bahia, Brazil | Itabuna, BA**
+### BSc in Interdisciplinary Sciences
 
-*Bachelor in Interdisciplinary Sciences*
+Universidade Federal do Sul da Bahia · Itabuna, BA · 2018 — 2022
 
-Worked with chemodiversity of native Atlantic forest plant populations of *Schinus terebinthifolia* Raddi.
+## Skills
+
+**Sequencing data** — NGS analysis; genome and transcriptome assembly and curation; differential expression; gene set enrichment (GSEA); small RNA analysis.
+
+**Engineering** — bioinformatics pipeline development; reproducible environments with Docker and pixi; data mining from public sequence repositories; Linux server administration for research.
+
+**Languages** — R, Python and Bash, with Git and GitHub for everything.
+
+## Software
+
+### [viralquest](https://github.com/gabrielvpina/viralquest)
+
+An interactive, accessible pipeline for viral sequence analysis and curation. Designed so that finding viruses in a contig set does not require being a bioinformatician first. *Published in BMC Bioinformatics.*
+
+### [viralfetch](https://github.com/gabrielvpina/viralfetch)
+
+Query and download viral taxonomy, metadata and sequences — the tedious part of every virome project, automated.
+
+### [slin](https://github.com/gabrielvpina/slin)
+
+A terminal interface for the SLURM workload manager, for people who live on a cluster.
+
+### [dataViz](https://github.com/gabrielvpina/dataViz)
+
+Figures and visualizations from published papers, kept in the open so the plots are reproducible.
+
+## Publications
+
+Work on cocoa viromes, bee endogenous viral elements, stingless bee miRNAs and the ViralQuest pipeline itself — the full list lives on the [publications page](../publications/).
 
 ```{=html}
+        <p class="terminal-prompt cursor"><b>gabrielvpina@me.log</b>:~$ </p>
+      </div>
     </div>
   </div>
 
