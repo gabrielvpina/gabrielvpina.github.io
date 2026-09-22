@@ -11,42 +11,61 @@ listing:
     date-format: "YYYY-MM-DD"
     template: assets/recent-posts.ejs
     fields: [title, date, categories, path]
+  - id: pubs-listing
+    contents: "publications/papers.yml"
+    sort: "date desc"
+    max-items: 4
+    date-format: "YYYY"
+    template: assets/recent-pubs.ejs
+    fields: [title, date, description, path]
+  - id: projects-listing
+    contents: "projects/*/index.qmd"
+    sort: "date desc"
+    max-items: 4
+    template: assets/recent-projects.ejs
+    fields: [title, description, categories, path]
 ---
 
 ```{=html}
 <div class="retro-desktop">
   <div class="desktop-grid">
 
-    <!-- ── Profile Window (full width) ──────────────────── -->
-    <div class="retro-window profile-window">
+    <!-- ── Hero (janela em destaque) ─────────────────────── -->
+    <div class="retro-window profile-window window-highlight">
       <div class="window-titlebar">
         <span class="window-title">gabriel_pina.exe</span>
         <div class="window-controls">
           <span></span><span></span><span></span>
         </div>
       </div>
-      <div class="window-body profile-body-wide">
-        <div class="profile-photo-frame">
-          <img src="assets/profile.jpg" class="profile-photo"
-               alt="Gabriel Pina"
-               onerror="this.style.background='#C4BBC4';" />
-        </div>
-        <div class="profile-content">
-          <p class="profile-name">Gabriel Pina</p>
-          <p class="profile-bio">RNA, code, and notes to my future self.<br>
-            Bioinformatician · PhD Student · UESC, Bahia, Brazil</p>
-          <div class="social-row">
-            <a class="retro-btn" href="https://linkedin.com/in/gabriel-rodrigues-008419210/" target="_blank">LinkedIn</a>
-            <a class="retro-btn" href="https://lattes.cnpq.br/6691808758719803" target="_blank">Lattes</a>
-            <a class="retro-btn" href="https://github.com/gabrielvpina" target="_blank">GitHub</a>
-            <a class="retro-btn" href="https://orcid.org/0009-0005-2294-2845" target="_blank">ORCID</a>
-            <a class="retro-btn retro-btn-primary" href="about/">→ about me</a>
-          </div> 
+      <div class="window-body">
+        <div class="hero">
+          <div class="hero-photo">
+            <img src="assets/profile.jpg" alt="Gabriel Pina" />
+            <span class="hero-photo-label">perfil.jpg</span>
+          </div>
+          <div class="hero-text">
+            <p class="hero-greeting">olá, eu sou</p>
+            <h1 class="hero-name">Gabriel Pina</h1>
+            <p class="hero-tagline">RNA, code, and <span class="mark">notes to my future self</span>.</p>
+            <ul class="hero-meta">
+              <li>Bioinformatician</li>
+              <li>PhD Student</li>
+              <li>UESC — Bahia, Brazil</li>
+            </ul>
+            <div class="social-row">
+              <a class="retro-btn" href="https://linkedin.com/in/gabriel-rodrigues-008419210/" target="_blank">LinkedIn</a>
+              <a class="retro-btn" href="https://lattes.cnpq.br/6691808758719803" target="_blank">Lattes</a>
+              <a class="retro-btn" href="https://github.com/gabrielvpina" target="_blank">GitHub</a>
+              <a class="retro-btn" href="https://orcid.org/0009-0005-2294-2845" target="_blank">ORCID</a>
+              <a class="retro-btn retro-btn-primary" href="about/">→ about me</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- ── System Info Window ──────────────────────────── -->
+    <!-- ── system.log (terminal) ─────────────────────────── -->
     <div class="retro-window sysinfo-window">
       <div class="window-titlebar">
         <span class="window-title">system.log</span>
@@ -55,23 +74,29 @@ listing:
         </div>
       </div>
       <div class="window-body">
-        <pre class="sys-pre">
-<span class="sys-key">USER    </span><span class="sys-sep"> :: </span><span class="sys-val">gabrielvpina</span>
-<span class="sys-key">OS      </span><span class="sys-sep"> :: </span><span class="sys-val">Linux/macOS</span>
-<span class="sys-key">SKILL   </span><span class="sys-sep"> :: </span><span class="sys-val">R/Python</span>
-<span class="sys-key">SHELL   </span><span class="sys-sep"> :: </span><span class="sys-val">Zsh</span>
-<span class="sys-key">TERMINAL</span><span class="sys-sep"> :: </span><span class="sys-val">Kitty</span>
-<span class="sys-key">FIELD   </span><span class="sys-sep"> :: </span><span class="sys-val">Bioinformatics / Genetics</span>
-<span class="sys-key">AFFIL   </span><span class="sys-sep"> :: </span><span class="sys-val">UESC — Brazil</span>
-<span class="sys-key">DEGREE  </span><span class="sys-sep"> :: </span><span class="sys-val">MSc. Genetics &amp; Mol. Bio.</span>
-<span class="sys-key">BOOT    </span><span class="sys-sep"> :: </span><span class="sys-val">2026</span>
-<span class="sys-key">KERNEL  </span><span class="sys-sep"> :: </span><span class="sys-val">me.log v1.0.2</span>
-        </pre>
-        <span class="cursor-blink"></span>
+        <div class="terminal">
+          <p class="terminal-prompt"><b>gabrielvpina@me.log</b>:~$ whoami</p>
+          <dl class="ficha">
+            <dt>user</dt><dd>gabrielvpina</dd>
+            <dt>os</dt><dd>Linux / macOS</dd>
+            <dt>skill</dt><dd>R / Python</dd>
+            <dt>shell</dt><dd>Zsh</dd>
+            <dt>terminal</dt><dd>Kitty</dd>
+            <dt>field</dt><dd>Bioinformatics / Genetics</dd>
+            <dt>affil</dt><dd>UESC — Brazil</dd>
+            <dt>degree</dt><dd>MSc. Genetics &amp; Mol. Bio.</dd>
+            <dt>boot</dt><dd>2026</dd>
+            <dt>kernel</dt><dd>me.log v2.0.0</dd>
+          </dl>
+          <div class="palette">
+            <span style="background:#1c1a22"></span><span style="background:#ec6f5b"></span><span style="background:#4fbf7a"></span><span style="background:#f0c24b"></span><span style="background:#7247e6"></span><span style="background:#b39bff"></span><span style="background:#e7dfcc"></span><span style="background:#fbf8f1"></span>
+          </div>
+          <p class="terminal-prompt cursor" style="margin:12px 0 0"><b>gabrielvpina@me.log</b>:~$ </p>
+        </div>
       </div>
     </div>
 
-    <!-- ── Recent Posts Window ─────────────────────────── -->
+    <!-- ── recent.log (posts) ────────────────────────────── -->
     <div class="retro-window posts-window">
       <div class="window-titlebar">
         <span class="window-title">recent.log</span>
@@ -81,30 +106,62 @@ listing:
       </div>
       <div class="window-body">
         <div id="posts-listing"></div>
-        <div class="posts-footer">
-          <a class="retro-btn retro-btn-primary" href="posts/index.html">→ all posts</a>
+      </div>
+      <div class="window-footer">
+        <a class="retro-btn retro-btn-primary" href="posts/">→ all posts</a>
+      </div>
+    </div>
+
+    <!-- ── papers.bib (publicações) ──────────────────────── -->
+    <div class="retro-window pubs-window">
+      <div class="window-titlebar">
+        <span class="window-title">papers.bib</span>
+        <div class="window-controls">
+          <span></span><span></span><span></span>
         </div>
+      </div>
+      <div class="window-body">
+        <div id="pubs-listing"></div>
+      </div>
+      <div class="window-footer">
+        <a class="retro-btn retro-btn-primary" href="publications/">→ all publications</a>
+      </div>
+    </div>
+
+    <!-- ── ~/projects ────────────────────────────────────── -->
+    <div class="retro-window projects-window">
+      <div class="window-titlebar">
+        <span class="window-title">~/projects</span>
+        <div class="window-controls">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="window-body">
+        <div id="projects-listing"></div>
+      </div>
+      <div class="window-footer">
+        <a class="retro-btn retro-btn-primary" href="projects/">→ all projects</a>
       </div>
     </div>
 
   </div><!-- /desktop-grid -->
 
-  <!-- ── Taskbar ─────────────────────────────────────────── -->
+  <!-- ── Barra de tarefas ──────────────────────────────────── -->
   <div class="retro-taskbar">
     <button class="taskbar-start">▶ START</button>
     <div class="taskbar-tab">me.log</div>
     <div class="taskbar-spacer"></div>
-    <div class="taskbar-clock" id="taskbar-clock">2026</div>
+    <div class="taskbar-clock" id="taskbar-clock">00:00</div>
   </div>
 
 </div><!-- /retro-desktop -->
 
 <script>
-  // Live clock
+  // Relógio da barra de tarefas
   function updateClock() {
     const now = new Date();
-    const h = String(now.getHours()).padStart(2,'0');
-    const m = String(now.getMinutes()).padStart(2,'0');
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
     document.getElementById('taskbar-clock').textContent = h + ':' + m;
   }
   updateClock();

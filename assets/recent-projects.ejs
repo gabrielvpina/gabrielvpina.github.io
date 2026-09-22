@@ -1,0 +1,1 @@
+<div class="project-grid"><% for (const item of items) { %><a class="project-card" href="<%= item.path %>"><span class="project-card-name"><%= item.title %></span><span class="project-card-desc"><%- item.description %></span><% if (item.categories && item.categories.length) { %><span class="project-card-meta"><%= item.categories.join(" &#183; ") %></span><% } %></a><% } %></div>

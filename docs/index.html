@@ -42,10 +42,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-8dda9e25eddef15406e505acf83d2eea.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7ebcd8d6d84910df5062aada6d3c69fc.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-4fab041a99645153a72dff5fbdf76dfb.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-67e7787d5ab1be301272ddeee7391781.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -90,6 +90,62 @@ ul.task-list li input[type="checkbox"] {
 
     window['quarto-listings'] = window['quarto-listings'] || {};
     window['quarto-listings']['listing-posts-listing'] = new List('listing-posts-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-pubs-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-date','listing-description','listing-path',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] }],
+      
+      searchColumns: ["listing-title","listing-date","listing-image","listing-description","listing-categories","listing-target"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-pubs-listing'] = new List('listing-pubs-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-projects-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-categories','listing-path',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-date-modified-sort'] },{ data: ['listing-file-modified-sort'] },{ data: ['listing-reading-time-sort'] },{ data: ['listing-word-count-sort'] }],
+      
+      searchColumns: ["listing-project","listing-website","listing-format","listing-execute","listing-engines","listing-language","listing-title","listing-date","listing-description","listing-categories","listing-image","listing-status","listing-github","listing-toc","listing-path","listing-outputHref","listing-date-modified","listing-author","listing-filename","listing-file-modified","listing-reading-time","listing-word-count"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-projects-listing'] = new List('listing-projects-listing', options);
 
     if (window['quarto-listing-loaded']) {
       window['quarto-listing-loaded']();
@@ -192,34 +248,42 @@ window.Quarto = {
 <div class="retro-desktop">
   <div class="desktop-grid">
 
-    <!-- ── Profile Window (full width) ──────────────────── -->
-    <div class="retro-window profile-window">
+    <!-- ── Hero (janela em destaque) ─────────────────────── -->
+    <div class="retro-window profile-window window-highlight">
       <div class="window-titlebar">
         <span class="window-title">gabriel_pina.exe</span>
         <div class="window-controls">
           <span></span><span></span><span></span>
         </div>
       </div>
-      <div class="window-body profile-body-wide">
-        <div class="profile-photo-frame">
-          <img src="assets/profile.jpg" class="profile-photo" alt="Gabriel Pina" onerror="this.style.background='#C4BBC4';">
-        </div>
-        <div class="profile-content">
-          <p class="profile-name">Gabriel Pina</p>
-          <p class="profile-bio">RNA, code, and notes to my future self.<br>
-            Bioinformatician · PhD Student · UESC, Bahia, Brazil</p>
-          <div class="social-row">
-            <a class="retro-btn" href="https://linkedin.com/in/gabriel-rodrigues-008419210/" target="_blank">LinkedIn</a>
-            <a class="retro-btn" href="https://lattes.cnpq.br/6691808758719803" target="_blank">Lattes</a>
-            <a class="retro-btn" href="https://github.com/gabrielvpina" target="_blank">GitHub</a>
-            <a class="retro-btn" href="https://orcid.org/0009-0005-2294-2845" target="_blank">ORCID</a>
-            <a class="retro-btn retro-btn-primary" href="about/">→ about me</a>
-          </div> 
+      <div class="window-body">
+        <div class="hero">
+          <div class="hero-photo">
+            <img src="assets/profile.jpg" alt="Gabriel Pina">
+            <span class="hero-photo-label">perfil.jpg</span>
+          </div>
+          <div class="hero-text">
+            <p class="hero-greeting">olá, eu sou</p>
+            <h1 class="hero-name">Gabriel Pina</h1>
+            <p class="hero-tagline">RNA, code, and <span class="mark">notes to my future self</span>.</p>
+            <ul class="hero-meta">
+              <li>Bioinformatician</li>
+              <li>PhD Student</li>
+              <li>UESC — Bahia, Brazil</li>
+            </ul>
+            <div class="social-row">
+              <a class="retro-btn" href="https://linkedin.com/in/gabriel-rodrigues-008419210/" target="_blank">LinkedIn</a>
+              <a class="retro-btn" href="https://lattes.cnpq.br/6691808758719803" target="_blank">Lattes</a>
+              <a class="retro-btn" href="https://github.com/gabrielvpina" target="_blank">GitHub</a>
+              <a class="retro-btn" href="https://orcid.org/0009-0005-2294-2845" target="_blank">ORCID</a>
+              <a class="retro-btn retro-btn-primary" href="about/">→ about me</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- ── System Info Window ──────────────────────────── -->
+    <!-- ── system.log (terminal) ─────────────────────────── -->
     <div class="retro-window sysinfo-window">
       <div class="window-titlebar">
         <span class="window-title">system.log</span>
@@ -228,22 +292,29 @@ window.Quarto = {
         </div>
       </div>
       <div class="window-body">
-        <pre class="sys-pre"><span class="sys-key">USER    </span><span class="sys-sep"> :: </span><span class="sys-val">gabrielvpina</span>
-<span class="sys-key">OS      </span><span class="sys-sep"> :: </span><span class="sys-val">Linux/macOS</span>
-<span class="sys-key">SKILL   </span><span class="sys-sep"> :: </span><span class="sys-val">R/Python</span>
-<span class="sys-key">SHELL   </span><span class="sys-sep"> :: </span><span class="sys-val">Zsh</span>
-<span class="sys-key">TERMINAL</span><span class="sys-sep"> :: </span><span class="sys-val">Kitty</span>
-<span class="sys-key">FIELD   </span><span class="sys-sep"> :: </span><span class="sys-val">Bioinformatics / Genetics</span>
-<span class="sys-key">AFFIL   </span><span class="sys-sep"> :: </span><span class="sys-val">UESC — Brazil</span>
-<span class="sys-key">DEGREE  </span><span class="sys-sep"> :: </span><span class="sys-val">MSc. Genetics &amp; Mol. Bio.</span>
-<span class="sys-key">BOOT    </span><span class="sys-sep"> :: </span><span class="sys-val">2026</span>
-<span class="sys-key">KERNEL  </span><span class="sys-sep"> :: </span><span class="sys-val">me.log v1.0.2</span>
-        </pre>
-        <span class="cursor-blink"></span>
+        <div class="terminal">
+          <p class="terminal-prompt"><b>gabrielvpina@me.log</b>:~$ whoami</p>
+          <dl class="ficha">
+            <dt>user</dt><dd>gabrielvpina</dd>
+            <dt>os</dt><dd>Linux / macOS</dd>
+            <dt>skill</dt><dd>R / Python</dd>
+            <dt>shell</dt><dd>Zsh</dd>
+            <dt>terminal</dt><dd>Kitty</dd>
+            <dt>field</dt><dd>Bioinformatics / Genetics</dd>
+            <dt>affil</dt><dd>UESC — Brazil</dd>
+            <dt>degree</dt><dd>MSc. Genetics &amp; Mol. Bio.</dd>
+            <dt>boot</dt><dd>2026</dd>
+            <dt>kernel</dt><dd>me.log v2.0.0</dd>
+          </dl>
+          <div class="palette">
+            <span style="background:#1c1a22"></span><span style="background:#ec6f5b"></span><span style="background:#4fbf7a"></span><span style="background:#f0c24b"></span><span style="background:#7247e6"></span><span style="background:#b39bff"></span><span style="background:#e7dfcc"></span><span style="background:#fbf8f1"></span>
+          </div>
+          <p class="terminal-prompt cursor" style="margin:12px 0 0"><b>gabrielvpina@me.log</b>:~$ </p>
+        </div>
       </div>
     </div>
 
-    <!-- ── Recent Posts Window ─────────────────────────── -->
+    <!-- ── recent.log (posts) ────────────────────────────── -->
     <div class="retro-window posts-window">
       <div class="window-titlebar">
         <span class="window-title">recent.log</span>
@@ -255,47 +326,118 @@ window.Quarto = {
         <div id="listing-posts-listing" class="quarto-listing quarto-listing-container-custom">
 <ul class="file-list">
 <li class="file-entry">
-<div class="file-info">
-<p><a class="file-name" href="./posts/R_language/post.html">Ploglamando em L - Boas pláticas</a> <span class="file-meta">2026-07-09 · Data Science, R, Programing</span></p>
-</div>
+<a class="file-link" href="./posts/R_language/post.html"><span class="file-date">2026-07-09</span><span class="file-name">Ploglamando em L - Boas pláticas</span><span class="file-arrow">→</span><span class="file-tags"><span class="tag">Data Science</span><span class="tag">R</span><span class="tag">Programing</span></span></a>
 </li>
 <li class="file-entry">
-<div class="file-info">
-<p><a class="file-name" href="./posts/why_use_linux/post.html">Seja amigo de um pinguim</a> <span class="file-meta">2026-07-03 · Opinion, Linux, Research</span></p>
-</div>
+<a class="file-link" href="./posts/why_use_linux/post.html"><span class="file-date">2026-07-03</span><span class="file-name">Seja amigo de um pinguim</span><span class="file-arrow">→</span><span class="file-tags"><span class="tag">Opinion</span><span class="tag">Linux</span><span class="tag">Research</span></span></a>
 </li>
 <li class="file-entry">
-<div class="file-info">
-<p><a class="file-name" href="./posts/decision_tree_basic/dec_tree.html">Árvore de Decisão - Introdução</a> <span class="file-meta">2025-11-11 · Machine-learning, Tutorial, R</span></p>
+<a class="file-link" href="./posts/decision_tree_basic/dec_tree.html"><span class="file-date">2025-11-11</span><span class="file-name">Árvore de Decisão - Introdução</span><span class="file-arrow">→</span><span class="file-tags"><span class="tag">Machine-learning</span><span class="tag">Tutorial</span><span class="tag">R</span></span></a>
+</li>
+</ul>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+      </div>
+      <div class="window-footer">
+        <a class="retro-btn retro-btn-primary" href="posts/">→ all posts</a>
+      </div>
+    </div>
+
+    <!-- ── papers.bib (publicações) ──────────────────────── -->
+    <div class="retro-window pubs-window">
+      <div class="window-titlebar">
+        <span class="window-title">papers.bib</span>
+        <div class="window-controls">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
+      <div class="window-body">
+        <div id="listing-pubs-listing" class="quarto-listing quarto-listing-container-custom">
+<ul class="pub-list">
+<li class="pub">
+<span class="pub-year">2026</span>
+<div class="pub-body">
+<a class="pub-title" href="https://doi.org/10.1186/s12859-026-06391-6" target="_blank">ViralQuest: A user-friendly interactive pipeline for viral-sequences analysis</a>
+<p class="pub-authors">
+<strong>Gabriel Victor Pina Rodrigues</strong>; Lucas Yago Melo Ferreira; Eric Roberto Guimarães Rocha Aguiar
+</p>
+</div>
+</li>
+<li class="pub">
+<span class="pub-year">2026</span>
+<div class="pub-body">
+<a class="pub-title" href="https://doi.org/10.1186/s13100-026-00393-0" target="_blank">Tracing ancient viral footprints: a comprehensive study of endogenous viral elements in Bombus species</a>
+<p class="pub-authors">
+Lucas Barbosa de Amorim Conceição; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; <strong>Gabriel Victor Pina Rodrigues</strong>; Marco Antônio Costa; Eric Roberto Guimarães Rocha Aguiar
+</p>
+</div>
+</li>
+<li class="pub">
+<span class="pub-year">2025</span>
+<div class="pub-body">
+<a class="pub-title" href="https://doi.org/10.3390/ncrna11030048" target="_blank">Insights into miRNAs of the Stingless Bee <em>Melipona quadrifasciata</em></a>
+<p class="pub-authors">
+Dalliane Oliveira Soares; Lucas Yago Melo Ferreira; <strong>Gabriel Victor Pina Rodrigues</strong>; João Pedro Nunes Santos; Ícaro Santos Lopes; Lucas Barbosa de Amorim Conceição; Tatyana Chagas Moura; Isaque João da Silva de Faria; Roenick Proveti Olmo; Weyder Cristiano Santana <em>et al.</em>
+</p>
+</div>
+</li>
+<li class="pub">
+<span class="pub-year">2025</span>
+<div class="pub-body">
+<a class="pub-title" href="https://www.mdpi.com/1999-4915/17/5/624" target="_blank"><em>Theobroma cacao</em> Virome: Exploring Public RNA-Seq Data for Viral Discovery and Surveillance</a>
+<p class="pub-authors">
+<strong>Gabriel Victor Pina Rodrigues</strong>; João Pedro Nunes Santos; Lucas Yago Melo Ferreira; Lucas Barbosa de Amorim Conceição; Joel Augusto Moura Porto; Eric Roberto Guimarães Rocha Aguiar
+</p>
 </div>
 </li>
 </ul>
 <div class="listing-no-matching d-none">No matching items</div>
 </div>
-        <div class="posts-footer">
-          <a class="retro-btn retro-btn-primary" href="posts/index.html">→ all posts</a>
+      </div>
+      <div class="window-footer">
+        <a class="retro-btn retro-btn-primary" href="publications/">→ all publications</a>
+      </div>
+    </div>
+
+    <!-- ── ~/projects ────────────────────────────────────── -->
+    <div class="retro-window projects-window">
+      <div class="window-titlebar">
+        <span class="window-title">~/projects</span>
+        <div class="window-controls">
+          <span></span><span></span><span></span>
         </div>
+      </div>
+      <div class="window-body">
+        <div id="listing-projects-listing" class="quarto-listing quarto-listing-container-custom">
+<div class="project-grid">
+<a class="project-card" href="./projects/viralquest/index.html"><span class="project-card-name">ViralQuest Pipeline Refactor</span><span class="project-card-desc">The refactor of a bioinformatics pipeline to viral discovery and analysis.</span><span class="project-card-meta">Python · Bioinformatics · GitHub</span></a>
+</div>
+<div class="listing-no-matching d-none">No matching items</div>
+</div>
+      </div>
+      <div class="window-footer">
+        <a class="retro-btn retro-btn-primary" href="projects/">→ all projects</a>
       </div>
     </div>
 
   </div><!-- /desktop-grid -->
 
-  <!-- ── Taskbar ─────────────────────────────────────────── -->
+  <!-- ── Barra de tarefas ──────────────────────────────────── -->
   <div class="retro-taskbar">
     <button class="taskbar-start">▶ START</button>
     <div class="taskbar-tab">me.log</div>
     <div class="taskbar-spacer"></div>
-    <div class="taskbar-clock" id="taskbar-clock">2026</div>
+    <div class="taskbar-clock" id="taskbar-clock">00:00</div>
   </div>
 
 </div><!-- /retro-desktop -->
 
 <script>
-  // Live clock
+  // Relógio da barra de tarefas
   function updateClock() {
     const now = new Date();
-    const h = String(now.getHours()).padStart(2,'0');
-    const m = String(now.getMinutes()).padStart(2,'0');
+    const h = String(now.getHours()).padStart(2, '0');
+    const m = String(now.getMinutes()).padStart(2, '0');
     document.getElementById('taskbar-clock').textContent = h + ':' + m;
   }
   updateClock();
