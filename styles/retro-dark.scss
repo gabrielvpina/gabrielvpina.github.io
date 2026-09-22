@@ -1,0 +1,142 @@
+/* ============================================================
+   me.log — tema ESCURO
+
+   Espelho de retro.scss: mesmas variáveis, mesmas regras (o
+   parcial _retro-rules.scss é importado no fim), só os valores
+   mudam. Nenhuma regra é duplicada entre os dois temas.
+
+   A ideia da versão escura não é "inverter": é trocar o papel
+   por uma superfície escura mantendo o traço neobrutalista —
+   borda clara e grossa, sombra sólida, roxo só no destaque.
+   ============================================================ */
+
+/*-- scss:defaults --*/
+
+/* ── Paleta ─────────────────────────────────────────────────── */
+/* A regra que evita o efeito de "negativo": nada aqui é branco nem
+   preto puro, e as intensidades são escalonadas —
+   texto < traço < fundo em distância, nunca tudo no máximo.      */
+
+/* Superfícies. Os degraus são curtos de propósito: página, janela
+   e barra de título se distinguem sem que nada salte.            */
+$fundo:         #1a1822;   /* fundo da página */
+$papel:         #232029;   /* superfície de janelas e navbar */
+$areia:         #2c2833;   /* barras de título, cabeçalho de tabela */
+$areia-escura:  #3d3848;   /* listras da barra de título */
+$linha:         #322e3c;   /* divisórias tracejadas */
+
+/* Texto: cinza-violeta claro, NÃO creme puro. Creme sobre quase-preto
+   é o que dá a sensação de brilho e de inversão.                  */
+$tinta:         #cfc9d6;
+$tinta-suave:   #948da3;
+
+/* Traço mais apagado que o texto. No claro a borda é a cor mais
+   forte da tela; no escuro isso viraria uma grade ofuscante, então
+   ela recua e passa a ser estrutura, não destaque.               */
+$traco:         #4a4458;
+
+/* Elementos preenchidos (menu ativo, chip de ano, relógio, botão de
+   tema). No claro são blocos de tinta cheia; aqui um bloco creme
+   seria exatamente o "negativo" a evitar — então é um roxo-acinzentado
+   discreto.                                                       */
+$inverso-bg:    #3a3446;
+$inverso-fg:    #ded8e6;
+
+/* Destaque — lavanda em vez do roxo saturado, que no escuro estoura */
+$roxo:          #a78bfa;
+$roxo-claro:    #2b2340;   /* fundo de hover */
+$roxo-escuro:   #c4b0ff;   /* estado mais forte */
+
+/* A barra da janela em destaque é a maior área colorida da home.
+   Em roxo cheio ela vira uma faixa de neon, então escurece.       */
+$destaque-bg:   #453874;
+$destaque-fg:   #e6e0f2;
+
+/* Botões de ação. Lavanda claro com texto branco era o elemento mais
+   ofuscante da tela; um roxo fechado com texto claro chama a mesma
+   atenção sem brilhar.                                            */
+$acento-bg:     #5c48a6;
+$acento-fg:     #ece7f7;
+$acento-hover:  #6d57bd;
+
+/* Apoio — dessaturados, porque no escuro a saturação cheia grita */
+$mostarda:      #e0b962;
+$coral:         #dd7e6f;
+$verde:         #6cc48f;
+
+/* Terminal: um degrau abaixo da janela, e o texto na mesma
+   suavidade do resto do site.                                     */
+$term-fundo:    #14121c;
+$term-texto:    #cfc9d6;
+$term-label:    #b7a5f0;
+$term-sep:      #6a6479;
+$term-prompt:   #7d7690;
+
+/* Status de projeto */
+$status-ativo-borda: #4e8f68;
+$status-ativo-bg:    #1b2f23;
+$status-ativo-texto: #7fc79b;
+$status-wip-borda:   #9c7b35;
+$status-wip-bg:      #2e2716;
+$status-wip-texto:   #dcb462;
+
+/* Traços que mudam entre claro e escuro e não são cor de elemento */
+$grade:        rgba(207, 201, 214, .028);  /* grade do papel milimetrado */
+$afundado:     rgba(0, 0, 0, .35);         /* sombra interna da aba ativa */
+$term-linha:   rgba(207, 201, 214, .14);   /* divisória dentro do terminal */
+$term-em:      #8fc9b6;                    /* itálico no terminal */
+
+/* ── Estrutura ────────────────────────────────────────────────
+   Bordas e raio idênticos ao tema claro — o traço é o mesmo.
+   A sombra, não: uma clara viraria uma segunda borda. Como o fundo
+   da página subiu para #1a1822, uma sombra mais escura que ele
+   volta a ser perceptível — e lê como profundidade, não como
+   contorno.                                                    */
+$borda-w:       2.5px;
+$borda-fina:    2px;
+$raio:          4px;
+
+$sombra-cor:    #100e17;
+$sombra:        6px 6px 0 $sombra-cor;
+$sombra-p:      3px 3px 0 $sombra-cor;
+$sombra-mini:   2px 2px 0 $sombra-cor;
+
+/* ── Tipografia ───────────────────────────────────────────── */
+$fonte-titulo: "Space Grotesk", system-ui, sans-serif;
+$fonte-texto:  "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+$fonte-pixel:  "VT323", ui-monospace, monospace;
+
+/* ── Configuração do Bootstrap / Quarto ─────────────────────── */
+$web-font-path: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=VT323&display=swap";
+
+$font-family-sans-serif: $fonte-texto;
+$font-family-monospace:  $fonte-texto;
+$headings-font-family:   $fonte-titulo;
+$headings-font-weight:   700;
+
+$body-bg:    $fundo;
+$body-color: $tinta;
+
+$primary:          $roxo;
+$link-color:       $roxo;
+$link-hover-color: $roxo-escuro;
+$code-color:       $roxo-escuro;
+
+$card-bg:            $papel;
+$card-border-color:  $tinta;
+$card-border-width:  $borda-fina;
+$card-border-radius: $raio;
+$card-spacer-y:      16px;
+$card-spacer-x:      16px;
+
+$navbar-bg: $papel;
+$navbar-fg: $tinta;
+$navbar-hl: $roxo;
+$footer-bg: $papel;
+$footer-fg: $tinta-suave;
+
+
+/*-- scss:rules --*/
+
+/* Todas as regras do tema, escritas sobre as variáveis acima. */
+@import "retro-rules";
