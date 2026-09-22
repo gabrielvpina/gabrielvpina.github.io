@@ -1,54 +1,150 @@
 /* ============================================================
    me.log — Neo-Brutalist Colorful Design System
    Paleta: fundo lavanda · janelas brancas · bordas pretas flat
+
+   Este arquivo é um TEMA SASS do Quarto, não um CSS solto.
+   Ele é compilado JUNTO com o Bootstrap (tema flatly), o que
+   permite configurar o próprio Bootstrap em vez de sobrescrever
+   o CSS dele na força do !important.
+
+   As camadas abaixo são lidas pelo Quarto pelos comentários
+   delimitadores:
+     scss:defaults → entra ANTES do Bootstrap (define variáveis)
+     scss:rules    → entra DEPOIS do Bootstrap (regras próprias)
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+/*-- scss:defaults --*/
 
-/* ── Variáveis CSS (Custom Properties) ─────────────────────────
-   :root define variáveis no elemento raiz (html). Elas ficam
-   disponíveis em todo o documento via var(--nome).
-   Isso centraliza a paleta: mudar uma cor aqui reflete em tudo. */
+/* ── Paleta (fonte única da verdade) ──────────────────────────
+   Variáveis SASS ($nome) são resolvidas em tempo de compilação.
+   Mudar um valor aqui reflete no site inteiro — inclusive nas
+   partes geradas pelo próprio Bootstrap/Quarto (navbar, footer,
+   cards), que antes precisavam ser sobrescritas à mão.         */
+
+/* Roxos — identidade do tema */
+$purple:          #9B5DE5;   /* roxo vibrante (titlebar, navbar) */
+$accent:          #7C3AED;   /* acento interativo principal */
+$accent-dark:     #5B21B6;
+$accent-light:    #D6BCF5;
+
+/* Cores de apoio das titlebars */
+$gold:            #F5C842;   /* amarelo dourado */
+$coral:           #F07060;   /* coral/salmão */
+
+/* Superfícies */
+$lavender:        #E2D5F5;   /* fundo da área de desktop */
+$page-bg:         #F5F0FB;   /* fundo das páginas internas */
+$white:           #FFFFFF;   /* corpo das janelas */
+$window-chrome:   #FAF6FE;   /* moldura das janelas / botões */
+$lilac-100:       #ECE3FA;   /* chips, code inline, taskbar-tab */
+$divider:         #E0D3F2;   /* divisórias finas em listas */
+$output-bg:       #FFF8F6;   /* fundo dos blocos de saída */
+$ink-deep:        #251A30;   /* navbar e footer */
+
+/* Texto e bordas */
+$ink:             #111111;   /* texto principal e borda flat */
+$text-secondary:  #3A3A3A;
+$text-muted:      #777777;
+
+/* Status de projeto */
+$status-active-border: #2E7D32;
+$status-active-bg:     #E8F5E9;
+$status-active-text:   #1B5E20;
+$status-wip-border:    #F57F17;
+$status-wip-bg:        #FFFDE7;
+$status-wip-text:      #E65100;
+
+/* ── Métricas ─────────────────────────────────────────────── */
+$radius:     10px;   /* janelas e cards */
+$radius-sm:   6px;   /* botões e badges */
+
+/* box-shadow: deslocX deslocY blur cor
+   Com blur = 0, a sombra é sólida e geométrica — efeito
+   neo-brutalist. O deslocamento cria a ilusão de "elevação". */
+$shadow-window: 5px 5px 0 $ink;
+$shadow-card:   3px 3px 0 $ink;
+$shadow-btn:    3px 3px 0 $ink;
+
+$font-stack: 'JetBrains Mono', 'Courier New', Courier, monospace;
+
+/* ── Configuração do Bootstrap / Quarto ───────────────────────
+   Daqui para baixo não há estilo novo: são as MESMAS cores acima
+   entregues ao Bootstrap. Como o Quarto coloca esta camada antes
+   das variáveis do flatly, estas atribuições vencem — e por isso
+   a navbar, o footer e os cards já nascem com a cara do tema,
+   sem precisar de !important depois.                            */
+
+/* Fonte: o flatly importa a fonte definida em $web-font-path.
+   Trocando o valor, o @import do Google Fonts sai no topo do CSS
+   compilado (posição válida para um @import), em vez de ficar no
+   meio do bundle.                                               */
+$web-font-path: "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap";
+
+$font-family-sans-serif: $font-stack;
+$font-family-monospace:  $font-stack;
+$headings-font-weight:   700;
+
+$body-bg:    $page-bg;
+$body-color: $ink;
+
+$primary:          $accent;
+$link-color:       $accent;
+$link-hover-color: $accent-dark;
+$code-color:       $accent-dark;
+
+/* Cards das páginas de listagem (/posts, /projects) */
+$card-bg:            $white;
+$card-border-color:  $ink;
+$card-border-width:  2px;
+$card-border-radius: $radius;
+$card-spacer-y:      16px;
+$card-spacer-x:      16px;
+
+/* Navbar e footer — antes duplicados em _quarto.yml */
+$navbar-bg: $ink-deep;
+$navbar-fg: $lilac-100;
+$navbar-hl: $purple;
+$footer-bg: $ink-deep;
+$footer-fg: $accent-light;
+
+
+/*-- scss:rules --*/
+
+/* ── Ponte SASS → Custom Properties ───────────────────────────
+   As variáveis SASS acima somem na compilação. Este bloco as
+   reexporta como custom properties para que continuem acessíveis
+   em tempo de execução (e para manter legível o resto do arquivo).
+   A sintaxe com cerquilha e chaves é interpolação: injeta o valor
+   da variável SASS dentro do valor CSS.                          */
 :root {
-  /* Fundo da área de desktop (landing page) */
-  --desktop-bg:        #E2D5F5;
+  --desktop-bg:        #{$lavender};
 
-  /* Superfícies de janela */
-  --window-bg:         #FFFFFF;
-  --window-chrome:     #FAF6FE;
+  --window-bg:         #{$white};
+  --window-chrome:     #{$window-chrome};
 
-  /* Titlebars coloridas — cada janela tem a sua */
-  --titlebar-profile:  #9B5DE5;   /* roxo vibrante */
-  --titlebar-sysinfo:  #F5C842;   /* amarelo dourado */
-  --titlebar-posts:    #F07060;   /* coral/salmão */
-  --titlebar-about:    #9B5DE5;   /* roxo (reutilizado em /about) */
+  --titlebar-profile:  #{$purple};
+  --titlebar-sysinfo:  #{$gold};
+  --titlebar-posts:    #{$coral};
+  --titlebar-about:    #{$purple};
 
-  /* Acento interativo principal */
-  --accent:            #7C3AED;
-  --accent-dark:       #5B21B6;
-  --accent-light:      #D6BCF5;
+  --accent:            #{$accent};
+  --accent-dark:       #{$accent-dark};
+  --accent-light:      #{$accent-light};
 
-  /* Texto */
-  --text-primary:      #111111;
-  --text-secondary:    #3A3A3A;
-  --text-muted:        #777777;
+  --text-primary:      #{$ink};
+  --text-secondary:    #{$text-secondary};
+  --text-muted:        #{$text-muted};
 
-  /* Borda flat (neo-brutalista): uma cor sólida escura, sem gradiente 3D */
-  --border:            #111111;
+  --border:            #{$ink};
 
-  /* box-shadow: deslocX deslocY blur cor
-     Com blur = 0, a sombra é sólida e geométrica — efeito neo-brutalist.
-     O deslocamento cria a ilusão de "elevação" sem gradiente. */
-  --shadow-window:     5px 5px 0 var(--border);
-  --shadow-card:       3px 3px 0 var(--border);
-  --shadow-btn:        3px 3px 0 var(--border);
+  --shadow-window:     #{$shadow-window};
+  --shadow-card:       #{$shadow-card};
+  --shadow-btn:        #{$shadow-btn};
 
-  /* border-radius: arredonda os cantos dos elementos
-     --radius é para janelas/cards; --radius-sm para botões e badges */
-  --radius:            10px;
-  --radius-sm:          6px;
+  --radius:            #{$radius};
+  --radius-sm:         #{$radius-sm};
 
-  --font: 'JetBrains Mono', 'Courier New', Courier, monospace;
+  --font:              #{$font-stack};
 }
 
 /* ── Reset / Base ───────────────────────────────────────────── */
@@ -56,17 +152,9 @@
    na largura/altura declarada — comportamento mais previsível    */
 *, *::before, *::after { box-sizing: border-box; }
 
-body {
-  font-family: var(--font);
-  background: #F5F0FB;
-  color: var(--text-primary);
-  margin: 0; padding: 0;
-}
-
-h1,h2,h3,h4,h5,h6 { font-family: var(--font); font-weight: 700; }
-
-a { color: var(--accent); }
-a:hover { color: var(--accent-dark); }
+/* A fonte e as cores de body/headings/links já vêm de
+   $font-family-sans-serif, $body-bg, $body-color e $link-color.  */
+body { margin: 0; padding: 0; }
 
 /* ── Código e saídas (code chunks / outputs) ────────────────── */
 
@@ -74,11 +162,9 @@ a:hover { color: var(--accent-dark); }
    :not(.sourceCode) evita aplicar este estilo ao código DENTRO de
    blocos coloridos, que têm syntax highlighting próprio do Quarto. */
 code:not(.sourceCode) {
-  font-family: var(--font);
-  background: #ECE3FA;
-  color: var(--accent-dark);
-  border: 1px solid var(--accent-light);
-  border-radius: var(--radius-sm);
+  background: $lilac-100;
+  border: 1px solid $accent-light;
+  border-radius: $radius-sm;
   padding: 1px 6px;
   font-size: .88em;
 }
@@ -86,12 +172,12 @@ code:not(.sourceCode) {
 /* Bloco de CÓDIGO DE ENTRADA (input do chunk R/Python/Bash).
    Estrutura do Quarto: div.sourceCode > pre > code.sourceCode      */
 div.sourceCode {
-  background: #FAF6FE;
-  border: 2px solid var(--border);
+  background: $window-chrome;
+  border: 2px solid $ink;
   /* faixa roxa à esquerda marca visualmente "isto é entrada"       */
-  border-left: 6px solid var(--titlebar-profile);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-card);
+  border-left: 6px solid $purple;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-card;
   /* max-width: 100% impede que o bloco ultrapasse o container; a
      quebra de linha (regra abaixo) acomoda linhas longas dentro    */
   max-width: 100%;
@@ -129,84 +215,87 @@ div.sourceCode pre code.sourceCode > span {
 /* Bloco de SAÍDA (resultado/output do chunk): coral à esquerda
    para diferenciar claramente da entrada roxa                      */
 .cell-output pre {
-  background: #FFF8F6;
-  border: 2px solid var(--border);
-  border-left: 6px solid var(--titlebar-posts);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-card);
+  background: $output-bg;
+  border: 2px solid $ink;
+  border-left: 6px solid $coral;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-card;
   max-width: 100%;
   padding: 14px 16px;
   margin: 0 0 1rem;
-  color: var(--text-secondary);
+  color: $text-secondary;
 }
 
 /* Botão "copiar" do Quarto herda o arredondamento                  */
-.code-copy-button { border-radius: var(--radius-sm) !important; }
+.code-copy-button { border-radius: $radius-sm; }
 
 /* ── Navbar ─────────────────────────────────────────────────── */
-/* !important sobrescreve especificidade do Bootstrap/Quarto     */
-.navbar {
-  background: #251A30 !important;
-  border-bottom: 3px solid #9B5DE5 !important;
-  font-family: var(--font) !important;
-  min-height: 40px !important;
-  padding: 4px 20px !important;
+/* Cor de fundo e cor dos links vêm de $navbar-bg / $navbar-fg.
+   Aqui ficam só a borda de acento e o dimensionamento.
+   O seletor com ID é necessário porque o Quarto define o padding da
+   navbar em "#quarto-header > nav" — especificidade que um ".navbar"
+   sozinho não alcança.                                             */
+.navbar,
+#quarto-header > nav.navbar {
+  border-bottom: 3px solid $purple;
+  min-height: 40px;
+  padding: 4px 20px;
 }
 
-.navbar-brand {
-  color: #9B5DE5 !important;
-  font-weight: 800 !important;
-  font-size: .95rem !important;
+.navbar-brand,
+.navbar-brand:hover {
+  color: $purple;
+  font-weight: 800;
+  font-size: .95rem;
   letter-spacing: 2px;
 }
 
 /* ::before é um pseudo-element: insere conteúdo decorativo
    antes do elemento sem precisar de HTML extra               */
-.navbar-brand::before { content: "▶ "; color: #9B5DE5; }
+.navbar-brand::before { content: "▶ "; color: $purple; }
 
 .navbar .nav-link,
 .navbar .navbar-nav .nav-link {
-  color: #ECE3FA !important;
-  font-family: var(--font) !important;
-  font-size: .92rem !important;
-  font-weight: 800 !important;
-  padding: 4px 12px !important;
+  /* $navbar-hl pintaria de roxo o link da página ativa; o tema sempre
+     manteve todos os itens na mesma cor, então isso é reafirmado aqui
+     (o roxo fica só para o hover, logo abaixo).                      */
+  color: $navbar-fg;
+  font-size: .92rem;
+  font-weight: 800;
+  padding: 4px 12px;
   border: 1.5px solid transparent;
-  border-radius: var(--radius-sm);
+  border-radius: $radius-sm;
   /* transition: anima suavemente as propriedades listadas
      ao mudar de estado (normal → hover)                      */
   transition: background 0.15s, border-color 0.15s;
 }
 
 .navbar .nav-link:hover {
-  color: #9B5DE5 !important;
-  border-color: #9B5DE5 !important;
-  /* rgba(r,g,b,a): cor com transparência; 0.12 = 12% opaco   */
-  background: rgba(155,93,229,.14) !important;
+  color: $purple;
+  border-color: $purple;
+  /* rgba() do SASS deriva a transparência da própria cor do tema,
+     em vez de repetir os canais R/G/B à mão                       */
+  background: rgba($purple, .14);
 }
 
 /* ── Footer ─────────────────────────────────────────────────── */
+/* Cores vêm de $footer-bg / $footer-fg.                          */
 .nav-footer {
-  background: #251A30 !important;
-  color: var(--accent-light) !important;
-  font-family: var(--font) !important;
-  font-size: .75rem !important;
-  border-top: 3px solid #9B5DE5 !important;
+  font-size: .75rem;
+  border-top: 3px solid $purple;
 }
 
 /* ── Páginas internas (não é a landing page) ────────────────── */
 /* :not(.retro-desktop-body) seleciona body que NÃO tem essa classe,
    ou seja, todas as páginas exceto a landing page              */
-body:not(.retro-desktop-body) {
-  background: #F5F0FB;
-}
-
 body:not(.retro-desktop-body) #quarto-content main {
-  background: var(--window-bg);
-  border: 2px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
+  background: $white;
+  border: 2px solid $ink;
+  border-radius: $radius;
+  box-shadow: $shadow-card;
   margin: 20px auto;
+  /* !important necessário: o Quarto define o padding de main na
+     folha do próprio layout, com a mesma especificidade           */
   padding: 28px 36px !important;
   /* main é um ITEM do CSS grid .page-columns do Quarto, colocado num
      track de largura fixa (~806px). Descendentes rígidos (tabelas gt
@@ -239,8 +328,8 @@ body:not(.retro-desktop-body) main table {
 /* Cabeçalho de tabela com a cor de acento do tema                  */
 body:not(.retro-desktop-body) main table thead th,
 body:not(.retro-desktop-body) main table tr.header th {
-  background: #ECE3FA;
-  border-bottom: 2px solid var(--border) !important;
+  background: $lilac-100;
+  border-bottom: 2px solid $ink;
   font-weight: 700;
 }
 
@@ -251,7 +340,7 @@ body:not(.retro-desktop-body) main img {
 }
 
 body:not(.retro-desktop-body) .page-columns {
-  background: #F5F0FB;
+  background: $page-bg;
 }
 
 /* ── Landing page (desktop) ─────────────────────────────────── */
@@ -259,7 +348,8 @@ body.retro-desktop-body {
   overflow-x: hidden;
 }
 
-/* Remove os containers padrão do Quarto na landing page        */
+/* Remove os containers padrão do Quarto na landing page
+   (!important: disputa direta com o layout do Quarto)          */
 body.retro-desktop-body #quarto-content,
 body.retro-desktop-body main.content {
   padding: 0 !important;
@@ -273,12 +363,12 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 /* ── Área de desktop ────────────────────────────────────────── */
 .retro-desktop {
   min-height: calc(100vh - 90px);
-  background: var(--desktop-bg);
+  background: $lavender;
   /* repeating-linear-gradient: grade sutil de fundo
      Dois gradientes sobrepostos criam a aparência de grid      */
   background-image:
-    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba(255,255,255,.25) 32px),
-    repeating-linear-gradient(90deg, transparent, transparent 31px, rgba(255,255,255,.25) 32px);
+    repeating-linear-gradient(0deg, transparent, transparent 31px, rgba($white, .25) 32px),
+    repeating-linear-gradient(90deg, transparent, transparent 31px, rgba($white, .25) 32px);
   /* clamp(mínimo, preferido, máximo): padding lateral responsivo.
      Em telas estreitas fica 16px, escala até 40px em telas largas */
   padding: 32px clamp(16px, 5%, 40px) 24px;
@@ -318,19 +408,19 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 /* ── Componente base: Retro Window ──────────────────────────── */
 .retro-window {
-  background: var(--window-chrome);
-  border: 2px solid var(--border);
-  border-radius: var(--radius);
+  background: $window-chrome;
+  border: 2px solid $ink;
+  border-radius: $radius;
   /* overflow: hidden é necessário: faz os filhos respeitarem
      o border-radius do pai (titlebar não vaza nas bordas)      */
   overflow: hidden;
-  box-shadow: var(--shadow-window);
+  box-shadow: $shadow-window;
 }
 
 /* Barra de título */
 .window-titlebar {
-  background: var(--titlebar-profile);
-  color: var(--text-primary);
+  background: $purple;
+  color: $ink;
   padding: 8px 12px;
   display: flex;
   justify-content: space-between;
@@ -341,14 +431,14 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   /* user-select: none impede selecionar o texto da titlebar ao clicar */
   user-select: none;
   gap: 8px;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 2px solid $ink;
 }
 
 /* Cores individuais por janela — seletor descendente:
    .sysinfo-window .window-titlebar = titlebar DENTRO de sysinfo-window */
-.profile-window .window-titlebar { background: var(--titlebar-profile); }
-.sysinfo-window .window-titlebar { background: var(--titlebar-sysinfo); }
-.posts-window   .window-titlebar { background: var(--titlebar-posts); color: #FFFFFF; }
+.profile-window .window-titlebar { background: $purple; }
+.sysinfo-window .window-titlebar { background: $gold; }
+.posts-window   .window-titlebar { background: $coral; color: $white; }
 
 .window-title {
   flex: 1;
@@ -365,18 +455,18 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   align-items: center;
   justify-content: center;
   width: 20px; height: 20px;
-  background: var(--window-bg);
-  color: var(--text-primary);
+  background: $white;
+  color: $ink;
   font-size: 10px; font-weight: 900;
-  border: 1.5px solid var(--border);
+  border: 1.5px solid $ink;
   /* border-radius: 50% cria um círculo perfeito               */
   border-radius: 50%;
   cursor: default; line-height: 1;
 }
 
 .window-body {
-  background: var(--window-bg);
-  color: var(--text-primary);
+  background: $white;
+  color: $ink;
 }
 
 /* ── Profile Window ─────────────────────────────────────────── */
@@ -396,11 +486,11 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .profile-photo-frame {
   display: inline-block;
   flex-shrink: 0;
-  border: 3px solid var(--border);
-  border-radius: var(--radius);
+  border: 3px solid $ink;
+  border-radius: $radius;
   padding: 5px;
-  background: var(--titlebar-profile);
-  box-shadow: var(--shadow-card);
+  background: $purple;
+  box-shadow: $shadow-card;
 }
 
 .profile-photo {
@@ -409,7 +499,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   height: clamp(120px, 18vw, 170px);
   object-fit: cover; display: block;
   /* calc(): subtrai 4px do raio para o filho não ultrapassar o frame */
-  border-radius: calc(var(--radius) - 4px);
+  border-radius: calc(#{$radius} - 4px);
 }
 
 /* flex: 1 faz o conteúdo ocupar o espaço restante ao lado da foto */
@@ -419,12 +509,12 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   font-size: 2rem; font-weight: 800;
   letter-spacing: 2px;
   margin: 0 0 12px;
-  color: var(--text-primary);
+  color: $ink;
 }
 
 .profile-bio {
   font-size: 1rem;
-  color: var(--text-secondary);
+  color: $text-secondary;
   margin: 0 0 28px;
   line-height: 1.7;
 }
@@ -446,26 +536,28 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .retro-btn {
   display: inline-block;
   padding: 8px 20px;
-  font-family: var(--font);
+  font-family: $font-stack;
   font-size: .88rem; font-weight: 700;
-  color: var(--text-primary);
+  color: $ink;
+  /* !important: o Quarto marca o sublinhado de links em .content
+     como !important, então precisa ser respondido no mesmo nível  */
   text-decoration: none !important;
-  background: #FAF6FE;
-  border: 2px solid var(--border);
-  border-radius: var(--radius-sm);
+  background: $window-chrome;
+  border: 2px solid $ink;
+  border-radius: $radius-sm;
   cursor: pointer; letter-spacing: .5px; white-space: nowrap;
-  box-shadow: var(--shadow-btn);
+  box-shadow: $shadow-btn;
   /* transition anima transform e box-shadow ao mudar de estado */
   transition: transform 0.08s, box-shadow 0.08s;
 }
 
 .retro-btn:hover {
-  background: var(--accent-light);
-  color: var(--text-primary);
+  background: $accent-light;
+  color: $ink;
   text-decoration: none !important;
   /* translate(-1px, -1px): move 1px para cima e esquerda (efeito "levitar") */
   transform: translate(-1px, -1px);
-  box-shadow: 4px 4px 0 var(--border);
+  box-shadow: 4px 4px 0 $ink;
 }
 
 .retro-btn:active {
@@ -475,12 +567,12 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .retro-btn-primary {
-  background: var(--accent);
-  color: #FFFFFF;
-  border-color: var(--border);
+  background: $accent;
+  color: $white;
+  border-color: $ink;
 }
 
-.retro-btn-primary:hover { background: var(--accent-dark); color: #FFFFFF; }
+.retro-btn-primary:hover { background: $accent-dark; color: $white; }
 
 /* ── System Info Window ─────────────────────────────────────── */
 .sysinfo-window { grid-column: 1; grid-row: 2; }
@@ -497,20 +589,20 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .sys-pre {
-  font-family: var(--font);
+  font-family: $font-stack;
   font-size: .95rem;
-  color: var(--text-primary);
+  color: $ink;
   margin: 0; background: transparent;
   border: none; padding: 0; line-height: 1.9;
 }
 
-.sys-key { color: var(--accent); font-weight: 700; }
-.sys-sep { color: var(--text-muted); }
+.sys-key { color: $accent; font-weight: 700; }
+.sys-sep { color: $text-muted; }
 
 .cursor-blink {
   display: inline-block;
   width: 10px; height: 18px;
-  background: var(--accent);
+  background: $accent;
   vertical-align: text-bottom;
   border-radius: 2px;
   /* animation: nome duração timing-function iterações
@@ -519,8 +611,13 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 /* @keyframes define os quadros da animação:
-   0% e 100% → opaco; 50% → invisível → pisca                  */
-@keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+   0% e 100% dão o elemento opaco, 50% invisível — o que faz piscar.
+   Os frames ficam em linhas separadas porque o analisador de SCSS do
+   Quarto não lê blocos aninhados escritos numa linha só.          */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
 
 /* ── Posts Preview Window ───────────────────────────────────── */
 .posts-window { grid-column: 2; grid-row: 2; }
@@ -533,7 +630,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   align-items: center;
   padding: 18px 24px;
   gap: 14px;
-  border-bottom: 1.5px solid #E0D3F2;
+  border-bottom: 1.5px solid $divider;
 }
 
 .file-entry:last-child { border-bottom: none; }
@@ -544,7 +641,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .file-info p { margin: 0; }
 
 .file-name {
-  color: var(--text-primary) !important;
+  color: $ink;
   text-decoration: none !important;
   font-weight: 600;
   font-size: 1rem;
@@ -552,12 +649,12 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
 }
 
-.file-name:hover { color: var(--accent) !important; }
-.file-meta { color: var(--text-muted) !important; font-size: .82rem; }
+.file-name:hover { color: $accent; }
+.file-meta { color: $text-muted; font-size: .82rem; }
 
 .posts-footer {
   padding: 14px 24px;
-  border-top: 1.5px solid #E0D3F2;
+  border-top: 1.5px solid $divider;
   text-align: right;
 }
 
@@ -567,27 +664,26 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   max-width: 1140px;
   margin: 20px auto 0;
   width: 100%;
-  background: var(--window-bg);
-  border: 2px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-card);
+  background: $white;
+  border: 2px solid $ink;
+  border-radius: $radius;
+  box-shadow: $shadow-card;
   padding: 6px 12px;
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font);
   font-size: .9rem;
 }
 
 .taskbar-start {
-  background: var(--accent);
-  color: #FFFFFF;
+  background: $accent;
+  color: $white;
   padding: 5px 18px;
   font-weight: 800; font-size: .88rem;
-  border: 2px solid var(--border);
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-btn);
-  font-family: var(--font);
+  border: 2px solid $ink;
+  border-radius: $radius-sm;
+  box-shadow: $shadow-btn;
+  font-family: $font-stack;
   letter-spacing: 1px;
   transition: transform 0.08s, box-shadow 0.08s;
   cursor: pointer;
@@ -595,14 +691,14 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 .taskbar-start:hover {
   transform: translate(-1px,-1px);
-  box-shadow: 4px 4px 0 var(--border);
+  box-shadow: 4px 4px 0 $ink;
 }
 
 .taskbar-tab {
-  background: #ECE3FA;
+  background: $lilac-100;
   padding: 5px 16px;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
+  border: 1.5px solid $ink;
+  border-radius: $radius-sm;
   font-weight: 600; font-size: .85rem;
 }
 
@@ -611,29 +707,30 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 .taskbar-spacer { flex: 1; }
 
 .taskbar-clock {
-  background: var(--titlebar-sysinfo);
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
+  background: $gold;
+  border: 1.5px solid $ink;
+  border-radius: $radius-sm;
   padding: 4px 14px; font-size: .85rem; font-weight: 700;
-  color: var(--text-primary);
+  color: $ink;
 }
 
 /* ── Título das páginas internas ────────────────────────────── */
 .quarto-title-block .quarto-title h1 {
-  font-family: var(--font);
   font-size: 1.4rem; font-weight: 800;
-  color: var(--text-primary);
+  color: $ink;
   letter-spacing: 1px;
   padding-bottom: 8px;
-  border-bottom: 3px solid var(--accent);
+  border-bottom: 3px solid $accent;
 }
 
 .quarto-title-block .quarto-title h1::before {
   content: '> ';
-  color: var(--accent);
+  color: $accent;
 }
 
 /* ── Cards (páginas de listagem: /posts, /projects) ─────────── */
+/* Fundo, borda, raio e padding já vêm de $card-bg, $card-border-*
+   e $card-spacer-* — aqui fica só o que o Bootstrap não tem.     */
 .quarto-listing-container-grid {
   padding: 8px 4px;
 }
@@ -646,107 +743,105 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 }
 
 .card {
-  background: var(--window-bg) !important;
-  border: 2px solid var(--border) !important;
-  border-radius: var(--radius) !important;
-  box-shadow: var(--shadow-card) !important;
-  transition: transform 0.08s, box-shadow 0.08s !important;
+  box-shadow: $shadow-card;
+  transition: transform 0.08s, box-shadow 0.08s;
   overflow: hidden;
   margin-bottom: 4px;
 }
 
 .card:hover {
-  transform: translate(-2px,-2px) !important;
-  box-shadow: 5px 5px 0 var(--border) !important;
-}
-
-.card-body {
-  background: var(--window-bg) !important;
-  padding: 16px !important;
+  transform: translate(-2px,-2px);
+  box-shadow: 5px 5px 0 $ink;
 }
 
 .card-title {
-  font-family: var(--font) !important;
-  font-size: .88rem !important; font-weight: 700 !important;
-  color: var(--text-primary) !important;
+  font-size: .88rem; font-weight: 700;
+  color: $ink;
 }
 
-.card-text, .card-subtitle, .listing-description {
-  font-family: var(--font) !important;
-  font-size: .75rem !important;
-  color: var(--text-secondary) !important;
+/* Os seletores longos do Quarto (.quarto-grid-item .card-text = .9em)
+   venceriam um .card-text solto. Em vez de !important, respondemos no
+   mesmo nível de especificidade — e vencemos por vir depois.          */
+.card-text,
+.card-subtitle,
+.listing-description,
+.quarto-grid-item .card-text,
+.quarto-grid-item .card-subtitle.subtitle,
+div.quarto-post .listing-description {
+  font-size: .75rem;
+  color: $text-secondary;
 }
 
 .card-img-top, .thumbnail-image {
-  border-bottom: 2px solid var(--border);
+  border-bottom: 2px solid $ink;
 }
 
-/* Chips de categoria nos cards */
-.quarto-category, .badge {
-  background: #ECE3FA !important;
-  border: 1.5px solid var(--accent) !important;
-  color: var(--accent-dark) !important;
-  border-radius: var(--radius-sm) !important;
-  font-family: var(--font) !important;
-  font-size: .68rem !important; font-weight: 700 !important;
+/* Chips de categoria (cards e cabeçalho de post). O seletor do Quarto
+   .quarto-title .quarto-categories .quarto-category é mais específico,
+   então precisa ser igualado aqui.                                    */
+.quarto-category,
+.badge,
+.quarto-title .quarto-categories .quarto-category {
+  background: $lilac-100;
+  border: 1.5px solid $accent;
+  color: $accent-dark;
+  border-radius: $radius-sm;
+  font-size: .68rem; font-weight: 700;
   letter-spacing: .3px;
-  padding: 2px 8px !important;
+  padding: 2px 8px;
 }
 
-.listing-date { color: var(--accent) !important; font-size: .72rem !important; }
+.listing-date { color: $accent; font-size: .72rem; }
 
 /* ── Painel lateral de categorias ───────────────────────────── */
-#quarto-margin-sidebar .quarto-listing-category {
-  font-family: var(--font);
-}
-
+/* O Quarto estiliza este título por ID (#quarto-margin-sidebar),
+   especificidade que só se iguala repetindo o ID.                 */
+#quarto-margin-sidebar .quarto-listing-category-title,
 .quarto-listing-category-title {
-  font-family: var(--font) !important;
-  font-size: .72rem !important;
-  font-weight: 800 !important;
+  font-size: .72rem;
+  font-weight: 800;
   letter-spacing: 1px;
-  color: var(--accent) !important;
+  color: $accent;
   text-transform: uppercase;
-  border-bottom: 2px solid var(--border);
+  border-bottom: 2px solid $ink;
   padding-bottom: 4px;
   margin-bottom: 8px;
 }
 
 .quarto-listing-category a {
-  font-family: var(--font) !important;
-  font-size: .75rem !important;
-  color: var(--text-primary) !important;
+  font-size: .75rem;
+  color: $ink;
   text-decoration: none !important;
   display: flex;
   justify-content: space-between;
   padding: 3px 0;
 }
 
-.quarto-listing-category a:hover { color: var(--accent) !important; }
+.quarto-listing-category a:hover { color: $accent; }
 
 .quarto-listing-category a.active {
-  color: var(--accent) !important;
-  font-weight: 700 !important;
+  color: $accent;
+  font-weight: 700;
 }
 
 .quarto-listing-category a .quarto-category-count {
-  background: #ECE3FA;
-  border: 1.5px solid var(--accent);
-  border-radius: var(--radius-sm);
+  background: $lilac-100;
+  border: 1.5px solid $accent;
+  border-radius: $radius-sm;
   font-size: .65rem;
   padding: 0 5px;
-  color: var(--text-muted) !important;
+  color: $text-muted;
 }
 
 /* ── Publicações / cards de artigos ─────────────────────────── */
 .quarto-listing-item .card-body a {
-  color: var(--accent-dark);
+  color: $accent-dark;
   font-weight: 700;
 }
 
 /* ── Meta de post/projeto (data, author) ────────────────────── */
-.quarto-title-meta { font-family: var(--font); font-size: .76rem; }
-.quarto-title-meta-heading { color: var(--accent); font-weight: 700; }
+.quarto-title-meta { font-size: .76rem; }
+.quarto-title-meta-heading { color: $accent; font-weight: 700; }
 
 /* ── Layout da página /about ────────────────────────────────── */
 /* Coluna única: as duas janelas ficam uma ABAIXO da outra,
@@ -768,27 +863,75 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 
 .about-profile-info { flex: 1; min-width: 0; }
 
+/* Foto do /about é de tamanho fixo (não fluida como a da home).
+   As duas classes são exigidas no seletor: só ".about-photo" perderia
+   para "body:not(.retro-desktop-body) main img { height: auto }", que
+   tem mais elementos no seletor.                                    */
+.profile-photo.about-photo {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+}
+
+.about-name {
+  font-size: 1.3rem; font-weight: 800;
+  letter-spacing: 1px;
+  margin: 0 0 2px;
+}
+
+.about-role {
+  font-size: .85rem;
+  color: $text-secondary;
+  margin: 0 0 2px;
+}
+
+.about-place {
+  font-size: .8rem;
+  color: $text-muted;
+  margin: 0 0 14px;
+}
+
+/* Corpo de texto longo dentro de uma retro-window               */
+.window-body-prose { padding: 24px 28px; }
+
 /* Em telas estreitas o banner vira coluna e centraliza           */
 @media (max-width: 600px) {
   .about-profile-banner { flex-direction: column; text-align: center; }
   .about-profile-info .social-row { justify-content: center; }
 }
 
+/* ── Cabeçalho de projeto (badge de status + links) ─────────── */
+.project-header {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
 /* ── Badge de status de projeto ─────────────────────────────── */
 .project-status {
   display: inline-block;
-  font-family: var(--font);
   font-size: .7rem; font-weight: 700;
   padding: 2px 10px;
-  border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm);
-  background: var(--window-chrome);
-  color: var(--text-primary);
+  border: 1.5px solid $ink;
+  border-radius: $radius-sm;
+  background: $window-chrome;
+  color: $ink;
   letter-spacing: 1px;
 }
 
-.project-status.active  { border-color: #2E7D32; background: #E8F5E9; color: #1B5E20; }
-.project-status.wip     { border-color: #F57F17; background: #FFFDE7; color: #E65100; }
+.project-status.active {
+  border-color: $status-active-border;
+  background: $status-active-bg;
+  color: $status-active-text;
+}
+
+.project-status.wip {
+  border-color: $status-wip-border;
+  background: $status-wip-bg;
+  color: $status-wip-text;
+}
 
 /* ── Responsivo ─────────────────────────────────────────────── */
 /* Abaixo de 760px: empilha as janelas em coluna única           */

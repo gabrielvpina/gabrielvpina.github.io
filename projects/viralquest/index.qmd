@@ -14,7 +14,7 @@ toc: true
 
 ```{=html}
 <!-- Project status badge + links -->
-<div style="display:flex; gap:10px; align-items:center; margin-bottom:24px; flex-wrap:wrap;">
+<div class="project-header">
   <span class="project-status active">● Active</span>
   <a class="retro-btn" href="https://github.com/gabrielvpina/viralquest" target="_blank">⎈ GitHub</a>
 </div>

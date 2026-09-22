@@ -9,8 +9,7 @@ website:
   open-graph: true
   twitter-card: true
   navbar:
-    background: "#251A30"
-    foreground: "#ECE3FA"
+    # Cores da navbar vivem em styles/retro.scss ($navbar-bg/$navbar-fg/$navbar-hl)
     left:
       - href: posts/index.qmd
         text: "/posts"
@@ -24,15 +23,18 @@ website:
       - icon: github
         href: https://github.com/gabrielvpina
   page-footer:
+    # Cores do footer vivem em styles/retro.scss ($footer-bg/$footer-fg)
     center: "© gabriel_pina :: 2026"
     border: false
-    background: "#251A30"
-    foreground: "#D6BCF5"
 
 format:
   html:
-    theme: flatly
-    css: styles/retro.css
+    # O tema customizado é compilado JUNTO com o flatly (não é um css
+    # solto carregado depois), o que permite configurar o Bootstrap
+    # a partir das variáveis em scss:defaults.
+    theme:
+      - flatly
+      - styles/retro.scss
     toc: false
     fontsize: 0.9em
     resources:
