@@ -968,63 +968,469 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
   line-height: 1.1;
 }
 
-/* ── Cards das páginas de listagem ──────────────────────────── */
-.quarto-listing-container-grid { padding: 8px 4px; }
+/* ── Cards das páginas de listagem ────────────────────────────
+   Três camadas: base comum a todas as listagens, depois as duas
+   variantes escolhidas por body-classes —
+     .lista-ls      → /posts      (listagem estilo ls -l)
+     .pub-pasta   → /publications (pasta com aba)
+   /projects fica só com a base.
 
-.list.grid {
-  --bs-gutter-x: 1.5rem;
-  --bs-gutter-y: 1.5rem;
-  row-gap: 1.5rem !important;
+   Toda cor vem das variáveis do tema, nunca de hex literal: é isso
+   que faz os cards acompanharem o modo escuro.                   */
+
+/* Quanto o título e os autores podem ocupar antes de cortar */
+$linhas-titulo:     3;
+$linhas-descricao:  4;   /* descrição do post / autores do paper */
+$linhas-autores:    3;
+
+.quarto-listing .list.grid {
+  gap: 30px;
+  row-gap: 40px;
 }
 
-.card {
+/* Os cards de uma linha terminam juntos. Para isso não gerar vão em
+   branco, título e descrição abaixo reservam um número fixo de linhas
+   — assim o conteúdo de todo card mede igual, e não é a grade que
+   estica um para alcançar o outro.                                  */
+.quarto-listing .list.grid > * { height: 100%; }
+
+.quarto-grid-link { display: block; height: 100%; }
+
+.quarto-grid-link,
+.quarto-grid-link:hover {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.quarto-grid-item.card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  padding: 0;
+  background: $papel;
+  border: $borda-w solid $traco;
+  border-radius: $raio;
+  box-shadow: $sombra;
+  transition: transform .15s ease, box-shadow .15s ease, rotate .15s ease;
+}
+
+.quarto-grid-link:hover .quarto-grid-item.card {
+  transform: translate(-4px, -4px);
+  box-shadow: 10px 10px 0 $sombra-cor;
+}
+
+.quarto-grid-link:active .quarto-grid-item.card {
+  transform: translate(3px, 3px);
   box-shadow: $sombra-p;
-  transition: transform .1s, box-shadow .1s;
+}
+
+.quarto-grid-link:focus-visible {
+  outline: 3px dashed $roxo;
+  outline-offset: 6px;
+  border-radius: $raio;
+}
+
+/* Imagem */
+.quarto-grid-item .card-img-top {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  /* Sem isto o flex encolhe a imagem para caber, e o espaco que ela
+     perde reaparece como vao em branco no corpo do card.           */
+  flex-shrink: 0;
   overflow: hidden;
-  margin-bottom: 4px;
+  background: $areia;
+  border-bottom: $borda-w solid $traco;
 }
 
-.card:hover {
-  transform: translate(-2px, -2px);
-  box-shadow: 5px 5px 0 $sombra-cor;
+.quarto-grid-item .card-img-top img,
+.quarto-grid-item img.thumbnail-image {
+  display: block;
+  width: 100%;
+  /* !important: o Quarto escreve height inline na <img> a partir de
+     image-height, e só !important vence um atributo style.        */
+  height: auto !important;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
 }
 
-.card-title {
+/* Corpo — estica até o fim para o rodapé encostar na base */
+.quarto-grid-item .card-body {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 18px 16px;
+  background: $papel;
+}
+
+/* Título cortado em N linhas, para a grade não desalinhar */
+.quarto-grid-item .listing-title,
+.quarto-grid-item .card-title {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $linhas-titulo;
+  line-clamp: $linhas-titulo;
+  overflow: hidden;
+  margin: 0;
+  min-height: calc(#{$linhas-titulo} * 1.3em);
   font-family: $fonte-titulo;
-  font-size: .95rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: $tinta;
+  text-wrap: balance;
+}
+
+.quarto-grid-item .listing-description,
+.quarto-grid-item .card-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $linhas-descricao;
+  line-clamp: $linhas-descricao;
+  overflow: hidden;
+  margin: 0;
+  /* Altura reservada em vez de flex: com "flex: 1" a altura imposta
+     pelo flex vence o -webkit-line-clamp e o texto e cortado no meio
+     da linha, sem reticencias.                                     */
+  min-height: calc(#{$linhas-descricao} * 1.5em);
+  font-size: .86rem;
+  line-height: 1.5;
+  color: $tinta-suave;
+}
+
+.quarto-grid-item .listing-description p { margin: 0; }
+
+/* Categorias */
+.quarto-grid-item .listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.quarto-grid-item .listing-categories .listing-category {
+  padding: 1px 9px 2px;
+  margin: 0;
+  background: $papel;
+  border: 2px solid $traco;
+  border-radius: 999px;
+  font-family: $fonte-texto;
+  font-size: .68rem;
+  letter-spacing: .04em;
+  line-height: 1.5;
+  color: $tinta;
+  text-transform: uppercase;
+  opacity: 1;
+  transition: background .12s;
+}
+
+.quarto-grid-item .listing-categories .listing-category:hover {
+  background: $roxo-claro;
+}
+
+/* Rodapé */
+.quarto-grid-item .card-attribution {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  /* O Quarto poe flex-grow:10 aqui, o que estica o rodape por todo o
+     espaco livre do card — a linha sobe para logo abaixo do texto e a
+     data fica boiando no fundo de uma caixa vazia. Com flex:none ele
+     volta a ter a altura do conteudo, e o margin-top:auto encosta a
+     barra na base.                                                  */
+  flex: none;
+  margin-top: auto;
+  margin-inline: -18px;
+  margin-bottom: -16px;
+  padding: 10px 18px;
+  border-top: $borda-fina solid $traco;
+  background: $fundo;
+}
+
+.quarto-grid-item .listing-date {
+  flex: none;
+  white-space: nowrap;
+  font-family: $fonte-pixel;
+  font-size: 1.05rem;
+  line-height: 1.15;
+  color: $tinta-suave;
+}
+
+.quarto-grid-item .listing-author {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $linhas-autores;
+  line-clamp: $linhas-autores;
+  overflow: hidden;
+  min-width: 0;
+  font-family: $fonte-texto;
+  font-size: .74rem;
+  line-height: 1.5;
+  color: $tinta-suave;
+}
+
+.quarto-grid-item .listing-author b,
+.quarto-grid-item .listing-author strong { color: $tinta; }
+
+/* ── /posts — listagem estilo "ls -l" ──────────────────────────
+   A pagina de posts nao usa grade de cards: e uma listagem
+   (type: default) dentro de um quadro unico, uma linha por post,
+   com permissoes falsas antes do titulo e a data a direita.     */
+
+/* Base da listagem type: default */
+.quarto-listing-default .quarto-post {
+  align-items: center;
+  margin: 0;
+  padding: 14px 16px;
+  border: 0;
+  column-gap: 16px;
+}
+
+.quarto-listing-default .quarto-post a {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.quarto-listing-default .quarto-post .listing-title { margin: 0; }
+.quarto-listing-default .quarto-post .body > * + * { margin-top: 6px; }
+
+.quarto-listing-default .listing-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+/* O Quarto reserva 2em a direita do container da listagem para a
+   barra lateral, que neste layout ja tem coluna propria — zerar
+   devolve essa largura ao quadro.                                */
+.lista-ls .quarto-listing-container-default { margin-right: 0; }
+
+/* O quadro que envolve a lista inteira */
+.lista-ls .quarto-listing-default {
+  padding: 10px 0;
+  background: $papel;
+  border: $borda-w solid $traco;
+  border-radius: $raio;
+  box-shadow: $sombra;
+  font-family: $fonte-texto;
+  overflow: hidden;
+}
+
+/* Cabecalho do terminal. Usa $term-fundo (e nao $tinta) porque
+   precisa ser escuro nos dois temas — com $tinta a faixa ficaria
+   clara no modo escuro e o verde sumiria.                        */
+.lista-ls .quarto-listing-default::before {
+  content: "gabrielvpina@me.log:~/posts$ ls -l";
+  display: block;
+  margin: -10px 0 8px;
+  padding: 7px 16px;
+  background: $term-fundo;
+  color: $verde;
+  font-size: .76rem;
+  letter-spacing: .04em;
+}
+
+.lista-ls .quarto-post {
+  display: grid;
+  grid-template-columns: 86px 1fr auto;
+  padding: 12px 18px;
+}
+
+/* O Quarto marca os itens como .image-right e reordena a miniatura;
+   a colocacao explicita garante a imagem na primeira coluna.      */
+.lista-ls .quarto-post > .thumbnail { grid-column: 1; order: 0; margin: 0; }
+.lista-ls .quarto-post > .body      { grid-column: 2; order: 0; min-width: 0; }
+.lista-ls .quarto-post > .metadata  { grid-column: 3; order: 0; text-align: right; }
+
+.lista-ls .quarto-post:hover { background: $roxo-claro; }
+
+.lista-ls .quarto-post .thumbnail img {
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border: 2px solid $traco;
+  border-radius: 3px;
+}
+
+.lista-ls .quarto-post .listing-title {
+  font-family: $fonte-titulo;
+  font-size: .98rem;
   font-weight: 700;
   color: $tinta;
 }
 
-/* Os seletores longos do Quarto (.quarto-grid-item .card-text = .9em)
-   venceriam um .card-text solto; em vez de !important, respondemos no
-   mesmo nível de especificidade — e vencemos por vir depois.         */
-.card-text,
-.card-subtitle,
-.listing-description,
-.quarto-grid-item .card-text,
-.quarto-grid-item .card-subtitle.subtitle,
-div.quarto-post .listing-description {
+/* Permissoes falsas, para a linha parecer saida de ls -l */
+.lista-ls .quarto-post .listing-title::before {
+  content: "-rw-r--r--  ";
+  font-family: $fonte-texto;
+  font-weight: 400;
+  font-size: .8rem;
+  color: $tinta-suave;
+}
+
+.lista-ls .quarto-post .listing-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
   font-size: .78rem;
   color: $tinta-suave;
 }
 
-.card-img-top, .thumbnail-image {
-  border-bottom: $borda-fina solid $traco;
-}
+.lista-ls .quarto-post .listing-description p { margin: 0; }
 
-/* Etiquetas de categoria dos cards de listagem. O Quarto as estiliza
-   por .quarto-grid-item/.quarto-post, seletores mais específicos que
-   .listing-category — por isso a regra precisa repeti-los.          */
-.quarto-grid-item .listing-categories .listing-category,
-div.quarto-post .listing-categories .listing-category {
+/* Especificidade alta o bastante para vencer a regra de pilula dos
+   cards, que tambem alcanca div.quarto-post.                      */
+.lista-ls div.quarto-post .listing-categories .listing-category {
+  padding: 0 7px 1px;
   background: $papel;
   border: 1.5px solid $traco;
-  border-radius: 999px;
+  border-radius: 3px;
   color: $tinta;
-  font-size: .68em;
+  font-size: .62rem;
+  text-transform: uppercase;
+}
+
+.lista-ls .quarto-post .listing-date {
+  font-family: $fonte-pixel;
+  font-size: 1.05rem;
+  color: $tinta-suave;
+}
+
+/* ── /publications — pasta com aba ─────────────────────────────
+   Cada artigo é uma pasta: aba no topo com o nome do arquivo,
+   selo de DOI à direita e o miolo em papel dentro dela.         */
+.pub-pasta { --card-arquivo: "paper.pdf"; }
+
+.pub-pasta .quarto-listing .list.grid { row-gap: 52px; }
+
+/* O espaco da aba vem do item da grade, nao de uma margem no card.
+   Com margin-top o card mantinha height:100% da linha inteira (o .h-100
+   do Bootstrap e !important) e sobravam 26px de vao; como padding do
+   item, a altura de 100% ja resolve contra a caixa de conteudo.     */
+.pub-pasta .quarto-listing .list.grid > * { padding-top: 26px; }
+
+.pub-pasta .quarto-grid-item.card {
+  overflow: visible;
+  padding-top: 9px;              /* lombada */
+  background: $areia;
+  border-top-left-radius: 0;
+  /* O inset desenha o vinco da base; o outro é a sombra da pasta */
+  box-shadow: inset 0 -7px 0 $areia, $sombra;
+}
+
+.pub-pasta .quarto-grid-link:hover .quarto-grid-item.card {
+  box-shadow: inset 0 -7px 0 $areia, 10px 10px 0 $sombra-cor;
+}
+
+.pub-pasta .quarto-grid-link:active .quarto-grid-item.card {
+  box-shadow: inset 0 -7px 0 $areia, $sombra-p;
+}
+
+/* Aba */
+.pub-pasta .quarto-grid-item.card::before {
+  content: var(--card-arquivo, "paper.pdf");
+  position: absolute;
+  top: -26px;
+  left: -#{$borda-w};
+  padding: 3px 20px 4px;
+  background: $areia;
+  border: $borda-w solid $traco;
+  border-bottom: 0;
+  border-radius: 6px 6px 0 0;
+  font-family: $fonte-pixel;
+  font-size: 1.1rem;
+  line-height: 1.2;
+  color: $tinta;
+}
+
+/* Selo de link externo */
+.pub-pasta .quarto-grid-item.card::after {
+  content: "DOI ↗";
+  position: absolute;
+  top: -23px;
+  right: 4px;
+  padding: 0 8px 1px;
+  background: $fundo;
+  border: 2px solid $areia-escura;
+  border-radius: 3px;
+  font-family: $fonte-texto;
+  font-size: .62rem;
+  letter-spacing: .12em;
+  color: $tinta-suave;
+  transition: color .12s, border-color .12s;
+}
+
+.pub-pasta .quarto-grid-link:hover .quarto-grid-item.card::after {
+  color: $roxo;
+  border-color: $roxo;
+}
+
+/* Miolo recuado, para a pasta aparecer em volta */
+.pub-pasta .quarto-grid-item .card-img-top {
+  margin-inline: 9px;
+  /* O Bootstrap define width:100% em .card-img-top. Com a margem
+     lateral da pasta, isso mede 100% do card e vaza 9px para fora —
+     "auto" deixa o flex calcular já descontando as margens.       */
+  width: auto;
+  /* A borda de baixo fica: e ela que marca a divisa entre a figura e o
+     titulo. O corpo logo abaixo tem border-top: 0, entao o risco e um
+     so, de 2px, e nao dois encostados.                              */
+  border: 2px solid $traco;
+}
+
+/* A figura preenche a largura da pasta e o excesso vertical e
+   cortado. object-position: top porque em figura de artigo o topo
+   costuma trazer o painel A e o titulo da analise — cortar por baixo
+   perde menos informacao do que cortar pelos dois lados.           */
+.pub-pasta .quarto-grid-item .card-img-top img {
+  aspect-ratio: 2 / 1;
+  object-fit: cover;
+  object-position: center top;
+  background: $papel;
+}
+
+.pub-pasta .quarto-grid-item .card-body {
+  margin: 0 9px 9px;
+  padding: 16px 16px 14px;
+  border: 2px solid $traco;
+  border-top: 0;
+}
+
+.pub-pasta .quarto-grid-item .card-attribution {
+  margin-inline: -16px;
+  margin-bottom: -14px;
+  padding: 9px 16px;
+  background: $fundo;
+}
+
+.pub-pasta .quarto-grid-item .listing-title { font-size: 1rem; }
+
+.pub-pasta .quarto-grid-item .listing-title::after {
+  content: " ↗";
+  color: $roxo;
+}
+
+.pub-pasta .quarto-grid-item .listing-categories .listing-category {
+  border-width: 1.5px;
+  border-radius: 2px;
+  font-size: .64rem;
+}
+
+/* Data como carimbo */
+.pub-pasta .quarto-grid-item .listing-date {
   padding: 1px 8px;
-  margin-right: 4px;
+  border: 2px solid $tinta-suave;
+  border-radius: 3px;
+  font-size: .95rem;
+  color: $tinta-suave;
+  rotate: -2deg;
 }
 
 /* Etiquetas de categoria no cabeçalho dos posts */
@@ -1242,7 +1648,39 @@ div.quarto-post .listing-categories .listing-category {
   }
 }
 
+/* Telas estreitas: sem giro, que no celular só atrapalha a leitura */
+@media (max-width: 575.98px) {
+  .quarto-listing .list.grid { gap: 26px; }
+  .quarto-grid-item .card-body { padding: 15px 15px 13px; }
+  .quarto-grid-item .card-attribution {
+    margin-inline: -15px;
+    margin-bottom: -13px;
+    padding: 9px 15px;
+  }
+
+  .lista-ls .quarto-post { grid-template-columns: 44px 1fr; row-gap: 6px; padding: 10px 12px; }
+  .lista-ls .quarto-post > .metadata { grid-column: 2; text-align: left; }
+  .lista-ls .quarto-post .listing-title::before { content: none; }
+
+  .pub-pasta .quarto-grid-item .card-body { margin: 0 9px 9px; padding: 14px 14px 12px; }
+  .pub-pasta .quarto-grid-item .card-attribution {
+    margin-inline: -14px;
+    margin-bottom: -12px;
+    padding: 8px 14px;
+  }
+}
+
+@media print {
+  .quarto-grid-item.card {
+    box-shadow: none !important;
+    rotate: 0deg !important;
+  }
+  .lista-ls .quarto-listing-default { box-shadow: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .cursor::after { animation: none; }
   .retro-btn, .project-card, .file-arrow, .card { transition: none; }
+  .quarto-grid-item.card,
+  .pub-pasta .quarto-grid-item.card::after { transition: none; }
 }

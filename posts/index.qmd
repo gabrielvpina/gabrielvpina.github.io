@@ -1,15 +1,16 @@
 ---
 title: "/posts"
 toc: false
+page-layout: full
+body-classes: lista-ls
 listing:
   id: posts-listing
-  type: grid
+  type: default
   contents: "*/*.qmd"
   sort: "date desc"
   categories: true
-  fields: [image, date, title, description, categories]
-  page-size: 9
-  grid-columns: 3
+  fields: [image, date, title, categories, description]
+  page-size: 20
 ---
 
 ::: {#posts-listing}
