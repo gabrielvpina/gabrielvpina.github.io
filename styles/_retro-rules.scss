@@ -1264,15 +1264,6 @@ $linhas-autores:    3;
   color: $tinta;
 }
 
-/* Permissoes falsas, para a linha parecer saida de ls -l */
-.lista-ls .quarto-post .listing-title::before {
-  content: "-rw-r--r--  ";
-  font-family: $fonte-texto;
-  font-weight: 400;
-  font-size: .8rem;
-  color: $tinta-suave;
-}
-
 .lista-ls .quarto-post .listing-description {
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1660,7 +1651,6 @@ $linhas-autores:    3;
 
   .lista-ls .quarto-post { grid-template-columns: 44px 1fr; row-gap: 6px; padding: 10px 12px; }
   .lista-ls .quarto-post > .metadata { grid-column: 2; text-align: left; }
-  .lista-ls .quarto-post .listing-title::before { content: none; }
 
   .pub-pasta .quarto-grid-item .card-body { margin: 0 9px 9px; padding: 14px 14px 12px; }
   .pub-pasta .quarto-grid-item .card-attribution {
