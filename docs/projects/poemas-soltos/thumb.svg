@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" role="img" aria-label="Monitor CRT lilás">
+  <rect width="600" height="400" fill="#2b2933"/>
+  <rect x="34" y="28" width="532" height="344" rx="30" fill="#14101f" stroke="#55525f" stroke-width="10"/>
+  <g font-family="monospace" font-size="27" fill="#c9b6ff">
+    <text x="74" y="92">$ ls poemas/</text>
+    <rect x="66" y="118" width="468" height="42" fill="#c9b6ff"/>
+    <text x="74" y="148" fill="#14101f">&gt; poemas soltos</text>
+    <text x="74" y="204">décimas</text>
+    <text x="74" y="252">rimas</text>
+    <text x="74" y="324">$ _</text>
+  </g>
+</svg>

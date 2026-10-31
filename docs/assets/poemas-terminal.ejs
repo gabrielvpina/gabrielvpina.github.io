@@ -1,0 +1,41 @@
+<%
+const slug = (item) => item.path.split("/").pop().replace(/\.(html|qmd)$/, "");
+%>
+```{=html}
+<div class="crt-monitor">
+  <div class="crt-tela">
+    <div class="crt-rolagem" tabindex="0">
+      <section class="crt-seletor" aria-label="Poemas">
+        <p class="crt-comando">visitante@me.log:~/poemas-soltos$ ls -t poemas/</p>
+        <p class="crt-total">total <%= items.length %></p>
+        <ul>
+<% for (const item of items) { %>
+          <li><a href="#<%= slug(item) %>"><span class="crt-data"><%= item.date %></span><span class="crt-titulo"><%= item.title %></span></a></li>
+<% } %>
+        </ul>
+        <p class="crt-comando">visitante@me.log:~/poemas-soltos$ <span class="crt-cursor"></span></p>
+      </section>
+<% for (const item of items) { %>
+      <article class="crt-poema" id="poema-<%= slug(item) %>">
+        <p class="crt-comando">visitante@me.log:~/poemas-soltos$ cat <%= slug(item) %>.txt</p>
+        <h2><%= item.title %></h2>
+<% if (item.subtitle) { %>
+        <p class="crt-subtitulo"><%= item.subtitle %></p>
+<% } %>
+        <p class="crt-data"><%= item.date %></p>
+        <pre><%= item.text %></pre>
+        <p class="crt-comando">-- fim do arquivo -- <span class="crt-cursor"></span></p>
+      </article>
+<% } %>
+    </div>
+    <div class="crt-barra">
+      <span class="crt-atalhos">↑↓ navegar · enter abrir</span>
+      <a class="crt-botao crt-voltar" href="#" hidden>&lt; voltar</a>
+      <span class="crt-botoes-rolagem">
+        <button class="crt-botao crt-subir" type="button" hidden>▲ subir</button>
+        <button class="crt-botao crt-descer" type="button" hidden>▼ descer</button>
+      </span>
+    </div>
+  </div>
+</div>
+```

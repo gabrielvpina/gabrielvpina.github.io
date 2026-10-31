@@ -5,7 +5,7 @@ description: "Como um recurso intelectual valioso pode ser desperdiçado facilme
 image: "thumb.jpg"
 categories: [IA, LLM, Opinion]
 
-date: "2025-09-30"
+date: "2026-09-30"
 date-format: "long"
 
 author: 

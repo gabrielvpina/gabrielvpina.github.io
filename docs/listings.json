@@ -2,18 +2,28 @@
   {
     "listing": "/index.html",
     "items": [
+      "/posts/using_ai/post.html",
       "/posts/R_language/post.html",
       "/posts/why_use_linux/post.html",
       "/posts/decision_tree_basic/dec_tree.html",
       "/posts/seq_sanger/seq_sanger.html",
       "/posts/data_report/data_report.html",
-      "/posts/using_ai/post.html",
+      "/projects/poemas-soltos/index.html",
       "/projects/viralquest/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/poemas-soltos/index.html",
+    "items": [
+      "/projects/poemas-soltos/poemas/pratica-de-decima-espinela.html",
+      "/projects/poemas-soltos/poemas/organico.html",
+      "/projects/poemas-soltos/poemas/solidão.html"
     ]
   },
   {
     "listing": "/projects/index.html",
     "items": [
+      "/projects/poemas-soltos/index.html",
       "/projects/viralquest/index.html"
     ]
   },
@@ -24,12 +34,12 @@
   {
     "listing": "/posts/index.html",
     "items": [
+      "/posts/using_ai/post.html",
       "/posts/R_language/post.html",
       "/posts/why_use_linux/post.html",
       "/posts/decision_tree_basic/dec_tree.html",
       "/posts/seq_sanger/seq_sanger.html",
-      "/posts/data_report/data_report.html",
-      "/posts/using_ai/post.html"
+      "/posts/data_report/data_report.html"
     ]
   }
 ]

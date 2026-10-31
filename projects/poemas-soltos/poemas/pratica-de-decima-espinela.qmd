@@ -1,0 +1,16 @@
+---
+title: "Prática de Décima Espinela"
+subtitle: "texto com ana, ena, ina e una"
+date: "2026-10-30"
+text: |
+  Tendo de encarar minha própia ruína
+  quebro as frias longas cadenas
+  que calavam as vozes serenas
+  com maldições e juras à minha sina.
+  Como garras encravadas pela rapina
+  meus pensamentos ecoam pela tribuna,
+  com júri, acusação e calúnia
+  condeno-me da pena máxima tirana
+  por tratar da forma mais leviana
+  os amores que ofereçeram tanta fortuna
+---

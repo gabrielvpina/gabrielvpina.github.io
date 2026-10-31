@@ -1,0 +1,87 @@
+---
+title: "Poemas Soltos"
+date: "2026-10-30"
+description: "Poemas meus, guardados em um terminal CRT lilás."
+categories: [Poesia, Literatura]
+image: "thumb.svg"
+page-layout: custom
+title-block-style: none
+toc: false
+body-classes: poemas-crt
+listing:
+  id: poemas-listing
+  contents: "poemas/*.qmd"
+  sort: "date desc"
+  date-format: "YYYY-MM-DD"
+  page-size: 999
+  template: ../../assets/poemas-terminal.ejs
+---
+
+::: {#poemas-listing}
+:::
+
+```{=html}
+<script>
+(() => {
+  const seletor = document.querySelector(".crt-seletor");
+  if (!seletor) return;
+
+  const rolagem = document.querySelector(".crt-rolagem");
+  const poemas = [...document.querySelectorAll(".crt-poema")];
+  const links = [...seletor.querySelectorAll("a")];
+  const atalhos = document.querySelector(".crt-atalhos");
+  const voltar = document.querySelector(".crt-voltar");
+  const subir = document.querySelector(".crt-subir");
+  const descer = document.querySelector(".crt-descer");
+  const movimento = matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth";
+  let ultimoLink = links[0];
+
+  function atualizarBotoes() {
+    const lendo = seletor.hidden;
+    const fim = rolagem.scrollHeight - rolagem.clientHeight;
+    const rola = lendo && fim > 1;
+    subir.hidden = descer.hidden = !rola;
+    subir.disabled = rolagem.scrollTop <= 1;
+    descer.disabled = rolagem.scrollTop >= fim - 1;
+  }
+
+  function mostrar(focar) {
+    const slug = decodeURIComponent(location.hash.slice(1));
+    const poema = poemas.find((p) => p.id === "poema-" + slug);
+    seletor.hidden = Boolean(poema);
+    atalhos.hidden = Boolean(poema);
+    voltar.hidden = !poema;
+    poemas.forEach((p) => { p.hidden = p !== poema; });
+    rolagem.scrollTop = 0;
+    atualizarBotoes();
+    if (focar) (poema ? rolagem : ultimoLink)?.focus({ preventScroll: true });
+  }
+
+  function rolar(sentido) {
+    rolagem.scrollBy({ top: sentido * rolagem.clientHeight * 0.8, behavior: movimento });
+  }
+
+  links.forEach((link) => link.addEventListener("click", () => { ultimoLink = link; }));
+  subir.addEventListener("click", () => rolar(-1));
+  descer.addEventListener("click", () => rolar(1));
+  rolagem.addEventListener("scroll", atualizarBotoes);
+  addEventListener("resize", atualizarBotoes);
+  addEventListener("hashchange", () => mostrar(true));
+  document.fonts?.ready.then(atualizarBotoes);
+
+  seletor.addEventListener("keydown", (e) => {
+    const atual = links.indexOf(document.activeElement);
+    const passo = { ArrowDown: 1, ArrowUp: -1 }[e.key];
+    if (!passo || !links.length) return;
+    e.preventDefault();
+    links[(atual + passo + links.length) % links.length].focus();
+  });
+
+  addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && seletor.hidden) voltar.click();
+  });
+
+  mostrar(false);
+})();
+</script>
+```

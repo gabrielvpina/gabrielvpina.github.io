@@ -1,0 +1,5 @@
+# Os poemas são exibidos só no terminal de ../index.qmd. A página
+# individual de cada um apenas redireciona para o poema lá dentro.
+include-in-header:
+  text: |
+    <script>location.replace("../#" + location.pathname.split("/").pop().replace(/\.html$/, ""));</script>

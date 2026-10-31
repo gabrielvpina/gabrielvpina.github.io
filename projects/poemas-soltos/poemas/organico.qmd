@@ -1,0 +1,20 @@
+---
+title: "orgânico"
+subtitle: ""
+date: "2026-10-07"
+text: |
+    Sonho um dia em ser máquina,
+    ter a serenidade do lógico mecanismo
+    que ante as adversidades do destino
+    se contenta em tranquilo conformismo.
+
+    Porém o sangue em mim pulsa fraco
+    e o coração muito se abala.
+    Como máquina sou fraco,
+    como homem sou pária.
+
+    Resta-me ser o operador
+    das máquinas dos construtores,
+    homens-máquina de pouco amor
+    não passam de meros amadores.
+---

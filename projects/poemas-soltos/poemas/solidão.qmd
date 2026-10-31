@@ -1,0 +1,15 @@
+---
+title: "Solidão"
+subtitle: "inspirado em uma poesia do sertão"
+date: "2026-09-15"
+text: |
+  A sombra que me acompanha
+  é a mesma que me persegue,
+  seus olhos negros me vigiam
+  para onde quer que a carregue.
+
+  no findar da vida ela me cobrirá
+  pois é seu manto o que me veste.
+  e a morte nos unirá para sempre
+  até que nada mais me reste.
+---
