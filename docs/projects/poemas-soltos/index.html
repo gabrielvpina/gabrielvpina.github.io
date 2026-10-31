@@ -417,7 +417,7 @@ ter a serenidade do lógico mecanismo
 que ante as adversidades do destino
 se contenta em tranquilo conformismo.
 
-Porém o sangue em mim pulsa fraco
+Porém o sangue em mim pulsa ralo
 e o coração muito se abala.
 Como máquina sou fraco,
 como homem sou pária.
@@ -452,7 +452,7 @@ até que nada mais me reste.
 
     </div>
     <div class="crt-barra">
-      <span class="crt-atalhos">↑↓ navegar · enter abrir</span>
+      <span class="crt-atalhos">↑↓ navegar · → ou enter abrir · ← voltar</span>
       <a class="crt-botao crt-voltar" href="#" hidden="">&lt; voltar</a>
       <span class="crt-botoes-rolagem">
         <button class="crt-botao crt-subir" type="button" hidden="">▲ subir</button>
@@ -503,6 +503,7 @@ até que nada mais me reste.
     rolagem.scrollBy({ top: sentido * rolagem.clientHeight * 0.8, behavior: movimento });
   }
 
+  links.forEach((link) => link.addEventListener("focus", () => { ultimoLink = link; }));
   links.forEach((link) => link.addEventListener("click", () => { ultimoLink = link; }));
   subir.addEventListener("click", () => rolar(-1));
   descer.addEventListener("click", () => rolar(1));
@@ -511,19 +512,33 @@ até que nada mais me reste.
   addEventListener("hashchange", () => mostrar(true));
   document.fonts?.ready.then(atualizarBotoes);
 
-  seletor.addEventListener("keydown", (e) => {
-    const atual = links.indexOf(document.activeElement);
-    const passo = { ArrowDown: 1, ArrowUp: -1 }[e.key];
-    if (!passo || !links.length) return;
-    e.preventDefault();
-    links[(atual + passo + links.length) % links.length].focus();
-  });
-
   addEventListener("keydown", (e) => {
-    if (e.key === "Escape" && seletor.hidden) voltar.click();
+    if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    const ativo = document.activeElement;
+    if (ativo?.matches("input, textarea, select, [contenteditable]")) return;
+
+    if (seletor.hidden) {
+      if (e.key === "ArrowLeft" || e.key === "Escape") voltar.click();
+      return;
+    }
+
+    // Com o foco em outro lugar (a navbar, por exemplo), as teclas seguem o padrão
+    const noLink = links.includes(ativo);
+    if (!noLink && ativo !== document.body && ativo !== rolagem) return;
+    const atual = noLink ? ativo : ultimoLink;
+    const passo = { ArrowDown: 1, ArrowUp: -1 }[e.key];
+
+    if (passo && links.length) {
+      e.preventDefault();
+      const indice = links.indexOf(atual);
+      links[(indice + passo + links.length) % links.length].focus();
+    } else if ((e.key === "ArrowRight" || e.key === "Enter") && atual) {
+      e.preventDefault();
+      atual.click();
+    }
   });
 
-  mostrar(false);
+  mostrar(true);
 })();
 </script>
 
