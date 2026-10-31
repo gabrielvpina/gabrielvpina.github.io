@@ -3,7 +3,7 @@ title: "ViralQuest Pipeline Refactor"
 date: "2026-06-09"
 description: "The refactor of a bioinformatics pipeline to viral discovery and analysis."
 categories: [Python, Bioinformatics, GitHub]
-image: "thumb.png"
+image: "thumb.webp"
 
 # Project-specific fields (edit freely)
 status: "Active"           # Active | WIP | Completed

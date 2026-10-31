@@ -2,7 +2,7 @@
 title: Processando dados de sequenciamento Sanger
 description: "Tutorial prático de processamento de dados de sequenciamento Sanger para a construção de árvores filogenéticas."
 
-image: "thumb.png"
+image: "thumb.webp"
 categories: [Bioinformatics, Tutorial, Sanger]
 
 date: "2025-11-05"
@@ -50,7 +50,7 @@ Arquivos *.ab1* são dados brutos vindos de sequenciadores tipo Sanger. Esses ar
 
 Nesse caso vamos utilizar o software [CutePeaks](https://github.com/labsquare/CutePeaks) para realizar o *basecalling*, a chamada das bases individuais da sequência analisada, para conferir seu pico de fluorescência e sua qualidade. 
 
-![Exemplo de arquivo .ab1 lido pelo software CutePeaks](figures/cutepeaks.png)
+![Exemplo de arquivo .ab1 lido pelo software CutePeaks](figures/cutepeaks.webp)
 
 ## Conversão de .ab1 para .fastq
 
@@ -116,9 +116,9 @@ Onde o identificador da sequência é o `@13F` e a pontuação *Phred* de qualid
 
 Para checar se a conversão foi realizada corretamente, os arquivos de qualidade das sequências *.fastq* foram comparadas com a qualidade exibida no eletroferograma e checada no *CutePeaks*. Essa checagem foi realizada com o software [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/).
 
-![Qualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas](figures/cp_comparison.png)
+![Qualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas](figures/cp_comparison.webp)
 
-![Checagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC](figures/fastqc.png)
+![Checagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC](figures/fastqc.webp)
 
 ## Remoção das bases de baixa qualidade
 
@@ -197,9 +197,9 @@ As sequências finais foram Alinhadas via [BLASTn online](https://blast.ncbi.nlm
 
 A qualidade sequências dos arquvos *FASTQ* foram realizadas com o software **FastQC** e depois agragadas com o software **MultiQC**. As qualidades foram medidas antes e depois da remoção de sequências de baixa qualidade.
 
-![Qualidade das sequências SEM a remoção das bases de baixa qualidade](figures/pre_trim.png)
+![Qualidade das sequências SEM a remoção das bases de baixa qualidade](figures/pre_trim.webp)
 
-![Qualidade das sequências COM a remoção das bases de baixa qualidade](figures/pos_trim.png)
+![Qualidade das sequências COM a remoção das bases de baixa qualidade](figures/pos_trim.webp)
 
 ## Sequências montadas
 

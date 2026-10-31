@@ -4,9 +4,9 @@
   <g font-family="monospace" font-size="27" fill="#c9b6ff">
     <text x="74" y="92">$ ls poemas/</text>
     <rect x="66" y="118" width="468" height="42" fill="#c9b6ff"/>
-    <text x="74" y="148" fill="#14101f">&gt; poemas soltos</text>
-    <text x="74" y="204">décimas</text>
-    <text x="74" y="252">rimas</text>
+    <text x="74" y="148" fill="#14101f">&gt; escritos</text>
+    <text x="74" y="204">perdidos</text>
+    <text x="74" y="252">no tempo</text>
     <text x="74" y="324">$ _</text>
   </g>
 </svg>

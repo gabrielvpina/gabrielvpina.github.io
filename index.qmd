@@ -41,7 +41,7 @@ listing:
       <div class="window-body">
         <div class="hero">
           <div class="hero-photo">
-            <img src="assets/profile-pixel.jpg" alt="Gabriel Pina" />
+            <img src="assets/profile-pixel.webp" alt="Gabriel Pina" />
             <span class="hero-photo-label">profile.jpg</span>
           </div>
           <div class="hero-text">

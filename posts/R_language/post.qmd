@@ -2,7 +2,7 @@
 title: Ploglamando em L - Boas pláticas
 description: "Dicas pessoais e boas práticas em R: instalação, ambiente de desenvolvimento e organização do fluxo de trabalho."
 
-image: "little-onion.jpg"
+image: "little-onion.webp"
 categories: [Data Science, R, Programing]
 
 date: 2026-07-09

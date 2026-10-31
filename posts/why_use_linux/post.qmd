@@ -2,7 +2,7 @@
 title: Seja amigo de um pinguim
 description: "Um ensaio sobre jardins fechados, dependência de sistemas operacionais e por que vale a pena migrar para o Linux."
 
-image: "logo.jpg"
+image: "logo.webp"
 categories: [Opinion, Linux, Research]
 
 date: 2026-07-03
@@ -33,7 +33,7 @@ lang: pt
 
 Como um fã de *Star Trek*, lembro especialmente de uma cena inusitada no filme **Jornada nas Estrelas IV: A Volta para Casa**, onde o personagem do engenheiro-chefe Scotty tem que interagir com um computador do século XX e acaba por inicialmente chamar o computador por voz (assim como os computadores da nave *USS Enterprise*), e falhando em ter uma resposta.
 
-![Scotty falando com um computador do século XX. Imagem do filme Jornada nas Estrelas IV: A Volta para Casa (1986)](pics/scotty-talking.jpg)
+![Scotty falando com um computador do século XX. Imagem do filme Jornada nas Estrelas IV: A Volta para Casa (1986)](pics/scotty-talking.webp)
 
 O "Hello, computer" dito como algo de outro mundo (literalmente) pelo personagem é uma realidade hoje, e isso evidencia como a forma de usar um computador avançou nas últimas décadas.
 
@@ -61,7 +61,7 @@ Não sei se de fato eu acertei, mas essas previsões surgem a partir da distribu
 
 > Um **Sistema Operacional** (OS) é o software fundamental que gerencia todo o hardware e os recursos de um computador, servindo como intermediário entre a máquina e o seu usuário (ou entre a máquina e outros programas). Ele controla coisas como o processador, a memória, o armazenamento, os dispositivos de entrada e saída, e a execução de todos os outros softwares instalados.
 
-![Distribuição de mercado dos Sistemas Operacionais em escala global (2025). Os sistemas Android e Windows tem a predominância dos dispositivos móveis e computadores, respectivamente @procurri2025osmarket.](pics/os-worldwide.png)
+![Distribuição de mercado dos Sistemas Operacionais em escala global (2025). Os sistemas Android e Windows tem a predominância dos dispositivos móveis e computadores, respectivamente @procurri2025osmarket.](pics/os-worldwide.webp)
 
 Uma consequência direta da predominância dessas sistemas no mercado é a dependência em seu uso. Cada OS possui o próprio ecossistema de programas e aplicações, que são em geral incompatíveis com outros sistemas operacionais.
 
@@ -137,7 +137,7 @@ Casos onde um *hardware* é bloqueado de forma total ou parcial de cumprir as fu
 
 # Nosso amigo pinguim
 
-![Coitado do pinguim](pics/pingo.jpg)
+![Coitado do pinguim](pics/pingo.webp)
 
 Na tentativa de escapar da concessão involuntária de dados e da obsolescência mediada por software, muitas pessoas (não muitas ainda 😭) migram para sistemas *open source* que dependem de comunidades para sua manutenção.
 
@@ -157,7 +157,7 @@ código aberto.
 > Stallman, ao criar a Free Software Foundation inicia o movimento que hoje chamamos de open source. Todos os códigos open source necessitam de uma licença para operar, é ela quem vai delimitar as diretrizes de modificação, reprodução e uso comercial do código. As licenças MIT e GPL são ótimos 
 exemplos e ainda continuam sendo adotadas até hoje (eu inclusive tenho um projeto com a licença GPL).
 
-![Richard Stallman e Linus Torvalds (Sta-Lin)](pics/sta-lin.jpg)
+![Richard Stallman e Linus Torvalds (Sta-Lin)](pics/sta-lin.webp)
 
 O linux se espalhou velozmente na comunidade de desenvolvedores da época e hoje está presente em quase todos os servidores que hospedam algum serviço na web. Existem versões desktop também que são menos conhecidas e adotadas por menos usuários.
 
@@ -177,7 +177,7 @@ Distribuições ou "distros" são essas variações do kernel que estão livreme
 
 Para iniciantes, eu pessoalmente recomendo utilizar a distro **Linux Mint**, o ambiente de desktop lembra a interface gráfica do *Windows*; além de ser um sistema estável e confiável. É possível ver mais sobre no site oficial da distribuição: [https://linuxmint.com/](https://linuxmint.com/).
 
-![Ambiente desktop do Linux Mint. O sistema pode ser personalizado de diversas maneiras.](pics/mint.jpeg)
+![Ambiente desktop do Linux Mint. O sistema pode ser personalizado de diversas maneiras.](pics/mint.webp)
 
 Para usuários avançados, distros *rolling release* (que recebem atualizações mais cedo) podem ser mais vantajosas, entretanto elas devem ser usadas com cautela, a cada nova atualização que surge são necessários testes e feedbacks da comunidade para a detecção de bugs e defeitos. Para isso o *Arch Linux* e seus derivados podem ser utilizados, entretanto é preciso cautela (os avisos repetitivos refletem problemas que já me ocorreram 😭). 
 

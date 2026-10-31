@@ -2,7 +2,7 @@
 title: Uma IA é seu funcionário, e você é um péssimo chefe
 description: "Como um recurso intelectual valioso pode ser desperdiçado facilmente."
 
-image: "thumb.jpg"
+image: "thumb.webp"
 categories: [IA, LLM, Opinion]
 
 date: "2026-09-30"
@@ -36,7 +36,7 @@ Criado pela *Sirius Cybernetics Corporation*, ele possui um exclusivo recurso ai
 
 > – Vamos – disse ele. – Me mandaram buscar vocês e levá-los até a ponte de comando. Pois é. Eu, com um cérebro do tamanho de um planeta, e eles me mandam buscar vocês e levar até a ponte de comando. Que tal isso como realização profissional?
 
-![Marvin no filme do Guia do Mochileiro das Galáxias (2005).](images/marvin2.gif)
+![Marvin no filme do Guia do Mochileiro das Galáxias (2005).](images/marvin2.webp)
 
 O conceito de uma mente (ou algo parecido) tão extraordinária como aquela, fazendo as tarefas mais trivais possíveis, combina perfeitamente com a personalidade depressiva vinda de fábrica. E, infelizmente, cabe muito bem em como alguns recursos que existem hoje são usados de forma tão banais como nunca antes foi visto.
 
@@ -55,7 +55,7 @@ O que podemos perceber com o passar do tempo é que o conhecimento humano possui
 
 # Conhecimento x Ação
 
-A revolução da IA difere um pouco dessa tendência, uma IA não é um novo meio de se produzir conhecimento — visto que ela se utiliza de informações previamente criadas por humanos e não cria uma nova a partir disso — e muito menos é um meio de disseminação. Ao contrário dessas duas definições que adotamos, os *chats* são máquinas de **agência**.
+A revolução da IA difere um pouco dessa tendência, uma IA não é um novo meio de se produzir conhecimento — visto que ela se utiliza de informações previamente criadas por humanos — e muito menos é um meio de disseminação. Ao contrário dessas duas definições que adotamos, os *chats* são máquinas de **agência**.
 
 :::{.callout-note}
 E somente para deixar uma coisa clara antes de prolongar o texto, eu pessoalmente uso vários recursos de IA no meu cotidiano. Não sou uma pessoa que é contra uma IA por puro capricho ou teimosia, mas dados os recursos naturais e problemas gerados atualmente por causa dela, eu fico com um pouco de incômodo ao ver tanto slop inútil sendo produzido.

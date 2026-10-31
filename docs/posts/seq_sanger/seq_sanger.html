@@ -120,15 +120,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <meta property="og:title" content="Processando dados de sequenciamento Sanger – me.log">
 <meta property="og:description" content="Tutorial prático de processamento de dados de sequenciamento Sanger para a construção de árvores filogenéticas.">
-<meta property="og:image" content="https://gabrielvpina.github.io/posts/seq_sanger/thumb.png">
+<meta property="og:image" content="https://gabrielvpina.github.io/posts/seq_sanger/thumb.webp">
 <meta property="og:site_name" content="me.log">
-<meta property="og:image:height" content="906">
-<meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Processando dados de sequenciamento Sanger – me.log">
 <meta name="twitter:description" content="Tutorial prático de processamento de dados de sequenciamento Sanger para a construção de árvores filogenéticas.">
-<meta name="twitter:image" content="https://gabrielvpina.github.io/posts/seq_sanger/thumb.png">
-<meta name="twitter:image-height" content="906">
-<meta name="twitter:image-width" content="1024">
+<meta name="twitter:image" content="https://gabrielvpina.github.io/posts/seq_sanger/thumb.webp">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -445,7 +441,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Nesse caso vamos utilizar o software <a href="https://github.com/labsquare/CutePeaks">CutePeaks</a> para realizar o <em>basecalling</em>, a chamada das bases individuais da sequência analisada, para conferir seu pico de fluorescência e sua qualidade.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figures/cutepeaks.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Exemplo de arquivo .ab1 lido pelo software CutePeaks"><img src="figures/cutepeaks.png" class="img-fluid figure-img" alt="Exemplo de arquivo .ab1 lido pelo software CutePeaks"></a></p>
+<p><a href="figures/cutepeaks.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Exemplo de arquivo .ab1 lido pelo software CutePeaks"><img src="figures/cutepeaks.webp" class="img-fluid figure-img" alt="Exemplo de arquivo .ab1 lido pelo software CutePeaks"></a></p>
 <figcaption>Exemplo de arquivo .ab1 lido pelo software CutePeaks</figcaption>
 </figure>
 </div>
@@ -503,13 +499,13 @@ _______W__W_________________OO______WPOO_L_[[[[[[[[[U[[[[[[[[[[W
 <p>Para checar se a conversão foi realizada corretamente, os arquivos de qualidade das sequências <em>.fastq</em> foram comparadas com a qualidade exibida no eletroferograma e checada no <em>CutePeaks</em>. Essa checagem foi realizada com o software <a href="https://www.bioinformatics.babraham.ac.uk/projects/fastqc/">FastQC</a>.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figures/cp_comparison.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Qualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas"><img src="figures/cp_comparison.png" class="img-fluid figure-img" alt="Qualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas"></a></p>
+<p><a href="figures/cp_comparison.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Qualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas"><img src="figures/cp_comparison.webp" class="img-fluid figure-img" alt="Qualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas"></a></p>
 <figcaption>Qualidade do eletroferograma do arquivo RBA_2R no software CutePeaks, a qualidade é representada pelas barras cinzas</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figures/fastqc.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Checagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"><img src="figures/fastqc.png" class="img-fluid figure-img" alt="Checagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"></a></p>
+<p><a href="figures/fastqc.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Checagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"><img src="figures/fastqc.webp" class="img-fluid figure-img" alt="Checagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC"></a></p>
 <figcaption>Checagem de qualidade do arquivo fastq (RBA_2R), através do software FastQC</figcaption>
 </figure>
 </div>
@@ -580,13 +576,13 @@ TCAAAATAAATGTTGATAA</code></pre>
 <p>A qualidade sequências dos arquvos <em>FASTQ</em> foram realizadas com o software <strong>FastQC</strong> e depois agragadas com o software <strong>MultiQC</strong>. As qualidades foram medidas antes e depois da remoção de sequências de baixa qualidade.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figures/pre_trim.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Qualidade das sequências SEM a remoção das bases de baixa qualidade"><img src="figures/pre_trim.png" class="img-fluid figure-img" alt="Qualidade das sequências SEM a remoção das bases de baixa qualidade"></a></p>
+<p><a href="figures/pre_trim.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Qualidade das sequências SEM a remoção das bases de baixa qualidade"><img src="figures/pre_trim.webp" class="img-fluid figure-img" alt="Qualidade das sequências SEM a remoção das bases de baixa qualidade"></a></p>
 <figcaption>Qualidade das sequências SEM a remoção das bases de baixa qualidade</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="figures/pos_trim.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Qualidade das sequências COM a remoção das bases de baixa qualidade"><img src="figures/pos_trim.png" class="img-fluid figure-img" alt="Qualidade das sequências COM a remoção das bases de baixa qualidade"></a></p>
+<p><a href="figures/pos_trim.webp" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Qualidade das sequências COM a remoção das bases de baixa qualidade"><img src="figures/pos_trim.webp" class="img-fluid figure-img" alt="Qualidade das sequências COM a remoção das bases de baixa qualidade"></a></p>
 <figcaption>Qualidade das sequências COM a remoção das bases de baixa qualidade</figcaption>
 </figure>
 </div>
