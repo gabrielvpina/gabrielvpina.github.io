@@ -971,7 +971,7 @@ body.retro-desktop-body #quarto-sidebar { display: none !important; }
 /* ── Cards das páginas de listagem ────────────────────────────
    Três camadas: base comum a todas as listagens, depois as duas
    variantes escolhidas por body-classes —
-     .lista-ls      → /posts      (listagem estilo ls -l)
+     .posts-jornal → /posts        (boletim tipográfico)
      .pub-pasta   → /publications (pasta com aba)
    /projects fica só com a base.
 
@@ -1177,121 +1177,107 @@ $linhas-autores:    3;
 .quarto-grid-item .listing-author b,
 .quarto-grid-item .listing-author strong { color: $tinta; }
 
-/* ── /posts — listagem estilo "ls -l" ──────────────────────────
-   A pagina de posts nao usa grade de cards: e uma listagem
-   (type: default) dentro de um quadro unico, uma linha por post,
-   com permissoes falsas antes do titulo e a data a direita.     */
-
-/* Base da listagem type: default */
-.quarto-listing-default .quarto-post {
-  align-items: center;
-  margin: 0;
-  padding: 14px 16px;
-  border: 0;
-  column-gap: 16px;
+/* ── /posts — boletim tipográfico ──────────────────────────────
+   Sem caixa colorida: filetes, serifada no título, capitular e
+   olho do texto. A foto entra colorida — sem o cinza de jornal.  */
+.posts-jornal .quarto-grid-item.card {
+  border-width: $borda-fina;
+  border-radius: 0;
+  box-shadow: 4px 4px 0 $areia-escura;
 }
 
-.quarto-listing-default .quarto-post a {
-  text-decoration: none !important;
-  color: inherit;
+.posts-jornal .quarto-grid-link:hover .quarto-grid-item.card {
+  box-shadow: 8px 8px 0 $sombra-cor;
 }
 
-.quarto-listing-default .quarto-post .listing-title { margin: 0; }
-.quarto-listing-default .quarto-post .body > * + * { margin-top: 6px; }
-
-.quarto-listing-default .listing-categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-/* O Quarto reserva 2em a direita do container da listagem para a
-   barra lateral, que neste layout ja tem coluna propria — zerar
-   devolve essa largura ao quadro.                                */
-.lista-ls .quarto-listing-container-default { margin-right: 0; }
-
-/* O quadro que envolve a lista inteira */
-.lista-ls .quarto-listing-default {
-  padding: 10px 0;
-  background: $papel;
-  border: $borda-w solid $traco;
-  border-radius: $raio;
-  box-shadow: $sombra;
-  font-family: $fonte-texto;
-  overflow: hidden;
-}
-
-/* Cabecalho do terminal. Usa $term-fundo (e nao $tinta) porque
-   precisa ser escuro nos dois temas — com $tinta a faixa ficaria
-   clara no modo escuro e o verde sumiria.                        */
-.lista-ls .quarto-listing-default::before {
-  content: "gabrielvpina@me.log:~/posts$ ls -l";
+/* Linha de edição */
+.posts-jornal .quarto-grid-item.card::before {
+  content: "me.log \00a0·\00a0 edição";
   display: block;
-  margin: -10px 0 8px;
-  padding: 7px 16px;
-  background: $term-fundo;
-  color: $verde;
-  font-size: .76rem;
-  letter-spacing: .04em;
-}
-
-.lista-ls .quarto-post {
-  display: grid;
-  grid-template-columns: 86px 1fr auto;
-  padding: 12px 18px;
-}
-
-/* O Quarto marca os itens como .image-right e reordena a miniatura;
-   a colocacao explicita garante a imagem na primeira coluna.      */
-.lista-ls .quarto-post > .thumbnail { grid-column: 1; order: 0; margin: 0; }
-.lista-ls .quarto-post > .body      { grid-column: 2; order: 0; min-width: 0; }
-.lista-ls .quarto-post > .metadata  { grid-column: 3; order: 0; text-align: right; }
-
-.lista-ls .quarto-post:hover { background: $roxo-claro; }
-
-.lista-ls .quarto-post .thumbnail img {
-  width: 72px;
-  height: 72px;
-  object-fit: cover;
-  border: 2px solid $traco;
-  border-radius: 3px;
-}
-
-.lista-ls .quarto-post .listing-title {
-  font-family: $fonte-titulo;
-  font-size: .98rem;
-  font-weight: 700;
-  color: $tinta;
-}
-
-.lista-ls .quarto-post .listing-description {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  line-clamp: 1;
-  overflow: hidden;
-  font-size: .78rem;
-  color: $tinta-suave;
-}
-
-.lista-ls .quarto-post .listing-description p { margin: 0; }
-
-/* Especificidade alta o bastante para vencer a regra de pilula dos
-   cards, que tambem alcanca div.quarto-post.                      */
-.lista-ls div.quarto-post .listing-categories .listing-category {
-  padding: 0 7px 1px;
-  background: $papel;
-  border: 1.5px solid $traco;
-  border-radius: 3px;
-  color: $tinta;
-  font-size: .62rem;
+  padding: 6px 16px 5px;
+  border-bottom: 1.5px solid $traco;
+  font-family: $fonte-texto;
+  font-size: .6rem;
+  letter-spacing: .22em;
+  text-align: center;
   text-transform: uppercase;
+  color: $tinta-suave;
 }
 
-.lista-ls .quarto-post .listing-date {
-  font-family: $fonte-pixel;
-  font-size: 1.05rem;
+.posts-jornal .quarto-grid-item .card-img-top {
+  border-bottom: 1.5px solid $traco;
+}
+
+.posts-jornal .quarto-grid-item .card-img-top img { aspect-ratio: 3 / 2; }
+
+.posts-jornal .quarto-grid-item .card-body {
+  gap: 10px;
+  padding: 16px 18px 14px;
+}
+
+.posts-jornal .quarto-grid-item .listing-title {
+  font-family: $fonte-serif;
+  font-size: 1.22rem;
+  line-height: 1.22;
+  min-height: calc(#{$linhas-titulo} * 1.22em);
+}
+
+/* Olho do texto, com capitular */
+.posts-jornal .quarto-grid-item .listing-description {
+  font-family: $fonte-serif;
+  font-size: .88rem;
+  line-height: 1.55;
+  min-height: calc(#{$linhas-descricao} * 1.55em);
+  color: $tinta;
+}
+
+.posts-jornal .quarto-grid-item .listing-description::first-letter,
+.posts-jornal .quarto-grid-item .listing-description p::first-letter {
+  float: left;
+  margin: 2px 6px 0 0;
+  font-size: 2.6rem;
+  line-height: .82;
+  font-weight: 700;
+  color: $roxo;
+}
+
+.posts-jornal .quarto-grid-item .listing-categories {
+  gap: 0;
+  padding-top: 8px;
+  border-top: 1.5px solid $areia-escura;
+}
+
+.posts-jornal .quarto-grid-item .listing-categories .listing-category {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  font-size: .62rem;
+  letter-spacing: .14em;
   color: $tinta-suave;
+}
+
+.posts-jornal .quarto-grid-item .listing-categories .listing-category:hover {
+  background: transparent;
+  color: $roxo;
+}
+
+.posts-jornal .quarto-grid-item .listing-categories .listing-category:not(:last-child)::after {
+  content: " · ";
+  color: $areia-escura;
+}
+
+.posts-jornal .quarto-grid-item .card-attribution {
+  margin-bottom: -14px;
+  background: transparent;
+  border-top: 3px double $traco;
+}
+
+.posts-jornal .quarto-grid-item .listing-date {
+  font-family: $fonte-texto;
+  font-size: .66rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
 }
 
 /* ── /publications — pasta com aba ─────────────────────────────
@@ -1649,8 +1635,7 @@ $linhas-autores:    3;
     padding: 9px 15px;
   }
 
-  .lista-ls .quarto-post { grid-template-columns: 44px 1fr; row-gap: 6px; padding: 10px 12px; }
-  .lista-ls .quarto-post > .metadata { grid-column: 2; text-align: left; }
+  .posts-jornal .quarto-grid-item .card-body { padding: 14px 15px 13px; }
 
   .pub-pasta .quarto-grid-item .card-body { margin: 0 9px 9px; padding: 14px 14px 12px; }
   .pub-pasta .quarto-grid-item .card-attribution {
@@ -1665,7 +1650,6 @@ $linhas-autores:    3;
     box-shadow: none !important;
     rotate: 0deg !important;
   }
-  .lista-ls .quarto-listing-default { box-shadow: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

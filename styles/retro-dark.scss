@@ -105,9 +105,10 @@ $sombra-mini:   2px 2px 0 $sombra-cor;
 $fonte-titulo: "Space Grotesk", system-ui, sans-serif;
 $fonte-texto:  "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 $fonte-pixel:  "VT323", ui-monospace, monospace;
+$fonte-serif:  "Lora", Georgia, "Times New Roman", serif;
 
 /* ── Configuração do Bootstrap / Quarto ─────────────────────── */
-$web-font-path: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=VT323&display=swap";
+$web-font-path: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Mono:wght@400;500;600&family=VT323&family=Lora:wght@400;700&display=swap";
 
 $font-family-sans-serif: $fonte-texto;
 $font-family-monospace:  $fonte-texto;
