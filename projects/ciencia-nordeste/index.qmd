@@ -1,0 +1,66 @@
+---
+title: "Ciência Nordeste"
+date: "2026-11-17"
+description: "Criação de rede interligada de ciência no Nordeste."
+categories: [Python, Cloud, Data Science]
+image: "thumb.svg"
+
+# Project-specific fields (edit freely)
+status: "Active"           # Active | WIP | Completed
+github: "https://github.com/gabrielvpina/ciencia-nordeste"
+
+toc: true
+---
+
+```{=html}
+<!-- Project status badge + links -->
+<div class="project-header">
+  <span class="project-status active">● Active</span>
+  <a class="retro-btn" href="https://github.com/gabrielvpina/ciencia-nordeste" target="_blank">⎈ GitHub</a>
+</div>
+```
+
+## O Início do Projeto
+
+O **Ciência Nordeste** teve forte inspiração na mesa redonda do **Integra Nordeste: Redes Colaborativas em Virologia**, que ocorreu no 37 Congresso Brasileiro de Virologia — organizado pela Sociedade Brasileira de Virologia (SBV). Participei da mesa como ouvinte. O mediador, *Dr. Abelardo Silva Júnior* - UFAL, destacou através das palestras realizadas a necessidade de comunicação e colaboração entre as Universidades e Instituições de pesquisa do nordeste.
+
+Além de uma rede científica Brasileira, era necessária uma intercomunicação entre as instituições e pesquisadores do Nordeste — ante as desigualdades regionais e disparidades de recursos destinados à pesquisa. 
+
+Usando como exemplo meu grupo de pesquisa, somos um dos poucos grupos de pesquisa que lida com Bioinformática de Vírus no Nordeste, e realizamos análises com uma gama ampla de hospedeiros e famílias virais. Meu atual orientador, Dr. Eric Aguiar foi um dos participantes da mesa e destacou a construção de ferramentas open-source desenvolvidas pelo laboratório — ferramentas essas que sempre estimulamos o uso e divulgação pela comunidade científica. 
+
+Esse seria só um exemplo de serviço que poderia ser prestado, particularmente por nossa equipe. Mas quantos outros recursos e serviços podem estar disponíveis por instituições de todo o Nordeste e que simplesmente não são divulgados o suficiente?
+
+O **Ciência Nordeste** surge na tentativa de integração entre os serviços e áreas de pesquisa realizados nas instituições do Nordeste, juntamente com o levantamento dos pesquisadores e sua produção nos últimos anos. 
+
+## Desafios técnicos
+
+Na data em que eu escrevo esse post, o Ciência Nordeste está disponível abertamente no GitHub e está rodandd em uma VPS do tipo EC2 hospedada na AWS (estou usando meus créditos gratuitos hehe). 
+
+Inicialmente eu pensei em fazer um dashboard Shiny R para alocar e visualizar todos os recursos. Entretanto depois de pensar melhor, vi que nunca fiz um projeto fechado em um framework mais convencional — esse projeto acabou sendo a combinação de PostgreSQL + Next.js + um microsserviço Python de embeddings.
+
+Eu utilizei IA durante todo o projeto, falo isso sem problemas. Tenho somente noções básicas de JavaScript, e os scripts de ingestão de dados do python foram feitos pelo Claude. Claro que tenho mais experiência em relação à análise de dados, ETL, SQL, vizualização de dados; foi bem legal de planejar e implementar. Mas o projeto em si tem pouco valor didático para mim, como tenho pouco tempo do teste da VPS, prefiro fazer tudo rápido e deixar no ar mesmo. Posso tentar fazer outra coisa com mais calma no futuro (mas ainda sem mexer com JavaScript - esse eu não quero aprender por agora kkk).
+
+A escolha de usar uma busca vetorial vem da falta de estruturação de dados, como não acessei o Lattes dos pesquisadores (somente a produção de artigos), buscar as áreas de trabalho é muito mais importante que ver palavras-chave ou correspondências em um banco tão diverso como esse. Seria possível usar RAG para fazer a pesquisa nos campos, mas exigiria APIs e créditos que me faltam, e sinceramente, a busca vetorial como está funciona bem para consultas de área.
+
+Os dados foram obtidos pela API do OpenAlex para obter os trabalhos e metadados, e correlacionados com o ORCID de cada autor registrado. Como o banco só conta com autores que possuem publicações nos últimos 5 anos, perde-se uma base muito grande de pesquisadores que não publicaram durante esse período (pesquisadores que terão seu primeiro artigo no futuro e ainda não estão na base de dados).
+
+Para isso surge a ideia do quiz; eu poderia fazer uma integração com a API do ORCID, porém nem todos os estudantes de graduação vão possuir esse tipo de cadastro, e talvez ele se torne uma barreira para a inscrição — ou pior, o ORCID vazio informe pouco dos usuários. A ideia de um quiz para traçar a área pode ser interessante para ver de forma rápida a afinidade dos pesquisadores, achar paralelos e ainda ajudar na divulgação do projeto. 
+
+## Perspectivas
+
+Futuramente penso em fazer um recurso para que os usuários reinvidiquem seus perfis e preencham informações complementares nele (Foto, Lattes, Área de pesquisa, etc). Tenho que analisar a API do ORCID para isso, ver um jeito de validar o código do perfil reinvidicado com o login que o usuário inserir. 
+
+Outro recurso que eu penso é inserir um painel de recursos/serviços de pesquisa. Pesquisadores de área irão inserir o que podem disponibilizar e no que estão interessados em colaborar — ainda estou pensando em como fazer um match desse tipo de informação para que os pesquisadores possam inserir suas demandas, e o site direcione a equipe que possa realizar esse tipo de serviço. 
+
+Precisaria de um serviço de longa retenção também. Todos os serviços que mencionei aqui são pesquisas esporádicas que os usuários irão fazer no site para tirar uma dúvida, o que não vai reter os pesquisadores na plataforma. É necessário trabalhar em algo que alimente a retenção e engajamento dos usuários com outros pesquisadores e com a plataforma em si.
+
+## Conclusões
+
+O projeto em si não é muito didático no que tange conteúdos de computação, o que me deixa um pouco triste. Mas ao mesmo tempo, é a minha primeira experiência com um serviço público que possui uma base de usuários - a responsabilidade dos dados obtidos e o pensamento estratégico de como converter mais usuários para a plataforma é algo legal de se ficar pensando e me desperta alguns interesses em gerência de projetos. 
+
+Sinceramente estou com pouco tempo para estudos, em parte por culpa minha. Apesar de ser um projeto apressado e insesparado, pode me ajudar a ter mais tato para planejamento de negócios e gerenciamento de projetos. Caso você tenha lido até aqui, veja se o site ainda está no ar via [www.ciencianordeste.com.br](www.ciencianordeste.com.br).
+
+
+
+
+
