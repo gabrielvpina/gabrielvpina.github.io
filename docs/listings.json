@@ -8,28 +8,10 @@
       "/posts/decision_tree_basic/dec_tree.html",
       "/posts/seq_sanger/seq_sanger.html",
       "/posts/data_report/data_report.html",
+      "/projects/ciencia-nordeste/index.html",
       "/projects/poemas-soltos/index.html",
       "/projects/viralquest/index.html"
     ]
-  },
-  {
-    "listing": "/projects/poemas-soltos/index.html",
-    "items": [
-      "/projects/poemas-soltos/poemas/pratica-de-decima-espinela.html",
-      "/projects/poemas-soltos/poemas/organico.html",
-      "/projects/poemas-soltos/poemas/solidão.html"
-    ]
-  },
-  {
-    "listing": "/projects/index.html",
-    "items": [
-      "/projects/poemas-soltos/index.html",
-      "/projects/viralquest/index.html"
-    ]
-  },
-  {
-    "listing": "/publications/index.html",
-    "items": []
   },
   {
     "listing": "/posts/index.html",
@@ -40,6 +22,26 @@
       "/posts/decision_tree_basic/dec_tree.html",
       "/posts/seq_sanger/seq_sanger.html",
       "/posts/data_report/data_report.html"
+    ]
+  },
+  {
+    "listing": "/publications/index.html",
+    "items": []
+  },
+  {
+    "listing": "/projects/index.html",
+    "items": [
+      "/projects/ciencia-nordeste/index.html",
+      "/projects/poemas-soltos/index.html",
+      "/projects/viralquest/index.html"
+    ]
+  },
+  {
+    "listing": "/projects/poemas-soltos/index.html",
+    "items": [
+      "/projects/poemas-soltos/poemas/pratica-de-decima-espinela.html",
+      "/projects/poemas-soltos/poemas/organico.html",
+      "/projects/poemas-soltos/poemas/solidão.html"
     ]
   }
 ]
